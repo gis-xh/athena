@@ -2,11 +2,7 @@
 
 ## 1 引入
 
-
-
-
-
-## 2 入门案例 
+## 2 入门案例
 
 ```vue
 <template>
@@ -84,18 +80,14 @@ onMounted(() => {
 </style>
 ```
 
-
-
 ## 3 封装子组件
-
-
 
 > 父组件中
 
 ```vue
 <template>
   <div>
-      <waterChart :height="'300px'" :width="'100%'" :rawData="waterData" />
+    <waterChart :height="'300px'" :width="'100%'" :rawData="waterData" />
   </div>
 </template>
 <script setup>
@@ -182,3 +174,4 @@ onMounted(() => {
 <style scoped></style>
 ```
 
+不要使用ref包裹ECharts实例，这会使得其自带的图表交互工具无法使用：https://github.com/apache/echarts/issues/16642
