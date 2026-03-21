@@ -1,3 +1,7 @@
+# Week 1
+
+机器学习第一周内容。
+
 [MUSIC] Welcome to Machine learning. What is machine learning?
 You probably use it many times a day without even knowing it.
 Anytime you want to find out something like how do I make a sushi roll?
@@ -15,4 +19,3 @@ Or more likely your email service will probably flag it as spam.
 That too is an application of machine learning.
 Beyond consumer applications that you might use, AI is also rapidly making its way into big companies and into industrial applications. For example, I'm deeply concerned about climate change, and I'm glad to see that machine learning is already hoping to optimize wind turbine power generation. Or in healthcare, is starting to make its way into hospitals to help doctors make accurate diagnosis. Or recently at Landing AI have been doing a lot of work, putting computer vision into factories to help inspect if something coming off the assembly line has any defects. That's machine learning, it's the science of getting computers to learn without being explicitly programmed. In this course, you learn about machine learning and get to implement machine learning and code yourself. Millions of others have taken the earlier version of this course, which is of course, that led to the founding of Coursera. And many learners ended up building exciting machine learning systems or even pursuing very successful careers in AI.
 I'm excited that you're on this journey with me. Welcome and let's get started.
-

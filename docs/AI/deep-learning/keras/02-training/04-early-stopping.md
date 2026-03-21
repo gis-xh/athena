@@ -101,7 +101,7 @@ plt.show()
 
 - 过拟合模型的训练监控结果曲线图
 
-![](../../../assets/images/dl-image-20220913105542381-071.webp)
+![](../../../../assets/images/dl-image-20220913105542381-071.webp)
 
 ### 2.7 模型评价
 
@@ -115,7 +115,7 @@ print('accurary : ' + str(loss_and_metrics[1]))
 
 - 过拟合模型的模型评价
 
-![](../../../assets/images/dl-image-20220913105849387-072.webp)
+![](../../../../assets/images/dl-image-20220913105849387-072.webp)
 
 ## 3 设置早停
 
@@ -137,11 +137,11 @@ hist = model.fit(x_train, y_train, epochs=3000,batch_size=10,validation_data=(x_
 
 - 早停法下的训练监控结果曲线图
 
-![](../../../assets/images/dl-image-20220913110451998-073.webp)
+![](../../../../assets/images/dl-image-20220913110451998-073.webp)
 
 - 早停法下的模型评价
 
-![](../../../assets/images/dl-image-20220913110621704-074.webp)
+![](../../../../assets/images/dl-image-20220913110621704-074.webp)
 
 ### 3.3 数据对比
 

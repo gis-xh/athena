@@ -2,9 +2,9 @@
 comments: false
 ---
 
-# Keras 深度学习
+# Keras 深度学习框架
 
-Keras 框架学习笔记。
+Keras 深度学习框架学习笔记。
 
 ## 目录
 

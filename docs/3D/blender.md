@@ -1,7 +1,5 @@
 # Blender学习
 
-
-
 ## 1 概述
 
 ### 1.1 基本介绍
@@ -30,8 +28,6 @@ threejs实战数字孪生园区开源（threejs+vue3+vite）
 
 - 在线博客：https://juejin.cn/post/7355012708582227987
 - 代码仓库：https://github.com/tingyuxuan2302/threejs-learning
-
-
 
 ## 2 基本使用
 

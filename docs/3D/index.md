@@ -6,4 +6,4 @@ comments: false
 
 ## 目录
 
-- [Blender](blender.md)
+- [Blender 软件](blender.md)

@@ -53,23 +53,143 @@ nav:
   - 首页: index.md
   - AI 学习:
       - AI 总览: AI/index.md
-      - 理论体系:
-          - 机器学习: AI/theory/machine-learning/index.md
-          - 深度学习: AI/theory/deep-learning/index.md
-          - 大语言模型: AI/llm/index.md
-      - 框架工具:
-          - Keras: AI/keras/index.md
+      - 深度学习:
+          - 概述: AI/deep-learning/index.md
+          - PyTorch: AI/deep-learning/pytorch/index.md
+          - PyTorch 安装: AI/deep-learning/pytorch/pytorch-install.md
+          - B站 PyTorch 实践: AI/deep-learning/pytorch/bilibili-pytorch-practice.md
+          - Keras: AI/deep-learning/keras/index.md
+          - Keras 安装: AI/deep-learning/keras/keras-install.md
+          - Keras 基础:
+              - 概述: AI/deep-learning/keras/01-basics/index.md
+              - 环境配置: AI/deep-learning/keras/01-basics/01-environment.md
+              - 核心概念: AI/deep-learning/keras/01-basics/02-concepts.md
+          - Keras 训练:
+              - 概述: AI/deep-learning/keras/02-training/index.md
+              - MNIST: AI/deep-learning/keras/02-training/01-mnist.md
+              - TensorBoard: AI/deep-learning/keras/02-training/02-tensorboard.md
+              - 回调函数: AI/deep-learning/keras/02-training/03-callbacks.md
+              - 早停: AI/deep-learning/keras/02-training/04-early-stopping.md
+              - AUC: AI/deep-learning/keras/02-training/05-auc.md
+              - AP: AI/deep-learning/keras/02-training/06-ap.md
+          - Keras 高级:
+              - 概述: AI/deep-learning/keras/03-advanced/index.md
+              - 迁移学习: AI/deep-learning/keras/03-advanced/transfer-learning.md
+      - 大语言模型:
+          - 概述: AI/llm/index.md
+          - 01 预训练: AI/llm/01-pretrain.md
+          - 02 Transformer: AI/llm/02-transformer.md
+          - 03 GPT & BERT: AI/llm/03-gpt-bert.md
+          - 04 RWKV: AI/llm/04-rwkv.md
+          - 05 GLM: AI/llm/05-glm.md
+          - 06 知识图谱: AI/llm/06-knowledge-graph.md
+          - 07 LangChain: AI/llm/07-langchain.md
+          - 08 MCP: AI/llm/08-mcp.md
+          - 09 向量数据库: AI/llm/09-vectorstore.md
+          - 10 训练方法: AI/llm/10-training-approach.md
       - 课程学习:
-          - CS230 2018: AI/courses/cs230-2018/index.md
-          - Deeplearning.AI: AI/courses/deeplearning-ai/index.md
+          - 课程总览: AI/courses/index.md
+          - 机器学习:
+              - 概述: AI/courses/machine-learning/index.md
+              - Week 1: AI/courses/machine-learning/Week01.md
+          - CS230 2018:
+              - 概述: AI/courses/cs230-2018/index.md
+              - Neural Networks: AI/courses/cs230-2018/01-neural-networks.md
+              - 02: AI/courses/cs230-2018/02.md
+              - Lecture 2: AI/courses/cs230-2018/Lecture2.md
+          - Deeplearning.AI:
+              - 概述: AI/courses/deeplearning-ai/index.md
+              - Prompt Engineering: AI/courses/deeplearning-ai/01-prompt-engineering.md
+              - ChatGPT API: AI/courses/deeplearning-ai/02-chatgpt-api.md
+              - LangChain App: AI/courses/deeplearning-ai/03-langchain-app.md
+              - LangChain Data: AI/courses/deeplearning-ai/04-langchain-data.md
+              - Gradio: AI/courses/deeplearning-ai/05-gradio.md
       - AI 应用:
           - AI Agents: AI/agents/index.md
-  - 前端学习: frontend/index.md
-  - Python 学习: python/index.md
-  - Linux 学习: linux/index.md
-  - 项目部署: deploy/index.md
-  - 物联网: iot/index.md
-  - 3D 建模: 3d/index.md
+          - OpenCLAW 配置: AI/agents/openclaw-setup.md
+          - OpenCode 配置: AI/agents/opencode-setup.md
+          - Prompt 模板: AI/agents/prompt-template.md
+  - 前端学习:
+      - 前端总览: frontend/index.md
+      - 环境配置: frontend/01-setup.md
+      - UI 框架: frontend/02-ui.md
+      - Web3D: frontend/03-web3d.md
+      - Cesium GIS: frontend/04-cesium.md
+      - GeoServer: frontend/05-geoserver.md
+      - Vue 实现: frontend/vue-implementation.md
+      - React 实现: frontend/react-implementation.md
+      - Vue:
+          - 概述: frontend/vue/index.md
+          - Vue2 转 Vue3: frontend/vue/vue2-to-vue3.md
+          - Vue3 & ECharts: frontend/vue/vue3-echarts.md
+          - Vue3 & ElementPlus: frontend/vue/vue3-element-plus.md
+          - 基础知识: frontend/vue/basics.md
+          - 学习记录: frontend/vue/learning-notes.md
+  - Python 学习:
+      - Python 总览: python/index.md
+      - Conda:
+          - 概述: python/01-conda/index.md
+          - Windows 安装: python/01-conda/windows-installation.md
+      - 数据分析:
+          - 概述: python/02-data-analysis/index.md
+          - NumPy:
+              - 概述: python/02-data-analysis/numpy/index.md
+              - 基础:
+                  - 环境配置: python/02-data-analysis/numpy/01-basics/01-setup.md
+                  - 基础操作: python/02-data-analysis/numpy/01-basics/02-basics.md
+                  - 快速入门: python/02-data-analysis/numpy/01-basics/03-quickstart.md
+              - 数据存取:
+                  - 数据存取: python/02-data-analysis/numpy/02-data-storage/01-storage.md
+                  - 词云: python/02-data-analysis/numpy/02-data-storage/02-wordcloud.md
+                  - 函数: python/02-data-analysis/numpy/02-data-storage/03-functions.md
+          - Matplotlib: python/02-data-analysis/matplotlib/01-intro.md
+          - Python Excel: python/02-data-analysis/python-excel/01-excel.md
+          - Spider: python/02-data-analysis/spider/01-spider.md
+      - Django:
+          - 概述: python/03-django/index.md
+          - 环境配置: python/03-django/01-setup.md
+          - 教程: python/03-django/02-tutorial.md
+          - 项目 1: python/03-django/03-project-1.md
+          - 项目 2: python/03-django/04-project-2.md
+      - PyQt:
+          - 概述: python/04-pyqt/index.md
+          - 入门: python/04-pyqt/01-intro.md
+      - FastAPI:
+          - 概述: python/05-fastapi/index.md
+          - 入门: python/05-fastapi/01-intro.md
+  - Linux 学习:
+      - Linux 总览: linux/index.md
+      - Linux 基础:
+          - 概述: linux/01-basics/index.md
+          - 安装: linux/01-basics/01-installation.md
+          - 虚拟机操作: linux/01-basics/02-vm-operations.md
+          - Linux 基础: linux/01-basics/03-basics.md
+      - Linux 实操:
+          - 概述: linux/02-practical/index.md
+          - 远程访问: linux/02-practical/01-remote-access.md
+          - 用户管理: linux/02-practical/02-user-management.md
+          - 网络配置: linux/02-practical/03-network.md
+          - Linux & Python: linux/02-practical/04-python.md
+  - 项目部署:
+      - 部署总览: deploy/index.md
+      - CentOS 部署: deploy/centos-deployment.md
+      - Docker: deploy/docker-learning.md
+      - Docker + GeoServer: deploy/docker-geoserver-guide.md
+      - Windows 部署: deploy/windows-deployment.md
+      - 阿里云全栈部署: deploy/aliyun-fullstack-deployment.md
+      - 阿里云踩坑: deploy/aliyun-deployment-issues.md
+      - DevOps 学习: deploy/devops-learning.md
+      - 网络配置: deploy/network.md
+  - 物联网:
+      - IoT 总览: iot/index.md
+      - IoT 学习: iot/iot-learning.md
+      - 边缘计算: iot/edge-computing.md
+      - OrangePi: iot/orangepi.md
+  - 3D 建模:
+      - 3D 总览: 3d/index.md
+      - Blender: 3d/blender.md
+  - 其他:
+      - 随记: somethings.md
 
 # [Extensions] 扩展
 plugins:

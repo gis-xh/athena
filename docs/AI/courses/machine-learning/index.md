@@ -8,4 +8,4 @@ comments: false
 
 ## 目录
 
-- [Week 1](Week%201/01.md)
+- [Week 1](Week01.md)

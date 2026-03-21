@@ -13,5 +13,11 @@
     "vue",
     "html",
     "markdown"
-  ]
+  ],
+  // 针对 yml 和 yaml 文件定制格式, 以便 mkdocs 能够顺利运行
+  "[yaml]": {
+    "editor.detectIndentation": false, // 关闭自动检测缩进
+    "editor.tabSize": 2, // 缩进为2个空格
+    "editor.insertSpaces": true // 缩进使用空格
+  }
 }

@@ -135,7 +135,7 @@ plt.show()
 
 - 训练监控结果曲线图
 
-![](../../../assets/images/dl-image-20220912110134769-070.webp)
+![](../../../../assets/images/dl-image-20220912110134769-070.webp)
 
 &emsp;&emsp;这里我们可以看到，监控结果与 [0201 训练 MNIST 手写体数据集](../02-training/01-mnist.md) 所展示的示例基本一致。
 

@@ -29,7 +29,7 @@ print('loss_and_metrics:'+str(loss_and_metrics))
 
 &emsp;&emsp;如果没有错误正常运行，则会显示以下内容。
 
-![](../../../assets/images/dl-image-20220726153204239-061.webp)
+![](../../../../assets/images/dl-image-20220726153204239-061.webp)
 
 ## 2 查看深度学习基本模型驱动
 
@@ -42,7 +42,7 @@ from keras.utils.vis_utils import model_to_dot
 SVG(model_to_dot(model, show_shapes=True).create(prog='dot', format='svg'))
 ```
 
-![](../../../assets/images/dl-image-20220726155647188-062.webp)
+![](../../../../assets/images/dl-image-20220726155647188-062.webp)
 
 ## 3 查看深度学习模型存储功能
 
@@ -53,7 +53,7 @@ model.save('mnist_mlp_model.h5')
 model = load_model('mnist_mlp_model.h5')
 ```
 
-![](../../../assets/images/dl-image-20220726160146772-063.webp)
+![](../../../../assets/images/dl-image-20220726160146772-063.webp)
 
 上一节：无
 

@@ -38,4 +38,4 @@ plt.show()
 
 - 绘制图像
 
-![image-20220916090649478](../../../assets/images/dl-image-20220916090649478-075.webp)
+![image-20220916090649478](../../../../assets/images/dl-image-20220916090649478-075.webp)
