@@ -1,3 +1,5 @@
+# OpenClaw 及其插件安装配置说明 - 20260321 更新
+
 ## 一、不同系统的注意事项
 
 ### 1、Windows环境安装
@@ -40,7 +42,7 @@ nvm npm_mirror https://npmmirror.com/mirrors/npm/
 - 查看当前支持的 Node 版本
 
 ```sh
-nvm list available	
+nvm list available
 ```
 
 - 安装 Node.js 22 最新 LTS 版本（截止至 2026.03.01）
@@ -103,8 +105,6 @@ curl -sSL https://openclaw.ai/install.sh | bash
 
 3、常用快捷键：。。。
 
-
-
 # SealOS部署OpenClaw
 
 环境变量中修改模型供应商：
@@ -146,4 +146,3 @@ ffmpeg：语音/视频格式转换，可用于 QQBot 识别语音与视频
 ```sh
 sudo apt install ffmpeg
 ```
-

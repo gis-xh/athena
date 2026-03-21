@@ -24,7 +24,7 @@ RUN pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
 
 Docker Hub 提供很多镜像：https://hub.docker.com/search?q=Python
 
-![](../assets/images/deploy-3-003.webp)
+![](../assets/images/deploy-image-20230426144654613-012.webp)
 
 创建镜像
 

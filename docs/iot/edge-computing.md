@@ -97,15 +97,11 @@ MindIE+香橙派，边缘开发板部署DeepSeek系列蒸馏模型：https://www
 
 恩智浦cloudlab部署yolo模型：https://hexchip.com/archives/8jDjR3F
 
-### 2.4 Orange Pi Zero3
+### 2.4 Orange Pi
 
-官方资料：http://www.orangepi.cn/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-Pi-Zero-3.html
+官方网址：http://www.orangepi.cn/
 
 Docker镜像构建：https://github.com/wukongdaily/OrangePiShell
-
-![](../assets/images/deploy-5-005.webp)
-
-内网穿透cpolar：http://192.168.1.134:9200/
 
 ## 3 Qemu 虚拟机模拟方案
 

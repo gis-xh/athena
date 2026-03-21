@@ -1,6 +1,6 @@
 # Vue3 setup 语法糖下的 Element-Plus 使用
 
-## 1  i8n 国际化
+## 1 i8n 国际化
 
 官网：[国际化 | Element Plus](https://element-plus.gitee.io/zh-CN/guide/i18n.html)
 
@@ -9,14 +9,12 @@ Element Plus 组件 **默认** <font style="color:red;">使用英语</font>，�
 > main.js 中全局配置
 
 ```js
-import ElementPlus from 'element-plus'
-import zhCn from 'element-plus/es/locale/lang/zh-cn'
+import ElementPlus from "element-plus";
+import zhCn from "element-plus/es/locale/lang/zh-cn";
 app.use(ElementPlus, {
   locale: zhCn,
-})
+});
 ```
-
-
 
 ## 2 Table 表格
 
@@ -86,10 +84,6 @@ const cellStyle = ({ row, column, rowIndex, columnIndex }) => {
   }
 };
 ```
-
-
-
-
 
 ## 3 Pagination 分页器
 

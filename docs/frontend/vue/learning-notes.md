@@ -1,5 +1,3 @@
-  
-
 是否使用分号结尾，是否使用单引号，最后一段话是否以逗号结尾。
 
 ```
@@ -51,7 +49,6 @@ cnpm i husky@7.0.1 --save-dev
 npx husky install
 ```
 
-
 ## 安装 ElementPlus 库
 
 ### 1 安装
@@ -75,6 +72,7 @@ cnpm install -D unplugin-vue-components unplugin-auto-import
 ```
 
 5.在package.json中新增指令
+
 ```
 "prepare": "husky install"
 ```
@@ -97,7 +95,6 @@ npx husky add .husky/commit-msg
 npx --no-install commitlint --edit
 ```
 
-
 ## 安装 svg-sprite-loader
 
 > cnpm 安装
@@ -111,7 +108,6 @@ cnpm i --save-dev svg-sprite-loader@6.0.9
 ```
 yarn add --save-dev svg-sprite-loader@6.0.9
 ```
-
 
 ```
 yarn add vue-i18n@next

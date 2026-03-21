@@ -44,7 +44,7 @@ su root
 exit
 ```
 
-![](../../assets/images/deploy-4-004.webp)
+![](../../assets/images/linux-image-20220819102809214-015.webp)
 
 ### 1.5 APT 软件管理
 

@@ -1,7 +1,5 @@
 # 吴恩达大模型系列课程学习
 
-
-
 ## 参考
 
 - Deeplearning.AI 原版课程：https://learn.deeplearning.ai/
@@ -17,5 +15,3 @@
 3、《LangChain for LLM Application Development》教程结合经典大模型开源框架 LangChain，介绍了如何基于 LangChain 框架开发具备实用功能、能力全面的应用程序
 
 4、《LangChain Chat With Your Data》教程则在第 3 节的基础上进一步介绍了如何使用 LangChain 架构结合个人私有数据开发个性化大模型应用。
-
-

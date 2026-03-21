@@ -16,7 +16,7 @@
 
 1、首先，安装 VS2022 社区版，安装 **"使用 C++ 的桌面开发"** 模块并在右侧选择所有 C++ 相关的包。
 
-![](../assets/images/deploy-5-005.webp)
+![](../assets/images/llm-image-20230809095031355-005.webp)
 
 2、安装好 VS 还不够，还需要讲必要的工具加入环境变量，这样在编译一些使用 C/C++ 编写的包才正常编译。（有不少 Python 是使用 C/C++ 编写的，在安装时需要编译，这样做会省去后续很多麻烦）
 
@@ -33,7 +33,7 @@ D:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\
 
 2、然后，新建系统变量 `PGROOT`，将 PostgreSQL 的安装地址添加为变量值
 
-![](../assets/images/deploy-7-007.webp)
+![](../assets/images/llm-image-20230809100704947-006.webp)
 
 ### 1.3 下载并尝试编译 pgvector 插件
 
@@ -51,7 +51,7 @@ git clone --branch v0.4.4 https://github.com/pgvector/pgvector.git
 nmake /F Makefile.win
 ```
 
-![](../assets/images/deploy-1-001.webp)
+![](../assets/images/llm-image-20230809103335181-007.webp)
 
 ### 1.4 使用 VS 编译并安装插件
 
@@ -59,7 +59,7 @@ nmake /F Makefile.win
 
 1、首先，以管理员身份运行 `Developer Command Prompt`
 
-![](../assets/images/deploy-7-007.webp)
+![](../assets/images/llm-image-20230807205104467-004.webp)
 
 2、切换到 `vcvarsall.bat` 所在的目录
 
@@ -85,7 +85,7 @@ cd E:\github\pgvector
 nmake /F Makefile.win
 ```
 
-![](../assets/images/deploy-2-002.webp)
+![](../assets/images/llm-image-20230809104346632-008.webp)
 
 6、编译完成后，不要关闭命令行窗口，还需要将编译好的结果安装到 PostgreSQL 中
 
@@ -107,4 +107,4 @@ nmake /F Makefile.win install
 CREATE EXTENSION vector;
 ```
 
-![](../assets/images/deploy-1-001.webp)
+![](../assets/images/llm-image-20230809105904791-010.webp)

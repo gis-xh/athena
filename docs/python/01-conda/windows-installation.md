@@ -18,13 +18,13 @@
 
 ![](../../assets/images/py-2-060.webp)
 
-![](../../assets/images/dl-3-078.webp)
+![](../../assets/images/py-3-061.webp)
 
 ### 3.2 安装成功
 
-![](../../assets/images/dl-4-079.webp)
+![](../../assets/images/py-4-062.webp)
 
-![](../../assets/images/dl-5-080.webp)
+![](../../assets/images/py-5-063.webp)
 
 ### 3.3 添加环境变量
 
@@ -32,7 +32,7 @@
 
 - 右击此电脑 → 属性 → 高级系统设置 → 环境变量
 
-![](../../assets/images/dl-6-081.webp)
+![](../../assets/images/py-6-064.webp)
 
 - 添加环境变量 Path
 
@@ -44,7 +44,7 @@ D:\program\Miniconda3\Scripts
 D:\program\Miniconda3\Library\bin
 ```
 
-![](../../assets/images/dl-7-082.webp)
+![](../../assets/images/py-7-065.webp)
 
 &emsp;&emsp;到这里才算是正式完成 miniconda 的安装，即软件安装 + 环境配置，下面我们需要对 conda 进行初始化。
 
@@ -56,7 +56,7 @@ D:\program\Miniconda3\Library\bin
 conda init powershell
 ```
 
-![](../../assets/images/dl-8-083.webp)
+![](../../assets/images/py-8-066.webp)
 
 > 初始化 cmd
 
@@ -64,7 +64,7 @@ conda init powershell
 conda init cmd.exe
 ```
 
-![](../../assets/images/dl-9-084.webp)
+![](../../assets/images/py-9-067.webp)
 
 ## 5 更换国内镜像源
 
@@ -76,7 +76,7 @@ conda init cmd.exe
 conda config --set show_channel_urls yes
 ```
 
-![](../../assets/images/fe-10-026.webp)
+![](../../assets/images/py-10-053.webp)
 
 ### 5.2 生成下载源文件的配置文件
 
@@ -84,7 +84,7 @@ conda config --set show_channel_urls yes
 
 &emsp;&emsp;在 C 盘用户目录下找到文件后，右击使用记事本打开。
 
-![](../../assets/images/fe-11-027.webp)
+![](../../assets/images/py-11-054.webp)
 
 > 修改后内容
 
@@ -118,7 +118,7 @@ custom_channels:
 conda clean -i
 ```
 
-> 修改虚拟环境默认安装位置
+> 修改虚拟环境默认安装位置用户权限
 
 &emsp;&emsp;找到 miniconda 目录下的 envs 文件夹，右击打开属性。
 
@@ -132,7 +132,7 @@ conda clean -i
 conda info
 ```
 
-![](../../assets/images/dl-3-078.webp)
+![](../../assets/images/py-13-056.webp)
 
 ### 6.2 创建并查看虚拟环境
 
@@ -150,7 +150,7 @@ conda create -n CVEOdemo02 python=3.9
 conda info -e
 ```
 
-![](../../assets/images/dl-4-079.webp)
+![](../../assets/images/py-14-057.webp)
 
 ### 6.3 移除虚拟环境
 
@@ -170,7 +170,7 @@ conda remove -n CVEOdemo02 --all
 conda activate CVEOdemo02
 ```
 
-![](../../assets/images/dl-5-080.webp)
+![](../../assets/images/py-15-058.webp)
 
 > 关闭虚拟环境
 
@@ -180,7 +180,7 @@ conda activate CVEOdemo02
 conda deactivate CVEOdemo02
 ```
 
-![](../../assets/images/dl-6-081.webp)
+![](../../assets/images/py-16-059.webp)
 
 ## 参考文章
 

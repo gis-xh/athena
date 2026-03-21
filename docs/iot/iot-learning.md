@@ -2,7 +2,7 @@
 
 ## 一、基本概念
 
-![](../assets/images/deploy-3-003.webp)
+![](../assets/images/iot-image-20250318224521050-001.webp)
 
 数据库结构：IoTDB 采用树形结构定义数据模式
 
@@ -24,7 +24,7 @@ Tablet： 是一个设备若干行数据块，每一行的列都相同
 
 示例：ln 电力集团、wf01 风电场的实体 wt01 有名为 status 的物理量，其时间序列表示为：`root.ln.wf01.wt01.status`
 
-![](../assets/images/deploy-2-002.webp)
+![](../assets/images/iot-image-20250318224521050-002.webp)
 
 ## 二、官网教程
 

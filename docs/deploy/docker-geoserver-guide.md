@@ -6,9 +6,9 @@
 
 - 下载地址：https://www.docker.com/products/docker-desktop/
 
-Note：普通Windows机器下载AMD64版本即可，不用再装docker compose，新版Docker已经默认自带
+Note：普通Windows机器下载AMD64版本即可，不用再装docker compose，新版Docker已经默认自带。
 
-![](../assets/images/deploy-3-003.webp)
+![fe-image-20250904155529063-010](../assets/images/fe-image-20250904155529063-010.webp)
 
 ### 1.2 拉取docker镜像
 
@@ -40,9 +40,9 @@ Docker Hub搜索Nginx镜像结果：
 docker pull docker.osgeo.org/geoserver:2.27.x
 ```
 
-OSGEO Docker搜索Geoserver镜像结果：
+OSGEO Docker搜索Geoserver镜像结果：https://docker.osgeo.org/#browse/search/docker=attributes.docker.imageName%3Dgeoserver
 
-![](../assets/images/deploy-7-007.webp)
+![fe-image-20250904160730737-012](../assets/images/fe-image-20250904160730737-012.webp)
 
 ### 1.3 构建项目Docker容器
 
@@ -50,7 +50,7 @@ OSGEO Docker搜索Geoserver镜像结果：
 
 Note：在Windows上每次使用Docker命令时，必须确保Docker Desktop已经启动。
 
-![](../assets/images/deploy-3-003.webp)
+![fe-image-20250904162228623-014](../assets/images/fe-image-20250904162228623-014.webp)
 
 #### 1.3.2 命令行打开项目根目录
 
@@ -66,7 +66,7 @@ docker compose up -d --build
 
 Note：请注意，此时一定要保证当前目录下有`docker-compose.yml`文件
 
-![](../assets/images/deploy-7-007.webp)
+![fe-image-20250904162631797-015](../assets/images/fe-image-20250904162631797-015.webp)
 
 ## 2 Geoserver配置
 
@@ -83,7 +83,7 @@ Step3：访问部署好的Geoserver
 - 网址：`http://localhost:18080/geoserver`
 - 账户：admin，密码：geoserver
 
-![](../assets/images/deploy-7-007.webp)
+![fe-image-20250904163225967-017](../assets/images/fe-image-20250904163225967-017.webp)
 
 ### 2.2 首次发布数据
 
@@ -103,29 +103,29 @@ Step3：访问部署好的Geoserver
 
 Note：由于使用的是docker发布的geoserver，所以浏览文件时仅能看到容器目录，看不到外部Windows目录，需要提前将文件放置在映射目录`test_data/`内部。
 
-![](../assets/images/deploy-4-004.webp)
+![fe-image-20250904165223204-019](../assets/images/fe-image-20250904165223204-019.webp)
 
 #### 2.2.3 新建图层
 
 在完成新建存储仓库后，会直接来到新建图层界面，点击发布后，直接保存即可，后续再设置图层的具体显示样式。
 
-![](../assets/images/deploy-1-001.webp)
+![fe-image-20250904165537061-020](../assets/images/fe-image-20250904165537061-020.webp)
 
 #### 2.2.4 新建样式
 
 Note：由于样式设置本质是将其转换为xml内容，所以，这里的样式文件可以访问的容器外部的Windows环境。
 
-![](../assets/images/deploy-3-003.webp)
+![fe-image-20250904170434103-021](../assets/images/fe-image-20250904170434103-021.webp)
 
 #### 2.2.5 更新图层样式
 
 由于是首次发布数据，在新建样式后，需要手动更新图层的样式，后续再发布数据时，可以直接在新建图层时设置图层样式。
 
-![](../assets/images/deploy-5-005.webp)
+![fe-image-20250904171015645-022](../assets/images/fe-image-20250904171015645-022.webp)
 
 #### 2.2.6 图层预览
 
-![](../assets/images/deploy-1-001.webp)
+![fe-image-20250904171153291-023](../assets/images/fe-image-20250904171153291-023.webp)
 
 ### 2.3 再次发布其他数据
 

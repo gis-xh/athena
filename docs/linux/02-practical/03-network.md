@@ -68,7 +68,7 @@ sudo netplan apply
 
 5. 虚拟机网络配置中修改
 
-![](../../assets/images/deploy-5-005.webp)
+![](../../assets/images/linux-image-20220819101716585-010.webp)
 
 ![](../../assets/images/linux-image-20220819101726709-011.webp)
 
@@ -82,4 +82,4 @@ sudo reboot
 
 1. 按需填写 IP 即可
 
-![](../../assets/images/deploy-5-005.webp)
+![](../../assets/images/linux-image-20220819101821605-012.webp)

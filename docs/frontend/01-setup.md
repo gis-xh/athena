@@ -4,7 +4,7 @@
 
 &emsp;&emsp;[Node.js 官网](https://nodejs.org/en/download)
 
-![](../assets/images/deploy-4-004.webp)
+![](../assets/images/fe-image-20250201204211294-002.webp)
 
 &emsp;&emsp;安装过程很简单，中途注意修改安装位置到其他盘，其余下一步即可。
 
@@ -14,7 +14,7 @@
 node -v
 ```
 
-![](../assets/images/deploy-3-003.webp)
+![](../assets/images/fe-image-20250201204413843-003.webp)
 
 ## 2 安装包管理器
 
@@ -28,13 +28,13 @@ node -v
 npm root -g
 ```
 
-![](../assets/images/dl-3-078.webp)
+![](../assets/images/fe-image-20250201205124832-005.webp)
 
 > 在 nodejs 文件夹中创建文件夹
 
 &emsp;&emsp;创建 `node_global`，`node_cache`，`yarn` 三个新文件夹。
 
-![](../assets/images/deploy-3-003.webp)
+![](../assets/images/fe-image-20250201204800673-004.webp)
 
 #### 2.2.2 修改 npm 全局安装包路径
 
@@ -56,11 +56,11 @@ npm config set cache "D:\program\nodejs\node_cache"
 
 > 环境变量 → 系统变量 → path → 新建
 
-![](../assets/images/dl-5-080.webp)
+![](../assets/images/fe-5-030.webp)
 
 > 环境变量 → 系统变量 → 新建 → `NODE_PATH`
 
-![](../assets/images/dl-6-081.webp)
+![](../assets/images/fe-6-031.webp)
 
 > 再次查看默认安装路径
 
@@ -68,7 +68,7 @@ npm config set cache "D:\program\nodejs\node_cache"
 npm root -g
 ```
 
-![](../assets/images/dl-7-082.webp)
+![](../assets/images/fe-7-032.webp)
 
 ### 2.2 安装并配置 yarn
 
@@ -86,7 +86,7 @@ npm i -g yarn
 yarn -v
 ```
 
-![](../assets/images/deploy-2-002.webp)
+![](../assets/images/fe-image-20250201205124832-005.webp)
 
 #### 2.2.2 查看 yarn 的默认配置
 
@@ -102,7 +102,7 @@ yarn global dir
 yarn cache dir
 ```
 
-![](../assets/images/dl-9-084.webp)
+![](../assets/images/fe-9-033.webp)
 
 #### 2.2.3 创建相应文件夹
 
@@ -137,11 +137,11 @@ yarn cache dir
 yarn config set registry https://registry.npmmirror.com
 ```
 
-![](../assets/images/deploy-7-007.webp)
+![](../assets/images/fe-image-20250201205358017-006.webp)
 
 NOTE：此处是淘宝镜像源的最新地址：[npmmirror 中国镜像站](https://npmmirror.com/)
 
-![](../assets/images/deploy-3-003.webp)
+![](../assets/images/fe-image-20250201205440923-007.webp)
 
 ### 2.3 安装 cnpm
 
@@ -189,7 +189,7 @@ or
 vue --version
 ```
 
-![](../assets/images/dl-4-079.webp)
+![](../assets/images/fe-14-028.webp)
 
 ## 5 Vite改造
 

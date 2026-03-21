@@ -15,7 +15,7 @@
 2. 文件上传/下载 Xftp7
 3. XShell 官网：https://www.xshell.com/zh/free-for-home-school/
 
-![](../../assets/images/deploy-1-001.webp)
+![](../../assets/images/linux-image-20220819112851971-013.webp)
 
 ### 1.3 远程连接
 

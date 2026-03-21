@@ -50,7 +50,7 @@ python manage.py makemigrations mallManagement
 
 - 当前项目目录
 
-![](../../assets/images/deploy-1-001.webp)
+![](../../assets/images/py-image-20220901123640121-049.webp)
 
 > 应用迁移脚本迁移数据
 
@@ -62,7 +62,7 @@ python manage.py migrate
 
 - 数据库迁移的生成和应用
 
-![](../../assets/images/deploy-1-001.webp)
+![](../../assets/images/py-image-20220825195643156-030.webp)
 
 **【特别注意】**：每次修改 models.py 文件都要进行以上操作，使得数据库同步修改结果。
 

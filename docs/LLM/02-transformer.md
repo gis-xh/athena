@@ -20,52 +20,52 @@
 
 ### 1.2 以 Transformer 机器翻译为例
 
-**流程 1：**输入待翻译的文本 → Transformer → 翻译后的文本
+**流程 1：** 输入待翻译的文本 → Transformer → 翻译后的文本
 
-![](../assets/images/dl-8-083.webp)
+![](../assets/images/llm-1689579544018-043.webp)
 
-<center>图 1-2 </center>
+<center>图 1-2 机器翻译流程</center>
 
-**流程 2：**编码器和解码器
+**流程 2：** 编码器和解码器
 
+- Transformer 模型：编码器 + 解码器
 - 编码器 Encoder：把输入序列变成一个词向量（Self-Attetion）
 - 解码器 Decoder：得到编码器输出的词向量后，生成翻译的结果
 
 ![](../assets/images/llm-1689579946382-044.webp)
 
-<center>图 1-3 </center>
+<center>图 1-3 编码器与解码器</center>
 
-**流程 3：**Nx
+**流程 3：** Nx 编码器层
 
 Nx：编码器里面又有 N 个小编码器（默认 N=6），层数越大显存消耗越大
 
 通过 6 个编码器，对词向量一步又一步的强化（增强）
 
-![](../assets/images/dl-6-081.webp)
+![](../assets/images/llm-1689661703416-045.webp)
 
-<center>图 1-4 </center>
+<center>图 1-4 编码器与解码器层结构</center>
 
-**流程 4：**FFN (Feed Forward Networks)
+**流程 4：** FFN (Feed Forward Networks)
 
 双重线性变换：$w_2*(w_1*x_1+b_1)+b_2$
 
-![](../assets/images/dl-3-078.webp)
+![](../assets/images/llm-1689661936203-046.webp)
 
-<center>图 1-5 </center>
+<center>图 1-5 FFN 后馈神经网络结构</center>
 
 ## 2 编码器 Encoder
 
 ### 2.1 基本概念
 
-编码器包括两个子层：
+编码器包括两个子层, 每一个子层的传输过程中都会有一个（残差网络+归一化）
 
-- Self-Attention
-- Feed Forward
-- 每一个子层的传输过程中都会有一个（残差网络+归一化）
+- Self-Attention: 自注意力机制，得到 $z_1$（是 thinking 的新的表征）
+- Feed Forward: 前馈神经网络，得到 $r_1$（是 thinking 的新的表征）
 
 ### 2.2 详细结构
 
-![](../assets/images/dl-6-081.webp)
+![](../assets/images/llm-1689662551836-047.webp)
 
 <center>图 2-1 编码器详细结构图</center>
 
@@ -108,13 +108,13 @@ Thinking & Machines
 
 解码器会接收编码器生成的词向量，然后通过这个词向量去生成翻译的结果。
 
-比编码器多了一层
+比编码器多了一层，由三部分组成：
 
 - Masked Self-Attention：做掩码
-- Feed Forward
 - Encoder-Decoder Attention：做交叉注意力机制
+- Feed Forward：前馈神经网络，得到 $r_2$（是 thinking 的新的表征）
 
-![](../assets/images/dl-6-081.webp)
+![](../assets/images/llm-1689661936203-046.webp)
 
 <center>图 3-1 解码器详细结构图</center>
 
@@ -193,7 +193,7 @@ Thinking & Machines
 
 代码参考：https://www.cnblogs.com/nickchen121/p/16518613.html
 
-相关包
+相关 Python 库
 
 - huggingface
 

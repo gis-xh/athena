@@ -11,6 +11,5 @@ comments: false
 - [Web3D](03-web3d.md)
 - [Cesium](04-cesium.md)
 - [GeoServer](05-geoserver.md)
-- [前端初始化](init.md)
 - [Vue 前端实现](vue-implementation.md)
 - [React 前端实现](react-implementation.md)

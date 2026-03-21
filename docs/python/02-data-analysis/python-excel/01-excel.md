@@ -3,8 +3,6 @@
 1. [CSDN - 【办公自动化】全网最全 python 中 openpyxl 库用法](https://blog.csdn.net/m0_70214054/article/details/125570707)
 2. [CSDN - Python 高效办公 1.1 第三方库 openpyxl 的安装](https://blog.csdn.net/weixin_63986098/article/details/124001914)
 
-
-
 ## 2 安装相关库
 
 ### 2.1 `openpyxl` 库
@@ -23,8 +21,6 @@
 pip install openpyxl
 ```
 
-
-
 ### 2.2 `tqdm` 库
 
 - Tqdm 是一个进度条工具库。
@@ -34,8 +30,6 @@ pip install openpyxl
 ```sh
 pip install tqdm
 ```
-
-
 
 ## 3 使用 openpyxl 操作 Excel 表
 
@@ -54,4 +48,3 @@ for i in range(1,100):
 savename = r'E:\Download\新闻与文化传播学院2022年硕士研究生入学考试拟录取结果公示(批量删除).xlsx'
 wb.save(savename)
 ```
-

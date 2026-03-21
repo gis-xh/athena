@@ -12,7 +12,7 @@
 
 先启动MySQL
 
-![](../assets/images/deploy-7-007.webp)
+![](../assets/images/deploy-image-20250512210506197-031.webp)
 
 ### 1.3 配置数据库
 
@@ -20,13 +20,13 @@
 
 2、再创建一个与后端代码中配置一致的数据库
 
-![](../assets/images/deploy-6-006.webp)
+![](../assets/images/deploy-image-20250512203927683-028.webp)
 
 3、导入数据库，需要等待一会，成功会弹窗提示
 
-![](../assets/images/deploy-3-003.webp)
+![](../assets/images/deploy-image-20250512203306276-027.webp)
 
-![](../assets/images/deploy-7-007.webp)
+![](../assets/images/deploy-image-20250512205624667-030.webp)
 
 ## 2 基于Nginx的前端部署
 
@@ -44,12 +44,10 @@
 
 1、在开发电脑上打包好前端项目，将其拷贝到指定目录`nginx-1.27.5\html\`中。
 
-2、
+2、修改Nginx配置文件`nginx-1.27.5\conf\nginx.conf`，将端口号修改为与后端端口号一致
 
 ### 2.3 访问页面
 
 此时输入`http://localhost:8080`可以直接访问网站
 
-![](../assets/images/deploy-6-006.webp)
-
-###
+![](../assets/images/deploy-image-20250512204244606-029.webp)

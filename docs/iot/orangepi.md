@@ -7,6 +7,10 @@
 - 默认用户：orangepi
 - 默认密码：orangepi
 
+官方资料：http://www.orangepi.cn/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-Pi-Zero-3.html
+
+Docker镜像构建：https://github.com/wukongdaily/OrangePiShell
+
 ## 二、基本配置
 
 ### 1 查看香橙派 IP
@@ -27,7 +31,7 @@ ifconfig
 ssh orangepi@192.168.XXX.XXX
 ```
 
-![](../assets/images/deploy-7-007.webp)
+![](../assets/images/iot-image-20260318224521017-004.webp)
 
 ### 3 检查硬件时钟时间
 
@@ -73,13 +77,13 @@ docker 离线包：https://wwl.lanzouq.com/s/zero3 密码:3c60
 
 [如何低成本搭建一个docker 轻服务器 随时随地访问小雅影音库 OrangePi Zero3 一键快速部署指南 ｜免费内网穿透\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1ND421T7nB/)
 
-- 首次执行需要下载脚本并赋予脚本权限
+- 首次执行需要下载脚本并赋予脚本权限，安装完成后将进入配置界面。
 
 ```sh
 wget -qO pi.sh https://cafe.cpolar.cn/wkdaily/zero3/raw/branch/main/zero3/pi.sh && chmod +x pi.sh && ./pi.sh
 ```
 
-![](../assets/images/deploy-4-004.webp)
+![](../assets/images/iot-image-20260318233458254-005.webp)
 
 - 后续二次执行时，直接启动脚本即可
 
@@ -95,7 +99,7 @@ wget -qO pi.sh https://cafe.cpolar.cn/wkdaily/zero3/raw/branch/main/zero3/pi.sh 
 1pctl update password
 ```
 
-![](../assets/images/deploy-2-002.webp)
+![](../assets/images/iot-image-20260319001818762-006.webp)
 
 v1 升级 v2.0.0
 
@@ -121,7 +125,7 @@ mv 1panel-migrator-linux-arm64 /usr/local/bin/1panel-migrator
 1panel-migrator upgrade website
 ```
 
-![](../assets/images/deploy-1-001.webp)
+![](../assets/images/iot-image-20260319014838551-007.webp)
 
 ### 3 使用内网穿透 cpolar
 

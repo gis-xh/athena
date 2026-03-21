@@ -2,8 +2,6 @@
 
 以下内容为 [B站 - 韩顺平 2021 Linux 教程](https://www.bilibili.com/video/BV1Sv411r7vd) 学习笔记。
 
-
-
 ## 一、目录结构
 
 1. 采用级层式的树状目录结构

@@ -38,7 +38,7 @@ conda deactivate mydjango
 pip list
 ```
 
-![](../../assets/images/deploy-3-003.webp)
+![](../../assets/images/py-image-20220824121329293-015.webp)
 
 &emsp;&emsp;这里我们可以看到当前虚拟环境下所含的包，并没有 Django 且出现需要更新 pip 版本的警告。
 
@@ -62,7 +62,7 @@ pip install --upgrade pip
 python -m pip install --upgrade pip
 ```
 
-![](../../assets/images/deploy-7-007.webp)
+![](../../assets/images/py-image-20220824121819007-017.webp)
 
 ### 3.3 再次检查当前包的版本
 
@@ -76,7 +76,7 @@ pip list
 
 ### 3.4 虚拟环境的目录结构
 
-> Miniconda3 下名为 mydjango 的虚拟环境
+> Miniconda3 下名为 mydjango 的虚拟环境目录结构
 
 ```
 D:\Miniconda3\envs\mydjango\

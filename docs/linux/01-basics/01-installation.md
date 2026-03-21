@@ -33,7 +33,7 @@
 
 ### 4.1 选择操作系统与版本
 
-![](../../assets/images/deploy-2-002.webp)
+![](../../assets/images/linux-image-20220819092526602-001.webp)
 
 ### 4.2 网络适配器
 
@@ -48,7 +48,7 @@
 1. 开发工具：默认安装 GCC，JDK，MySQL
 2. 配置需要等待时间， ==<font style="color:red;">**不要乱点**</font>==，否则容易卡死
 
-![](../../assets/images/deploy-3-003.webp)
+![](../../assets/images/linux-image-20220819092755573-003.webp)
 
 ### 5.2 磁盘分区（全盘最大20G）
 
@@ -62,8 +62,8 @@
 
 1. 若不显示IP，则需将以下两个相关服务启动
 
-![](../../assets/images/deploy-6-006.webp)
+![](../../assets/images/linux-image-20220819092946966-006.webp)
 
 2. 配置完成
 
-![](../../assets/images/deploy-2-002.webp)
+![](../../assets/images/linux-image-20220819092959912-007.webp)

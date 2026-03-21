@@ -153,7 +153,7 @@ const typeRadios = ref([
 ]);
 ```
 
-![](../../assets/images/deploy-2-002.webp)
+![](../../assets/images/fe-image-20220810145840592-025.webp)
 
 ## 4 `mount()` 函数
 

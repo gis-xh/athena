@@ -84,7 +84,7 @@ z = np.array([[1, 2], (3, 4), [5, 6]])
 print(z)
 ```
 
-![](../../../../assets/images/deploy-5-005.webp)
+![](../../../../assets/images/py-image-20220821164445935-008.webp)
 
 ### 2.2 【常用方法】使用 NumPy 的函数进行创建
 
@@ -179,7 +179,7 @@ print("一维数组切片:", a[1: 4: 2])
 
 > jupyter 内容
 
-![](../../../../assets/images/deploy-4-004.webp)
+![](../../../../assets/images/py-image-20220822184510604-009.webp)
 
 ### 4.3 对于多维数组
 
@@ -206,7 +206,7 @@ print(a[:, :, ::2])
 
 > jupyter 内容
 
-![](../../../../assets/images/deploy-2-002.webp)
+![](../../../../assets/images/py-image-20220823113725452-010.webp)
 
 ## 5 ndarray 数组的运算
 

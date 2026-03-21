@@ -1,26 +1,4 @@
-# ChatGLM+LangChain
-
-## ChatGLM-6B
-
-### 基本介绍
-
-清华大学开源的语言模型，基于 GLM 架构
-
-- ChatGLM-6B：https://github.com/THUDM/ChatGLM-6B
-- ChatGLM2-6B：https://github.com/THUDM/ChatGLM2-6B
-
-### 具备能力
-
-1、自我认知；2、提纲写作；3、文案写作；4、信息抽取
-
-### 实际应用
-
-通过**通识知识**进行训练，在针对**垂直领域知识**、**私有数据问答**的应用，需要对模型进行**微调**或**提示词工程**，来提升效果。
-
-|            | 概念                                             | 适用场景                                                       |
-| :--------: | ------------------------------------------------ | -------------------------------------------------------------- |
-|    微调    | 在原有模型的基础上，在少量数据上进一步训练       | 任务和业务领域明确，有足够的标记数据的前提下，通常使用模型微调 |
-| 提示词工程 | 涉及自然语言提示或指示，指导语言模型执行特定任务 | 适合高精度和明确输出的任务，比如知识抽取                       |
+# Langchain-ChatGLM 部署
 
 ## LangChain
 
@@ -102,8 +80,6 @@
 ### 2 文档加工
 
 ### 3 借助不同模型
-
-# Langchain-ChatGLM 部署
 
 ## 模型下载
 
@@ -237,7 +213,7 @@ Compiling gcc -O3 -fPIC -std=c99 C:\Users\Evolto\.cache\huggingface\modules\tran
 
 需要注意的是，Win11 系统中可能会将外来安装包删除或者锁定。如果在安装时，遇到双击无响应时，需要手动解除锁定才能正常进行安装。
 
-![](../assets/images/deploy-6-006.webp)
+![](../assets/images/llm-image-20230704185344636-003.webp)
 
 3、当需要使用 CPU 运行项目时，可能会出现如下错误：
 
@@ -269,7 +245,7 @@ ImportError: Using `low_cpu_mem_usage=True` or a `device_map` requires Accelerat
 pip install accelerate
 ```
 
-4、
+4、其他可能出现的错误
 
 解决方案：[RuntimeError: Only Tensors of floating point and complex dtype can require gradients · Issue #483 · imClumsyPanda/langchain-ChatGLM (github.com)](https://github.com/imClumsyPanda/langchain-ChatGLM/issues/483)
 
@@ -281,7 +257,7 @@ conda env export -n llm01 > langchain-ChatGLM.yaml
 
 ### 3 启动项目
 
-#### 3.1
+#### 3.1 配置模型加载参数
 
 `models/loader/loader.py` 中添加
 
@@ -329,6 +305,8 @@ LLM_MODEL = "chatglm2-6b-int4"
 
 在首次启动时，如果本地没有此模型，初次启动后会默认下载到 `$HOME/.cache/huggingface/` 目录下。
 
+![alt text](../assets/images/llm-image-20230704113712442-001.webp)
+
 4、由于硬件限制，把 LLM 运行设备设置为 CPU
 
 ```python
@@ -364,7 +342,7 @@ LLM_HISTORY_LEN = 0
 python webui.py
 ```
 
-![](../assets/images/deploy-2-002.webp)
+![](../assets/images/llm-image-20230815213723576-032.webp)
 
 ## langchain-ChatGLM-webui
 

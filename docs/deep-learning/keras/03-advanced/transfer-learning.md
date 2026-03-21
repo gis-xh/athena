@@ -1,7 +1,5 @@
 # 迁移学习
 
-
-
 ## 环境配置
 
 > 创建虚拟环境
@@ -40,10 +38,6 @@ conda install -c conda-forge jupyterlab matplotlib Pillow -y
 conda remove -n krs01 --all
 ```
 
-
-
-
-
 ## 迁移学习介绍
 
 在迁移学习中需要有些不被使用的层被冻结
@@ -51,8 +45,6 @@ conda remove -n krs01 --all
 使用已有模型帮助完成任务，删掉、冻结某些层、添加自定义层实现新的模型
 
 参考：https://keras.io/guides/transfer_learning/
-
-
 
 ## 论文分享
 

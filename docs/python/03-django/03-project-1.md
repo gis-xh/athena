@@ -33,7 +33,7 @@ django-admin startproject myDjango32
 cd myDjango32
 ```
 
-![](../../assets/images/deploy-4-004.webp)
+![](../../assets/images/py-image-20220830104815454-038.webp)
 
 ### 1.3 项目默认文件的介绍
 
@@ -43,7 +43,7 @@ cd myDjango32
 tree /f
 ```
 
-![](../../assets/images/deploy-6-006.webp)
+![](../../assets/images/py-image-20220830104941506-039.webp)
 
 > 当前项目目录结构说明
 
@@ -130,7 +130,7 @@ python manage.py runserver
 
 - 项目页面：在浏览器输入 http://127.0.0.1:8000/ 即可访问当前本地运行的项目。
 
-![](../../assets/images/deploy-1-001.webp)
+![](../../assets/images/py-image-20220830110752061-041.webp)
 
 #### 2.3.2 数据迁移
 
@@ -156,7 +156,7 @@ python manage.py runserver
 
 &emsp;&emsp;此时我们可以看到，错误信息已经消失。每次对数据模型 `model` 进行修改后，都要进行数据迁移操作，这个我们后面再详细讲解。
 
-![](../../assets/images/deploy-5-005.webp)
+![](../../assets/images/py-image-20220830111322065-042.webp)
 
 #### 2.3.3 `runserver` 命令解析
 
@@ -182,13 +182,13 @@ python manage.py runserver
 
 &emsp;&emsp;在浏览器中打开地址 http://127.0.0.1:8000/admin/ 后，输入密码可进入管理页面。
 
-![](../../assets/images/deploy-6-006.webp)
+![](../../assets/images/py-image-20220825203509273-033.webp)
 
 ## 四、项目依赖包管理
 
 ### 4.1 创建项目虚拟环境
 
-&emsp;&emsp;虽然我们使用了 conda 来管理 python 虚拟环境，但是对于不同项目，其所在的项目依赖各不相同，所以最好是对每个项目的依赖环境也进行隔离操作。
+&emsp;&emsp;虽然我们使用了 conda 来管理 python 虚拟环境，但是对于不同项目也可以使用 `venv` 来创建项目虚拟环境，实现项目依赖环境的隔离操作。
 
 > python venv 创建项目虚拟环境
 
@@ -198,7 +198,7 @@ python -m venv env
 
 &emsp;&emsp;使用 `python -m venv` 命令创建名为 `env` 的虚拟环境，此时项目目录如下图所示。
 
-![](../../assets/images/deploy-6-006.webp)
+![](../../assets/images/py-image-20220831233129456-045.webp)
 
 > 激活虚拟环境
 
@@ -238,11 +238,11 @@ pipreqs ./ --encoding=utf-8 --force
 - `--encoding=utf-8` ：使用 `utf-8` 编码。
 - `--force` ：若已存在 `requirements.txt` 文件，将强行覆盖原文件。
 
-![](../../assets/images/deploy-6-006.webp)
+![](../../assets/images/py-image-20220831233552446-046.webp)
 
 > 生成后的项目目录
 
-![](../../assets/images/deploy-6-006.webp)
+![](../../assets/images/py-image-20220831233624906-047.webp)
 
 #### 4.2.3 安装项目依赖
 
@@ -470,8 +470,6 @@ python manage.py runserver
 &emsp;&emsp;在浏览器中打开地址 http://127.0.0.1:8000/ 后即可进入 DRF 页面。
 
 ![](../../assets/images/py-image-20220831113346248-043.webp)
-
-### 2
 
 上一节：[02 Django 官网示例](./02-tutorial.md)
 

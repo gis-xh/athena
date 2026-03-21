@@ -16,11 +16,11 @@
 django-admin startproject mysite
 ```
 
-![](../../assets/images/deploy-2-002.webp)
+![](../../assets/images/py-image-20220824142934672-021.webp)
 
 #### 1.1.2 目录结构展示
 
-![](../../assets/images/deploy-3-003.webp)
+![](../../assets/images/py-image-20220824143330703-022.webp)
 
 【注：官网原文】最外层的 `mysite/` 根目录只是你项目的容器， 根目录名称对 Django 没有影响，你可以将它重命名为任何你喜欢的名称。
 
@@ -38,7 +38,7 @@ cd mysite
 python manage.py runserver
 ```
 
-![](../../assets/images/deploy-3-003.webp)
+![](../../assets/images/py-image-20220830110453169-040.webp)
 
 【注：官网原文】忽略有关未应用最新数据库迁移的警告，稍后我们处理数据库，另外，`ctrl+C` 可以停止项目运行。
 
@@ -52,7 +52,7 @@ python manage.py startapp polls
 
 > polls 应用目录结构
 
-![](../../assets/images/deploy-2-002.webp)
+![](../../assets/images/py-image-20220824150610802-024.webp)
 
 ### 1.3 编写应用视图
 
@@ -93,13 +93,13 @@ python manage.py runserver
 
 - 若访问地址：`http://127.0.0.1:8000/` 则会因地址错误，出现以下页面，此界面只会在开发模式中 Debug 为 True 时出现。
 
-![](../../assets/images/deploy-4-004.webp)
+![](../../assets/images/py-image-20220825102233103-027.webp)
 
 - 若访问正确地址：`http://127.0.0.1:8000/polls/` 则会显示如下界面。
 
 ![](../../assets/images/py-image-20220825102010050-025.webp)
 
-【注】：此时由于为进行迁移操作，所以在运行时还是会报错，接下来我们会对此进行处理。
+【注】：此时由于未进行数据库迁移操作，所以在运行时还是会报错，接下来我们会对此进行处理。
 
 ![](../../assets/images/deploy-3-003.webp)
 
@@ -117,7 +117,7 @@ python manage.py runserver
 python manage.py migrate
 ```
 
-![](../../assets/images/deploy-5-005.webp)
+![](../../assets/images/py-image-20220825195643156-030.webp)
 
 #### 2.2.2 创建模型
 
@@ -187,7 +187,7 @@ python manage.py makemigrations polls
 python manage.py migrate
 ```
 
-![](../../assets/images/deploy-6-006.webp)
+![](../../assets/images/py-image-20220825195643156-030.webp)
 
 【**_重点：官网原文_**】每次改变模型 **_都需要_** 以下三步：
 
@@ -229,11 +229,11 @@ python manage.py runserver
 
 - 管理员登录界面
 
-![](../../assets/images/deploy-5-005.webp)
+![](../../assets/images/py-image-20220825203340105-032.webp)
 
 - 管理员站点界面
 
-![](../../assets/images/deploy-3-003.webp)
+![](../../assets/images/py-image-20220825203509273-033.webp)
 
 &emsp;&emsp;此时，我们可以看到，这里全是纯英文内容，为了方便起见我们改为中文显示。
 
@@ -250,7 +250,7 @@ TIME_ZONE = 'Asia/Shanghai'
 
 - 此时保持运行状态，刷新页面即可
 
-![](../../assets/images/deploy-1-001.webp)
+![](../../assets/images/py-image-20220825203853471-034.webp)
 
 ### 3.3 向管理页加入投票应用
 
@@ -312,7 +312,7 @@ urlpatterns = [
 
 > 创建应用的 `templates` 模板
 
-![](../../assets/images/deploy-5-005.webp)
+![](../../assets/images/py-image-20220826140315105-036.webp)
 
 > polls/templates/polls/index.html
 

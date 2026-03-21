@@ -1,15 +1,11 @@
 # Vue前端实现-20260311
 
-
-
 ## 相关参考
 
 1. [Tailwind CSS 中文站| Install Tailwind CSS with Vite](https://www.tailwindcss.cn/docs/guides/vite)
-3. [Tailwind CSS 官方站| Installation Using Vite](https://tailwindcss.com/docs/installation/using-vite)
-4. [Github | tailwindcss 无法初始化 Discussion](https://github.com/tailwindlabs/tailwindcss/discussions/15820)
-5. [Github | Cesium 官方 Vite 模板](https://github.com/CesiumGS/cesium-vite-example)
-
-
+2. [Tailwind CSS 官方站| Installation Using Vite](https://tailwindcss.com/docs/installation/using-vite)
+3. [Github | tailwindcss 无法初始化 Discussion](https://github.com/tailwindlabs/tailwindcss/discussions/15820)
+4. [Github | Cesium 官方 Vite 模板](https://github.com/CesiumGS/cesium-vite-example)
 
 ## 一、环境配置
 
@@ -162,8 +158,6 @@ npm install deepdark-ui
 
 ### （一）`vite.config.js` 配置
 
-
-
 ### （二）`main.js` 配置
 
 为了将上面安装的库引入到代码中使用，需要在 `main.js` 中的设置如下。
@@ -213,4 +207,3 @@ app.use(ElementPlus, {
 // 挂载应用
 app.mount("#app");
 ```
-

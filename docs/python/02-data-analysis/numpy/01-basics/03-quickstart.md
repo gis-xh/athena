@@ -44,8 +44,6 @@
 | additionally                                       | 另外；此外                            |
 | provide                                            | v. 提供                               |
 
-
-
 ## 1 要求
 
 你需要了解一点 Python 的知识，如需复习，请参考 [Python tutorial](https://docs.python.org/tutorial/)
@@ -63,8 +61,6 @@
 - 了解在 NumPy 中一维、二维以及多维数组间的不同
 - 了解如何在不使用 for 循环的情况下，将一些线性代数运算应用于多维数组
 - 了解多维数组的轴和形状属性
-
-
 
 ## 2 基础知识
 
@@ -103,11 +99,6 @@
 
 &emsp;&emsp;
 
-
-
-
-
 上一节：[0102 NumPy 库基础操作](./02-basics.md)
 
 下一节：[0201 NumPy 数据存取](../02-data-storage/01-storage.md)
-

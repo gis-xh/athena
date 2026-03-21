@@ -1,13 +1,9 @@
 # 0401 PyQt5 开发环境配置
 
-
-
 ## 一、参考文章
 
 1. [conda 克隆环境及导入新环境 / conda 环境移植](https://blog.csdn.net/l8947943/article/details/103179274)
 2. [Anaconda3 导入flow环境报错](https://blog.csdn.net/tonighthack/article/details/117703473)
-
-
 
 ## 二、配置虚拟环境
 
@@ -48,11 +44,7 @@ conda env create -n cevo_qt -f conda.yaml
 - `-n` 后的参数：创建名为 `cevo_qt` 的虚拟环境
 - `-f` 后的参数：需要复制的 yaml 环境内容
 
-
-
 ## 三、示例代码
-
-
 
 ```sh
 # 若使用的是 PySide2 直接替换掉 PyQt5 即可正常使用
@@ -92,4 +84,3 @@ def handleCalc():
 # 每次按钮时运行
 button.clicked.connect(handleCalc)
 ```
-

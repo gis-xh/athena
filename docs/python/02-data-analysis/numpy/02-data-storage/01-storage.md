@@ -31,7 +31,7 @@ np.savetxt(frame, array, fmt='%.18e', delimiter=None)
 
 > ipython
 
-![](../../../../assets/images/deploy-6-006.webp)
+![](../../../../assets/images/py-image-20220827160841536-012.webp)
 
 > python
 
@@ -43,7 +43,7 @@ np.savetxt('a.csv', a, fmt='%d', delimiter=',')
 
 #### 1.1.2 打开 CSV 文件
 
-![](../../../../assets/images/deploy-1-001.webp)
+![](../../../../assets/images/py-image-20220827163259191-013.webp)
 
 ### 1.2 读取 CSV 文件中的数据
 

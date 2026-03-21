@@ -10,30 +10,30 @@ comments: false
 
 ## 目录说明
 
-### 1 前端学习：[Frontend-Notes](./frontend)
+### 1 前端学习：[Frontend-Notes](./frontend/index.md)
 
-### 2 Python 学习：[Python-Notes](./python)
+### 2 Python 学习：[Python-Notes](./python/index.md)
 
-- [Conda 学习记录](./python/01-conda)
-- [NumPy 学习记录](./python/02-data-analysis/numpy)
-- [Django 学习记录](./python/03-django)
+- [Conda 学习记录](./python/01-conda/index.md)
+- [NumPy 学习记录](./python/02-data-analysis/numpy/01-basics/01-setup.md)
+- [Django 学习记录](./python/03-django/index.md)
 
-### 3 Linux 学习笔记：[Linux-Notes](./linux)
+### 3 Linux 学习笔记：[Linux-Notes](./linux/index.md)
 
-### 4 项目部署：[Deploy-Notes](./deploy)
+### 4 项目部署：[Deploy-Notes](./deploy/index.md)
 
-### 5 机器学习：[Machine-Learning](./machine-learning)
+### 5 机器学习：[Machine-Learning](./machine-learning/index.md)
 
-### 6 深度学习：[Deep-Learning](./deep-learning)
+### 6 深度学习：[Deep-Learning](./deep-learning/index.md)
 
-- [Keras 深度学习](./deep-learning/keras)
-- [CS230 2018](./deep-learning/cs230-2018)
+- [Keras 深度学习](./deep-learning/keras/index.md)
+- [CS230 2018](./deep-learning/cs230-2018/index.md)
 
-### 7 大语言模型：[LLM](./llm)
+### 7 大语言模型：[LLM](./LLM/index.md)
 
-### 8 物联网：[IoT](./iot)
+### 8 物联网：[IoT](./iot/index.md)
 
-### 9 3D 建模：[3D](./3d)
+### 9 3D 建模：[3D](./3d/index.md)
 
 ## 主要参考
 
