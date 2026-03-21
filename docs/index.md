@@ -18,7 +18,7 @@ comments: false
 | [Linux 学习](./linux/index.md)   | 系统操作、Shell 脚本、Python 自动化                |
 | [项目部署](./deploy/index.md)    | Docker、阿里云、CentOS、DevOps                     |
 | [物联网](./iot/index.md)         | OrangePi、边缘计算                                 |
-| [3D 建模](./3d/index.md)         | Blender                                            |
+| [3D 建模](./3D/index.md)         | Blender                                            |
 
 ## 技术栈
 

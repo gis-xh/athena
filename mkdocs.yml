@@ -186,8 +186,8 @@ nav:
       - 边缘计算: iot/edge-computing.md
       - OrangePi: iot/orangepi.md
   - 3D 建模:
-      - 3D 总览: 3d/index.md
-      - Blender: 3d/blender.md
+      - 3D 总览: 3D/index.md
+      - Blender: 3D/blender.md
   - 其他:
       - 随记: somethings.md
 
