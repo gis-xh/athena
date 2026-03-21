@@ -2,7 +2,7 @@
 comments: false
 ---
 
-# Athena 雅典娜笔记
+# Athena
 
 ## 关于本项目
 

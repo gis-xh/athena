@@ -1,4 +1,4 @@
-# Athena 雅典娜笔记
+# Athena
 
 ## 介绍
 
