@@ -1,0 +1,2455 @@
+<!DOCTYPE html><html lang="zh" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="亚瑟的个人AI博客站">
+      
+      
+        <meta name="author" content="gis-xh">
+      
+      
+        <link rel="canonical" href="https://gis-xh.github.io/my-note/deploy/aliyun-fullstack-deployment/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>项目部署全过程记录 - 个人AI博客</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/timeago.css">
+    
+      <link rel="stylesheet" href="../../mkdocs/css/unordered-list-symbols.css">
+    
+      <link rel="stylesheet" href="../../mkdocs/css/img-center.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="个人AI博客" class="md-header__button md-logo" aria-label="个人AI博客" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            个人AI博客
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              项目部署全过程记录
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange" aria-label="切换至夜间模式" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange" aria-label="切换至日间模式" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard="" data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/gis-xh/my-note" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M202.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M496 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    my-note
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../frontend/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Frontend
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../python/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Python
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../linux/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Linux
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Deploy
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../machine-learning/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Machine Learning
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../deep-learning/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Deep Learning
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../llm/index.md" class="md-tabs__link">
+          
+  
+  
+    
+  
+  LLM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../iot/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  IoT
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../3d/index.md" class="md-tabs__link">
+        
+  
+  
+    
+  
+  3D
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="个人AI博客" class="md-nav__button md-logo" aria-label="个人AI博客" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    个人AI博客
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/gis-xh/my-note" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M202.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M496 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    my-note
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../frontend/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Frontend
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frontend/vue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../python/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Python
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/README.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../linux/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Linux
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploy
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Deploy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../machine-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../deep-learning/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deep Learning
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Deep Learning
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deep-learning/keras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deep-learning/cs230-2018/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS230 2018
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8">
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LLM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../llm/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../llm/knowledge-graph/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IoT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3d/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、项目所用工具
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、项目所用工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        项目&amp;环境说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        部署环境配置
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、创建用户及项目目录
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、创建用户及项目目录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 创建用户
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 授予权限并切换用户
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 创建项目目录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 查看项目目录
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三、安装 git 并克隆远程仓库
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、配置后端 python 环境
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、配置后端 python 环境">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-python39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 安装 Python3.9
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-pipenv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 安装 pipenv
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 配置虚拟环境
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 配置虚拟环境">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.1 创建项目虚拟环境
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-pipenv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.2 修改 pipenv 安装镜像源
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-pipenv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.3 pipenv 的使用
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-gunicorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 安装 Gunicorn 并启动项目
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 安装 Gunicorn 并启动项目">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#441-gunicorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4.1 安装 Gunicorn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#442" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4.2 启动项目
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#443" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4.3 访问网站
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五、配置并运行前端 dist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五、配置并运行前端 dist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-dist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 将打包 dist 上传至服务器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 配置 Nginx
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 项目后端的 nginx 配置
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 项目前端的 nginx 配置
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 检查 nginx 配置并重启
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 收集后端 django 所用的静态文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supervisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        六、使用 supervisor 管理进程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="六、使用 supervisor 管理进程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-supervisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 安装 supervisor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-supervisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 修改 supervisor 配置文件
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2 修改 supervisor 配置文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#621-unix_http_server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.1 修改 [unix_http_server] 版块
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#622-supervisord" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.2 修改 [supervisord] 板块
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#623-supervisorctl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.3 修改 [supervisorctl] 板块
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#624-include" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.4 修改 [include] 版块
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-gunicorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 管理 gunicorn 进程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 管理 gunicorn 进程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#631-gunicorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.1 创建 gunicorn 配置文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#632-gunicorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.2 配置 gunicorn 进程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#633" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.3 配置内容说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-supervisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 启动 Supervisor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 启动 Supervisor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#641" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.1 首次启动并开启控制台
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-supervisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 Supervisor 常用命令
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        小结
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+
+  
+  
+
+
+<h1 id="_1">项目部署全过程记录<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p>相关文档：<a href="../aliyun-deployment-issues/">阿里云部署踩坑记录</a></p>
+<h2 id="_2">一、项目所用工具<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p><code>supervisor + gunicorn + django + nginx + vue</code></p>
+<h3 id="_3">项目&amp;环境说明<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<ol>
+<li>前端：Vue</li>
+<li>后端：Django</li>
+<li>服务器：阿里云服务器 Ubuntu20.04.4 Server</li>
+<li>数据库：阿里云 MySQL 数据库</li>
+<li>服务器连接：Xshell7</li>
+<li>服务器文件管理：Xftp7</li>
+</ol>
+<h3 id="_4">部署环境配置<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<ol>
+<li>进程管理：<a href="http://supervisord.org/">supervisor</a></li>
+<li>运行 Django 项目：<a href="https://gunicorn.org/">gunicorn</a></li>
+<li>管理静态资源：<a href="https://nginx.org/en/">nginx</a></li>
+<li>虚拟环境管理：<a href="https://docs.pipenv.org/">pipenv</a></li>
+</ol>
+<h2 id="_5">二、创建用户及项目目录<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
+<h3 id="21">2.1 创建用户<a class="headerlink" href="#21" title="Permanent link">¶</a></h3>
+<p>  连接云端数据库后，当前用户是 root 用户，Ubuntu 不提倡直接在 root 用户上进行操作，所以我们要创建一个自己的用户进行后续操作。
+<br>
+  创建用户时会自动为创建的用户指定主目录、系统 shell 版本，并配置用户密码。</p>
+<div style="height:15px;"></div>
+
+<blockquote>
+<p>创建名为 cveo 的普通用户</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>adduser cveo
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/deploy-adduser-008.webp" data-desc-position="bottom"><img alt="deploy-adduser" src="../../assets/images/deploy-adduser-008.webp"></a></p>
+<h3 id="22">2.2 授予权限并切换用户<a class="headerlink" href="#22" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>赋予 cveo 用户 sudo权限</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>usermod -aG sudo cveo
+</code></pre></div>
+<p> 注：在 Linux 中没有消息就是好消息。</p>
+<blockquote>
+<p>切换 cveo 用户并完全切换工作环境</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>su - cveo
+</code></pre></div>
+<h3 id="23">2.3 创建项目目录<a class="headerlink" href="#23" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>项目目录结构</p>
+</blockquote>
+<p>  通过之前的操作，我们已经切换到了 cveo 用户的工作环境中。此时的环境在 ~/ 即 /home/cveo/ 目录中。
+<br>
+  在 Linux 中 /home/cveo/ 或 ~/ 两个是一个意思。</p>
+<div style="height:15px;"></div>
+
+<div class="highlight"><pre><span></span><code>~/dat
+&nbsp;&nbsp;&nbsp;├── /front (前端代码)
+&nbsp;&nbsp;&nbsp;└── /backend (后端代码)
+        └── /.venv (虚拟环境)
+&nbsp;&nbsp;&nbsp;├── /db&nbsp;(将数据库备份以及存储置于此处)
+&nbsp;&nbsp;&nbsp;└── /scripts&nbsp;(启动脚本等)
+</code></pre></div>
+<blockquote>
+<p>mkdir 命令说明</p>
+</blockquote>
+<p>  mkdir 只能创建指定的文件夹
+<br>
+  mkdir -p 创建文件夹时可以把全路径的文件夹都创建好</p>
+<div style="height:15px"></div>
+
+<blockquote>
+<p>创建项目目录</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>mkdir -p ~/dat/backend/.venv
+mkdir ~/dat/front
+mkdir ~/dat/db
+mkdir ~/dat/scripts
+</code></pre></div>
+<h3 id="24">2.4 查看项目目录<a class="headerlink" href="#24" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>转到 dat 目录</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>cd ~/dat
+</code></pre></div>
+<blockquote>
+<p>查看该目录下文件列表</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>ll
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/deploy-content-009.webp" data-desc-position="bottom"><img alt="deploy-content" src="../../assets/images/deploy-content-009.webp"></a></p>
+<h2 id="git">三、安装 git 并克隆远程仓库<a class="headerlink" href="#git" title="Permanent link">¶</a></h2>
+<p>  云端的服务器中初始没有安装 git，所以需要先进行全局安装。
+第一次使用 git 需要配置用户名和邮箱。</p>
+<blockquote>
+<p>全局安装 git</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>sudo apt-get install git
+</code></pre></div>
+<blockquote>
+<p>转到后端项目根目录</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>cd ~/dat/backend
+</code></pre></div>
+<blockquote>
+<p>配置用户名&amp;邮箱 (默认局部配置)</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>git config user.name '***'
+git config user.email '***@**.com'
+</code></pre></div>
+<blockquote>
+<p>clone 远程仓库</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>git clone 远程仓库地址
+</code></pre></div>
+<p>  此时后端的 Django 项目已经克隆到了配置好的后端目录位置。
+前端的 vue 项目可以现在本地打包成 dist 文件，然后通过 Xftp7 直接传送到 ~/dat/front 目录下即可。</p>
+<h2 id="python">四、配置后端 python 环境<a class="headerlink" href="#python" title="Permanent link">¶</a></h2>
+<h3 id="41-python39">4.1 安装 Python3.9<a class="headerlink" href="#41-python39" title="Permanent link">¶</a></h3>
+<p>  因为 Ubuntu 20.04 LTS 默认 python 版本为 3.8.10，
+而本次项目开发环境使用 python3.9，所以需要另外安装。</p>
+<blockquote>
+<p>刷新安装源</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>sudo apt-get update
+</code></pre></div>
+<p> 注：建议每次安装新软件时，都操作一次。</p>
+<blockquote>
+<p>APT 安装 Python3.9</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>sudo apt install python3.9
+</code></pre></div>
+<blockquote>
+<p>检查安装情况</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>python3.9 --version
+or
+python3.9 -V
+</code></pre></div>
+<blockquote>
+<p>修改 Python3 默认版本</p>
+</blockquote>
+<p>  因为系统默认 python3 使用 python3.8.10，
+所以需要添加 python3.9 为 python3 的可选项，并将 python3.9 置于第一位。</p>
+<div class="highlight"><pre><span></span><code>sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 1
+</code></pre></div>
+<blockquote>
+<p>检查 python3 对应版本</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>python3 -V
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/deploy-py39-install-044.webp" data-desc-position="bottom"><img alt="deploy-py39-install" src="../../assets/images/deploy-py39-install-044.webp"></a></p>
+<h3 id="42-pipenv">4.2 安装 pipenv<a class="headerlink" href="#42-pipenv" title="Permanent link">¶</a></h3>
+<p>  pipenv 是一个面向人类的 Python 开发工作流程 (<a href="https://docs.pipenv.org/">官网原文</a>)，它同时结合了 pip 和 virtualenv，可以直接进行对虚拟环境进行安装配置。</p>
+<blockquote>
+<p>添加环境变量</p>
+</blockquote>
+<p>  因为在安装中为了安全起见，我们将安装在当前用户目录下，需要先添加环境变量，否则会报如下错误。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/deploy-pipenv-warning-043.webp" data-desc-position="bottom"><img alt="deploy-pipenv-warning" src="../../assets/images/deploy-pipenv-warning-043.webp"></a></p>
+<div class="highlight"><pre><span></span><code>echo 'export PATH=/home/cveo/.local/bin:$PATH' &gt;&gt;~/.bashrc
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>source ~/.bashrc
+</code></pre></div>
+<blockquote>
+<p>给 cveo 用户安装 pipenv</p>
+</blockquote>
+<p>  此命令属于用户级安装，会将 pipenv 安装到 /home/cveo/.local/bin 路径下</p>
+<div class="highlight"><pre><span></span><code>pip3 install pipenv --user
+</code></pre></div>
+<h3 id="43">4.3 配置虚拟环境<a class="headerlink" href="#43" title="Permanent link">¶</a></h3>
+<p>  创建虚拟环境时，默认会查找当前目录下有没有 .venv 目录。
+如果没有，则默认会在用户目录下的 /home/xxxx/.local/share/virtualenvs 中创建虚拟环境目录。
+所以我们之前在项目根目录中创建了一个 .venv 文件夹。</p>
+<h4 id="431">4.3.1 创建项目虚拟环境<a class="headerlink" href="#431" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>先转到项目根目录下</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>cd ~/dat/backend
+</code></pre></div>
+<blockquote>
+<p>指定使用 Python3.9 创建环境</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>pipenv --python3.9
+</code></pre></div>
+<p>  若项目根目录下有 requirement.txt 文件，pipenv 会读取内部信息生成 Pipfile 文件存放插件版本信息。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/deploy-venv-049.webp" data-desc-position="bottom"><img alt="deploy-venv" src="../../assets/images/deploy-venv-049.webp"></a></p>
+<h4 id="432-pipenv">4.3.2 修改 pipenv 安装镜像源<a class="headerlink" href="#432-pipenv" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>使用 vim 编辑器编辑 Pipfile 文件</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>vim Pipfile
+</code></pre></div>
+<blockquote>
+<p>按 i 键进入编辑模式 (只修改下面一行)</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>url = "https://mirrors.aliyun.com/pypi/simple/"
+</code></pre></div>
+<blockquote>
+<p>按 esc 键退出编辑模式，保存并退出</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>:wq!
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/deploy-pipenv-mirror-041.webp" data-desc-position="bottom"><img alt="deploy-pipenv-mirror" src="../../assets/images/deploy-pipenv-mirror-041.webp"></a></p>
+<div style="height:15px;"></div>
+
+<h4 id="433-pipenv">4.3.3 pipenv 的使用<a class="headerlink" href="#433-pipenv" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>激活虚拟环境</p>
+</blockquote>
+<p>  一定要进入项目中 Pipfile 所在目录输入以下命令，激活后命令前面会一直有个 (backend)</p>
+<div class="highlight"><pre><span></span><code>pipenv shell
+</code></pre></div>
+<blockquote>
+<p>按照 Pipfile 文件中的内容安装对应的包</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>pipenv install
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/deploy-pipenv-shell-042.webp" data-desc-position="bottom"><img alt="deploy-pipenv-shell" src="../../assets/images/deploy-pipenv-shell-042.webp"></a></p>
+<div style="height:15px;"></div>
+
+<blockquote>
+<p>退出虚拟环境</p>
+</blockquote>
+<p>  退出后命令前面的 (backend) 就没了。</p>
+<div class="highlight"><pre><span></span><code>exit
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/deploy-pipenv-exit-040.webp" data-desc-position="bottom"><img alt="deploy-pipenv-exit" src="../../assets/images/deploy-pipenv-exit-040.webp"></a></p>
+<h3 id="44-gunicorn">4.4 安装 Gunicorn 并启动项目<a class="headerlink" href="#44-gunicorn" title="Permanent link">¶</a></h3>
+<p>  Gunicorn 是一个用于 UNIX 的 Python WSGI HTTP 服务器。
+(<a href="https://gunicorn.org/">官网原文</a>)，在这里为了版本控制，我们安装在将它虚拟环境中。</p>
+<h4 id="441-gunicorn">4.4.1 安装 Gunicorn<a class="headerlink" href="#441-gunicorn" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>转到 Django 项目根目录</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>cd ~/dat/backend/
+</code></pre></div>
+<blockquote>
+<p>安装 gunicorn 到项目虚拟环境中</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>pipenv install gunicorn
+</code></pre></div>
+<p> 注：此时我们已经退出了虚拟环境。</p>
+<h4 id="442">4.4.2 启动项目<a class="headerlink" href="#442" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>使用 gunicorn 启动项目</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>pipenv run gunicorn -w 2 Security.wsgi:application -k gthread -b 0.0.0.0:8000
+</code></pre></div>
+<blockquote>
+<p>参数说明</p>
+</blockquote>
+<p><code>-w 2</code></p>
+<p>启动2个 worker 用于处理请求 (一个 worker 可以理解为一个进程) 通常将 worker 数目设置为 CPU 核心数的 2-4 倍</p>
+<p><code>Security.wsgi:application</code></p>
+<p>指定 wsgi application， 其中 wsgi 文件的位置即 appName.wsgi</p>
+<p><code>-k gthread</code></p>
+<p>指定每个 worker 处理请求的方式，指定为&nbsp;gthread&nbsp;的异步模式能获取比较高的性能</p>
+<p><code>-b 0.0.0.0:8000</code></p>
+<p>将服务绑定到 8000 端口，运行通过服务器IP和 8000 端口访问应用</p>
+<h4 id="443">4.4.3 访问网站<a class="headerlink" href="#443" title="Permanent link">¶</a></h4>
+<p>  此时，虽然我们成功访问了，但是样式完全乱了。因为此前在本地使用的是 django 自带的开发服务器，它会自动处理静态样式文件，但 Gunicorn 不擅长处理静态文件，需要使用 Nginx 来启动静态样式。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/deploy-nocss-039.webp" data-desc-position="bottom"><img alt="deploy-nocss" src="../../assets/images/deploy-nocss-039.webp"></a></p>
+<h2 id="dist">五、配置并运行前端 dist<a class="headerlink" href="#dist" title="Permanent link">¶</a></h2>
+<h3 id="51-dist">5.1 将打包 dist 上传至服务器<a class="headerlink" href="#51-dist" title="Permanent link">¶</a></h3>
+<p>  安装好 Xftp7 后，可以在 Xshell7 中右击数据库连接，使用 Xftp7 打开，然后直接拖拽本地打包好的 dist 文件即可。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/deploy-dist-010.webp" data-desc-position="bottom"><img alt="deploy-dist" src="../../assets/images/deploy-dist-010.webp"></a></p>
+<h3 id="52-nginx">5.2 配置 Nginx<a class="headerlink" href="#52-nginx" title="Permanent link">¶</a></h3>
+<p>  阿里云服务器上已经安装了 Nginx，所以我们直接使用即可。默认配置文件的位置在 /etc/nginx/nginx.conf</p>
+<blockquote>
+<p>转到 nginx 配置目录</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>cd /etc/nginx/
+</code></pre></div>
+<blockquote>
+<p>修改 nginx 配置文件</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>sudo vim nginx.conf
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/deploy-nginx-conf-037.webp" data-desc-position="bottom"><img alt="deploy-nginx-conf" src="../../assets/images/deploy-nginx-conf-037.webp"></a></p>
+<blockquote>
+<p>转到 nginx 项目定制目录</p>
+</blockquote>
+<p>  之前我们已经将项目后端代码和前端 dist 文件上传至服务器安排的对应项目目录，接下来我们需要分别定制项目前后端的 nginx 配置。</p>
+<div class="highlight"><pre><span></span><code>cd /etc/nginx/conf.d/
+</code></pre></div>
+<h3 id="53-nginx">5.3 项目后端的 nginx 配置<a class="headerlink" href="#53-nginx" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>新建 gunicorn 的 nginx 配置文件</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>sudo vim campus-django-nginx.conf
+</code></pre></div>
+<blockquote>
+<p>详细配置内容</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>server {
+    charset utf-8;
+    listen 80;
+    server_name 服务器的 IP 地址;
+    location /static {
+        alias /home/cveo/dat/backend/static;
+    }
+    location / {
+        proxy_set_header Host $host;
+        proxy_pass http://127.0.0.1:8000;
+    }
+}
+</code></pre></div>
+<h3 id="54-nginx">5.4 项目前端的 nginx 配置<a class="headerlink" href="#54-nginx" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>新建 vue 的 nginx 配置文件</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>sudo vim campus-vue-nginx.conf
+</code></pre></div>
+<blockquote>
+<p>详细配置内容</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>server {
+    listen 8080;
+    server_name 服务器的 IP 地址;
+    location / {
+        root /home/cveo/dat/front/dist;
+        try_files $uri $uri/ /index.html;
+        index index.html index.htm index.nginx-debian.html;
+        proxy_set_header Host $host;
+    }
+    location /admin {
+        proxy_pass http://127.0.0.1:8000;
+    }
+}
+</code></pre></div>
+<h3 id="55-nginx">5.5 检查 nginx 配置并重启<a class="headerlink" href="#55-nginx" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>检查 nginx 配置</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>sudo nginx -t
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/deploy-nginx-success-038.webp" data-desc-position="bottom"><img alt="deploy-nginx-success" src="../../assets/images/deploy-nginx-success-038.webp"></a></p>
+<div style="height:15px;"></div>
+
+<blockquote>
+<p>重启 nginx (二选一即可)</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>sudo systemctl restart nginx
+sudo service nginx restart
+</code></pre></div>
+<h3 id="56-django">5.6 收集后端 django 所用的静态文件<a class="headerlink" href="#56-django" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>切换回后端项目根目录</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>cd ~/dat/backend/
+</code></pre></div>
+<blockquote>
+<p>未激活虚拟环境时收集静态文件</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>pipenv run python3 manage.py collectstatic
+</code></pre></div>
+<blockquote>
+<p>激活虚拟环境时 (视情况二选一)</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>python3 manage.py collectstatic
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/deploy-static-045.webp" data-desc-position="bottom"><img alt="deploy-static" src="../../assets/images/deploy-static-045.webp"></a></p>
+<div style="height:15px;"></div>
+
+<blockquote>
+<p>再次启动 gunicorn 并访问网址 (未激活)</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>pipenv run gunicorn -w 2 Security.wsgi:application -k gthread -b 127.0.0.1:8000
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/deploy-has-css-011.webp" data-desc-position="bottom"><img alt="deploy-has-css" src="../../assets/images/deploy-has-css-011.webp"></a></p>
+<h2 id="supervisor">六、使用 supervisor 管理进程<a class="headerlink" href="#supervisor" title="Permanent link">¶</a></h2>
+<p>  因为项目部署在生产环境中时，需要时刻保持运行，挂掉时立刻重启，所以我们需要把项目以进程的形式托管起来。
+<br>
+  Supervisor 是一个客户端/服务器系统，它允许其用户监视和控制类 UNIX 操作系统上的许多进程。
+(<a href="http://supervisord.org/">官网原文</a>)</p>
+<h3 id="61-supervisor">6.1 安装 supervisor<a class="headerlink" href="#61-supervisor" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>给当前用户安装 supervisor</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>pip3 install supervisor
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/deploy-supervisor-046.webp" data-desc-position="bottom"><img alt="deploy-supervisor" src="../../assets/images/deploy-supervisor-046.webp"></a></p>
+<div style="height:15px;"></div>
+
+<blockquote>
+<p>supervisor 配置目录</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>~/etc
+   ├── supervisor
+   │&nbsp;&nbsp;  ├── conf.d (自定义配置文件)
+   │&nbsp;&nbsp;  ├── var (存放一些常变的文件)
+   │&nbsp;&nbsp;  │    ├── log (存放日志文件)
+   │&nbsp;   │    └── ...
+   │    └── supervisord.conf (总配置文件)
+   └── ...
+</code></pre></div>
+<blockquote>
+<p>创建配置目录</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>mkdir -p ~/etc/supervisor/conf.d
+mkdir -p ~/etc/supervisor/var/log
+</code></pre></div>
+<blockquote>
+<p>转到 supervisor 配置目录</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>cd ~/etc/supervisor/
+</code></pre></div>
+<blockquote>
+<p>生成配置文件</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>echo_supervisord_conf &gt; supervisord.conf
+</code></pre></div>
+<h3 id="62-supervisor">6.2 修改 supervisor 配置文件<a class="headerlink" href="#62-supervisor" title="Permanent link">¶</a></h3>
+<h4 id="621-unix_http_server">6.2.1 修改 [unix_http_server] 版块<a class="headerlink" href="#621-unix_http_server" title="Permanent link">¶</a></h4>
+<p>vim 基本操作：
+<br>
+  按 i 进入编辑模式，按 esc 退出编辑模式，:wq! 保存并退出
+<br>  技巧1：先按 esc 退出编辑模式，shift+d 删除光标至行尾内容
+<br>  技巧2：复制命令后，shift+insert (在键盘右上角) 快速粘贴命令</p>
+<blockquote>
+<p>打开 supervisor 配置文件</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>vim supervisord.conf
+</code></pre></div>
+<blockquote>
+<p>修改 file 的值</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>file=/home/cveo/etc/supervisor/var/supervisor.sock
+</code></pre></div>
+<h4 id="622-supervisord">6.2.2 修改 [supervisord] 板块<a class="headerlink" href="#622-supervisord" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>修改 logfile 文件的路径</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>logfile=/home/cveo/etc/supervisor/var/log/supervisord.log
+</code></pre></div>
+<blockquote>
+<p>修改 pidfile 文件的路径</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>pidfile=/home/cveo/etc/supervisor/var/supervisord.pid
+</code></pre></div>
+<blockquote>
+<p>将 user 改为当前系统用户</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>user=cveo
+</code></pre></div>
+<p> 注：这里默认有 ; 注释，把它删了</p>
+<h4 id="623-supervisorctl">6.2.3 修改 [supervisorctl] 板块<a class="headerlink" href="#623-supervisorctl" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code>serverurl=unix:///home/cveo/etc/supervisor/var/supervisor.sock
+</code></pre></div>
+<h4 id="624-include">6.2.4 修改 [include] 版块<a class="headerlink" href="#624-include" title="Permanent link">¶</a></h4>
+<p>  将此目录下所有以 .ini 结尾的文件内容包含到配置中来，便于配置的模块化管理，
+与之前 Nginx 配置文件的处理方式类似。</p>
+<div class="highlight"><pre><span></span><code>[include]
+files = /home/cveo/etc/supervisor/conf.d/*.ini
+</code></pre></div>
+<p> 注：这里也有 ; 注释，先把它删了。</p>
+<h3 id="63-gunicorn">6.3 管理 gunicorn 进程<a class="headerlink" href="#63-gunicorn" title="Permanent link">¶</a></h3>
+<h4 id="631-gunicorn">6.3.1 创建 gunicorn 配置文件<a class="headerlink" href="#631-gunicorn" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>转到 conf.d 目录中</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>cd ~/etc/supervisor/conf.d
+</code></pre></div>
+<blockquote>
+<p>创建项目定制配置文件</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>vim gunicorn.ini
+</code></pre></div>
+<h4 id="632-gunicorn">6.3.2 配置 gunicorn 进程<a class="headerlink" href="#632-gunicorn" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code>[program:gunicorn]
+command=/home/cveo/.local/bin/pipenv run gunicorn Security.wsgi -w 2 -k gthread -b 127.0.0.1:8000
+directory=/home/cveo/dat/backend
+autostart=true
+autorestart=unexpected
+user=cveo
+stopasgroup=true
+stopsignal=QUIT
+stdout_logfile=/home/cveo/etc/supervisor/var/log/gunicorn-stdout.log
+stderr_logfile=/home/cveo/etc/supervisor/var/log/gunicorn-stderr.err
+</code></pre></div>
+<h4 id="633">6.3.3 配置内容说明<a class="headerlink" href="#633" title="Permanent link">¶</a></h4>
+<p><code>[program:gunicorn]</code>
+指明运行应用的进程,自己起个名就成。</p>
+<p><code>command</code>
+为进程启动时执行的命令，这里我们安装 pipenv 时安装在用户中的，为防止权限问题，所以要详细写。</p>
+<p><code>directory</code>
+指定执行命令时所在的目录。</p>
+<p><code>autostart</code>
+随 Supervisor 启动自动启动进程。</p>
+<p><code>autorestart</code>
+进程意外退出时重启。</p>
+<p><code>user</code>
+进程运行的用户，防止权限问题。</p>
+<p><code>stopasgroup</code> <code>stopsignal</code>
+停止命令时杀死进程，防止导致手动停止后，再启动 program 错误。</p>
+<p><code>stdout_logfile</code> <code>stderr_logfile</code>
+日志输出和错误文件。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/deploy-supervisor-gunicorn-048.webp" data-desc-position="bottom"><img alt="deploy-supervisor-gunicorn" src="../../assets/images/deploy-supervisor-gunicorn-048.webp"></a></p>
+<h3 id="64-supervisor">6.4 启动 Supervisor<a class="headerlink" href="#64-supervisor" title="Permanent link">¶</a></h3>
+<h4 id="641">6.4.1 首次启动并开启控制台<a class="headerlink" href="#641" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>启动 Supervisor</p>
+</blockquote>
+<p>  -c 指定 Supervisr 启动时的配置文件。</p>
+<div class="highlight"><pre><span></span><code>supervisord -c ~/etc/supervisor/supervisord.conf
+</code></pre></div>
+<blockquote>
+<p>进入管理控制台</p>
+</blockquote>
+<p>  进入 supervisorctl 进程管理控制台，第一次运行必须要指定配置文件。</p>
+<div class="highlight"><pre><span></span><code>supervisorctl -c ~/etc/supervisor/supervisord.conf
+</code></pre></div>
+<blockquote>
+<p>刷新进程并退出控制台</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>update
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>exit
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/deploy-supervisorctl-047.webp" data-desc-position="bottom"><img alt="deploy-supervisorctl" src="../../assets/images/deploy-supervisorctl-047.webp"></a></p>
+<h3 id="65-supervisor">6.5 Supervisor 常用命令<a class="headerlink" href="#65-supervisor" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>查看进程状态</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>supervisorctl status
+</code></pre></div>
+<blockquote>
+<p>重启所有项目进程</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>supervisorctl restart all
+</code></pre></div>
+<p> 注：每次更新项目文件后，都要重启对应的进程</p>
+<h2 id="_6">小结<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
+<p>  本文于 2022年6月14日 记录。</p>
+
+
+
+
+<hr>
+<div class="md-source-file">
+    <small>
+
+        <!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        最后更新:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2024年12月2日 18:15:20 CST"><span class="timeago" datetime="2024-12-02T18:15:20+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2024年12月2日 18:15:20 CST">2024-12-02</span>
+        
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2023年1月1日 18:26:44 CST"><span class="timeago" datetime="2023-01-01T18:26:44+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2023年1月1日 18:26:44 CST">2023-01-01</span>
+        
+
+        <!-- mkdocs-git-revision-date-plugin -->
+        
+
+        <br>
+        
+        作者:
+        <span class="git-page-authors git-authors"><a href="mailto:1612990205@qq.com">gis-xh</a></span>
+        
+    </small>
+</div>
+
+
+
+
+<!-- Insert Giscus generated snippet here -->
+<!-- 插入 Giscus 生成的代码块 -->
+<script src="https://giscus.app/client.js" data-repo="gis-xh/mkdocs-site" data-repo-id="R_kgDOJqGKjQ" data-category="Announcements" data-category-id="DIC_kwDOJqGKjc4CW4Tq" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="zh-CN" crossorigin="anonymous" async="">
+    </script>
+
+<!-- 下面保持不动即可 -->
+<!-- Synchronize Giscus theme with palette -->
+<script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate" ? "dark" : "light"
+        giscus.setAttribute("data-theme", theme)
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function () {
+        var ref = document.querySelector("[data-md-component=palette]")
+        ref.addEventListener("change", function () {
+            var palette = __md_get("__palette")
+            if (palette && typeof palette.color === "object") {
+                var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+                /* Instruct Giscus to change theme */
+                var frame = document.querySelector(".giscus-frame")
+                frame.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme } } },
+                    "https://giscus.app"
+                )
+            }
+        })
+    })
+</script>
+
+                
+
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 gis-xh
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/gis-xh" target="_blank" rel="noopener" title="GitHub | gis-xh" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.top", "navigation.footer", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="../../mkdocs/js/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html><!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->

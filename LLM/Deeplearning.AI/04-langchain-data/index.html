@@ -1,0 +1,1980 @@
+<!DOCTYPE html><html lang="zh" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="亚瑟的个人AI博客站">
+      
+      
+        <meta name="author" content="gis-xh">
+      
+      
+        <link rel="canonical" href="https://gis-xh.github.io/my-note/LLM/Deeplearning.AI/04-langchain-data/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>LangChain Chat With Your Data - 个人AI博客</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/timeago.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/img-center.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#langchain-chat-with-your-data" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="个人AI博客" class="md-header__button md-logo" aria-label="个人AI博客" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            个人AI博客
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              LangChain Chat With Your Data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange" aria-label="切换至夜间模式" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange" aria-label="切换至日间模式" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard="" data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/gis-xh/my-note" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M202.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M496 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    my-note
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../frontend/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Frontend
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../python/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Python
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../linux/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Linux
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../deploy/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Deploy
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../machine-learning/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Machine Learning
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../deep-learning/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Deep Learning
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../llm/index.md" class="md-tabs__link">
+          
+  
+  
+    
+  
+  LLM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../iot/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  IoT
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../3d/index.md" class="md-tabs__link">
+        
+  
+  
+    
+  
+  3D
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="个人AI博客" class="md-nav__button md-logo" aria-label="个人AI博客" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    个人AI博客
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/gis-xh/my-note" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M202.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M496 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    my-note
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../frontend/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Frontend
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../frontend/vue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../python/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Python
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python/README.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../linux/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Linux
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../deploy/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploy
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Deploy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../machine-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../deep-learning/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deep Learning
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Deep Learning
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../deep-learning/keras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../deep-learning/cs230-2018/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS230 2018
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8">
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LLM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../llm/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../llm/knowledge-graph/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../iot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IoT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3d/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 流程介绍
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 文档加载
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 文档加载">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 加载 PDF 文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 加载 Youtube 视频
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 加载网页数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-notion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 加载 Notion 数据库数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 文档分割
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 文档分割">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 基于字符的文本分割
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 基于 Token 的文本分割
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 小结
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 向量存储与语义搜索
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 向量存储与语义搜索">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 存储流程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 通过语义相似性进行搜索
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 小结
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 其他语义检索技术
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 其他语义检索技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-mmr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 MMR 最大边际相关性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-selfquery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 SelfQuery 自查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Compression 上下文压缩
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-qa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 QA 基于语义检索内容的问答
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 QA 基于语义检索内容的问答">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 基于 Prompt 模板的检索式问答链
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-mapreduce" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 基于 MapReduce 的检索式问答链
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-refine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 基于 Refine 的检索式问答链
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7 上下文对话
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+
+  
+  
+
+
+<h1 id="langchain-chat-with-your-data">LangChain Chat With Your Data<a class="headerlink" href="#langchain-chat-with-your-data" title="Permanent link">¶</a></h1>
+<h2 id="_1">参考<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<ul>
+<li>代码参考：https://github.com/datawhalechina/prompt-engineering-for-developers/tree/main/content/Prompt%20Engineering%20for%20Developer</li>
+<li>Deeplearning.AI 原版课程：https://learn.deeplearning.ai/langchain-chat-with-your-data/lesson/</li>
+<li>B 站搬运视频：【吴恩达与LangChain创始人最新课程《LangChain：与你的数据对话》whisper转文本+GPT翻译中文字幕】 https://www.bilibili.com/video/BV148411D7d2</li>
+</ul>
+<h2 id="1">1 流程介绍<a class="headerlink" href="#1" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/deploy-3-003.webp" data-desc-position="bottom"><img alt="" src="../../../assets/images/deploy-3-003.webp"></a></p>
+<p>1、Document Loading：使用文档加载器加载各个来源的数据</p>
+<p>2、Splitting：将文档内容拆分为语义上有意义的子块</p>
+<p>3、Storage：将存储与向量数据库中</p>
+<h2 id="2">2 文档加载<a class="headerlink" href="#2" title="Permanent link">¶</a></h2>
+<p>将各种来源的数据加载到一个标准的文档对象中，对象是由 <code>page_content</code> 内容和 <code>metadata</code> 元数据组成。结构化和非结构化数据都可以加载。</p>
+<h3 id="21-pdf">2.1 加载 PDF 文件<a class="headerlink" href="#21-pdf" title="Permanent link">¶</a></h3>
+<p>以文本和表格为主</p>
+<h3 id="22-youtube">2.2 加载 Youtube 视频<a class="headerlink" href="#22-youtube" title="Permanent link">¶</a></h3>
+<p>视频音频作为非结构化数据，视频转文本前需要先在下载安装 FFmpeg</p>
+<ul>
+<li><a href="http://www.ffmpeg.org/download.html#build-windows">Download FFmpeg</a></li>
+<li><a href="https://github.com/BtbN/FFmpeg-Builds/releases">Releases · BtbN/FFmpeg-Builds (github.com)</a></li>
+</ul>
+<blockquote>
+<p>安装相关包</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>-q<span class="w"> </span>install<span class="w"> </span>yt_dlp<span class="w"> </span>pydub<span class="w"> </span>ffmpeg<span class="w"> </span>ffprobe
+</code></pre></div>
+<p>1、在 Windows 系统中下载时，要选择 <code>ffmpeg-master-latest-win64-gpl.zip</code> 完整版下载。</p>
+<p>2、将 <code>ffmpeg/bin</code> 目录写入环境变量中</p>
+<p>3、<code>YoutubeAudioLoader</code>：Youtube 音频加载器，根据指定 URL 地址找到对应视频，从视频中保存音频文件到本地</p>
+<p>4、<code>OpenAIWhisperParser</code>：使用 OpenAI 的 Whisper 模型（语音转文本模型）,将视频中的音频转换为可处理的文本格式。</p>
+<h3 id="23">2.3 加载网页数据<a class="headerlink" href="#23" title="Permanent link">¶</a></h3>
+<p>1、<code>WebBaseLoader</code>：基于 Web 的加载器，可以读取 url 链接</p>
+<h3 id="24-notion">2.4 加载 Notion 数据库数据<a class="headerlink" href="#24-notion" title="Permanent link">¶</a></h3>
+<h2 id="3">3 文档分割<a class="headerlink" href="#3" title="Permanent link">¶</a></h2>
+<p>在进行检索增强生成时，需要检索与讨论的内容最相关的内容片段，只选择与讨论的主题最相关的段落或句子，而不是加载整个文档。</p>
+<p>在分割时，要尽可能地保证分割成语义相关的块。文本分割的基础就是保证块与块之间具有一定的重叠。在 LangChain 中文档分割具有两个重要参数。</p>
+<ul>
+<li><code>chunk_size</code>：块的大小</li>
+<li><code>chunk_overlap</code>：块重叠部分的大小</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/llm-image-20230724180043730-027.webp" data-desc-position="bottom"><img alt="" src="../../../assets/images/llm-image-20230724180043730-027.webp"></a></p>
+<center>图 4-1 文本分割示意图</center>
+
+<h3 id="31">3.1 基于字符的文本分割<a class="headerlink" href="#31" title="Permanent link">¶</a></h3>
+<h3 id="32-token">3.2 基于 Token 的文本分割<a class="headerlink" href="#32-token" title="Permanent link">¶</a></h3>
+<h3 id="33">3.3 小结<a class="headerlink" href="#33" title="Permanent link">¶</a></h3>
+<p>通过对文档的分割，可以获得具有适当元数据的语义相关的子块，下一步就是将数据块移动到向量存储中。</p>
+<h2 id="4">4 向量存储与语义搜索<a class="headerlink" href="#4" title="Permanent link">¶</a></h2>
+<h3 id="41">4.1 存储流程<a class="headerlink" href="#41" title="Permanent link">¶</a></h3>
+<p>流程同 3.4.2 节，在进行 embedding 分割后，可以计算向量点积求得向量间的相似程度。</p>
+<h3 id="42">4.2 通过语义相似性进行搜索<a class="headerlink" href="#42" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>1、加载本地文档</p>
+</blockquote>
+<ul>
+<li>首先，导入文档加载的包；</li>
+<li>然后，批量导入指定路径下所有的 txt 文件，并显示进度条</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">langchain.document_loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">DirectoryLoader</span><span class="p">,</span> <span class="n">TextLoader</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="s2">"./data/youtube"</span>
+<span class="n">loader</span> <span class="o">=</span> <span class="n">DirectoryLoader</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">glob</span><span class="o">=</span><span class="s2">"**/*.txt"</span><span class="p">,</span> <span class="n">loader_cls</span><span class="o">=</span><span class="n">TextLoader</span><span class="p">,</span> <span class="n">show_progress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">pages</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+</code></pre></div>
+<blockquote>
+<p>2、分割文档</p>
+</blockquote>
+<ul>
+<li>首先，加载文本分割的包；</li>
+<li>然后，预设块和块重叠的大小；</li>
+<li>接着，初始化文本分割器，并设置多种分隔符；</li>
+<li>最后，调用函数分割文档，可以打印出分割前的块数查看分割情况。</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">langchain.text_splitter</span><span class="w"> </span><span class="kn">import</span> <span class="n">RecursiveCharacterTextSplitter</span>
+
+<span class="n">chunk_size</span> <span class="o">=</span> <span class="mi">450</span>
+<span class="n">chunk_overlap</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="n">r_splitter</span> <span class="o">=</span> <span class="n">RecursiveCharacterTextSplitter</span><span class="p">(</span>
+    <span class="n">chunk_size</span><span class="o">=</span><span class="n">chunk_size</span><span class="p">,</span>
+    <span class="n">chunk_overlap</span><span class="o">=</span><span class="n">chunk_overlap</span><span class="p">,</span>
+    <span class="n">separators</span><span class="o">=</span><span class="p">[</span><span class="s2">"</span><span class="se">\n\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"(?&lt;=\. )"</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span> <span class="s2">""</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="n">splits_docs</span> <span class="o">=</span> <span class="n">r_splitter</span><span class="o">.</span><span class="n">split_documents</span><span class="p">(</span><span class="n">pages</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"分割前:"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">pages</span><span class="p">),</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">分割后:"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">splits_docs</span><span class="p">))</span>
+</code></pre></div>
+<blockquote>
+<p>3、加载 Embedding 模型</p>
+</blockquote>
+<ul>
+<li>加载 OpenAI 的 Embedding 模型作为向量存储的 Embedding 模型。</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">langchain.embeddings.openai</span><span class="w"> </span><span class="kn">import</span> <span class="n">OpenAIEmbeddings</span>
+<span class="n">embedding</span> <span class="o">=</span> <span class="n">OpenAIEmbeddings</span><span class="p">()</span>
+</code></pre></div>
+<blockquote>
+<p>4、加载向量数据库</p>
+</blockquote>
+<p>LangChain 集成了 30 多种不同的向量存储，选用 Chroma 作为向量数据库，是因为其易用轻巧且存储在内存中。</p>
+<ul>
+<li>首先，在初次使用时，要先在虚拟环境中安装好向量数据库的相关包。</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">chromadb</span> <span class="n">clickhouse</span><span class="o">-</span><span class="n">connect</span> <span class="n">tiktoken</span>
+</code></pre></div>
+<ul>
+<li>然后，加载向量数据库 Chroma 的包，并设置数据库文件存放目录（确保此目录为空）</li>
+<li>最后，通过向函数传入分割后的文本、 Embedding 模型、数据库存储路径等参数实现向量存储。</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">langchain.vectorstores</span><span class="w"> </span><span class="kn">import</span> <span class="n">Chroma</span>
+
+<span class="n">persist_directory</span> <span class="o">=</span> <span class="s1">'data/chroma/SciPy2023_Presentation_Geemap/'</span>
+<span class="n">vectordb</span> <span class="o">=</span> <span class="n">Chroma</span><span class="o">.</span><span class="n">from_documents</span><span class="p">(</span>
+    <span class="n">documents</span><span class="o">=</span><span class="n">splits_docs</span><span class="p">,</span>
+    <span class="n">embedding</span><span class="o">=</span><span class="n">embedding</span><span class="p">,</span>
+    <span class="n">persist_directory</span><span class="o">=</span><span class="n">persist_directory</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"向量个数: "</span><span class="p">,</span> <span class="n">vectordb</span><span class="o">.</span><span class="n">_collection</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
+</code></pre></div>
+<blockquote>
+<p>5、发起提问</p>
+</blockquote>
+<ul>
+<li>首先，提取相关问题，发起查询 query</li>
+<li>然后，使用 <code>similarity_search()</code> 相似性搜索方法，传入问题和并指定返回的文本长度的块数</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">question</span> <span class="o">=</span> <span class="s2">"I want to know how Geemap is used in research?"</span>
+
+<span class="n">answer</span> <span class="o">=</span> <span class="n">vectordb</span><span class="o">.</span><span class="n">similarity_search</span><span class="p">(</span><span class="n">question</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">answer</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">page_content</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="43">4.3 小结<a class="headerlink" href="#43" title="Permanent link">¶</a></h3>
+<p>尽管相似性搜索在回答相关性较高的问题上可以解决不少问题，但是在一些边缘问题，会存在一些错误，这有一部分是由于块与块之间的重复片段导致的。</p>
+<h2 id="5">5 其他语义检索技术<a class="headerlink" href="#5" title="Permanent link">¶</a></h2>
+<h3 id="51-mmr">5.1 MMR 最大边际相关性<a class="headerlink" href="#51-mmr" title="Permanent link">¶</a></h3>
+<p>如果只是选择在向量空间中最相似向量对应的文档，实际上会错过一些多样化信息。MMR 会选择一组多样化的文档，能够很好地<strong>解决多样性问题</strong>。</p>
+<ul>
+<li>首先，接受一个 query 查询</li>
+<li>然后，通过参数 <code>fetch_k</code> 控制响应的个数</li>
+<li>最后，生成多样化的文本片段返回给用户。</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/llm-image-20230726122519518-028.webp" data-desc-position="bottom"><img alt="" src="../../../assets/images/llm-image-20230726122519518-028.webp"></a></p>
+<center>图 4-2 MMR 处理流程图</center>
+
+<h3 id="52-selfquery">5.2 SelfQuery 自查询<a class="headerlink" href="#52-selfquery" title="Permanent link">¶</a></h3>
+<p>当问题不仅涉及到语义上查找的内容，还包括一些相关筛选后的元数据时，通过对语言模型进行更多地调用，将合适的最终答案集中在最重要的内容上。</p>
+<ul>
+<li>
+<p>首先，将原始问题分割为两个独立部分 Filter 筛选器和 Search term 搜索词</p>
+</li>
+<li>
+<p>然后，根据元数据对向量数据进行筛选，在对搜索词进行相关语义查询</p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/deploy-1-001.webp" data-desc-position="bottom"><img alt="" src="../../../assets/images/deploy-1-001.webp"></a></p>
+<center>图 4-3 查询相关语义与元数据的示例图</center>
+
+<h3 id="53-compression">5.3 Compression 上下文压缩<a class="headerlink" href="#53-compression" title="Permanent link">¶</a></h3>
+<p>通过压缩，可以将所有检索到的相关文档通过语言模型提取出最相关的片段，缩减对相关信息的响应，增加可以放在上下文中的结果的数量。</p>
+<p>然后只将最相关的片段传递到最后的语言模型中。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/llm-image-20230726201014238-030.webp" data-desc-position="bottom"><img alt="" src="../../../assets/images/llm-image-20230726201014238-030.webp"></a></p>
+<center>图 4-4 压缩流程图</center>
+
+<h2 id="6-qa">6 QA 基于语义检索内容的问答<a class="headerlink" href="#6-qa" title="Permanent link">¶</a></h2>
+<h3 id="61-prompt">6.1 基于 Prompt 模板的检索式问答链<a class="headerlink" href="#61-prompt" title="Permanent link">¶</a></h3>
+<p>针对单个文档，或文档较少时，可以结合 Prompt 模板调用语言模型进行检索问答。</p>
+<blockquote>
+<p>1、加载语言模型</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">langchain.chat_models</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatOpenAI</span>
+
+<span class="n">llm</span> <span class="o">=</span> <span class="n">ChatOpenAI</span><span class="p">(</span><span class="n">model_name</span><span class="o">=</span><span class="s2">"gpt-3.5-turbo"</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p>2、生成 Prompt 模板</p>
+</blockquote>
+<ul>
+<li>首先，导入 <code>PromptTemplate</code> 包</li>
+<li>然后，创建一个带有分隔符较为精确的 Prompt</li>
+<li>最后，利用 <code>from_template()</code> 生成 Prompt 模板</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">langchain.prompts</span><span class="w"> </span><span class="kn">import</span> <span class="n">PromptTemplate</span>
+
+<span class="n">template</span> <span class="o">=</span> <span class="s2">"""使用以下上下文片段来回答最后的问题。</span>
+<span class="s2">如果你不知道答案，只需说不知道，不要试图编造答案。</span>
+<span class="s2">答案最多使用三个句子。尽量简明扼要地回答。</span>
+<span class="s2">在回答的最后一定要说"感谢您的提问！"</span>
+<span class="si">{context}</span>
+<span class="s2">问题：</span><span class="si">{question}</span>
+<span class="s2">有用的回答："""</span>
+<span class="n">QA_CHAIN_PROMPT</span> <span class="o">=</span> <span class="n">PromptTemplate</span><span class="p">(</span>
+    <span class="n">input_variables</span><span class="o">=</span><span class="p">[</span><span class="s2">"context"</span><span class="p">,</span> <span class="s2">"question"</span><span class="p">],</span>
+    <span class="n">template</span><span class="o">=</span><span class="n">template</span>
+<span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p>3、构造检索式问答，导入 <code>RetrievalQA</code> 包，声明一个检索式问答链</p>
+</blockquote>
+<ul>
+<li>调用的语言模型</li>
+<li>作为检索器的向量数据库，默认使用 stuff 模式</li>
+<li>开启返回源文档信息的功能</li>
+<li>并且传入预设好的 Prompt 模板</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">langchain.chains</span><span class="w"> </span><span class="kn">import</span> <span class="n">RetrievalQA</span>
+
+<span class="n">qa_chain</span> <span class="o">=</span> <span class="n">RetrievalQA</span><span class="o">.</span><span class="n">from_chain_type</span><span class="p">(</span>
+    <span class="n">llm</span><span class="p">,</span>
+    <span class="n">retriever</span><span class="o">=</span><span class="n">vectordb</span><span class="o">.</span><span class="n">as_retriever</span><span class="p">(),</span>
+    <span class="n">return_source_documents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">chain_type_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">"prompt"</span><span class="p">:</span> <span class="n">QA_CHAIN_PROMPT</span><span class="p">}</span>
+<span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p>4、将问题作为查询进行调用</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">question</span> <span class="o">=</span> <span class="s2">"I want to know how Geemap is used in research?"</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">qa_chain</span><span class="p">({</span><span class="s2">"query"</span><span class="p">:</span> <span class="n">question</span><span class="p">})</span>
+
+<span class="n">result</span><span class="p">[</span><span class="s2">"result"</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="62-mapreduce">6.2 基于 MapReduce 的检索式问答链<a class="headerlink" href="#62-mapreduce" title="Permanent link">¶</a></h3>
+<p>当文档太多时，语言模型无法将它们全都适配到上下文窗口中；MapReduce 文档链的原理是：</p>
+<ul>
+<li>先将每个独立的文档单独发送到语言模型以获取原始答案</li>
+<li>然后这些答案通过最终对语言模型的一次调用组合成最终的答案。</li>
+</ul>
+<blockquote>
+<p>1、重新定义 QA 检索</p>
+</blockquote>
+<ul>
+<li>Chain 链类型设为 <code>MapReduceDocumentsChain()</code> 文档链</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">qa_chain_mr</span> <span class="o">=</span> <span class="n">RetrievalQA</span><span class="o">.</span><span class="n">from_chain_type</span><span class="p">(</span>
+    <span class="n">llm</span><span class="p">,</span>
+    <span class="n">retriever</span><span class="o">=</span><span class="n">vectordb</span><span class="o">.</span><span class="n">as_retriever</span><span class="p">(),</span>
+    <span class="n">chain_type</span><span class="o">=</span><span class="s2">"map_reduce"</span>
+<span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p>2、再次提问</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">question</span> <span class="o">=</span> <span class="s2">"I want to know how Geemap is used in research?"</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">qa_chain_mr</span><span class="p">({</span><span class="s2">"query"</span><span class="p">:</span> <span class="n">question</span><span class="p">})</span>
+<span class="n">result</span><span class="p">[</span><span class="s2">"result"</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="63-refine">6.3 基于 Refine 的检索式问答链<a class="headerlink" href="#63-refine" title="Permanent link">¶</a></h3>
+<p>实测效果最好</p>
+<blockquote>
+<p>重新定义 QA 检索</p>
+</blockquote>
+<ul>
+<li>Chain 链类型设为 <code>RefineDocumentsChain()</code> 文档链</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">qa_chain_r</span> <span class="o">=</span> <span class="n">RetrievalQA</span><span class="o">.</span><span class="n">from_chain_type</span><span class="p">(</span>
+    <span class="n">llm</span><span class="p">,</span>
+    <span class="n">retriever</span><span class="o">=</span><span class="n">vectordb</span><span class="o">.</span><span class="n">as_retriever</span><span class="p">(),</span>
+    <span class="n">chain_type</span><span class="o">=</span><span class="s2">"refine"</span>
+<span class="p">)</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">qa_chain_r</span><span class="p">({</span><span class="s2">"query"</span><span class="p">:</span> <span class="n">question</span><span class="p">})</span>
+<span class="n">result</span><span class="p">[</span><span class="s2">"result"</span><span class="p">]</span>
+</code></pre></div>
+<h2 id="7">7 上下文对话<a class="headerlink" href="#7" title="Permanent link">¶</a></h2>
+<p>记录之前与语言模型交流的任何对话和信息，作为聊天历史记录。使得 LLM 在回答问题时，能够综合考虑当前问题和聊天历史记录中的内容。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/deploy-4-004.webp" data-desc-position="bottom"><img alt="" src="../../../assets/images/deploy-4-004.webp"></a></p>
+<center>图 4-5 上下文 QA 对话流程图</center>
+
+<p>为了实现上下文对话，保存一个聊天消息的列表作为历史记录是缓存区，并在每次对话时将这些消息与问题一起传递给 LLM</p>
+<ul>
+<li>首先，要添加 <code>ConversationBufferMemory</code> 对话缓冲存储</li>
+<li>然后，指定 <code>chat_history</code> 作为聊天消息的缓存方式</li>
+<li>最后，设置返回的聊天历史记录是列表形式，而不是字符串</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">langchain.memory</span><span class="w"> </span><span class="kn">import</span> <span class="n">ConversationBufferMemory</span>
+<span class="n">memory</span> <span class="o">=</span> <span class="n">ConversationBufferMemory</span><span class="p">(</span>
+    <span class="n">memory_key</span><span class="o">=</span><span class="s2">"chat_history"</span><span class="p">,</span>
+    <span class="n">return_messages</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+
+
+<hr>
+<div class="md-source-file">
+    <small>
+
+        <!-- mkdocs-git-revision-date-localized-plugin -->
+        
+        最后更新:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年3月21日 16:49:04 CST"><span class="timeago" datetime="2026-03-21T16:49:04+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年3月21日 16:49:04 CST">2026-03-21</span>
+        
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年3月21日 16:49:04 CST"><span class="timeago" datetime="2026-03-21T16:49:04+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年3月21日 16:49:04 CST">2026-03-21</span>
+        
+
+        <!-- mkdocs-git-revision-date-plugin -->
+        
+
+        <br>
+        
+        作者:
+        <span class="git-page-authors git-authors"><a href="mailto:1612990205@qq.com">gis-xh</a></span>
+        
+    </small>
+</div>
+
+
+
+
+<!-- Insert Giscus generated snippet here -->
+<!-- 插入 Giscus 生成的代码块 -->
+<script src="https://giscus.app/client.js" data-repo="gis-xh/mkdocs-site" data-repo-id="R_kgDOJqGKjQ" data-category="Announcements" data-category-id="DIC_kwDOJqGKjc4CW4Tq" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="zh-CN" crossorigin="anonymous" async="">
+    </script>
+
+<!-- 下面保持不动即可 -->
+<!-- Synchronize Giscus theme with palette -->
+<script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate" ? "dark" : "light"
+        giscus.setAttribute("data-theme", theme)
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function () {
+        var ref = document.querySelector("[data-md-component=palette]")
+        ref.addEventListener("change", function () {
+            var palette = __md_get("__palette")
+            if (palette && typeof palette.color === "object") {
+                var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+                /* Instruct Giscus to change theme */
+                var frame = document.querySelector(".giscus-frame")
+                frame.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme } } },
+                    "https://giscus.app"
+                )
+            }
+        })
+    })
+</script>
+
+                
+
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 gis-xh
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/gis-xh" target="_blank" rel="noopener" title="GitHub | gis-xh" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "navigation.tabs", "navigation.top", "navigation.footer", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../js/timeago.min.js"></script>
+      
+        <script src="../../../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="../../../mkdocs/js/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html><!-- taken from 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
