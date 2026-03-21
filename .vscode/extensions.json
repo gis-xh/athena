@@ -1,0 +1,12 @@
+{
+    // 推荐此项目所需的 VS Code 扩展 (如果尚未安装)
+    "recommendations": [
+        "vscode-icons-team.vscode-icons", // 文件图标主题
+        "streetsidesoftware.code-spell-checker", // 拼写检查工具
+        "esbenp.prettier-vscode", // Prettier 代码格式化工具
+        "ms-python.python", // Python 语言支持
+        "charliermarsh.ruff", // Ruff 代码检查和格式化工具
+        "detachhead.BasedPyright", // Python 类型检查工具
+        "esbenp.prettier-vscode", // Prettier 代码格式化工具
+    ]
+}

@@ -1,0 +1,5 @@
+mkdocs-material # 使用pip包管理工具安装mkdocs-material
+mkdocs-glightbox # 安装图像缩放工具
+mkdocs-git-revision-date-localized-plugin # 获取github文档时间
+mkdocs-git-authors-plugin # 获取github作者
+mkdocs-meta-manager # 文件元数据管理器

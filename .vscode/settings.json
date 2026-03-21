@@ -1,0 +1,17 @@
+{
+  // 保存时自动格式化代码
+  "editor.formatOnSave": true,
+  // 统一使用Prettier格式化代码
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit" // 自动修复Eslint问题
+  },
+  // 开启ESLint代码检查
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue",
+    "html",
+    "markdown"
+  ]
+}

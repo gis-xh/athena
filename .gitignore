@@ -1,3 +1,8 @@
+*.env
+*data/
+code/
+site/
+*__pycache__/
 *.pdf
 *.doc
 *.docx
