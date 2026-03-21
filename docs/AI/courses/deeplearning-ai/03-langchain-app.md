@@ -222,7 +222,7 @@ print("输出类型:", type(output_dict), "\n输出内容:", output_dict)
 
 聊天机器人借助缓存完整上下文并提交给语言模型的形式，给对话添加了 “语境” 从而实现了记忆能力。每次对话，都会将上文中所有内容形成与对话一同输入，所以随着对话变得越来越长，所需的内存量也变得非常长。
 
-![](../../assets/images/deploy-5-005.webp)
+![![../../../assets/images/deploy-5-005.webp)
 
 <center>图 3-1 大语言模型的记忆力</center>
 
@@ -383,13 +383,13 @@ chain.run(product)
 
 - `SimpleSequentialChain()`：单个输入/输出
 
-![](../../assets/images/deploy-1-001.webp)
+![![../../../assets/images/deploy-1-001.webp)
 
 <center>图 3-2 SimpleSequentialChain: 单个输出输出的顺序链</center>
 
 - `SequentialChain()`：多个输入/输出
 
-![](../../assets/images/deploy-4-004.webp)
+![![../../../assets/images/deploy-4-004.webp)
 
 <center>图 3-3 SequentialChain: 多个输出输出的顺序链</center>
 
@@ -399,7 +399,7 @@ chain.run(product)
 
 并且预设一个 `Default Chain` 在不确定输入数据时，调用此链，对语言模型进行一般性调用。
 
-![](../../assets/images/deploy-1-001.webp)
+![![../../../assets/images/deploy-1-001.webp)
 
 <center>图 3-4 Router Chain: 路由链</center>
 
@@ -413,7 +413,7 @@ chain.run(product)
 
 ### 4.1 Embedding 模型
 
-![](../../assets/images/deploy-3-003.webp)
+![![../../../assets/images/deploy-3-003.webp)
 
 <center>图 3-5 Embeddings 工作原理-1</center>
 
@@ -427,7 +427,7 @@ chain.run(product)
 3) The Chevy Bolt accelerates to 60 mph in 6.7 seconds.
 ```
 
-![](../../assets/images/deploy-7-007.webp)
+![![../../../assets/images/deploy-7-007.webp)
 
 <center>图 3-6 Embeddings 工作原理-2</center>
 
@@ -439,7 +439,7 @@ chain.run(product)
 - 然后，将每一个块创建一个 Embedding
 - 最后，将所有结果存储在向量数据库中
 
-![](../../assets/images/llm-image-20230724113409479-022.webp)
+![![../../../assets/images/llm-image-20230724113409479-022.webp)
 
 <center>图 3-7 文档内容创建向量数据库存储</center>
 
@@ -448,19 +448,19 @@ chain.run(product)
 - 首先，对输入的查询创建 Embedding
 - 然后，将其与向量数据库中所有向量进行比较，并选择最相似的前 n 个
 
-![](../../assets/images/deploy-7-007.webp)
+![![../../../assets/images/deploy-7-007.webp)
 
 <center>图 3-8 查询内容与向量数据库进行匹配</center>
 
 3、**传递给LLM：**将返回的 n 个最相似的块与输入的查询一同作为 Prompt 传递给语言模型，得到答案。
 
-![](../../assets/images/deploy-5-005.webp)
+![![../../../assets/images/deploy-5-005.webp)
 
 <center>图 3-9 将相似向量输入给 LLM</center>
 
 4、Embedding 示例代码
 
-![](../../assets/images/deploy-6-006.webp)
+![![../../../assets/images/deploy-6-006.webp)
 
 <center>图 3-10 文本转向量数据示例</center>
 

@@ -2,7 +2,7 @@
 
 ## 1 安装 Miniconda / Anaconda
 
-&emsp;&emsp;书接上回：[Win11 安装配置 Miniconda](../python/01-conda/windows-installation.md)
+&emsp;&emsp;书接上回：[Win11 安装配置 Miniconda](../../python/01-conda/windows-installation.md)
 
 ## 2 创建并激活虚拟环境
 
@@ -32,7 +32,7 @@ conda activate krs01
 conda install -n krs01 ipython notebook
 ```
 
-![](../assets/images/dl-3-078.webp)
+![](../../assets/images/dl-3-078.webp)
 
 ### 3.2 运行 Jupyter Notebook
 
@@ -44,11 +44,11 @@ jupyter notebook
 
 - vscode 终端界面
 
-![](../assets/images/dl-4-079.webp)
+![](../../assets/images/dl-4-079.webp)
 
 - 浏览器运行界面
 
-![](../assets/images/dl-5-080.webp)
+![](../../assets/images/dl-5-080.webp)
 
 - 注：按 Ctrl + C 关闭 Notebook
 
@@ -60,13 +60,13 @@ jupyter notebook
 conda install -n krs01 numpy matplotlib pandas pydotplus h5py scikit-learn
 ```
 
-![](../assets/images/dl-6-081.webp)
+![](../../assets/images/dl-6-081.webp)
 
 ```shell
 conda install -n krs01 scipy mkl-service libpython m2w64-toolchain
 ```
 
-![](../assets/images/dl-7-082.webp)
+![](../../assets/images/dl-7-082.webp)
 
 ### 4.2 安装 TensorFlow
 
@@ -90,7 +90,7 @@ conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
 
 - 这里我们指定安装与 `tensorflow 2.10.0` 匹配的 `CUDA11.2` 和 `cuDNN 8.1.0`
 
-![](../assets/images/dl-image-20230428092112240-024.webp)
+![](../../assets/images/dl-image-20230428092112240-024.webp)
 
 ## 5 安装 CUDA
 
@@ -104,13 +104,13 @@ nvidia-smi
 
 - 此时可以看到当前显卡驱动为 `511.69`，支持的最高 CUDA 版本为 `11.6`
 
-![](../assets/images/dl-8-083.webp)
+![](../../assets/images/dl-8-083.webp)
 
 ### 5.2 官网下载
 
 - 官网：[CUDA 11.2 下载](https://developer.nvidia.com/cuda-11.2.0-download-archive?target_os=Windows&target_arch=x86_64&target_version=10)
 
-![](../assets/images/dl-image-20230428201253558-031.webp)
+![](../../assets/images/dl-image-20230428201253558-031.webp)
 
 ### 5.3 安装注意
 
@@ -118,19 +118,19 @@ nvidia-smi
 
 - 解压 CUDA 安装包
 
-![](../assets/images/dl-image-20220726110749394-002.webp)
+![](../../assets/images/dl-image-20220726110749394-002.webp)
 
 - 选择自定义安装
 
-![](../assets/images/dl-image-20230428193829668-026.webp)
+![](../../assets/images/dl-image-20230428193829668-026.webp)
 
 - 取消安装 Visual Studio Integration 组件，防止后续报错
 
-![](../assets/images/dl-image-20230428194413913-027.webp)
+![](../../assets/images/dl-image-20230428194413913-027.webp)
 
 - 使用默认安装路径，不做修改
 
-![](../assets/images/dl-image-20230428194440733-028.webp)
+![](../../assets/images/dl-image-20230428194440733-028.webp)
 
 > 检查是否安装成功
 
@@ -142,7 +142,7 @@ nvcc -V
 
 - 输出版本即为成功
 
-![](../assets/images/dl-image-20230428203435904-035.webp)
+![](../../assets/images/dl-image-20230428203435904-035.webp)
 
 ## 6 安装 cuDNN
 
@@ -150,17 +150,17 @@ nvcc -V
 
 - 官网：[cuDNN 下载](https://developer.nvidia.com/zh-cn/cudnn)，这里 <font style="color:red">必须登录账号</font> 才能继续下载。
 
-![](../assets/images/dl-image-20220726135042391-006.webp)
+![](../../assets/images/dl-image-20220726135042391-006.webp)
 
 - 首次使用需要注册账号并输入详细信息
 
-![](../assets/images/dl-image-20220726140602291-008.webp)
+![](../../assets/images/dl-image-20220726140602291-008.webp)
 
 ### 6.2 下载对应版本
 
 &emsp;&emsp;[cuDNN下载](https://developer.nvidia.com/rdp/cudnn-archive)，因为之前安装的 CUDA 版本号为 11.2，所以我们选择对应版本的 cuDNN 进行下载。
 
-![](../assets/images/dl-image-20230428201412685-032.webp)
+![](../../assets/images/dl-image-20230428201412685-032.webp)
 
 ### 6.3 安装 cuDNN
 
@@ -170,21 +170,21 @@ nvcc -V
 
 1、`cuDNN8.1.0` 解压包内容
 
-![](../assets/images/dl-image-20230428202404924-033.webp)
+![](../../assets/images/dl-image-20230428202404924-033.webp)
 
 2、CUDA Development 安装目录内容
 
-![](../assets/images/dl-image-20220726145523088-012.webp)
+![](../../assets/images/dl-image-20220726145523088-012.webp)
 
 3、逐个复制内容到对应目录中
 
-![](../assets/images/dl-image-20230428202655263-034.webp)
+![](../../assets/images/dl-image-20230428202655263-034.webp)
 
 ## 7 配置环境变量
 
 &emsp;&emsp;在成功安装 CUDA 后，系统会自动添加环境变量
 
-![](../assets/images/dl-image-20230428201014850-029.webp)
+![](../../assets/images/dl-image-20230428201014850-029.webp)
 
 > 在环境变量中添加如下内容
 
@@ -197,7 +197,7 @@ C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\lib
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\libnvvp
 ```
 
-![](../assets/images/dl-image-20230428201050040-030.webp)
+![](../../assets/images/dl-image-20230428201050040-030.webp)
 
 ## 8 测试安装环境
 

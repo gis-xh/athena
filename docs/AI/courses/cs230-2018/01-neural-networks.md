@@ -16,7 +16,7 @@ $$
 
 - 从 0 平滑地升高到 1，但是在两端梯度为 0，不利于后续计算
 
-![](../../assets/images/dl-image-20230729165611899-046.webp)
+![![../../../assets/images/dl-image-20230729165611899-046.webp)
 
 <center>图 1.1.1 Sigmoid 函数图</center>
 
@@ -26,19 +26,19 @@ $$
 
 **4、神经元：**在其内部可以运行一个函数，比如 ReLU 函数，其他非线性函数
 
-![](../../assets/images/dl-image-20230728114716764-040.webp)
+![![../../../assets/images/dl-image-20230728114716764-040.webp)
 
 <center>图 1.1.2 房价预测示例图</center>
 
 **5、神经网络：**由许多单一神经元叠加组成
 
-![](../../assets/images/dl-image-20230728115745077-041.webp)
+![![../../../assets/images/dl-image-20230728115745077-041.webp)
 
 <center>图 1.1.3 房价预测中的简易神经网络示例</center>
 
 - 给定足够多的训练示例 x 和 y，神经网络就能够很好地拟合出一个函数来建立 x 与 y 之间的映射关系。
 
-![](../../assets/images/dl-image-20230728120916923-042.webp)
+![![../../../assets/images/dl-image-20230728120916923-042.webp)
 
 <center>图 1.1.4 房价预测中的简易神经网络抽象化</center>
 
@@ -52,7 +52,7 @@ $$
 - CNN：卷积神经网络，常用于图像数据，如图像分类……
 - RNN：循环神经网络，常用于序列化数据，应用于语言翻译和录音识别……
 
-![](../../assets/images/dl-image-20230728230111641-043.webp)
+![![../../../assets/images/dl-image-20230728230111641-043.webp)
 
 <center>图 1.2.1 三种神经网络示例图</center>
 
@@ -67,7 +67,7 @@ $$
 - 图像像素值
 - 文本中的独立单词
 
-![](../../assets/images/dl-image-20230728230303030-044.webp)
+![![../../../assets/images/dl-image-20230728230303030-044.webp)
 
 <center>图 1.2.2 非结构化数据示例图</center>
 
@@ -77,7 +77,7 @@ $$
 - 大、中、小型神经网络
 - 传统机器学习算法：SVM 支持向量机、Logistic Regression 逻辑回归、……
 
-![](../../assets/images/dl-image-20230729111124715-045.webp)
+![![../../../assets/images/dl-image-20230729111124715-045.webp)
 
 <center>图 1.2.3 不同算法在不同数据规模的表现</center>
 
@@ -176,7 +176,7 @@ $$
 
 **2、渐变梯度下降算法：**通过不断迭代，将初始点向最陡的下坡方向（下降最快的方向）前进，直到到达最低点。
 
-![](../../assets/images/dl-image-20230729191159408-047.webp)
+![![../../../assets/images/dl-image-20230729191159408-047.webp)
 
 <center>图 2.1 梯度下降示意图</center>
 
@@ -197,7 +197,7 @@ $$
 
 **1、前向传播（Forward Propagation）：**按顺序计算代价函数。
 
-![](../../assets/images/dl-image-20230729195918986-048.webp)
+![![../../../assets/images/dl-image-20230729195918986-048.webp)
 
 <center>图 2.2 前向传播计算流程图</center>
 
@@ -207,7 +207,7 @@ $$
 \frac{dJ}{db}=\frac{dJ}{dv}\cdot\frac{dv}{du}\cdot\frac{du}{db}
 $$
 
-![](../../assets/images/dl-image-20230729202013657-049.webp)
+![![../../../assets/images/dl-image-20230729202013657-049.webp)
 
 <center>图 2.3 反向传播计算流程图（红）</center>
 
@@ -235,7 +235,7 @@ $$
 
 - 对于单一样本前向传播计算损失函数。
 
-![](../../assets/images/dl-image-20230729223442615-050.webp)
+![![../../../assets/images/dl-image-20230729223442615-050.webp)
 
 <center>图 2.4 逻辑回归前向传播</center>
 
@@ -266,7 +266,7 @@ $$
 
 **1、向量化：**在深度学习中，一定要避免使用 for loop，而是改用向量化计算，这样可以加快计算的速度。
 
-![](../../assets/images/dl-image-20230730143753318-051.webp)
+![![../../../assets/images/dl-image-20230730143753318-051.webp)
 
 <center>图 2.5 向量计算与 For 循环计算时间对比</center>
 
@@ -386,7 +386,7 @@ print("每一列总和: \n", cal)
 print("每项占比: \n", percentage)
 ```
 
-![](../../assets/images/dl-image-20230730170652499-052.webp)
+![![../../../assets/images/dl-image-20230730170652499-052.webp)
 
 <center>图 2.6 Broadcasting 示例输出</center>
 
@@ -501,7 +501,7 @@ assert(a.shape==(5,1))
 
 下面是一个简单的神经网络结构图，它是双层神经网络，包括一个隐藏层和一个输出层。（一般计算分层时不包括输入层）
 
-![](../../assets/images/dl-image-20230801203338869-053.webp)
+![![../../../assets/images/dl-image-20230801203338869-053.webp)
 
 <center>图 3.1 含有一个隐藏层的神经网络</center>
 
@@ -650,7 +650,7 @@ $$
 
 一个神经网络中的不同层，大致上都在做着相同的事情，或者说一遍又一遍地做着相同的计算。
 
-![](../../assets/images/dl-image-20230802180345166-054.webp)
+![![../../../assets/images/dl-image-20230802180345166-054.webp)
 
 <center>图 3.2 多样本向量化示例图</center>
 
@@ -689,7 +689,7 @@ g'(z)=\frac{d}{dz}g(z)&=\frac{1}{1+e^{-z}}(1-\frac{1}{1+e^{-z}})\\\\
 \end{align*}
 $$
 
-![](../../assets/images/dl-image-20230802203836947-055.webp)
+![![../../../assets/images/dl-image-20230802203836947-055.webp)
 
 <center>图 3.3 sigma 函数图像</center>
 
@@ -713,7 +713,7 @@ g'(z)=\frac{d}{dz}g(z)&=1-[\tanh(z)]^2\\\\
 \end{align*}
 $$
 
-![](../../assets/images/dl-image-20230802204050789-056.webp)
+![![../../../assets/images/dl-image-20230802204050789-056.webp)
 
 <center>图 3.4 tanh 函数图像</center>
 
@@ -744,7 +744,7 @@ undefine & ,if\ z=0
 \end{align*}
 $$
 
-![](../../assets/images/dl-image-20230802204136339-057.webp)
+![![../../../assets/images/dl-image-20230802204136339-057.webp)
 
 <center>图 3.5 ReLU 函数图像</center>
 
@@ -771,7 +771,7 @@ undefine & ,if\ z=0
 \end{align*}
 $$
 
-![](../../assets/images/dl-image-20230802204204632-058.webp)
+![![../../../assets/images/dl-image-20230802204204632-058.webp)
 
 <center>图 3.6 Leaky ReLU 函数图像</center>
 
@@ -853,7 +853,7 @@ $$
 
 在实现深度神经网络时，清晰地知道每个矩阵和向量的维度，能够很好地排除编程中的 bug。
 
-![](../../assets/images/dl-image-20230804142613142-059.webp)
+![![../../../assets/images/dl-image-20230804142613142-059.webp)
 
 <center>图 4.1 深层神经网络结构图</center>
 
@@ -901,7 +901,7 @@ $$
 
 3、梯度下降：利用计算出的导数不断减小权重和偏差值
 
-![](../../assets/images/dl-image-20230804154112954-060.webp)
+![![../../../assets/images/dl-image-20230804154112954-060.webp)
 
 <center>图 4.2 梯度下降流程图</center>
 

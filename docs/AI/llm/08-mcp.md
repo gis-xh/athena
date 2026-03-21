@@ -8,8 +8,8 @@ UV：Python的包管理器，管理基于Python开发的MCP服务的运行环境
 
 Bun：类似Nodejs的前端运行环境
 
-![](../assets/images/llm-image-20250512134736044-012.webp)
+![](../../assets/images/llm-image-20250512134736044-012.webp)
 
 直接复制即可
 
-![](../assets/images/llm-image-20250512142635756-013.webp)
+![](../../assets/images/llm-image-20250512142635756-013.webp)

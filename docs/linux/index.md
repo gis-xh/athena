@@ -4,11 +4,7 @@ comments: false
 
 # Linux 学习笔记
 
-本部分内容为 [B站 - 韩顺平 2021 Linux 教程](https://www.bilibili.com/video/BV1Sv411r7vd) 学习笔记。
-
-==$\textcolor{red}{Hello}$==
-
-_==<font style="color:red;">Hello</font>==_
+Linux 系统操作、Shell 脚本及 Python 自动化笔记。参考 [韩顺平 Linux 教程](https://www.bilibili.com/video/BV1Sv411r7vd)。
 
 ## 目录
 

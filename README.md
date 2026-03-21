@@ -1,21 +1,42 @@
-# 个人 AI 博客
+# Athena 雅典娜笔记
 
 ## 介绍
 
-&emsp;&emsp;这是由 gis-xh 使用 markdown 的在线博客仓库。包含深度学习 (DL)、大模型 (LLM) 等内容的 AI 学习探索的网站。
+&emsp;&emsp;这是 gis-xh 的**全栈技术学习笔记**，基于 MkDocs + Material 主题构建。内容涵盖 AI/机器学习、Python 后端、前端开发、Linux、DevOps 部署、IoT、3D 建模等多个技术领域。
+
+## 内容架构
+
+| 分类 | 路径 | 说明 |
+|------|------|------|
+| AI/ML | `docs/deep-learning/`, `docs/LLM/`, `docs/machine-learning/` | 深度学习、Keras、PyTorch、LLM |
+| Python | `docs/python/` | Django、FastAPI、PyQt、数据分析 |
+| 前端 | `docs/frontend/` | Vue、React、Cesium、Web3D |
+| Linux | `docs/linux/` | Linux 系统操作、Shell 脚本 |
+| DevOps | `docs/deploy/` | Docker、阿里云、CentOS 部署 |
+| IoT | `docs/iot/` | OrangePi、边缘计算 |
+| 3D | `docs/3d/` | Blender 建模 |
+
+## 技术栈
+
+- **框架**: MkDocs + MkDocs Material
+- **语言**: Python、JavaScript、Shell
+- **部署**: GitHub Pages
+
+## 本地运行
+
+```bash
+# 安装依赖
+pip install -r requirements.txt
+
+# 本地预览
+mkdocs serve
+
+# 构建静态站点
+mkdocs build
+```
 
 ## 主要参考
 
-- [graykode/nlp-tutorial: Natural Language Processing Tutorial for Deep Learning Researchers (github.com)](https://github.com/graykode/nlp-tutorial)
-
-- [Hugging Face 快速入门（重点讲解模型(Transformers)和数据集部分(Datasets)）\_huggingface_iioSnail 的博客-CSDN 博客](https://blog.csdn.net/zhaohongfei_358/article/details/126224199)
-
-- [【预训练语言模型】Attention Is All You Need（Transformer）*position encoder*华师数据学院·王嘉宁的博客-CSDN 博客](https://blog.csdn.net/qq_36426650/article/details/112222115)
-
-- [低显存本地搭建 chatglm int4 量化版 - 哔哩哔哩 (bilibili.com)](https://www.bilibili.com/read/cv23278837/)
-
-- [Prompt-Tuning——深度解读一种新的微调范式\_华师数据学院·王嘉宁的博客-CSDN 博客](https://blog.csdn.net/qq_36426650/article/details/120607050)
-
-- [刘焕勇-个人主页 (liuhuanyong.github.io)](https://liuhuanyong.github.io/)
-
-- [再看大模型微调与应用：3 大行业 18 个开源垂直微调模型、微调数据、工具资源及有趣的 AIGC 应用集合 (qq.com)](https://mp.weixin.qq.com/s/dWKNIJOhT93i-mqfEYovTg)
+- [graykode/nlp-tutorial (GitHub)](https://github.com/graykode/nlp-tutorial)
+- [Hugging Face 快速入门](https://blog.csdn.net/zhaohongfei_358/article/details/126224199)
+- [韩顺平 Linux 教程 (B站)](https://www.bilibili.com/video/BV1Sv411r7vd)

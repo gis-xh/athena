@@ -69,7 +69,7 @@
 
 将 Prompt 发送给 LLM 获得基于文档内容的回答
 
-![](../assets/images/llm-langchain-chatglm-011.webp)
+![](../../assets/images/llm-langchain-chatglm-011.webp)
 
 ## 进一步优化方向
 
@@ -213,7 +213,7 @@ Compiling gcc -O3 -fPIC -std=c99 C:\Users\Evolto\.cache\huggingface\modules\tran
 
 需要注意的是，Win11 系统中可能会将外来安装包删除或者锁定。如果在安装时，遇到双击无响应时，需要手动解除锁定才能正常进行安装。
 
-![](../assets/images/llm-image-20230704185344636-003.webp)
+![](../../assets/images/llm-image-20230704185344636-003.webp)
 
 3、当需要使用 CPU 运行项目时，可能会出现如下错误：
 
@@ -305,7 +305,7 @@ LLM_MODEL = "chatglm2-6b-int4"
 
 在首次启动时，如果本地没有此模型，初次启动后会默认下载到 `$HOME/.cache/huggingface/` 目录下。
 
-![alt text](../assets/images/llm-image-20230704113712442-001.webp)
+![alt text](../../assets/images/llm-image-20230704113712442-001.webp)
 
 4、由于硬件限制，把 LLM 运行设备设置为 CPU
 
@@ -342,7 +342,7 @@ LLM_HISTORY_LEN = 0
 python webui.py
 ```
 
-![](../assets/images/llm-image-20230815213723576-032.webp)
+![](../../assets/images/llm-image-20230815213723576-032.webp)
 
 ## langchain-ChatGLM-webui
 

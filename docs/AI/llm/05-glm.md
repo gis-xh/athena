@@ -9,7 +9,7 @@
 - ChatGLM-6B：https://github.com/THUDM/ChatGLM-6B
 - ChatGLM2-6B：https://github.com/THUDM/ChatGLM2-6B
 
-![](../assets/images/llm-image-20230704161025901-002.webp)
+![](../../assets/images/llm-image-20230704161025901-002.webp)
 
 ### 具备能力
 

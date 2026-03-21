@@ -14,7 +14,7 @@
 - 编码器：把输入文本变成一个词向量（Self-Attention）
 - 解码器：得到编码器输出的词向量后，生成处理的结果
 
-![](../assets/images/llm-1689579077512-042.webp)
+![![../../assets/images/llm-1689579077512-042.webp)
 
 <center>图 1-1 Transformer 框架结构图</center>
 
@@ -22,7 +22,7 @@
 
 **流程 1：** 输入待翻译的文本 → Transformer → 翻译后的文本
 
-![](../assets/images/llm-1689579544018-043.webp)
+![![../../assets/images/llm-1689579544018-043.webp)
 
 <center>图 1-2 机器翻译流程</center>
 
@@ -32,7 +32,7 @@
 - 编码器 Encoder：把输入序列变成一个词向量（Self-Attetion）
 - 解码器 Decoder：得到编码器输出的词向量后，生成翻译的结果
 
-![](../assets/images/llm-1689579946382-044.webp)
+![![../../assets/images/llm-1689579946382-044.webp)
 
 <center>图 1-3 编码器与解码器</center>
 
@@ -42,7 +42,7 @@ Nx：编码器里面又有 N 个小编码器（默认 N=6），层数越大显�
 
 通过 6 个编码器，对词向量一步又一步的强化（增强）
 
-![](../assets/images/llm-1689661703416-045.webp)
+![![../../assets/images/llm-1689661703416-045.webp)
 
 <center>图 1-4 编码器与解码器层结构</center>
 
@@ -50,7 +50,7 @@ Nx：编码器里面又有 N 个小编码器（默认 N=6），层数越大显�
 
 双重线性变换：$w_2*(w_1*x_1+b_1)+b_2$
 
-![](../assets/images/llm-1689661936203-046.webp)
+![![../../assets/images/llm-1689661936203-046.webp)
 
 <center>图 1-5 FFN 后馈神经网络结构</center>
 
@@ -65,7 +65,7 @@ Nx：编码器里面又有 N 个小编码器（默认 N=6），层数越大显�
 
 ### 2.2 详细结构
 
-![](../assets/images/llm-1689662551836-047.webp)
+![![../../assets/images/llm-1689662551836-047.webp)
 
 <center>图 2-1 编码器详细结构图</center>
 
@@ -114,7 +114,7 @@ Thinking & Machines
 - Encoder-Decoder Attention：做交叉注意力机制
 - Feed Forward：前馈神经网络，得到 $r_2$（是 thinking 的新的表征）
 
-![](../assets/images/llm-1689661936203-046.webp)
+![![../../assets/images/llm-1689661936203-046.webp)
 
 <center>图 3-1 解码器详细结构图</center>
 
@@ -126,7 +126,7 @@ Thinking & Machines
 
 测试阶段：没有输入的答案
 
-![](../assets/images/llm-tf-049.gif)
+![![../../assets/images/llm-tf-049.gif)
 
 <center>图 4-1 生成单个词</center>
 
@@ -134,7 +134,7 @@ Thinking & Machines
 
 利用已经生成的词作为解码器的输入，当生成的为句子结束符时，任务结束
 
-![](../assets/images/llm-tf-2-050.gif)
+![![../../assets/images/llm-tf-2-050.gif)
 
 <center>图 4-2 生成所有词</center>
 

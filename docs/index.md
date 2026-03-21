@@ -2,51 +2,37 @@
 comments: false
 ---
 
-# 个人 AI 博客
+# Athena 雅典娜笔记
 
-## 介绍
+## 关于本项目
 
-&emsp;&emsp;这是由 gis-xh 使用 markdown 的在线博客仓库。包含深度学习 (DL)、大模型 (LLM) 等内容的 AI 学习探索的网站。
+&emsp;&emsp;全栈技术学习笔记仓库，涵盖 AI/ML、Python、前端、Linux、DevOps、IoT、3D 等多个领域。使用 Markdown 编写，MkDocs + Material 主题构建静态网站。
 
-## 目录说明
+## 内容目录
 
-### 1 前端学习：[Frontend-Notes](./frontend/index.md)
+| 分类 | 说明 |
+|------|------|
+| [AI 学习](./AI/index.md) | AI/ML、深度学习、大语言模型、Keras、Agents |
+| [前端学习](./frontend/index.md) | Vue、React、Cesium、Web3D、GeoServer |
+| [Python 学习](./python/index.md) | Conda、Django、FastAPI、PyQt、数据分析 |
+| [Linux 学习](./linux/index.md) | 系统操作、Shell 脚本、Python 自动化 |
+| [项目部署](./deploy/index.md) | Docker、阿里云、CentOS、DevOps |
+| [物联网](./iot/index.md) | OrangePi、边缘计算 |
+| [3D 建模](./3d/index.md) | Blender |
 
-### 2 Python 学习：[Python-Notes](./python/index.md)
+## 技术栈
 
-- [Conda 学习记录](./python/01-conda/index.md)
-- [NumPy 学习记录](./python/02-data-analysis/numpy/01-basics/01-setup.md)
-- [Django 学习记录](./python/03-django/index.md)
+- **框架**: MkDocs + MkDocs Material
+- **语言**: Python、JavaScript、Shell
 
-### 3 Linux 学习笔记：[Linux-Notes](./linux/index.md)
+## 本地预览
 
-### 4 项目部署：[Deploy-Notes](./deploy/index.md)
-
-### 5 机器学习：[Machine-Learning](./machine-learning/index.md)
-
-### 6 深度学习：[Deep-Learning](./deep-learning/index.md)
-
-- [Keras 深度学习](./deep-learning/keras/index.md)
-- [CS230 2018](./deep-learning/cs230-2018/index.md)
-
-### 7 大语言模型：[LLM](./LLM/index.md)
-
-### 8 物联网：[IoT](./iot/index.md)
-
-### 9 3D 建模：[3D](./3d/index.md)
+```bash
+mkdocs serve
+```
 
 ## 主要参考
 
-- [graykode/nlp-tutorial: Natural Language Processing Tutorial for Deep Learning Researchers (github.com)](https://github.com/graykode/nlp-tutorial)
-
-- [Hugging Face 快速入门（重点讲解模型(Transformers)和数据集部分(Datasets)）\_huggingface_iioSnail 的博客-CSDN 博客](https://blog.csdn.net/zhaohongfei_358/article/details/126224199)
-
-- [【预训练语言模型】Attention Is All You Need（Transformer）*position encoder*华师数据学院·王嘉宁的博客-CSDN 博客](https://blog.csdn.net/qq_36426650/article/details/112222115)
-
-- [低显存本地搭建 chatglm int4 量化版 - 哔哩哔哩 (bilibili.com)](https://www.bilibili.com/read/cv23278837/)
-
-- [Prompt-Tuning——深度解读一种新的微调范式\_华师数据学院·王嘉宁的博客-CSDN 博客](https://blog.csdn.net/qq_36426650/article/details/120607050)
-
-- [刘焕勇-个人主页 (liuhuanyong.github.io)](https://liuhuanyong.github.io/)
-
-- [再看大模型微调与应用：3 大行业 18 个开源垂直微调模型、微调数据、工具资源及有趣的 AIGC 应用集合 (qq.com)](https://mp.weixin.qq.com/s/dWKNIJOhT93i-mqfEYovTg)
+- [graykode/nlp-tutorial](https://github.com/graykode/nlp-tutorial)
+- [韩顺平 Linux 教程](https://www.bilibili.com/video/BV1Sv411r7vd)
+- [Hugging Face 快速入门](https://blog.csdn.net/zhaohongfei_358/article/details/126224199)

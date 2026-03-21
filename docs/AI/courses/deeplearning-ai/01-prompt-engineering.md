@@ -55,7 +55,7 @@
 
 通过不断地完善提示，让输出越来越接近需求。
 
-![](../../assets/images/deploy-4-004.webp)
+![](../../../assets/images/deploy-4-004.webp)
 
 <center>图 1-1 迭代优化 Prompt</center>
 
@@ -96,7 +96,7 @@
 
 - 利用语言模型参数 `temperature`，改变模型响应的多样性，数值越大越容易分心，但也许更有创造力。
 
-![](../../assets/images/deploy-1-001.webp)
+![](../../../assets/images/deploy-1-001.webp)
 
 <center>图 1-2 Temperature 参数示例</center>
 
