@@ -11,3 +11,9 @@ site/
 *.ppt
 *.pptx
 *.xmind
+*.jpg
+*.png
+*.zip
+*.tar
+*.tar.gz
+*.7z

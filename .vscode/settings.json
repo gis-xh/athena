@@ -12,7 +12,6 @@
     "javascriptreact",
     "vue",
     "html",
-    "markdown"
   ],
   // 针对 yml 和 yaml 文件定制格式, 以便 mkdocs 能够顺利运行
   "[yaml]": {
