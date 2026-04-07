@@ -1,11 +1,11 @@
-# OpenCode 及其插件安装配置说明 - 20260321 更新
+# OpenCode 及其插件安装配置说明 - 20260407 更新
 
 ## 一、不同系统的注意事项
 
 ### 1、Windows环境安装
 
-- 全程使用cmd命令行，不要使用管理员权限，若使用管理员权限只能手动设置 Bun 的环境变量
-- 安装过程中无需使用魔法环境
+- 全程使用命令行，不要使用管理员权限，若使用管理员权限只能手动设置 Bun 的环境变量
+- 安装过程中除 Bun 外，其他软件无需使用魔法环境
 
 2、WSL Ubuntu环境下安装
 
@@ -17,11 +17,11 @@
 
 ### 1、Bun
 
-（1）用途：用于安装和启动 OpenCode 与 oh-my-openagent 插件。
+（1）用途：用于安装和启动 OpenCode 与 Oh-My-OpenAgent 插件。
 
 （2）官方地址：https://bun.com/docs/installation
 
-- Windows 安装
+- Windows 安装：安装时需要访问 GitHub 下载 Bun Releases 版本，所以需要魔法环境。
 
 ```powershell
 powershell -c "irm bun.sh/install.ps1|iex"
@@ -45,7 +45,7 @@ curl -fsSL https://bun.com/install | bash
 rm -rf ~/.bun
 ```
 
-- Bun 更新：截至2026.03.21，最新版为 `v1.3.11`
+- Bun 更新：截至2026.04.07，最新版为 `v1.3.11`
 
 ```sh
 bun upgrade
@@ -54,7 +54,7 @@ bun upgrade
 （3）设置国内镜像
 
 - 参考文档：https://zhuanlan.zhihu.com/p/683420294
-- 在 `$HOME/` 创建文件 `.bunfig.toml`，输入以下内容并保持即可
+- 在 `C:\Users\系统用户名\` 创建文件 `.bunfig.toml`，输入以下内容并保存即可
 
 ```toml
 [install]
@@ -93,7 +93,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 bun add -g opencode-ai
 ```
 
-（4）OpenCode 更新：截至2026.03.21，最新版为 `v1.2.27`
+（4）OpenCode 更新：截至 2026.04.07，最新版为 `v1.3.17`
 
 ```sh
 opencode upgrade
@@ -101,7 +101,7 @@ opencode upgrade
 
 - 安装后不要启动，继续安装下面的插件。
 
-### 4、Oh My OpenAgent（原Oh My OpenCode）
+### 4、Oh-My-OpenAgent（原Oh My OpenCode）
 
 （1）用途：OpenCode 的插件，添加了多个强力智能体，集成了很多AI模型辅助工具。
 
@@ -115,7 +115,7 @@ opencode upgrade
 bunx oh-my-openagent install
 ```
 
-(4）oh-my-openagent 更新：截至2026.03.21，最新版为 `v3.12.3`
+（4）Oh-My-OpenAgent 更新：截至 2026.04.07，最新版为 `v3.15.3`
 
 ## 三、配置说明
 
@@ -143,7 +143,7 @@ bunx oh-my-openagent install
 2. 需要使用 Python 时，如果用户没有指定运行环境，就使用 uv 进行包管理，并使用 ruff 进行代码格式化；
 3. 需要为 Python 代码写注释时，统一使用 Parameters 与 Returns 的风格进行注释；
 4. 需要读取 word 文档时，如果用户没有指定，一律使用 Python + Pandoc 进行处理；
-5. 需要使用浏览器时，可以使用 agent-browser 与 dev-browser 两个技能进行浏览器自动化测试。
+5. 需要使用浏览器时，可以使用 agent-browser 技能进行浏览器自动化测试。
 6. 开发前端项目时，在代码完成后必须使用浏览器进行测试，直至浏览器控制台中没有任何错误和警告才算完成当前任务。
 ```
 
@@ -173,7 +173,6 @@ bunx oh-my-openagent install
 find-skills：用于查找技能
 skill-creator: 用于创建新技能
 agent-browser：用于使用浏览器
-dev-browser：用于使用浏览器
 pdf: 用于读取 PDF 文件
 xlsx: 用于读取 Excel 文件
 pptx: 用于读取 pptx 文件
@@ -186,13 +185,13 @@ frontend-design: 用于前端界面设计
 
 ## 四、日常使用
 
-1、入门学习-opencode中文站：https://www.opencodecn.com/
+1、入门学习-OpenCode第三方中文站：https://www.opencodecn.com/
 
 2、安装时需要使用魔法，因为需要外网下载资源。日常使用国产模型时，最好关闭魔法工具再运行。
 
-3、opencode和oh-my-opencode的更新频率很快，建议每天使用前更新一次。
+3、OpenCode和Oh-My-OpenAgent的更新频率很快，建议每次使用前检查更新。
 
-- 截止至 2026.03.21，bun 最新 `v1.3.11`，opencode 最新 `v1.2.27`，oh-my-opencode `v3.12.3`
+- 截止至 2026.04.07，bun 最新 `v1.3.11`，OpenCode 最新 `v1.3.17`， Oh-My-OpenAgent 最新 `v3.15.3`
 
 ```sh
 bun upgrade
@@ -206,10 +205,12 @@ opencode upgrade
 
 （1）`/ulw`：魔法命令，配合 `Sisyphus` 智能体
 
-（2）`esc`：连按两次可以打断施法
+（2）`/ulw-roof`：魔法命令，配合 `Sisyphus` 智能体，循环调用模型，直到彻底完成任务
 
-（3）`/undo`：输入后撤销本次对话内容
+（3）`esc`：连按两次可以打断施法
 
-（4）`ctrl+c+空格`：清空当前输入框内容
+（4）`/undo`：输入后撤销本次对话内容
 
-- 因为是在控制台中运行，`ctrl+c`会直接退出opencode，使用前一定要先按住空格
+（5）`ctrl+c+空格`：清空当前输入框内容
+
+- 因为是在控制台中运行，`ctrl+c`会直接退出OpenCode，使用前一定要先按住空格键
