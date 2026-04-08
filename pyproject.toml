@@ -11,3 +11,6 @@ dependencies = [
     "mkdocs-git-authors-plugin",
     "mkdocs-meta-manager",
 ]
+[[tool.uv.index]]
+url="https://pypi.tuna.tsinghua.edu.cn/simple"
+default=true
