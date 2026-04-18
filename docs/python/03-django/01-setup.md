@@ -9,7 +9,7 @@
 
 【注意】：
 
-1. 此处默认已经安装 Anaconda / Miniconda，如未安装，请参考 [Win11 安装配置 Miniconda 全过程记录](../01-conda/windows-installation.md)
+1. 此处默认已经安装 Anaconda / Miniconda，如未安装，请参考 [Win11 安装配置 Miniconda 全过程记录](../01-setup/conda-setup.md)
 2. 以下命令均是在终端命令行中输入。
 
 ### 2.1 创建环境

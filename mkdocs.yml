@@ -127,9 +127,10 @@ nav:
           - 学习记录: frontend/vue/learning-notes.md
   - Python 学习:
       - Python 总览: python/index.md
-      - Conda:
-          - 概述: python/01-conda/index.md
-          - Windows 安装: python/01-conda/windows-installation.md
+      - Python 环境管理:
+          - 概述: python/01-setup/index.md
+          - Conda 安装与 Python 环境管理: python/01-setup/conda-setup.md
+          - uv 安装与 Python 环境管理: python/01-setup/uv-setup.md
       - 数据分析:
           - 概述: python/02-data-analysis/index.md
           - NumPy:

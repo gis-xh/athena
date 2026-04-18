@@ -14,7 +14,7 @@ comments: false
 | -------------------------------- | -------------------------------------------------- |
 | [AI 学习](./AI/index.md)         | AI、深度学习（PyTorch、Keras）、大语言模型、Agents |
 | [前端学习](./frontend/index.md)  | Vue、React、Cesium、Web3D、GeoServer               |
-| [Python 学习](./python/index.md) | Conda、Django、FastAPI、PyQt、数据分析             |
+| [Python 学习](./python/index.md) | Conda、uv、Django、FastAPI、PyQt、数据分析         |
 | [Linux 学习](./linux/index.md)   | 系统操作、Shell 脚本、Python 自动化                |
 | [项目部署](./deploy/index.md)    | Docker、阿里云、CentOS、DevOps                     |
 | [物联网](./iot/index.md)         | OrangePi、边缘计算                                 |

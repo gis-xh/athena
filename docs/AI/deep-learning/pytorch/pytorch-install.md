@@ -2,7 +2,7 @@
 
 ## 1 安装 Miniconda / Anaconda
 
-&emsp;&emsp;书接上回：[Win11 安装配置 Miniconda](../../../python/01-conda/windows-installation.md)
+&emsp;&emsp;书接上回：[Win11 安装配置 Miniconda](../../../python/01-setup/conda-setup.md)
 
 ## 2 创建并激活虚拟环境
 
