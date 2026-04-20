@@ -9,31 +9,31 @@
         <meta name="author" content="gis-xh">
       
       
-        <link rel="canonical" href="https://gis-xh.github.io/athena/python/04-pyqt/">
+        <link rel="canonical" href="https://gis-xh.github.io/athena/python/04-gui/02-pyinstaller/">
       
       
-        <link rel="prev" href="../03-django/04-project-2/">
+        <link rel="prev" href="../01-intro/">
       
       
-        <link rel="next" href="01-intro/">
+        <link rel="next" href="../../05-fastapi/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>概述 - Athena</title>
+        <title>PyInstaller 编译与反编译 - Athena</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -52,21 +52,21 @@
       
     
     
-      <link rel="stylesheet" href="../../css/timeago.css">
+      <link rel="stylesheet" href="../../../css/timeago.css">
     
-      <link rel="stylesheet" href="../../mkdocs/css/unordered-list-symbols.css">
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
     
-      <link rel="stylesheet" href="../../mkdocs/css/img-center.css">
+      <link rel="stylesheet" href="../../../mkdocs/css/img-center.css">
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pyqt" class="md-skip">
+        <a href="#pyinstaller" class="md-skip">
           跳转至
         </a>
       
@@ -109,7 +109,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="Athena" class="md-header__button md-logo" aria-label="Athena" data-md-component="logo">
+    <a href="../../.." title="Athena" class="md-header__button md-logo" aria-label="Athena" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
@@ -129,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              概述
+              PyInstaller 编译与反编译
             
           </span>
         </div>
@@ -247,7 +247,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -268,7 +268,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../AI/" class="md-tabs__link">
+        <a href="../../../AI/" class="md-tabs__link">
           
   
   
@@ -290,7 +290,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../frontend/" class="md-tabs__link">
+        <a href="../../../frontend/" class="md-tabs__link">
           
   
   
@@ -314,7 +314,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -336,7 +336,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../linux/" class="md-tabs__link">
+        <a href="../../../linux/" class="md-tabs__link">
           
   
   
@@ -358,7 +358,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../deploy/" class="md-tabs__link">
+        <a href="../../../deploy/" class="md-tabs__link">
           
   
   
@@ -380,7 +380,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../iot/" class="md-tabs__link">
+        <a href="../../../iot/" class="md-tabs__link">
           
   
   
@@ -402,7 +402,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../3D/" class="md-tabs__link">
+        <a href="../../../3D/" class="md-tabs__link">
           
   
   
@@ -424,7 +424,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../somethings/" class="md-tabs__link">
+        <a href="../../../somethings/" class="md-tabs__link">
           
   
   
@@ -460,7 +460,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Athena" class="md-nav__button md-logo" aria-label="Athena" data-md-component="logo">
+    <a href="../../.." title="Athena" class="md-nav__button md-logo" aria-label="Athena" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
@@ -490,7 +490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -548,7 +548,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../AI/" class="md-nav__link ">
+            <a href="../../../AI/" class="md-nav__link ">
               
   
   
@@ -631,7 +631,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../AI/deep-learning/" class="md-nav__link ">
+            <a href="../../../AI/deep-learning/" class="md-nav__link ">
               
   
   
@@ -675,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/deep-learning/pytorch/" class="md-nav__link">
+      <a href="../../../AI/deep-learning/pytorch/" class="md-nav__link">
         
   
   
@@ -703,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/deep-learning/pytorch/pytorch-install/" class="md-nav__link">
+      <a href="../../../AI/deep-learning/pytorch/pytorch-install/" class="md-nav__link">
         
   
   
@@ -731,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/deep-learning/pytorch/bilibili-pytorch-practice/" class="md-nav__link">
+      <a href="../../../AI/deep-learning/pytorch/bilibili-pytorch-practice/" class="md-nav__link">
         
   
   
@@ -759,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/deep-learning/keras/" class="md-nav__link">
+      <a href="../../../AI/deep-learning/keras/" class="md-nav__link">
         
   
   
@@ -787,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/deep-learning/keras/keras-install/" class="md-nav__link">
+      <a href="../../../AI/deep-learning/keras/keras-install/" class="md-nav__link">
         
   
   
@@ -842,7 +842,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../AI/deep-learning/keras/01-basics/" class="md-nav__link ">
+            <a href="../../../AI/deep-learning/keras/01-basics/" class="md-nav__link ">
               
   
   
@@ -886,7 +886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/deep-learning/keras/01-basics/01-environment/" class="md-nav__link">
+      <a href="../../../AI/deep-learning/keras/01-basics/01-environment/" class="md-nav__link">
         
   
   
@@ -914,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/deep-learning/keras/01-basics/02-concepts/" class="md-nav__link">
+      <a href="../../../AI/deep-learning/keras/01-basics/02-concepts/" class="md-nav__link">
         
   
   
@@ -985,7 +985,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../AI/deep-learning/keras/02-training/" class="md-nav__link ">
+            <a href="../../../AI/deep-learning/keras/02-training/" class="md-nav__link ">
               
   
   
@@ -1029,7 +1029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/deep-learning/keras/02-training/01-mnist/" class="md-nav__link">
+      <a href="../../../AI/deep-learning/keras/02-training/01-mnist/" class="md-nav__link">
         
   
   
@@ -1057,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/deep-learning/keras/02-training/02-tensorboard/" class="md-nav__link">
+      <a href="../../../AI/deep-learning/keras/02-training/02-tensorboard/" class="md-nav__link">
         
   
   
@@ -1085,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/deep-learning/keras/02-training/03-callbacks/" class="md-nav__link">
+      <a href="../../../AI/deep-learning/keras/02-training/03-callbacks/" class="md-nav__link">
         
   
   
@@ -1113,7 +1113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/deep-learning/keras/02-training/04-early-stopping/" class="md-nav__link">
+      <a href="../../../AI/deep-learning/keras/02-training/04-early-stopping/" class="md-nav__link">
         
   
   
@@ -1141,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/deep-learning/keras/02-training/05-auc/" class="md-nav__link">
+      <a href="../../../AI/deep-learning/keras/02-training/05-auc/" class="md-nav__link">
         
   
   
@@ -1169,7 +1169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/deep-learning/keras/02-training/06-ap/" class="md-nav__link">
+      <a href="../../../AI/deep-learning/keras/02-training/06-ap/" class="md-nav__link">
         
   
   
@@ -1230,7 +1230,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../AI/deep-learning/keras/03-advanced/" class="md-nav__link ">
+            <a href="../../../AI/deep-learning/keras/03-advanced/" class="md-nav__link ">
               
   
   
@@ -1274,7 +1274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/deep-learning/keras/03-advanced/transfer-learning/" class="md-nav__link">
+      <a href="../../../AI/deep-learning/keras/03-advanced/transfer-learning/" class="md-nav__link">
         
   
   
@@ -1361,7 +1361,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../AI/llm/" class="md-nav__link ">
+            <a href="../../../AI/llm/" class="md-nav__link ">
               
   
   
@@ -1405,7 +1405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/llm/01-pretrain/" class="md-nav__link">
+      <a href="../../../AI/llm/01-pretrain/" class="md-nav__link">
         
   
   
@@ -1433,7 +1433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/llm/02-transformer/" class="md-nav__link">
+      <a href="../../../AI/llm/02-transformer/" class="md-nav__link">
         
   
   
@@ -1461,7 +1461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/llm/03-gpt-bert/" class="md-nav__link">
+      <a href="../../../AI/llm/03-gpt-bert/" class="md-nav__link">
         
   
   
@@ -1489,7 +1489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/llm/04-rwkv/" class="md-nav__link">
+      <a href="../../../AI/llm/04-rwkv/" class="md-nav__link">
         
   
   
@@ -1517,7 +1517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/llm/05-glm/" class="md-nav__link">
+      <a href="../../../AI/llm/05-glm/" class="md-nav__link">
         
   
   
@@ -1545,7 +1545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/llm/06-knowledge-graph/" class="md-nav__link">
+      <a href="../../../AI/llm/06-knowledge-graph/" class="md-nav__link">
         
   
   
@@ -1573,7 +1573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/llm/07-langchain/" class="md-nav__link">
+      <a href="../../../AI/llm/07-langchain/" class="md-nav__link">
         
   
   
@@ -1601,7 +1601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/llm/08-mcp/" class="md-nav__link">
+      <a href="../../../AI/llm/08-mcp/" class="md-nav__link">
         
   
   
@@ -1629,7 +1629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/llm/09-vectorstore/" class="md-nav__link">
+      <a href="../../../AI/llm/09-vectorstore/" class="md-nav__link">
         
   
   
@@ -1657,7 +1657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/llm/10-training-approach/" class="md-nav__link">
+      <a href="../../../AI/llm/10-training-approach/" class="md-nav__link">
         
   
   
@@ -1722,7 +1722,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../AI/courses/" class="md-nav__link ">
+            <a href="../../../AI/courses/" class="md-nav__link ">
               
   
   
@@ -1791,7 +1791,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../AI/courses/machine-learning/" class="md-nav__link ">
+            <a href="../../../AI/courses/machine-learning/" class="md-nav__link ">
               
   
   
@@ -1835,7 +1835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/courses/machine-learning/Week01/" class="md-nav__link">
+      <a href="../../../AI/courses/machine-learning/Week01/" class="md-nav__link">
         
   
   
@@ -1900,7 +1900,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../AI/courses/cs230-2018/" class="md-nav__link ">
+            <a href="../../../AI/courses/cs230-2018/" class="md-nav__link ">
               
   
   
@@ -1944,7 +1944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/courses/cs230-2018/01-neural-networks/" class="md-nav__link">
+      <a href="../../../AI/courses/cs230-2018/01-neural-networks/" class="md-nav__link">
         
   
   
@@ -1972,7 +1972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/courses/cs230-2018/02/" class="md-nav__link">
+      <a href="../../../AI/courses/cs230-2018/02/" class="md-nav__link">
         
   
   
@@ -2000,7 +2000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/courses/cs230-2018/Lecture2/" class="md-nav__link">
+      <a href="../../../AI/courses/cs230-2018/Lecture2/" class="md-nav__link">
         
   
   
@@ -2069,7 +2069,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../AI/courses/deeplearning-ai/" class="md-nav__link ">
+            <a href="../../../AI/courses/deeplearning-ai/" class="md-nav__link ">
               
   
   
@@ -2113,7 +2113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/courses/deeplearning-ai/01-prompt-engineering/" class="md-nav__link">
+      <a href="../../../AI/courses/deeplearning-ai/01-prompt-engineering/" class="md-nav__link">
         
   
   
@@ -2141,7 +2141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/courses/deeplearning-ai/02-chatgpt-api/" class="md-nav__link">
+      <a href="../../../AI/courses/deeplearning-ai/02-chatgpt-api/" class="md-nav__link">
         
   
   
@@ -2169,7 +2169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/courses/deeplearning-ai/03-langchain-app/" class="md-nav__link">
+      <a href="../../../AI/courses/deeplearning-ai/03-langchain-app/" class="md-nav__link">
         
   
   
@@ -2197,7 +2197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/courses/deeplearning-ai/04-langchain-data/" class="md-nav__link">
+      <a href="../../../AI/courses/deeplearning-ai/04-langchain-data/" class="md-nav__link">
         
   
   
@@ -2225,7 +2225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/courses/deeplearning-ai/05-gradio/" class="md-nav__link">
+      <a href="../../../AI/courses/deeplearning-ai/05-gradio/" class="md-nav__link">
         
   
   
@@ -2298,7 +2298,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../AI/agents/" class="md-nav__link ">
+            <a href="../../../AI/agents/" class="md-nav__link ">
               
   
   
@@ -2342,7 +2342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/agents/openclaw-setup/" class="md-nav__link">
+      <a href="../../../AI/agents/openclaw-setup/" class="md-nav__link">
         
   
   
@@ -2370,7 +2370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/agents/opencode-setup/" class="md-nav__link">
+      <a href="../../../AI/agents/opencode-setup/" class="md-nav__link">
         
   
   
@@ -2398,7 +2398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/agents/prompt-template/" class="md-nav__link">
+      <a href="../../../AI/agents/prompt-template/" class="md-nav__link">
         
   
   
@@ -2480,7 +2480,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../frontend/" class="md-nav__link ">
+            <a href="../../../frontend/" class="md-nav__link ">
               
   
   
@@ -2524,7 +2524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frontend/01-setup/" class="md-nav__link">
+      <a href="../../../frontend/01-setup/" class="md-nav__link">
         
   
   
@@ -2552,7 +2552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frontend/02-ui/" class="md-nav__link">
+      <a href="../../../frontend/02-ui/" class="md-nav__link">
         
   
   
@@ -2580,7 +2580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frontend/03-web3d/" class="md-nav__link">
+      <a href="../../../frontend/03-web3d/" class="md-nav__link">
         
   
   
@@ -2608,7 +2608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frontend/04-cesium/" class="md-nav__link">
+      <a href="../../../frontend/04-cesium/" class="md-nav__link">
         
   
   
@@ -2636,7 +2636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frontend/05-geoserver/" class="md-nav__link">
+      <a href="../../../frontend/05-geoserver/" class="md-nav__link">
         
   
   
@@ -2664,7 +2664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frontend/vue-implementation/" class="md-nav__link">
+      <a href="../../../frontend/vue-implementation/" class="md-nav__link">
         
   
   
@@ -2692,7 +2692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frontend/react-implementation/" class="md-nav__link">
+      <a href="../../../frontend/react-implementation/" class="md-nav__link">
         
   
   
@@ -2753,7 +2753,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../frontend/vue/" class="md-nav__link ">
+            <a href="../../../frontend/vue/" class="md-nav__link ">
               
   
   
@@ -2797,7 +2797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frontend/vue/vue2-to-vue3/" class="md-nav__link">
+      <a href="../../../frontend/vue/vue2-to-vue3/" class="md-nav__link">
         
   
   
@@ -2825,7 +2825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frontend/vue/vue3-echarts/" class="md-nav__link">
+      <a href="../../../frontend/vue/vue3-echarts/" class="md-nav__link">
         
   
   
@@ -2853,7 +2853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frontend/vue/vue3-element-plus/" class="md-nav__link">
+      <a href="../../../frontend/vue/vue3-element-plus/" class="md-nav__link">
         
   
   
@@ -2881,7 +2881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frontend/vue/basics/" class="md-nav__link">
+      <a href="../../../frontend/vue/basics/" class="md-nav__link">
         
   
   
@@ -2909,7 +2909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frontend/vue/learning-notes/" class="md-nav__link">
+      <a href="../../../frontend/vue/learning-notes/" class="md-nav__link">
         
   
   
@@ -2988,7 +2988,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -3059,7 +3059,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../01-setup/" class="md-nav__link ">
+            <a href="../../01-setup/" class="md-nav__link ">
               
   
   
@@ -3103,7 +3103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-setup/conda-setup/" class="md-nav__link">
+      <a href="../../01-setup/conda-setup/" class="md-nav__link">
         
   
   
@@ -3131,7 +3131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-setup/uv-setup/" class="md-nav__link">
+      <a href="../../01-setup/uv-setup/" class="md-nav__link">
         
   
   
@@ -3198,7 +3198,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../02-data-analysis/" class="md-nav__link ">
+            <a href="../../02-data-analysis/" class="md-nav__link ">
               
   
   
@@ -3269,7 +3269,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../02-data-analysis/numpy/" class="md-nav__link ">
+            <a href="../../02-data-analysis/numpy/" class="md-nav__link ">
               
   
   
@@ -3373,7 +3373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-data-analysis/numpy/01-basics/01-setup/" class="md-nav__link">
+      <a href="../../02-data-analysis/numpy/01-basics/01-setup/" class="md-nav__link">
         
   
   
@@ -3401,7 +3401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-data-analysis/numpy/01-basics/02-basics/" class="md-nav__link">
+      <a href="../../02-data-analysis/numpy/01-basics/02-basics/" class="md-nav__link">
         
   
   
@@ -3429,7 +3429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-data-analysis/numpy/01-basics/03-quickstart/" class="md-nav__link">
+      <a href="../../02-data-analysis/numpy/01-basics/03-quickstart/" class="md-nav__link">
         
   
   
@@ -3525,7 +3525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-data-analysis/numpy/02-data-storage/01-storage/" class="md-nav__link">
+      <a href="../../02-data-analysis/numpy/02-data-storage/01-storage/" class="md-nav__link">
         
   
   
@@ -3553,7 +3553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-data-analysis/numpy/02-data-storage/02-wordcloud/" class="md-nav__link">
+      <a href="../../02-data-analysis/numpy/02-data-storage/02-wordcloud/" class="md-nav__link">
         
   
   
@@ -3581,7 +3581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-data-analysis/numpy/02-data-storage/03-functions/" class="md-nav__link">
+      <a href="../../02-data-analysis/numpy/02-data-storage/03-functions/" class="md-nav__link">
         
   
   
@@ -3625,7 +3625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-data-analysis/matplotlib/01-intro/" class="md-nav__link">
+      <a href="../../02-data-analysis/matplotlib/01-intro/" class="md-nav__link">
         
   
   
@@ -3653,7 +3653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-data-analysis/python-excel/01-excel/" class="md-nav__link">
+      <a href="../../02-data-analysis/python-excel/01-excel/" class="md-nav__link">
         
   
   
@@ -3681,7 +3681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-data-analysis/spider/01-spider/" class="md-nav__link">
+      <a href="../../02-data-analysis/spider/01-spider/" class="md-nav__link">
         
   
   
@@ -3748,7 +3748,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../03-django/" class="md-nav__link ">
+            <a href="../../03-django/" class="md-nav__link ">
               
   
   
@@ -3792,7 +3792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-django/01-setup/" class="md-nav__link">
+      <a href="../../03-django/01-setup/" class="md-nav__link">
         
   
   
@@ -3820,7 +3820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-django/02-tutorial/" class="md-nav__link">
+      <a href="../../03-django/02-tutorial/" class="md-nav__link">
         
   
   
@@ -3848,7 +3848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-django/03-project-1/" class="md-nav__link">
+      <a href="../../03-django/03-project-1/" class="md-nav__link">
         
   
   
@@ -3876,7 +3876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-django/04-project-2/" class="md-nav__link">
+      <a href="../../03-django/04-project-2/" class="md-nav__link">
         
   
   
@@ -3922,6 +3922,8 @@
       
         
       
+        
+      
     
     
     
@@ -3937,14 +3939,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    PyQt
+    GUI
   
 
     
@@ -3955,7 +3957,7 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -3966,7 +3968,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    PyQt
+    GUI
   
 
           </label>
@@ -3981,14 +3983,14 @@
   
   
     <li class="md-nav__item">
-      <a href="01-intro/" class="md-nav__link">
+      <a href="../01-intro/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    入门
+    PyQt 入门
   
 
     
@@ -3997,6 +3999,192 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PyInstaller 编译与反编译
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PyInstaller 编译与反编译
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 反编译环境配置
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 反编译环境配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-pyinstaller-extractor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 下载PyInstaller Extractor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-uv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 安装uv
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-msys2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 安装MSYS2环境
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-cmake-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 安装 CMake 和 C++ 编译器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-pycdc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 下载并编译 pycdc
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 反编译操作示例
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 反编译操作示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-pyc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 提取 *.pyc 文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-pyc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 反编译 *.pyc 文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4042,7 +4230,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../05-fastapi/" class="md-nav__link ">
+            <a href="../../05-fastapi/" class="md-nav__link ">
               
   
   
@@ -4086,7 +4274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-fastapi/01-intro/" class="md-nav__link">
+      <a href="../../05-fastapi/01-intro/" class="md-nav__link">
         
   
   
@@ -4156,7 +4344,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../linux/" class="md-nav__link ">
+            <a href="../../../linux/" class="md-nav__link ">
               
   
   
@@ -4229,7 +4417,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../linux/01-basics/" class="md-nav__link ">
+            <a href="../../../linux/01-basics/" class="md-nav__link ">
               
   
   
@@ -4273,7 +4461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/01-basics/01-installation/" class="md-nav__link">
+      <a href="../../../linux/01-basics/01-installation/" class="md-nav__link">
         
   
   
@@ -4301,7 +4489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/01-basics/02-vm-operations/" class="md-nav__link">
+      <a href="../../../linux/01-basics/02-vm-operations/" class="md-nav__link">
         
   
   
@@ -4329,7 +4517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/01-basics/03-basics/" class="md-nav__link">
+      <a href="../../../linux/01-basics/03-basics/" class="md-nav__link">
         
   
   
@@ -4396,7 +4584,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../linux/02-practical/" class="md-nav__link ">
+            <a href="../../../linux/02-practical/" class="md-nav__link ">
               
   
   
@@ -4440,7 +4628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/02-practical/01-remote-access/" class="md-nav__link">
+      <a href="../../../linux/02-practical/01-remote-access/" class="md-nav__link">
         
   
   
@@ -4468,7 +4656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/02-practical/02-user-management/" class="md-nav__link">
+      <a href="../../../linux/02-practical/02-user-management/" class="md-nav__link">
         
   
   
@@ -4496,7 +4684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/02-practical/03-network/" class="md-nav__link">
+      <a href="../../../linux/02-practical/03-network/" class="md-nav__link">
         
   
   
@@ -4524,7 +4712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/02-practical/04-python/" class="md-nav__link">
+      <a href="../../../linux/02-practical/04-python/" class="md-nav__link">
         
   
   
@@ -4606,7 +4794,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../deploy/" class="md-nav__link ">
+            <a href="../../../deploy/" class="md-nav__link ">
               
   
   
@@ -4650,7 +4838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deploy/centos-deployment/" class="md-nav__link">
+      <a href="../../../deploy/centos-deployment/" class="md-nav__link">
         
   
   
@@ -4678,7 +4866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deploy/docker-learning/" class="md-nav__link">
+      <a href="../../../deploy/docker-learning/" class="md-nav__link">
         
   
   
@@ -4706,7 +4894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deploy/docker-geoserver-guide/" class="md-nav__link">
+      <a href="../../../deploy/docker-geoserver-guide/" class="md-nav__link">
         
   
   
@@ -4734,7 +4922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deploy/windows-deployment/" class="md-nav__link">
+      <a href="../../../deploy/windows-deployment/" class="md-nav__link">
         
   
   
@@ -4762,7 +4950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deploy/aliyun-fullstack-deployment/" class="md-nav__link">
+      <a href="../../../deploy/aliyun-fullstack-deployment/" class="md-nav__link">
         
   
   
@@ -4790,7 +4978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deploy/aliyun-deployment-issues/" class="md-nav__link">
+      <a href="../../../deploy/aliyun-deployment-issues/" class="md-nav__link">
         
   
   
@@ -4818,7 +5006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deploy/devops-learning/" class="md-nav__link">
+      <a href="../../../deploy/devops-learning/" class="md-nav__link">
         
   
   
@@ -4846,7 +5034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deploy/network/" class="md-nav__link">
+      <a href="../../../deploy/network/" class="md-nav__link">
         
   
   
@@ -4910,7 +5098,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../iot/" class="md-nav__link ">
+            <a href="../../../iot/" class="md-nav__link ">
               
   
   
@@ -4954,7 +5142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../iot/iot-learning/" class="md-nav__link">
+      <a href="../../../iot/iot-learning/" class="md-nav__link">
         
   
   
@@ -4982,7 +5170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../iot/edge-computing/" class="md-nav__link">
+      <a href="../../../iot/edge-computing/" class="md-nav__link">
         
   
   
@@ -5010,7 +5198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../iot/orangepi/" class="md-nav__link">
+      <a href="../../../iot/orangepi/" class="md-nav__link">
         
   
   
@@ -5070,7 +5258,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../3D/" class="md-nav__link ">
+            <a href="../../../3D/" class="md-nav__link ">
               
   
   
@@ -5114,7 +5302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3D/blender/" class="md-nav__link">
+      <a href="../../../3D/blender/" class="md-nav__link">
         
   
   
@@ -5205,7 +5393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../somethings/" class="md-nav__link">
+      <a href="../../../somethings/" class="md-nav__link">
         
   
   
@@ -5260,13 +5448,113 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        目录
+        1 反编译环境配置
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="1 反编译环境配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-pyinstaller-extractor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 下载PyInstaller Extractor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-uv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 安装uv
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-msys2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 安装MSYS2环境
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-cmake-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 安装 CMake 和 C++ 编译器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-pycdc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 下载并编译 pycdc
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 反编译操作示例
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 反编译操作示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-pyc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 提取 *.pyc 文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-pyc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 反编译 *.pyc 文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5291,11 +5579,111 @@
   
 
 
-<h1 id="pyqt">PyQt<a class="headerlink" href="#pyqt" title="Permanent link">¶</a></h1>
-<h2 id="_1">目录<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<h1 id="pyinstaller">PyInstaller 编译与反编译<a class="headerlink" href="#pyinstaller" title="Permanent link">¶</a></h1>
+<h2 id="1">1 反编译环境配置<a class="headerlink" href="#1" title="Permanent link">¶</a></h2>
+<p>参考：<a href="https://www.bilibili.com/video/BV1iU3ozKEoj/?vd_source=20a06b23177df8693b090d0b034b2d94">pyinstaller打包逆向教程_哔哩哔哩_bilibili</a></p>
+<h3 id="11-pyinstaller-extractor">1.1 下载PyInstaller Extractor<a class="headerlink" href="#11-pyinstaller-extractor" title="Permanent link">¶</a></h3>
+<p>（1）用途：提取 Python 打包后的字节码文件</p>
+<p>（2）下载地址：<a href="https://github.com/extremecoders-re/pyinstxtractor/">extremecoders-re/pyinstxtractor: PyInstaller Extractor</a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/py_2026-04-19_00-59-23.webp" data-desc-position="bottom"><img alt="py_2026-04-19_00-59-23" src="../../../assets/images/py_2026-04-19_00-59-23.webp"></a></p>
+<p>（3）下载pyinstxtractor.py并放置在打包exe文件同一目录</p>
+<h3 id="12-uv">1.2 安装uv<a class="headerlink" href="#12-uv" title="Permanent link">¶</a></h3>
+<p>（1）用途：用于高效管理 Python 环境</p>
+<p>（2）安装并配置 uv：<a href="../../01-setup/uv-setup/">uv 管理 Python 环境</a></p>
+<h3 id="13-msys2">1.3 安装MSYS2环境<a class="headerlink" href="#13-msys2" title="Permanent link">¶</a></h3>
+<p>（1）用途：可以在Windows上运行的软件包管理工具，类似Linux中的pacman</p>
+<p>（2）官方地址：<a href="https://www.msys2.org/">MSYS2</a></p>
+<p>（3）安装时默认C盘安装即可</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/py_2026-04-19_02-17-43.webp" data-desc-position="bottom"><img alt="py_2026-04-19_02-17-43" src="../../../assets/images/py_2026-04-19_02-17-43.webp"></a></p>
+<h3 id="14-cmake-c">1.4 安装 <code>CMake</code> 和 <code>C++</code> 编译器<a class="headerlink" href="#14-cmake-c" title="Permanent link">¶</a></h3>
+<p>（1）用途：用于编译 C++ 相关程序，如 pycdc</p>
+<p>（2）安装 C++ 相关编译工具</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 全量更新软件包</span>
+pacman<span class="w"> </span>-Syu
+<span class="c1"># （可选）安装 mingw64 环境下常用工具链(包含 gcc/g++/gdb/make 等常用组件) 与 CMake 编译器以及 git 工具</span>
+pacman<span class="w"> </span>-S<span class="w"> </span>mingw-w64-x86_64-toolchain<span class="w"> </span>mingw-w64-x86_64-cmake<span class="w"> </span>git
+<span class="c1"># （推荐）安装 UCRT64 环境下常用工具链(包含 gcc/g++/gdb/make 等常用组件) 与 CMake 编译器以及 git 工具</span>
+pacman<span class="w"> </span>-S<span class="w"> </span>mingw-w64-ucrt-x86_64-toolchain<span class="w"> </span>mingw-w64-ucrt-x86_64-cmake<span class="w"> </span>git
+<span class="c1"># 安装 git</span>
+</code></pre></div>
 <ul>
-<li><a href="01-intro/">PyQt 入门</a></li>
+<li><code>mingw-w64-x86_64</code> 使用 <strong>MSVCRT</strong>（Microsoft Visual C++ 运行时，较老但兼容性好）</li>
+<li><code>mingw-w64-ucrt-x86_64</code> 使用 <strong>UCRT</strong>（Universal C Runtime，Win10 及以上原生支持，更现代且与 MSVC 互操作性更好）</li>
+<li>点击回车键后安装全部内容即可。</li>
 </ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/py_2026-04-20_15-51-45.webp" data-desc-position="bottom"><img alt="py_2026-04-20_15-51-45" src="../../../assets/images/py_2026-04-20_15-51-45.webp"></a></p>
+<p>（3）设置环境变量</p>
+<ul>
+<li>为了方便后续在 cmd 控制台中直接使用编译相关命令操作，需要配置环境变量</li>
+<li>创建变量 <code>MSYS2_PATH</code>，并写入到 <code>Path</code> 中 <code>%MSYS2_PATH%</code></li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/py_2026-04-20_15-55-02.webp" data-desc-position="bottom"><img alt="py_2026-04-20_15-55-02" src="../../../assets/images/py_2026-04-20_15-55-02.webp"></a></p>
+<p>（4）检查编译工具安装情况</p>
+<div class="highlight"><pre><span></span><code>gcc<span class="w"> </span>--version
+
+g++<span class="w"> </span>--version
+
+cmake<span class="w"> </span>--version
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/py_2026-04-20_16-00-00.webp" data-desc-position="bottom"><img alt="py_2026-04-20_16-00-00" src="../../../assets/images/py_2026-04-20_16-00-00.webp"></a></p>
+<h3 id="15-pycdc">1.5 下载并编译 <code>pycdc</code><a class="headerlink" href="#15-pycdc" title="Permanent link">¶</a></h3>
+<p>（1）用途： 对从 <code>*.exe</code> 中提取出的 <code>*.pyc</code> 文件进行反编译，得到 <code>*.py</code> 源码，Windows中使用前需要先完成编译。</p>
+<p>（2）获取源代码：<a href="https://github.com/zrax/pycdc">zrax/pycdc: C++ python bytecode disassembler and decompiler</a></p>
+<p>（3）具体编译操作：最好仍然在 MSYS2 UCRT64 终端中运行操作</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 切换到 D 盘</span>
+<span class="nb">cd</span><span class="w"> </span>D:
+<span class="c1"># 使用 git 克隆代码仓库</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/zrax/pycdc.git
+<span class="c1"># 进入 pycdc 项目目录</span>
+<span class="nb">cd</span><span class="w"> </span>pycdc
+<span class="c1"># 创建并进入 build 编译目录</span>
+mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+<span class="c1"># 使用 CMake 生成 MinGW 风格的 Makefile 构建文件</span>
+cmake<span class="w"> </span>..<span class="w"> </span>-G<span class="w"> </span><span class="s2">"MinGW Makefiles"</span>
+<span class="c1"># 调用 MinGW 的 make 工具开始编译项目</span>
+mingw32-make
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/py_2026-04-20_16-17-18.webp" data-desc-position="bottom"><img alt="py_2026-04-20_16-17-18" src="../../../assets/images/py_2026-04-20_16-17-18.webp"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/py_2026-04-20_16-19-39.webp" data-desc-position="bottom"><img alt="py_2026-04-20_16-19-39" src="../../../assets/images/py_2026-04-20_16-19-39.webp"></a></p>
+<p>（4）设置环境变量</p>
+<ul>
+<li>为了方便后续在 cmd 控制台中直接使用编译相关命令操作，需要配置环境变量</li>
+<li>创建变量 <code>PYCDC_PATH</code>，并写入到 <code>Path</code> 中 <code>%PYCDC_PATH%</code></li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/py_2026-04-20_16-21-38.webp" data-desc-position="bottom"><img alt="py_2026-04-20_16-21-38" src="../../../assets/images/py_2026-04-20_16-21-38.webp"></a></p>
+<h2 id="2">2 反编译操作示例<a class="headerlink" href="#2" title="Permanent link">¶</a></h2>
+<ol>
+<li>先用 pyinstxtractor（或同类工具）从目标 <code>*.exe</code> 中提取出 <code>*.pyc</code> 文件；</li>
+<li>再用 pycdc 对提取出的 <code>*.pyc</code> 文件进行反编译，得到 <code>*.py</code> 源码。</li>
+</ol>
+<h3 id="21-pyc">2.1 提取 <code>*.pyc</code> 文件<a class="headerlink" href="#21-pyc" title="Permanent link">¶</a></h3>
+<p>（1）用途：从目标 <code>*.exe</code> 中提取出 <code>*.pyc</code> 文件。</p>
+<p>（2）具体操作</p>
+<ul>
+<li>使用 uv 安装 Python 环境</li>
+</ul>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>python<span class="w"> </span>install<span class="w"> </span><span class="m">3</span>.9
+</code></pre></div>
+<ul>
+<li>使用 uv 运行脚本</li>
+</ul>
+<div class="highlight"><pre><span></span><code>uv run pyinstxtractor.py 待解析软件名称.exe
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/py_2026-04-19_02-03-45.webp" data-desc-position="bottom"><img alt="py_2026-04-19_02-03-45" src="../../../assets/images/py_2026-04-19_02-03-45.webp"></a></p>
+<p>以上图为例，解读解析结果：</p>
+<ul>
+<li>该软件开发时使用 Python 3.9，打包时使用 Pyinstaller 2.1+</li>
+<li><code>Possible entry point</code>：可能的程序入口文件，真正的入口文件名一般可能与exe同名，或是main.pyc等名称，是后续还原的重点</li>
+</ul>
+<p>此时如果 Python 版本不一致，则可以使用 uv 重新安装</p>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>python<span class="w"> </span>install<span class="w"> </span>版本号
+</code></pre></div>
+<h3 id="22-pyc">2.2 反编译 <code>*.pyc</code> 文件<a class="headerlink" href="#22-pyc" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># 切换到解析的 pyc 目录</span>
+<span class="nb">cd</span><span class="w"> </span>待解析软件名称.exe_extracted
+<span class="c1"># 使用 pycdc 解析 *.pyc 文件并保存到 main.py 中</span>
+pycdc<span class="w"> </span>待解析软件名称.pyc<span class="w"> </span>&gt;<span class="w"> </span>main.py
+</code></pre></div>
 
 
 
@@ -5307,11 +5695,11 @@
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         最后更新:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年3月21日 16:49:04 CST"><span class="timeago" datetime="2026-03-21T16:49:04+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年3月21日 16:49:04 CST">2026-03-21</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年4月20日 16:42:42 CST"><span class="timeago" datetime="2026-04-20T16:42:42+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年4月20日 16:42:42 CST">2026-04-20</span>
         
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年3月21日 16:49:04 CST"><span class="timeago" datetime="2026-03-21T16:49:04+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年3月21日 16:49:04 CST">2026-03-21</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年4月20日 16:42:42 CST"><span class="timeago" datetime="2026-04-20T16:42:42+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年4月20日 16:42:42 CST">2026-04-20</span>
         
 
         <!-- mkdocs-git-revision-date-plugin -->
@@ -5327,6 +5715,42 @@
 
 
 
+
+<!-- Insert Giscus generated snippet here -->
+<!-- 插入 Giscus 生成的代码块 -->
+<script src="https://giscus.app/client.js" data-repo="gis-xh/mkdocs-site" data-repo-id="R_kgDOJqGKjQ" data-category="Announcements" data-category-id="DIC_kwDOJqGKjc4CW4Tq" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="zh-CN" crossorigin="anonymous" async="">
+    </script>
+
+<!-- 下面保持不动即可 -->
+<!-- Synchronize Giscus theme with palette -->
+<script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate" ? "dark" : "light"
+        giscus.setAttribute("data-theme", theme)
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function () {
+        var ref = document.querySelector("[data-md-component=palette]")
+        ref.addEventListener("change", function () {
+            var palette = __md_get("__palette")
+            if (palette && typeof palette.color === "object") {
+                var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+                /* Instruct Giscus to change theme */
+                var frame = document.querySelector(".giscus-frame")
+                frame.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme } } },
+                    "https://giscus.app"
+                )
+            }
+        })
+    })
+</script>
 
                 
 
@@ -5353,7 +5777,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚">
         
           
-          <a href="../03-django/04-project-2/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 项目 2">
+          <a href="../01-intro/" class="md-footer__link md-footer__link--prev" aria-label="上一页: PyQt 入门">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -5363,20 +5787,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                项目 2
+                PyQt 入门
               </div>
             </div>
           </a>
         
         
           
-          <a href="01-intro/" class="md-footer__link md-footer__link--next" aria-label="下一页: 入门">
+          <a href="../../05-fastapi/" class="md-footer__link md-footer__link--next" aria-label="下一页: 概述">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                入门
+                概述
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -5430,16 +5854,16 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.top", "navigation.footer", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "navigation.tabs", "navigation.top", "navigation.footer", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../js/timeago.min.js"></script>
+        <script src="../../../js/timeago.min.js"></script>
       
-        <script src="../../js/timeago_mkdocs_material.js"></script>
+        <script src="../../../js/timeago_mkdocs_material.js"></script>
       
-        <script src="../../mkdocs/js/katex.js"></script>
+        <script src="../../../mkdocs/js/katex.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
       
