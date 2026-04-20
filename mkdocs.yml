@@ -152,9 +152,10 @@ nav:
           - 教程: python/03-django/02-tutorial.md
           - 项目 1: python/03-django/03-project-1.md
           - 项目 2: python/03-django/04-project-2.md
-      - PyQt:
-          - 概述: python/04-pyqt/index.md
-          - 入门: python/04-pyqt/01-intro.md
+      - GUI:
+          - 概述: python/04-gui/index.md
+          - PyQt 入门: python/04-gui/01-intro.md
+          - PyInstaller 编译与反编译: python/04-gui/02-pyinstaller.md
       - FastAPI:
           - 概述: python/05-fastapi/index.md
           - 入门: python/05-fastapi/01-intro.md
