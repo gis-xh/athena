@@ -1,4 +1,4 @@
-# Vue前端实现-20260311
+# Vue 前端项目初始化-20260514
 
 ## 相关参考
 
@@ -19,7 +19,7 @@
 
 （2）Code Spell Checker：拼写检查工具
 
-（3）Vue：Vue 语言支持
+（3）Vue：Vue 框架支持
 
 （4）Tailwind CSS IntelliSense：Tailwind CSS样式可视化
 
@@ -39,8 +39,14 @@ npm install -g eslint
 
 1、创建 vite-vue-javascript 项目
 
+（1）目的：使用 vite v7 版本直接创建 vue 模板项目
+
+（2）官网：https://v7.vite.dev/guide/
+
+（3）注意：由于 vite 最新版本 v8 出现了破坏性变更，对静态路径的读取发生改变，考虑到后续兼容性，选用 v7 版本。
+
 ```sh
-npm create vite@latest frontend -- --template vue
+npm create vite@7 frontend -- --template vue
 ```
 
 2、切换到项目目录
@@ -49,17 +55,23 @@ npm create vite@latest frontend -- --template vue
 cd frontend
 ```
 
-3、安装 Tailwind CSS
+### （三）样式初始化
+
+详细配置参考：https://v3.tailwindcss.com/docs/guides/vite#vue
+
+1、安装 Tailwind CSS
 
 （1）目的：将 Tailwind CSS 安装为 PostCSS 插件，将其与 webpack、Rollup、Vite 和 Parcel 等构建工具无缝集成。
 
-（2）注意：由于 Tailwind CSS v4 出现了破坏性变更，不再使用 `init` 初始化，且不支持旧版浏览器，考虑到后续兼容性，选用 v3 版本。
+（2）官网：https://v3.tailwindcss.com/docs/installation
+
+（3）注意：由于 Tailwind CSS v4 出现了破坏性变更，不再使用 `init` 初始化，且不支持旧版浏览器，考虑到旧版兼容性，选用 v3 版本。
 
 ```sh
 npm install -D tailwindcss@3 postcss autoprefixer
 ```
 
-4、初始化样式配置文件
+2、初始化样式配置文件
 
 （1）自动创建 `tailwind.config.js` 与 `postcss.config.js` 文件。
 
@@ -67,19 +79,41 @@ npm install -D tailwindcss@3 postcss autoprefixer
 npx tailwindcss init -p
 ```
 
-5、配置项目CSS关联
+3、配置项目CSS关联
 
-- 详细配置参考：https://v3.tailwindcss.com/docs/guides/vite#vue
+（1）将 `tailwind.config.js` 内容修改为如下内容：
 
-### （三）配置必备依赖
+```js
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
+（2）在 `./src/style.css` 中顶部添加如下内容：
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+### （四）配置必备依赖
 
 1、安装 Vite 核心配件
 
-- 用于 `vite.config.js` 内部配置
-- 逐个安装，`-D` 表示仅开发环境下使用
+（1）目的：用于 `vite.config.js` 内部配置
+
+（2）逐个安装，`-D` 表示仅开发环境下使用
+
+（3）注意：vite-plugin-static-copy v4 版本与 v3 版本存在较大差异，考虑到旧版本兼容性，选用 v3 版本。
 
 ```sh
-npm install -D @vitejs/plugin-vue-jsx vite-plugin-html vite-plugin-static-copy
+npm install -D @vitejs/plugin-vue-jsx vite-plugin-html vite-plugin-static-copy@3.4.0
 ```
 
 2、安装 Vue Router
@@ -104,31 +138,34 @@ npm install pinia
 
 4、安装 Axios
 
-（1）目的：用于接口请求。
+（1）目的：用于控制接口请求。
 
-（2）官网：https://axios-http.com/zh/
+（2）官网：https://axios.rest/zh/
 
 ```sh
 npm install axios
 ```
 
-5、安装 Element-Plus 及其常用的图标 Icon 集合
+5、安装 Element-Plus 及其插件
 
-（1）目的：当前主流 UI 组件库
+（1）目的：当前主流 UI 组件库。
 
 （2）官网：https://element-plus.org/zh-CN/
 
 ```sh
-npm install element-plus
-```
+# 安装 Element-Plus 及其常用的图标 Icon 集合
+npm install element-plus @element-plus/icons-vue
 
-```sh
-npm install @element-plus/icons-vue
+# 用于 element ui 的中国省市区级联数据
+npm install element-china-area-data
+
+# 用于 element ui 的元素大小检测高性能插件
+npm install element-resize-detector
 ```
 
 6、安装 ECharts
 
-（1）目的：当前主流图表组件库
+（1）目的：当前主流图表组件库。
 
 （2）官网：https://echarts.apache.org/zh/download.html
 
@@ -138,12 +175,46 @@ npm install @element-plus/icons-vue
 npm install echarts@5
 ```
 
-### （四）构建其他库
+7、安装 xlsx
 
-1、安装 Cesium
+（1）目的：用于导出 xlsx 表格。
+
+（2）官网：https://docs.sheetjs.com/docs/
+
+```sh
+npm install https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz
+```
+
+8、安装 vue-office
+
+（1）目的：用于docx、xlsx、pdf文件预览
+
+（2）官网：https://501351981.github.io/vue-office/examples/docs/
+
+```sh
+# docx文档预览组件
+npm install @vue-office/docx vue-demi
+
+# excel文档预览组件
+npm install @vue-office/excel vue-demi
+
+# pdf文档预览组件
+npm install @vue-office/pdf vue-demi
+```
+
+### （五）构建其他库（可选）
+
+1、安装 Cesium 及其插件
+
+（1）目的：三维场景可视化库。
+
+（2）官网：https://cesium.com/platform/cesiumjs/
 
 ```sh
 npm install cesium
+
+# 配合 cesium 使用的罗盘，导航仪（放大/缩小）和距离刻度组件
+npm install cesium-navigation-es6
 ```
 
 2、deepdark-ui：大屏 UI 组件库
@@ -154,9 +225,103 @@ npm install cesium
 npm install deepdark-ui
 ```
 
+3、安装 DataV - Vue3
+
+（1）目的：DataV Vue3+TS+Vite版，用于大屏展示的 UI 组件库。
+
+（2）官网：https://datav-vue3.netlify.app/
+
+```sh
+npm install @kjgl77/datav-vue3
+```
+
+4、安装 Day.js
+
+（1）目的：轻量级处理时间和日期的 JavaScript 库。
+
+（2）官网：https://day.js.org/zh-CN/
+
+```sh
+npm install dayjs
+```
+
 ## 二、基本配置
 
-### （一）`vite.config.js` 配置
+### （一）`vite.config.mjs` 配置
+
+将默认生成的`vite.config.js`文件名改为`vite.config.mjs`，修改后不会再被 `package.json` 中的 `"type"` 和 Node 版本影响。
+
+```js
+import { fileURLToPath, URL } from "node:url";
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import vueJsx from "@vitejs/plugin-vue-jsx";
+import { viteStaticCopy } from "vite-plugin-static-copy";
+
+const cesiumSource = "node_modules/cesium/Build/Cesium";
+const cesiumBaseUrl = "cesium";
+
+// https://vite.dev/config/
+export default defineConfig({
+  base: "./", // 项目根目录
+  define: {
+    // 定义 CESIUM_BASE_URL
+    CESIUM_BASE_URL: JSON.stringify(cesiumBaseUrl),
+  },
+  optimizeDeps: {
+    include: [
+      "cesium",
+      "echarts",
+      "element-plus",
+      "vue",
+      "vue-router",
+      "pinia",
+      "@element-plus/icons-vue",
+    ],
+  },
+
+  plugins: [
+    vue(),
+    vueJsx(),
+    // CESIUM 静态资源复制
+    viteStaticCopy({
+      targets: [
+        { src: `${cesiumSource}/ThirdParty`, dest: cesiumBaseUrl },
+        { src: `${cesiumSource}/Workers`, dest: cesiumBaseUrl },
+        { src: `${cesiumSource}/Assets`, dest: cesiumBaseUrl },
+        { src: `${cesiumSource}/Widgets`, dest: cesiumBaseUrl },
+      ],
+    }),
+  ],
+  // 开发服务器配置
+  server: {
+    hot: true, // 启用热模块
+    host: "0.0.0.0", // 允许外部访问
+    port: 8080, // 端口号
+    // 代理转发配置
+    proxy: {
+      // 后端代理
+      "/admin": {
+        target: "http://127.0.0.1:8000/admin/",
+        changeOrigin: true,
+        secure: false,
+        ws: true,
+        // 将请求路径中开头的 `/admin` 替换为空字符串，即移除 `/admin` 前缀
+        rewrite: (path) => path.replace(/^\/admin/, ""),
+      },
+    },
+    resolve: {
+      // 配置别名
+      alias: {
+        "@": fileURLToPath(new URL("./src", import.meta.url)),
+        assets: fileURLToPath(new URL("./src/assets", import.meta.url)),
+      },
+      // vite需要手动添加对后缀名省略的支持, webpack不需要
+      extensions: [".js", ".ts", ".jsx", ".tsx", ".vue", ".css", ".scss"],
+    },
+  },
+});
+```
 
 ### （二）`main.js` 配置
 
@@ -167,8 +332,9 @@ import { createApp } from "vue";
 import { createPinia } from "pinia";
 import router from "./router";
 import ElementPlus from "element-plus";
-import * as ElementPlusIconsVue from "@element-plus/icons-vue";
 import zhCn from "element-plus/es/locale/lang/zh-cn";
+import * as ElementPlusIconsVue from "@element-plus/icons-vue";
+import { ElTableColumn } from "element-plus";
 import "element-plus/dist/index.css";
 import "./style.css";
 import App from "./App.vue";
@@ -203,6 +369,11 @@ app.use(ElementPlus, {
   size: "small",
   zIndex: 3000,
 });
+// 全局配置表格列超出部分显示提示
+ElTableColumn.props.showOverflowTooltip = {
+  type: Function,
+  default: () => true,
+};
 
 // 挂载应用
 app.mount("#app");
