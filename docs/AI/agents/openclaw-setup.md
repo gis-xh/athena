@@ -64,7 +64,7 @@ nvm use 22.22.0
 
 ```sh
 npm config set cache "D:\nvm\node_cache"
-npm config set prefix "D:\nvm\node_prefix"
+npm config set prefix "D:\nvm\node_global"
 ```
 
 ### 3、OpenClaw
@@ -145,4 +145,10 @@ ffmpeg：语音/视频格式转换，可用于 QQBot 识别语音与视频
 
 ```sh
 sudo apt install ffmpeg
+```
+
+# OrangePi Zero3部署OpenClaw
+
+```sh
+openclaw configure
 ```

@@ -1,4 +1,4 @@
-# OpenCode 及其插件安装配置说明 - 2026.04.08 更新
+# OpenCode 及其插件安装配置说明 - 2026.05.14 更新
 
 ## 一、不同系统的注意事项
 
@@ -124,7 +124,7 @@ bun add -g opencode-ai
 bunx oh-my-openagent install
 ```
 
-（4）Oh-My-OpenAgent 更新：截至 2026.04.08，最新版为 `v3.15.3`
+（4）Oh-My-OpenAgent 更新：截至 2026.05.14 更新，最新版为 `v4.1.2`
 
 ## 三、配置说明
 
@@ -169,7 +169,7 @@ bunx oh-my-openagent install
 
 ![ai_2026-04-08_16-12-48](../../assets/images/ai_2026-04-08_16-12-48.webp)
 
-仍然以 MiniMax 最新模型 MiniMax-M2.7 为例（截至 2026.04.08），选中后即可使用该模型。
+仍然以 MiniMax 最新模型 MiniMax-M2.7（截至 2026.05.14）为例，选中后即可使用该模型。
 
 ![ai_2026-04-08_16-15-24](../../assets/images/ai_2026-04-08_16-15-24.webp)
 
@@ -234,7 +234,7 @@ frontend-design: 用于前端界面设计
 
 3、OpenCode 和 Oh-My-OpenAgent 的更新频率很快，建议每次使用前检查更新。
 
-- 截止至 2026.04.08，Bun 最新 `v1.3.11`，OpenCode 最新 `v1.4.0`， Oh-My-OpenAgent 最新 `v3.15.3`
+- 截止至 2026.05.14，Bun 最新 `v1.3.11`，OpenCode 最新 `v1.4.50`， Oh-My-OpenAgent 最新 `v4.1.2`
 
 ```sh
 bun upgrade
@@ -259,3 +259,17 @@ opencode upgrade
 （5）`ctrl+c+空格`：清空当前输入框内容
 
 - 因为是在控制台中运行，`ctrl+c`会直接退出OpenCode，使用前一定要先按住空格键
+
+## 使用问题记录
+
+1、无法删除的 nul 文件
+
+在使用opencode过程中，发现会生成一些无法删除的 nul 文件，猜测是因为 opencode 调用 git 工具并进行撤回操作时，出现错误
+
+参考文档：[删除Window上的nul文件 - Danno - 博客园](https://www.cnblogs.com/shiwanghualuo/p/13236009.html)
+
+2、无法自动更新最新版 Oh-My-OpenAgent
+
+Windows 环境下，可以手动删除该文件，再启动 OpenCode 即可更新最新版。
+
+文件路径：`C:\Users\系统用户名\.cache\opencode\packages\oh-my-openagent@latest`
