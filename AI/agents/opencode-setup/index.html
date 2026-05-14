@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#opencode-20260408" class="md-skip">
+        <a href="#opencode-20260514" class="md-skip">
           跳转至
         </a>
       
@@ -2620,6 +2620,17 @@
     <span class="md-ellipsis">
       
         四、日常使用
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用问题记录
       
     </span>
   </a>
@@ -5724,6 +5735,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用问题记录
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5745,7 +5767,7 @@
   
 
 
-<h1 id="opencode-20260408">OpenCode 及其插件安装配置说明 - 2026.04.08 更新<a class="headerlink" href="#opencode-20260408" title="Permanent link">¶</a></h1>
+<h1 id="opencode-20260514">OpenCode 及其插件安装配置说明 - 2026.05.14 更新<a class="headerlink" href="#opencode-20260514" title="Permanent link">¶</a></h1>
 <h2 id="_1">一、不同系统的注意事项<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <h3 id="1windows">1、Windows环境安装<a class="headerlink" href="#1windows" title="Permanent link">¶</a></h3>
 <ul>
@@ -5837,7 +5859,7 @@
 </ul>
 <div class="highlight"><pre><span></span><code><span class="n">bunx</span> <span class="n">oh-my-openagent</span> <span class="n">install</span>
 </code></pre></div>
-<p>（4）Oh-My-OpenAgent 更新：截至 2026.04.08，最新版为 <code>v3.15.3</code></p>
+<p>（4）Oh-My-OpenAgent 更新：截至 2026.05.14 更新，最新版为 <code>v4.1.2</code></p>
 <h2 id="_3">三、配置说明<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <h3 id="1windows_1">1、Windows环境下配置说明<a class="headerlink" href="#1windows_1" title="Permanent link">¶</a></h3>
 <p>（1）<code>C:\Users\系统用户名\.bun</code>：Bun 所在路径</p>
@@ -5862,7 +5884,7 @@
 <div class="highlight"><pre><span></span><code>/models
 </code></pre></div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/ai_2026-04-08_16-12-48.webp" data-desc-position="bottom"><img alt="ai_2026-04-08_16-12-48" src="../../../assets/images/ai_2026-04-08_16-12-48.webp"></a></p>
-<p>仍然以 MiniMax 最新模型 MiniMax-M2.7 为例（截至 2026.04.08），选中后即可使用该模型。</p>
+<p>仍然以 MiniMax 最新模型 MiniMax-M2.7（截至 2026.05.14）为例，选中后即可使用该模型。</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/ai_2026-04-08_16-15-24.webp" data-desc-position="bottom"><img alt="ai_2026-04-08_16-15-24" src="../../../assets/images/ai_2026-04-08_16-15-24.webp"></a></p>
 <h3 id="3rules">3、Rules 规则配置<a class="headerlink" href="#3rules" title="Permanent link">¶</a></h3>
 <p>（1）配置路径（需用户手动创建）：<code>C:\Users\系统用户名\.config\AGENTS.md</code></p>
@@ -5905,7 +5927,7 @@ frontend-design: 用于前端界面设计
 <p>2、安装时需要使用魔法，因为需要外网下载资源。日常使用国产模型时，最好关闭魔法工具再运行。</p>
 <p>3、OpenCode 和 Oh-My-OpenAgent 的更新频率很快，建议每次使用前检查更新。</p>
 <ul>
-<li>截止至 2026.04.08，Bun 最新 <code>v1.3.11</code>，OpenCode 最新 <code>v1.4.0</code>， Oh-My-OpenAgent 最新 <code>v3.15.3</code></li>
+<li>截止至 2026.05.14，Bun 最新 <code>v1.3.11</code>，OpenCode 最新 <code>v1.4.50</code>， Oh-My-OpenAgent 最新 <code>v4.1.2</code></li>
 </ul>
 <div class="highlight"><pre><span></span><code>bun<span class="w"> </span>upgrade
 </code></pre></div>
@@ -5921,6 +5943,13 @@ frontend-design: 用于前端界面设计
 <ul>
 <li>因为是在控制台中运行，<code>ctrl+c</code>会直接退出OpenCode，使用前一定要先按住空格键</li>
 </ul>
+<h2 id="_5">使用问题记录<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
+<p>1、无法删除的 nul 文件</p>
+<p>在使用opencode过程中，发现会生成一些无法删除的 nul 文件，猜测是因为 opencode 调用 git 工具并进行撤回操作时，出现错误</p>
+<p>参考文档：<a href="https://www.cnblogs.com/shiwanghualuo/p/13236009.html">删除Window上的nul文件 - Danno - 博客园</a></p>
+<p>2、无法自动更新最新版 Oh-My-OpenAgent</p>
+<p>Windows 环境下，可以手动删除该文件，再启动 OpenCode 即可更新最新版。</p>
+<p>文件路径：<code>C:\Users\系统用户名\.cache\opencode\packages\oh-my-openagent@latest</code></p>
 
 
 
@@ -5932,7 +5961,7 @@ frontend-design: 用于前端界面设计
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         最后更新:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年4月8日 16:27:32 CST"><span class="timeago" datetime="2026-04-08T16:27:32+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年4月8日 16:27:32 CST">2026-04-08</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年5月14日 17:36:16 CST"><span class="timeago" datetime="2026-05-14T17:36:16+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年5月14日 17:36:16 CST">2026-05-14</span>
         
         <br>
         创建日期:

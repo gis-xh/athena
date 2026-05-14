@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vue-20260311" class="md-skip">
+        <a href="#vue-20260514" class="md-skip">
           跳转至
         </a>
       
@@ -2775,7 +2775,7 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        （三）配置必备依赖
+        （三）样式初始化
       
     </span>
   </a>
@@ -2786,7 +2786,18 @@
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        （四）构建其他库
+        （四）配置必备依赖
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （五）构建其他库（可选）
       
     </span>
   </a>
@@ -2799,7 +2810,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
         二、基本配置
@@ -2811,10 +2822,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#viteconfigjs" class="md-nav__link">
+  <a href="#viteconfigmjs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        （一）vite.config.js 配置
+        （一）vite.config.mjs 配置
       
     </span>
   </a>
@@ -5496,7 +5507,7 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        （三）配置必备依赖
+        （三）样式初始化
       
     </span>
   </a>
@@ -5507,7 +5518,18 @@
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        （四）构建其他库
+        （四）配置必备依赖
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （五）构建其他库（可选）
       
     </span>
   </a>
@@ -5520,7 +5542,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
         二、基本配置
@@ -5532,10 +5554,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#viteconfigjs" class="md-nav__link">
+  <a href="#viteconfigmjs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        （一）vite.config.js 配置
+        （一）vite.config.mjs 配置
       
     </span>
   </a>
@@ -5579,7 +5601,7 @@
   
 
 
-<h1 id="vue-20260311">Vue前端实现-20260311<a class="headerlink" href="#vue-20260311" title="Permanent link">¶</a></h1>
+<h1 id="vue-20260514">Vue 前端项目初始化-20260514<a class="headerlink" href="#vue-20260514" title="Permanent link">¶</a></h1>
 <h2 id="_1">相关参考<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <ol>
 <li><a href="https://www.tailwindcss.cn/docs/guides/vite">Tailwind CSS 中文站| Install Tailwind CSS with Vite</a></li>
@@ -5593,7 +5615,7 @@
 <p>2、安装相关插件扩展</p>
 <p>（1）vscode-icons：文件系统图标优化</p>
 <p>（2）Code Spell Checker：拼写检查工具</p>
-<p>（3）Vue：Vue 语言支持</p>
+<p>（3）Vue：Vue 框架支持</p>
 <p>（4）Tailwind CSS IntelliSense：Tailwind CSS样式可视化</p>
 <p>（5）Prettier：代码格式化</p>
 <p>（6）ESLint：代码检查</p>
@@ -5605,31 +5627,48 @@
 <h3 id="_4">（二）项目初始化<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
 <p>初始化一个使用Vite、Vue、Tailwind CSS的前端项目底板。</p>
 <p>1、创建 vite-vue-javascript 项目</p>
-<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>create<span class="w"> </span>vite@latest<span class="w"> </span>frontend<span class="w"> </span>--<span class="w"> </span>--template<span class="w"> </span>vue
+<p>（1）目的：使用 vite v7 版本直接创建 vue 模板项目</p>
+<p>（2）官网：https://v7.vite.dev/guide/</p>
+<p>（3）注意：由于 vite 最新版本 v8 出现了破坏性变更，对静态路径的读取发生改变，考虑到后续兼容性，选用 v7 版本。</p>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>create<span class="w"> </span>vite@7<span class="w"> </span>frontend<span class="w"> </span>--<span class="w"> </span>--template<span class="w"> </span>vue
 </code></pre></div>
 <p>2、切换到项目目录</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>frontend
 </code></pre></div>
-<p>3、安装 Tailwind CSS</p>
+<h3 id="_5">（三）样式初始化<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<p>详细配置参考：https://v3.tailwindcss.com/docs/guides/vite#vue</p>
+<p>1、安装 Tailwind CSS</p>
 <p>（1）目的：将 Tailwind CSS 安装为 PostCSS 插件，将其与 webpack、Rollup、Vite 和 Parcel 等构建工具无缝集成。</p>
-<p>（2）注意：由于 Tailwind CSS v4 出现了破坏性变更，不再使用 <code>init</code> 初始化，且不支持旧版浏览器，考虑到后续兼容性，选用 v3 版本。</p>
+<p>（2）官网：https://v3.tailwindcss.com/docs/installation</p>
+<p>（3）注意：由于 Tailwind CSS v4 出现了破坏性变更，不再使用 <code>init</code> 初始化，且不支持旧版浏览器，考虑到旧版兼容性，选用 v3 版本。</p>
 <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-D<span class="w"> </span>tailwindcss@3<span class="w"> </span>postcss<span class="w"> </span>autoprefixer
 </code></pre></div>
-<p>4、初始化样式配置文件</p>
+<p>2、初始化样式配置文件</p>
 <p>（1）自动创建 <code>tailwind.config.js</code> 与 <code>postcss.config.js</code> 文件。</p>
 <div class="highlight"><pre><span></span><code>npx<span class="w"> </span>tailwindcss<span class="w"> </span>init<span class="w"> </span>-p
 </code></pre></div>
-<p>5、配置项目CSS关联</p>
-<ul>
-<li>详细配置参考：https://v3.tailwindcss.com/docs/guides/vite#vue</li>
-</ul>
-<h3 id="_5">（三）配置必备依赖<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<p>3、配置项目CSS关联</p>
+<p>（1）将 <code>tailwind.config.js</code> 内容修改为如下内容：</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/** @type {import('tailwindcss').Config} */</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"./index.html"</span><span class="p">,</span><span class="w"> </span><span class="s2">"./src/**/*.{vue,js,ts,jsx,tsx}"</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">theme</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">extend</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>（2）在 <code>./src/style.css</code> 中顶部添加如下内容：</p>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">tailwind</span><span class="w"> </span><span class="nt">base</span><span class="p">;</span>
+<span class="p">@</span><span class="k">tailwind</span><span class="w"> </span><span class="nt">components</span><span class="p">;</span>
+<span class="p">@</span><span class="k">tailwind</span><span class="w"> </span><span class="nt">utilities</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="_6">（四）配置必备依赖<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
 <p>1、安装 Vite 核心配件</p>
-<ul>
-<li>用于 <code>vite.config.js</code> 内部配置</li>
-<li>逐个安装，<code>-D</code> 表示仅开发环境下使用</li>
-</ul>
-<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-D<span class="w"> </span>@vitejs/plugin-vue-jsx<span class="w"> </span>vite-plugin-html<span class="w"> </span>vite-plugin-static-copy
+<p>（1）目的：用于 <code>vite.config.js</code> 内部配置</p>
+<p>（2）逐个安装，<code>-D</code> 表示仅开发环境下使用</p>
+<p>（3）注意：vite-plugin-static-copy v4 版本与 v3 版本存在较大差异，考虑到旧版本兼容性，选用 v3 版本。</p>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-D<span class="w"> </span>@vitejs/plugin-vue-jsx<span class="w"> </span>vite-plugin-html<span class="w"> </span>vite-plugin-static-copy@3.4.0
 </code></pre></div>
 <p>2、安装 Vue Router</p>
 <p>（1）目的：Vue 官方路由，页面切换或模块切换。</p>
@@ -5642,41 +5681,150 @@
 <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>pinia
 </code></pre></div>
 <p>4、安装 Axios</p>
-<p>（1）目的：用于接口请求。</p>
-<p>（2）官网：https://axios-http.com/zh/</p>
+<p>（1）目的：用于控制接口请求。</p>
+<p>（2）官网：https://axios.rest/zh/</p>
 <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>axios
 </code></pre></div>
-<p>5、安装 Element-Plus 及其常用的图标 Icon 集合</p>
-<p>（1）目的：当前主流 UI 组件库</p>
+<p>5、安装 Element-Plus 及其插件</p>
+<p>（1）目的：当前主流 UI 组件库。</p>
 <p>（2）官网：https://element-plus.org/zh-CN/</p>
-<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>element-plus
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>@element-plus/icons-vue
+<div class="highlight"><pre><span></span><code><span class="c1"># 安装 Element-Plus 及其常用的图标 Icon 集合</span>
+npm<span class="w"> </span>install<span class="w"> </span>element-plus<span class="w"> </span>@element-plus/icons-vue
+
+<span class="c1"># 用于 element ui 的中国省市区级联数据</span>
+npm<span class="w"> </span>install<span class="w"> </span>element-china-area-data
+
+<span class="c1"># 用于 element ui 的元素大小检测高性能插件</span>
+npm<span class="w"> </span>install<span class="w"> </span>element-resize-detector
 </code></pre></div>
 <p>6、安装 ECharts</p>
-<p>（1）目的：当前主流图表组件库</p>
+<p>（1）目的：当前主流图表组件库。</p>
 <p>（2）官网：https://echarts.apache.org/zh/download.html</p>
 <p>（3）注意：由于很多依赖包依赖的是 ECharts v5 版本，考虑到后续兼容性，选用 v5 版本。</p>
 <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>echarts@5
 </code></pre></div>
-<h3 id="_6">（四）构建其他库<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
-<p>1、安装 Cesium</p>
+<p>7、安装 xlsx</p>
+<p>（1）目的：用于导出 xlsx 表格。</p>
+<p>（2）官网：https://docs.sheetjs.com/docs/</p>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz
+</code></pre></div>
+<p>8、安装 vue-office</p>
+<p>（1）目的：用于docx、xlsx、pdf文件预览</p>
+<p>（2）官网：https://501351981.github.io/vue-office/examples/docs/</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># docx文档预览组件</span>
+npm<span class="w"> </span>install<span class="w"> </span>@vue-office/docx<span class="w"> </span>vue-demi
+
+<span class="c1"># excel文档预览组件</span>
+npm<span class="w"> </span>install<span class="w"> </span>@vue-office/excel<span class="w"> </span>vue-demi
+
+<span class="c1"># pdf文档预览组件</span>
+npm<span class="w"> </span>install<span class="w"> </span>@vue-office/pdf<span class="w"> </span>vue-demi
+</code></pre></div>
+<h3 id="_7">（五）构建其他库（可选）<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<p>1、安装 Cesium 及其插件</p>
+<p>（1）目的：三维场景可视化库。</p>
+<p>（2）官网：https://cesium.com/platform/cesiumjs/</p>
 <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>cesium
+
+<span class="c1"># 配合 cesium 使用的罗盘，导航仪（放大/缩小）和距离刻度组件</span>
+npm<span class="w"> </span>install<span class="w"> </span>cesium-navigation-es6
 </code></pre></div>
 <p>2、deepdark-ui：大屏 UI 组件库</p>
 <p>（1）注意：deepdark-ui 依赖于 ECharts v5 版本。</p>
 <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>deepdark-ui
 </code></pre></div>
-<h2 id="_7">二、基本配置<a class="headerlink" href="#_7" title="Permanent link">¶</a></h2>
-<h3 id="viteconfigjs">（一）<code>vite.config.js</code> 配置<a class="headerlink" href="#viteconfigjs" title="Permanent link">¶</a></h3>
+<p>3、安装 DataV - Vue3</p>
+<p>（1）目的：DataV Vue3+TS+Vite版，用于大屏展示的 UI 组件库。</p>
+<p>（2）官网：https://datav-vue3.netlify.app/</p>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>@kjgl77/datav-vue3
+</code></pre></div>
+<p>4、安装 Day.js</p>
+<p>（1）目的：轻量级处理时间和日期的 JavaScript 库。</p>
+<p>（2）官网：https://day.js.org/zh-CN/</p>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>dayjs
+</code></pre></div>
+<h2 id="_8">二、基本配置<a class="headerlink" href="#_8" title="Permanent link">¶</a></h2>
+<h3 id="viteconfigmjs">（一）<code>vite.config.mjs</code> 配置<a class="headerlink" href="#viteconfigmjs" title="Permanent link">¶</a></h3>
+<p>将默认生成的<code>vite.config.js</code>文件名改为<code>vite.config.mjs</code>，修改后不会再被 <code>package.json</code> 中的 <code>"type"</code> 和 Node 版本影响。</p>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">fileURLToPath</span><span class="p">,</span><span class="w"> </span><span class="nx">URL</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"node:url"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">defineConfig</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"vite"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">vue</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@vitejs/plugin-vue"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">vueJsx</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@vitejs/plugin-vue-jsx"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">viteStaticCopy</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"vite-plugin-static-copy"</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">cesiumSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"node_modules/cesium/Build/Cesium"</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">cesiumBaseUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"cesium"</span><span class="p">;</span>
+
+<span class="c1">// https://vite.dev/config/</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">defineConfig</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">base</span><span class="o">:</span><span class="w"> </span><span class="s2">"./"</span><span class="p">,</span><span class="w"> </span><span class="c1">// 项目根目录</span>
+<span class="w">  </span><span class="nx">define</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 定义 CESIUM_BASE_URL</span>
+<span class="w">    </span><span class="nx">CESIUM_BASE_URL</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">cesiumBaseUrl</span><span class="p">),</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">optimizeDeps</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">include</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="s2">"cesium"</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">"echarts"</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">"element-plus"</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">"vue"</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">"vue-router"</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">"pinia"</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">"@element-plus/icons-vue"</span><span class="p">,</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">  </span><span class="p">},</span>
+
+<span class="w">  </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nx">vue</span><span class="p">(),</span>
+<span class="w">    </span><span class="nx">vueJsx</span><span class="p">(),</span>
+<span class="w">    </span><span class="c1">// CESIUM 静态资源复制</span>
+<span class="w">    </span><span class="nx">viteStaticCopy</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">targets</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">src</span><span class="o">:</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">cesiumSource</span><span class="si">}</span><span class="sb">/ThirdParty`</span><span class="p">,</span><span class="w"> </span><span class="nx">dest</span><span class="o">:</span><span class="w"> </span><span class="nx">cesiumBaseUrl</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">src</span><span class="o">:</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">cesiumSource</span><span class="si">}</span><span class="sb">/Workers`</span><span class="p">,</span><span class="w"> </span><span class="nx">dest</span><span class="o">:</span><span class="w"> </span><span class="nx">cesiumBaseUrl</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">src</span><span class="o">:</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">cesiumSource</span><span class="si">}</span><span class="sb">/Assets`</span><span class="p">,</span><span class="w"> </span><span class="nx">dest</span><span class="o">:</span><span class="w"> </span><span class="nx">cesiumBaseUrl</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">src</span><span class="o">:</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">cesiumSource</span><span class="si">}</span><span class="sb">/Widgets`</span><span class="p">,</span><span class="w"> </span><span class="nx">dest</span><span class="o">:</span><span class="w"> </span><span class="nx">cesiumBaseUrl</span><span class="w"> </span><span class="p">},</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">    </span><span class="p">}),</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="c1">// 开发服务器配置</span>
+<span class="w">  </span><span class="nx">server</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">hot</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// 启用热模块</span>
+<span class="w">    </span><span class="nx">host</span><span class="o">:</span><span class="w"> </span><span class="s2">"0.0.0.0"</span><span class="p">,</span><span class="w"> </span><span class="c1">// 允许外部访问</span>
+<span class="w">    </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">8080</span><span class="p">,</span><span class="w"> </span><span class="c1">// 端口号</span>
+<span class="w">    </span><span class="c1">// 代理转发配置</span>
+<span class="w">    </span><span class="nx">proxy</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// 后端代理</span>
+<span class="w">      </span><span class="s2">"/admin"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="s2">"http://127.0.0.1:8000/admin/"</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">changeOrigin</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">secure</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">ws</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="c1">// 将请求路径中开头的 `/admin` 替换为空字符串，即移除 `/admin` 前缀</span>
+<span class="w">        </span><span class="nx">rewrite</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">path</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/^\/admin/</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">),</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">resolve</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// 配置别名</span>
+<span class="w">      </span><span class="nx">alias</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">"@"</span><span class="o">:</span><span class="w"> </span><span class="nx">fileURLToPath</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">URL</span><span class="p">(</span><span class="s2">"./src"</span><span class="p">,</span><span class="w"> </span><span class="k">import</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">url</span><span class="p">)),</span>
+<span class="w">        </span><span class="nx">assets</span><span class="o">:</span><span class="w"> </span><span class="nx">fileURLToPath</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">URL</span><span class="p">(</span><span class="s2">"./src/assets"</span><span class="p">,</span><span class="w"> </span><span class="k">import</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">url</span><span class="p">)),</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="c1">// vite需要手动添加对后缀名省略的支持, webpack不需要</span>
+<span class="w">      </span><span class="nx">extensions</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">".js"</span><span class="p">,</span><span class="w"> </span><span class="s2">".ts"</span><span class="p">,</span><span class="w"> </span><span class="s2">".jsx"</span><span class="p">,</span><span class="w"> </span><span class="s2">".tsx"</span><span class="p">,</span><span class="w"> </span><span class="s2">".vue"</span><span class="p">,</span><span class="w"> </span><span class="s2">".css"</span><span class="p">,</span><span class="w"> </span><span class="s2">".scss"</span><span class="p">],</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">});</span>
+</code></pre></div>
 <h3 id="mainjs">（二）<code>main.js</code> 配置<a class="headerlink" href="#mainjs" title="Permanent link">¶</a></h3>
 <p>为了将上面安装的库引入到代码中使用，需要在 <code>main.js</code> 中的设置如下。</p>
 <div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createApp</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"vue"</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createPinia</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"pinia"</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="nx">router</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"./router"</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="nx">ElementPlus</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"element-plus"</span><span class="p">;</span>
-<span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">ElementPlusIconsVue</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@element-plus/icons-vue"</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="nx">zhCn</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"element-plus/es/locale/lang/zh-cn"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">ElementPlusIconsVue</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@element-plus/icons-vue"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ElTableColumn</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"element-plus"</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="s2">"element-plus/dist/index.css"</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="s2">"./style.css"</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="nx">App</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"./App.vue"</span><span class="p">;</span>
@@ -5711,6 +5859,11 @@
 <span class="w">  </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="s2">"small"</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">zIndex</span><span class="o">:</span><span class="w"> </span><span class="mf">3000</span><span class="p">,</span>
 <span class="p">});</span>
+<span class="c1">// 全局配置表格列超出部分显示提示</span>
+<span class="nx">ElTableColumn</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">showOverflowTooltip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="nb">Function</span><span class="p">,</span>
+<span class="w">  </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="p">};</span>
 
 <span class="c1">// 挂载应用</span>
 <span class="nx">app</span><span class="p">.</span><span class="nx">mount</span><span class="p">(</span><span class="s2">"#app"</span><span class="p">);</span>
@@ -5726,7 +5879,7 @@
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         最后更新:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年3月21日 20:41:43 CST"><span class="timeago" datetime="2026-03-21T20:41:43+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年3月21日 20:41:43 CST">2026-03-21</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年5月14日 17:29:52 CST"><span class="timeago" datetime="2026-05-14T17:29:52+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年5月14日 17:29:52 CST">2026-05-14</span>
         
         <br>
         创建日期:
