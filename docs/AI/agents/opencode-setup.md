@@ -1,4 +1,4 @@
-# OpenCode 及其插件安装配置说明 - 2026.05.14 更新
+# OpenCode 及其插件安装配置说明 - 2026.06.19 更新
 
 ## 一、不同系统的注意事项
 
@@ -15,7 +15,45 @@
 
 ## 二、安装软件
 
-### 1、Bun
+### 1、Windows Terminal
+
+（1）用途：新版的终端程序，比系统自带终端更现代化，能够管理并切换多种终端，如WSL、Git Bash等。
+
+（2）安装方式：打开Microsoft Store，搜索windows terminal，点击安装。
+
+![win_2026-05-29_15-49-17](../../assets/images/win_2026-05-29_15-49-17.webp)
+
+![ai_2026-06-19_20-41-24](../../assets/images/win_2026-06-19_20-41-24.webp)
+
+### 2、PowerShell 7
+
+（1）用途：升级版Windows PowerShell（系统自带为PowerShell 5），对中文和特殊字符具有很好支持，避免智能体运行控制台时出现乱码。
+
+（2）官方安装说明：https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.6
+
+（3）安装步骤
+
+- 使用MSI包的方式进行安装
+
+![ai_2026-06-19_20-45-40](../../assets/images/win_2026-06-19_20-45-40.webp)
+
+- 下载完成后，双击安装到默认目录即可。
+
+![win_2026-05-29_16-01-59](../../assets/images/win_2026-05-29_16-01-59.webp)
+
+- 最后需要注意将 PowerShell 7 注入环境变量与右键菜单。
+
+![win_2026-05-29_16-00-35](../../assets/images/win_2026-05-29_16-00-35.webp)
+
+- 安装完成后，使用 `Ctrl + R` 调出运行时，并输入简称 `pwsh` 启动 PowerShell 7
+
+![win_2026-06-19_20-51-17](../../assets/images/win_2026-06-19_20-51-17.webp)
+
+- 打开设置，将默认终端改为新版 Windows 终端，并将默认配置文件改为 PowerShell 7
+
+![win_2026-06-19_20-50-28](../../assets/images/win_2026-06-19_20-50-28.webp)
+
+### 3、Bun
 
 （1）用途：用于安装和启动 OpenCode 与 Oh-My-OpenAgent 插件。
 
@@ -45,7 +83,7 @@ curl -fsSL https://bun.com/install | bash
 rm -rf ~/.bun
 ```
 
-（3）Bun 更新：截至2026.04.08，最新版为 `v1.3.11`
+（3）Bun 更新：截至2026.06.19，最新版为 `v1.3.14`
 
 ```sh
 bun upgrade
@@ -54,14 +92,14 @@ bun upgrade
 （4）设置国内镜像
 
 - 参考文档：[Bun 修改npm包源 - 知乎](https://zhuanlan.zhihu.com/p/683420294)
-- 在 `C:\Users\系统用户名\` 创建文件 `.bunfig.toml`，输入以下内容并保存即可
+- 在 `C:\Users\系统用户名\` 目录下，创建文件 `.bunfig.toml`，输入以下内容并保存即可
 
 ```toml
 [install]
 registry = "https://registry.npmmirror.com"
 ```
 
-### 2、uv
+### 4、uv
 
 （1）用途：使用 uv 命令管理 Python 环境，也可以使用 uvx 命令启动 MCP 服务。
 
@@ -94,7 +132,7 @@ default=true
 
 ![py_2026-04-08_16-22-57](../../assets/images/py_2026-04-08_16-22-57.webp)
 
-### 3、OpenCode
+### 5、OpenCode
 
 （1）用途：AI 生产工具，Windows 桌面版仍然有很多 bug，最好使用控制台版本。
 
@@ -110,13 +148,15 @@ bun add -g opencode-ai
 
 - 安装后不要启动，继续安装下面的插件。
 
-### 4、Oh-My-OpenAgent（原Oh My OpenCode）
+（4）OpenCode 更新：截至 2026.06.19 更新，最新版为 `v1.17.8`
+
+### 6、Oh-My-OpenAgent（原Oh My OpenCode）
 
 （1）用途：OpenCode 的插件，添加了多个强力智能体，集成了很多 AI 模型辅助工具。
 
-（2）官方地址：https://ohmyopenagent.com/
+（2）官方地址：https://omo.dev/zh
 
-（3）说明文档：https://github.com/code-yeongyu/oh-my-openagent/blob/dev/docs/guide/installation.md
+（3）安装说明文档：https://github.com/code-yeongyu/oh-my-openagent/blob/dev/docs/guide/installation.md
 
 - Windows 与 Linux 一致
 
@@ -124,7 +164,7 @@ bun add -g opencode-ai
 bunx oh-my-openagent install
 ```
 
-（4）Oh-My-OpenAgent 更新：截至 2026.05.14 更新，最新版为 `v4.1.2`
+（4）Oh-My-OpenAgent 更新：截至 2026.06.19 更新，最新版为 `v4.11.1`
 
 ## 三、配置说明
 
@@ -139,6 +179,8 @@ bunx oh-my-openagent install
 - `opencode.json`：配置 OpenCode 可以使用的模型、MCP 服务、Skills
 - `oh-my-openagent.json`（原`oh-my-opencode.json`）：配置 Oh-My-OpenAgent 插件各个智能体使用的模型型号
 
+（4）`C:\Users\系统用户名\.cache\opencode\packages\`：OpenCode 相关插件的安装目录，oh-my-openagent@latest
+
 ### 2、模型配置
 
 （1）连接模型服务
@@ -151,13 +193,13 @@ bunx oh-my-openagent install
 
 ![ai_2026-04-08_16-09-33](../../assets/images/ai_2026-04-08_16-09-33.webp)
 
-搜索模型名称，如 `minimax`
+搜索模型供应商名称，如 `xiaomi`
 
-![ai_2026-04-08_16-10-25](../../assets/images/ai_2026-04-08_16-10-25.webp)
+![ai_opencode_connect_2026-06-19](../../assets/images/ai_opencode_connect_2026-06-19.webp)
 
 选中后输入密钥后即可使用该系列模型
 
-![ai_2026-04-08_16-11-22](../../assets/images/ai_2026-04-08_16-11-22.webp)
+![ai_opencode_key_2026-06-19](../../assets/images/ai_opencode_key_2026-06-19.webp)
 
 （2）切换模型
 
@@ -169,9 +211,9 @@ bunx oh-my-openagent install
 
 ![ai_2026-04-08_16-12-48](../../assets/images/ai_2026-04-08_16-12-48.webp)
 
-仍然以 MiniMax 最新模型 MiniMax-M2.7（截至 2026.05.14）为例，选中后即可使用该模型。
+仍然以 Xiaomi MiMo 最新模型 MiMo-V2.5-Pro（截至 2026.06.19）为例，选中后即可使用该模型。
 
-![ai_2026-04-08_16-15-24](../../assets/images/ai_2026-04-08_16-15-24.webp)
+![ai_opencode_models_2026-06-19](../../assets/images/ai_opencode_models_2026-06-19.webp)
 
 ### 3、Rules 规则配置
 
@@ -186,7 +228,7 @@ bunx oh-my-openagent install
 2. 需要使用 Python 时，如果用户没有指定运行环境，就使用 uv 进行包管理，并使用 ruff 进行代码格式化；
 3. 需要为 Python 代码写注释时，统一使用 Parameters 与 Returns 的风格进行注释；
 4. 需要读取 word 文档时，如果用户没有指定，一律使用 Python + Pandoc 进行处理；
-5. 需要使用浏览器时，可以使用 agent-browser 技能进行浏览器自动化测试。
+5. 需要使用浏览器时，可以使用 agent-browser CLI 工具进行浏览器自动化测试。
 6. 开发前端项目时，在代码完成后必须使用浏览器进行测试，直至浏览器控制台中没有任何错误和警告才算完成当前任务。
 ```
 
@@ -196,11 +238,19 @@ bunx oh-my-openagent install
 
 （2）如果版本很久没更新，可能无法自动更新，建议先完全卸载再重新安装。
 
-### 5、购买并配置模型
+- 在`C:\Users\系统用户名\.cache\opencode\packages\`目录下，找到`oh-my-openagent@latest`直接删除后重新安装即可。
 
-（1）MiniMax Token Plan：https://platform.minimaxi.com/docs/token-plan
+### 5、购买并配置模型（按性价比排序）
 
-（2）阿里云 Coding Plan：https://help.aliyun.com/zh/model-studio/coding-plan
+（1）DeepSeek API：https://platform.deepseek.com
+
+（2）Xiaomi MiMo API：https://platform.xiaomimimo.com/
+
+（3）Xiaomi MiMo Token Plan：https://mimo.mi.com/docs/zh-CN/tokenplan/Token%20Plan/subscription
+
+（4）MiniMax Token Plan：https://platform.minimaxi.com/docs/token-plan
+
+（5）阿里云百炼 Coding Plan：https://help.aliyun.com/zh/model-studio/coding-plan
 
 ### 6、Skills 技能配置
 
@@ -234,7 +284,7 @@ frontend-design: 用于前端界面设计
 
 3、OpenCode 和 Oh-My-OpenAgent 的更新频率很快，建议每次使用前检查更新。
 
-- 截止至 2026.05.14，Bun 最新 `v1.3.11`，OpenCode 最新 `v1.4.50`， Oh-My-OpenAgent 最新 `v4.1.2`
+- 截止至 2026.06.19，Bun 最新 `v1.3.14`，OpenCode 最新 `v1.17.8`， Oh-My-OpenAgent 最新 `v4.11.1`
 
 ```sh
 bun upgrade
@@ -244,21 +294,20 @@ bun upgrade
 opencode upgrade
 ```
 
-![ai_2026-04-08_15-42-30](../../assets/images/ai_2026-04-08_15-42-30.webp)
+![ai_opencode_version_2026-06-19](../../assets/images/ai_opencode_version_2026-06-19.webp)
 
 4、常用快捷键
 
-（1）`/ulw`：魔法命令，配合 `Sisyphus` 智能体
-
-（2）`/ulw-roof`：魔法命令，配合 `Sisyphus` 智能体，循环调用模型，直到彻底完成任务
-
-（3）`esc`：连按两次可以打断施法
-
-（4）`/undo`：输入后撤销本次对话内容
-
-（5）`ctrl+c+空格`：清空当前输入框内容
-
-- 因为是在控制台中运行，`ctrl+c`会直接退出OpenCode，使用前一定要先按住空格键
+|                   | 快捷键说明                                                       |
+| ----------------- | ---------------------------------------------------------------- |
+| `/new`            | 开启新对话                                                       |
+| `/sessions`       | 查看当前目录所有对话记录                                         |
+| `ulw`             | 魔法命令，配合 `Sisyphus` 智能体进行多智能体协同工作             |
+| `/ulw-roof`       | 魔法命令，配合 `Sisyphus` 智能体，循环调用模型，直到彻底完成任务 |
+| `Esc`             | 连按两次可以打断施法                                             |
+| `/undo`           | 输入后撤销本次对话内容                                           |
+| `Ctrl + C + 空格` | 清空当前输入框内容，使用 `Ctrl + C` 会直接退出OpenCode           |
+| `Ctrl + Enter`    | 输入框换行                                                       |
 
 ## 使用问题记录
 
@@ -270,6 +319,6 @@ opencode upgrade
 
 2、无法自动更新最新版 Oh-My-OpenAgent
 
-Windows 环境下，可以手动删除该文件，再启动 OpenCode 即可更新最新版。
-
 文件路径：`C:\Users\系统用户名\.cache\opencode\packages\oh-my-openagent@latest`
+
+Windows 环境下，手动删除该文件，再启动 OpenCode 即可自动更新最新版。
