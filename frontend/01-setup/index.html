@@ -2465,6 +2465,8 @@
       
         
       
+        
+      
     
     
     
@@ -2826,17 +2828,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-vite" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5 Vite改造
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3030,6 +3021,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../rust-implementation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rust 实现
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -3060,7 +3079,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_9">
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_10">
         
           
           <div class="md-nav__link md-nav__container">
@@ -3082,14 +3101,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -5837,17 +5856,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-vite" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5 Vite改造
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6031,16 +6039,6 @@ or
 vue --version
 </code></pre></div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/fe-14-028.webp" data-desc-position="bottom"><img alt="" src="../../assets/images/fe-14-028.webp"></a></p>
-<h2 id="5-vite">5 Vite改造<a class="headerlink" href="#5-vite" title="Permanent link">¶</a></h2>
-<p>vite无法使用require，需要替换</p>
-<p>正则表达式检索替换：</p>
-<ul>
-<li><code>require\((["'][^"']+["'])\)</code>替换为<code>new URL($1, import.meta.url)</code></li>
-<li><code>require\((["'][^"']+["'])\)</code>替换为<code>new URL($1, import.meta.url)</code></li>
-</ul>
-<p>在package.json中添加一行，强制使用ESM语法</p>
-<div class="highlight"><pre><span></span><code>  "type": "module",
-</code></pre></div>
 <h2 id="_1">参考文章<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <ol>
 <li><a href="https://blog.csdn.net/bealei/article/details/115658300">修改npm全局安装包的位置路径</a></li>
@@ -6060,7 +6058,7 @@ vue --version
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         最后更新:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年4月7日 14:14:44 CST"><span class="timeago" datetime="2026-04-07T14:14:44+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年4月7日 14:14:44 CST">2026-04-07</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年6月20日 11:37:35 CST"><span class="timeago" datetime="2026-06-20T11:37:35+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年6月20日 11:37:35 CST">2026-06-20</span>
         
         <br>
         创建日期:

@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vue-20260514" class="md-skip">
+        <a href="#vue-typescript-20260517" class="md-skip">
           跳转至
         </a>
       
@@ -2465,6 +2465,8 @@
       
         
       
+        
+      
     
     
     
@@ -2822,10 +2824,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#viteconfigmjs" class="md-nav__link">
+  <a href="#viteconfigmts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        （一）vite.config.mjs 配置
+        （一）vite.config.mts 配置
       
     </span>
   </a>
@@ -2833,10 +2835,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#mainjs" class="md-nav__link">
+  <a href="#maints" class="md-nav__link">
     <span class="md-ellipsis">
       
-        （二）main.js 配置
+        （二）main.ts 配置
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （三）Vite改造
       
     </span>
   </a>
@@ -2845,6 +2858,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2872,6 +2896,34 @@
     
   
     React 实现
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rust-implementation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rust 实现
   
 
     
@@ -2921,7 +2973,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_9">
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_10">
         
           
           <div class="md-nav__link md-nav__container">
@@ -2943,14 +2995,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -5554,10 +5606,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#viteconfigmjs" class="md-nav__link">
+  <a href="#viteconfigmts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        （一）vite.config.mjs 配置
+        （一）vite.config.mts 配置
       
     </span>
   </a>
@@ -5565,10 +5617,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#mainjs" class="md-nav__link">
+  <a href="#maints" class="md-nav__link">
     <span class="md-ellipsis">
       
-        （二）main.js 配置
+        （二）main.ts 配置
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （三）Vite改造
       
     </span>
   </a>
@@ -5577,6 +5640,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
   
 </li>
       
@@ -5601,7 +5675,7 @@
   
 
 
-<h1 id="vue-20260514">Vue 前端项目初始化-20260514<a class="headerlink" href="#vue-20260514" title="Permanent link">¶</a></h1>
+<h1 id="vue-typescript-20260517">Vue TypeScript 前端项目初始化-20260517<a class="headerlink" href="#vue-typescript-20260517" title="Permanent link">¶</a></h1>
 <h2 id="_1">相关参考<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <ol>
 <li><a href="https://www.tailwindcss.cn/docs/guides/vite">Tailwind CSS 中文站| Install Tailwind CSS with Vite</a></li>
@@ -5630,7 +5704,10 @@
 <p>（1）目的：使用 vite v7 版本直接创建 vue 模板项目</p>
 <p>（2）官网：https://v7.vite.dev/guide/</p>
 <p>（3）注意：由于 vite 最新版本 v8 出现了破坏性变更，对静态路径的读取发生改变，考虑到后续兼容性，选用 v7 版本。</p>
-<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>create<span class="w"> </span>vite@7<span class="w"> </span>frontend<span class="w"> </span>--<span class="w"> </span>--template<span class="w"> </span>vue
+<ul>
+<li>Vite 官方构建模板说明：https://github.com/vitejs/vite/tree/main/packages/create-vite#readme</li>
+</ul>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>create<span class="w"> </span>vite@7<span class="w"> </span>frontend<span class="w"> </span>--<span class="w"> </span>--template<span class="w"> </span>vue-ts
 </code></pre></div>
 <p>2、切换到项目目录</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>frontend
@@ -5665,17 +5742,26 @@
 </code></pre></div>
 <h3 id="_6">（四）配置必备依赖<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
 <p>1、安装 Vite 核心配件</p>
-<p>（1）目的：用于 <code>vite.config.js</code> 内部配置</p>
+<p>（1）目的：用于 <code>vite.config.ts</code> 内部配置</p>
 <p>（2）逐个安装，<code>-D</code> 表示仅开发环境下使用</p>
 <p>（3）注意：vite-plugin-static-copy v4 版本与 v3 版本存在较大差异，考虑到旧版本兼容性，选用 v3 版本。</p>
-<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-D<span class="w"> </span>@vitejs/plugin-vue-jsx<span class="w"> </span>vite-plugin-html<span class="w"> </span>vite-plugin-static-copy@3.4.0
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-D<span class="w"> </span>@vitejs/plugin-vue-jsx<span class="w"> </span>vite-plugin-static-copy@3.4.0<span class="w"> </span>vite-plugin-compression
 </code></pre></div>
+<ul>
+<li><code>vitejs/plugin-vue-jsx</code>：用于对 vue 的 jsx 与 tsx 语言支持</li>
+<li><code>vite-plugin-static-copy</code>：用于复制静态依赖</li>
+<li><code>vite-plugin-compression</code>：用于开启打包时的代码压缩</li>
+</ul>
 <p>2、安装 Vue Router</p>
 <p>（1）目的：Vue 官方路由，页面切换或模块切换。</p>
 <p>（2）官网：https://router.vuejs.org/zh/</p>
 <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>vue-router@4
 </code></pre></div>
-<p>3、安装 Pinia</p>
+<p>3、安装 Vue 状态管理库</p>
+<p>安装 Vuex（可选）</p>
+<p>（1）目的：Vue 官方状态管理模式库。</p>
+<p>（2）官网：https://vuex.vuejs.org/zh/</p>
+<p>安装 Pinia（推荐）</p>
 <p>（1）目的：用于 Vue 的专属状态管理库，允许跨组件或页面共享状态。</p>
 <p>（2）官网：https://pinia.vuejs.org/zh/</p>
 <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>pinia
@@ -5744,8 +5830,8 @@ npm<span class="w"> </span>install<span class="w"> </span>cesium-navigation-es6
 <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>dayjs
 </code></pre></div>
 <h2 id="_8">二、基本配置<a class="headerlink" href="#_8" title="Permanent link">¶</a></h2>
-<h3 id="viteconfigmjs">（一）<code>vite.config.mjs</code> 配置<a class="headerlink" href="#viteconfigmjs" title="Permanent link">¶</a></h3>
-<p>将默认生成的<code>vite.config.js</code>文件名改为<code>vite.config.mjs</code>，修改后不会再被 <code>package.json</code> 中的 <code>"type"</code> 和 Node 版本影响。</p>
+<h3 id="viteconfigmts">（一）<code>vite.config.mts</code> 配置<a class="headerlink" href="#viteconfigmts" title="Permanent link">¶</a></h3>
+<p>将默认生成的<code>vite.config.ts</code>文件名改为<code>vite.config.mts</code>，修改后不会再被 <code>package.json</code> 中的 <code>"type"</code> 和 Node 版本影响。</p>
 <div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">fileURLToPath</span><span class="p">,</span><span class="w"> </span><span class="nx">URL</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"node:url"</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">defineConfig</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"vite"</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="nx">vue</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@vitejs/plugin-vue"</span><span class="p">;</span>
@@ -5760,7 +5846,16 @@ npm<span class="w"> </span>install<span class="w"> </span>cesium-navigation-es6
 <span class="w">  </span><span class="nx">base</span><span class="o">:</span><span class="w"> </span><span class="s2">"./"</span><span class="p">,</span><span class="w"> </span><span class="c1">// 项目根目录</span>
 <span class="w">  </span><span class="nx">define</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// 定义 CESIUM_BASE_URL</span>
-<span class="w">    </span><span class="nx">CESIUM_BASE_URL</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">cesiumBaseUrl</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">CESIUM_BASE_URL</span><span class="o">:</span><span class="w"> </span><span class="kt">JSON.stringify</span><span class="p">(</span><span class="nx">cesiumBaseUrl</span><span class="p">),</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">resolve</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 配置别名</span>
+<span class="w">    </span><span class="nx">alias</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="s2">"@"</span><span class="o">:</span><span class="w"> </span><span class="nx">fileURLToPath</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">URL</span><span class="p">(</span><span class="s2">"./src"</span><span class="p">,</span><span class="w"> </span><span class="k">import</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">url</span><span class="p">)),</span>
+<span class="w">      </span><span class="nx">assets</span><span class="o">:</span><span class="w"> </span><span class="kt">fileURLToPath</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">URL</span><span class="p">(</span><span class="s2">"./src/assets"</span><span class="p">,</span><span class="w"> </span><span class="k">import</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">url</span><span class="p">)),</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="c1">// vite需要手动添加对后缀名省略的支持, webpack不需要</span>
+<span class="w">    </span><span class="nx">extensions</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">".js"</span><span class="p">,</span><span class="w"> </span><span class="s2">".ts"</span><span class="p">,</span><span class="w"> </span><span class="s2">".jsx"</span><span class="p">,</span><span class="w"> </span><span class="s2">".tsx"</span><span class="p">,</span><span class="w"> </span><span class="s2">".vue"</span><span class="p">,</span><span class="w"> </span><span class="s2">".css"</span><span class="p">,</span><span class="w"> </span><span class="s2">".scss"</span><span class="p">],</span>
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="nx">optimizeDeps</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">include</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
@@ -5780,44 +5875,34 @@ npm<span class="w"> </span>install<span class="w"> </span>cesium-navigation-es6
 <span class="w">    </span><span class="c1">// CESIUM 静态资源复制</span>
 <span class="w">    </span><span class="nx">viteStaticCopy</span><span class="p">({</span>
 <span class="w">      </span><span class="nx">targets</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">src</span><span class="o">:</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">cesiumSource</span><span class="si">}</span><span class="sb">/ThirdParty`</span><span class="p">,</span><span class="w"> </span><span class="nx">dest</span><span class="o">:</span><span class="w"> </span><span class="nx">cesiumBaseUrl</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">src</span><span class="o">:</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">cesiumSource</span><span class="si">}</span><span class="sb">/Workers`</span><span class="p">,</span><span class="w"> </span><span class="nx">dest</span><span class="o">:</span><span class="w"> </span><span class="nx">cesiumBaseUrl</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">src</span><span class="o">:</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">cesiumSource</span><span class="si">}</span><span class="sb">/Assets`</span><span class="p">,</span><span class="w"> </span><span class="nx">dest</span><span class="o">:</span><span class="w"> </span><span class="nx">cesiumBaseUrl</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">src</span><span class="o">:</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">cesiumSource</span><span class="si">}</span><span class="sb">/Widgets`</span><span class="p">,</span><span class="w"> </span><span class="nx">dest</span><span class="o">:</span><span class="w"> </span><span class="nx">cesiumBaseUrl</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">src</span><span class="o">:</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">cesiumSource</span><span class="si">}</span><span class="sb">/ThirdParty`</span><span class="p">,</span><span class="w"> </span><span class="nx">dest</span><span class="o">:</span><span class="w"> </span><span class="kt">cesiumBaseUrl</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">src</span><span class="o">:</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">cesiumSource</span><span class="si">}</span><span class="sb">/Workers`</span><span class="p">,</span><span class="w"> </span><span class="nx">dest</span><span class="o">:</span><span class="w"> </span><span class="kt">cesiumBaseUrl</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">src</span><span class="o">:</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">cesiumSource</span><span class="si">}</span><span class="sb">/Assets`</span><span class="p">,</span><span class="w"> </span><span class="nx">dest</span><span class="o">:</span><span class="w"> </span><span class="kt">cesiumBaseUrl</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">src</span><span class="o">:</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">cesiumSource</span><span class="si">}</span><span class="sb">/Widgets`</span><span class="p">,</span><span class="w"> </span><span class="nx">dest</span><span class="o">:</span><span class="w"> </span><span class="kt">cesiumBaseUrl</span><span class="w"> </span><span class="p">},</span>
 <span class="w">      </span><span class="p">],</span>
 <span class="w">    </span><span class="p">}),</span>
 <span class="w">  </span><span class="p">],</span>
 <span class="w">  </span><span class="c1">// 开发服务器配置</span>
 <span class="w">  </span><span class="nx">server</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">hot</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// 启用热模块</span>
 <span class="w">    </span><span class="nx">host</span><span class="o">:</span><span class="w"> </span><span class="s2">"0.0.0.0"</span><span class="p">,</span><span class="w"> </span><span class="c1">// 允许外部访问</span>
-<span class="w">    </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">8080</span><span class="p">,</span><span class="w"> </span><span class="c1">// 端口号</span>
+<span class="w">    </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="kt">5713</span><span class="p">,</span><span class="w"> </span><span class="c1">// 端口号</span>
 <span class="w">    </span><span class="c1">// 代理转发配置</span>
 <span class="w">    </span><span class="nx">proxy</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="c1">// 后端代理</span>
-<span class="w">      </span><span class="s2">"/admin"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="s2">"http://127.0.0.1:8000/admin/"</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">changeOrigin</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">secure</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">ws</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">        </span><span class="c1">// 将请求路径中开头的 `/admin` 替换为空字符串，即移除 `/admin` 前缀</span>
-<span class="w">        </span><span class="nx">rewrite</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">path</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/^\/admin/</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">),</span>
+<span class="w">      </span><span class="s2">"/api"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="s2">"http://127.0.0.1:8000/api/"</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">changeOrigin</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">secure</span><span class="o">:</span><span class="w"> </span><span class="kt">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">ws</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="p">,</span>
+<span class="w">        </span><span class="c1">// 将请求路径中开头的 `/api` 替换为空字符串，即移除 `/api` 前缀</span>
+<span class="w">        </span><span class="nx">rewrite</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">path</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/^\/api/</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">),</span>
 <span class="w">      </span><span class="p">},</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nx">resolve</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="c1">// 配置别名</span>
-<span class="w">      </span><span class="nx">alias</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="s2">"@"</span><span class="o">:</span><span class="w"> </span><span class="nx">fileURLToPath</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">URL</span><span class="p">(</span><span class="s2">"./src"</span><span class="p">,</span><span class="w"> </span><span class="k">import</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">url</span><span class="p">)),</span>
-<span class="w">        </span><span class="nx">assets</span><span class="o">:</span><span class="w"> </span><span class="nx">fileURLToPath</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">URL</span><span class="p">(</span><span class="s2">"./src/assets"</span><span class="p">,</span><span class="w"> </span><span class="k">import</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">url</span><span class="p">)),</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="c1">// vite需要手动添加对后缀名省略的支持, webpack不需要</span>
-<span class="w">      </span><span class="nx">extensions</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">".js"</span><span class="p">,</span><span class="w"> </span><span class="s2">".ts"</span><span class="p">,</span><span class="w"> </span><span class="s2">".jsx"</span><span class="p">,</span><span class="w"> </span><span class="s2">".tsx"</span><span class="p">,</span><span class="w"> </span><span class="s2">".vue"</span><span class="p">,</span><span class="w"> </span><span class="s2">".css"</span><span class="p">,</span><span class="w"> </span><span class="s2">".scss"</span><span class="p">],</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">  </span><span class="p">},</span>
 <span class="p">});</span>
 </code></pre></div>
-<h3 id="mainjs">（二）<code>main.js</code> 配置<a class="headerlink" href="#mainjs" title="Permanent link">¶</a></h3>
-<p>为了将上面安装的库引入到代码中使用，需要在 <code>main.js</code> 中的设置如下。</p>
+<h3 id="maints">（二）<code>main.ts</code> 配置<a class="headerlink" href="#maints" title="Permanent link">¶</a></h3>
+<p>为了将上面安装的库引入到代码中使用，需要在 <code>main.ts</code> 中的设置如下。</p>
 <div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createApp</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"vue"</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createPinia</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"pinia"</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="nx">router</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"./router"</span><span class="p">;</span>
@@ -5836,11 +5921,10 @@ npm<span class="w"> </span>install<span class="w"> </span>cesium-navigation-es6
 <span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">DeepdarkUi</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"deepdark-ui"</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="s2">"deepdark-ui/deepdark-ui.css"</span><span class="p">;</span>
 
-<span class="c1">// 设置Cesium Ion Token</span>
-<span class="nx">Cesium</span><span class="p">.</span><span class="nx">Ion</span><span class="p">.</span><span class="nx">defaultAccessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"XXXXXX"</span><span class="p">;</span>
+<span class="c1">// 配置Cesium Ion Token</span>
+<span class="nx">Cesium</span><span class="p">.</span><span class="nx">Ion</span><span class="p">.</span><span class="nx">defaultAccessToken</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzZGJkM2ExNC1jMTYyLTQ2YjQtODBmMi04NzE4NGQ4MmI1NTQiLCJpZCI6MTAyNzI1LCJpYXQiOjE2NzczOTk3ODF9.OhHmzcF2vVFbfChAoNjWGTylgsRfVa8q9wYgS3nXQXU"</span><span class="p">;</span>
 
-<span class="c1">// 引入Pinia</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">pinia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createPinia</span><span class="p">();</span>
 <span class="c1">// 创建Vue应用实例</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createApp</span><span class="p">(</span><span class="nx">App</span><span class="p">);</span>
 
@@ -5849,25 +5933,38 @@ npm<span class="w"> </span>install<span class="w"> </span>cesium-navigation-es6
 <span class="w">  </span><span class="nx">app</span><span class="p">.</span><span class="nx">component</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="nx">component</span><span class="p">);</span>
 <span class="p">}</span>
 
+<span class="c1">// 引入Pinia</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">pinia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createPinia</span><span class="p">();</span>
 <span class="c1">// 使用Pinia</span>
 <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">pinia</span><span class="p">);</span>
 <span class="c1">// 使用Vue Router</span>
 <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">router</span><span class="p">);</span>
 <span class="c1">// 使用Element Plus, 并设置语言为中文, 表单组件默认尺寸大小为small, 弹窗组件层级z-index为3000</span>
 <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">ElementPlus</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">locale</span><span class="o">:</span><span class="w"> </span><span class="nx">zhCn</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">locale</span><span class="o">:</span><span class="w"> </span><span class="kt">zhCn</span><span class="p">,</span>
 <span class="w">  </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="s2">"small"</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">zIndex</span><span class="o">:</span><span class="w"> </span><span class="mf">3000</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">zIndex</span><span class="o">:</span><span class="w"> </span><span class="kt">3000</span><span class="p">,</span>
 <span class="p">});</span>
 <span class="c1">// 全局配置表格列超出部分显示提示</span>
 <span class="nx">ElTableColumn</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">showOverflowTooltip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="nb">Function</span><span class="p">,</span>
+<span class="w">  </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="nb">Function</span><span class="p">,</span>
 <span class="w">  </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="p">};</span>
 
 <span class="c1">// 挂载应用</span>
 <span class="nx">app</span><span class="p">.</span><span class="nx">mount</span><span class="p">(</span><span class="s2">"#app"</span><span class="p">);</span>
 </code></pre></div>
+<h3 id="vite">（三）Vite改造<a class="headerlink" href="#vite" title="Permanent link">¶</a></h3>
+<p>vite无法使用require，需要替换</p>
+<p>正则表达式检索替换：</p>
+<ul>
+<li><code>require\((["'][^"']+["'])\)</code>替换为<code>new URL($1, import.meta.url)</code></li>
+<li><code>require\((["'][^"']+["'])\)</code>替换为<code>new URL($1, import.meta.url)</code></li>
+</ul>
+<p>在package.json中添加一行，强制使用ESM语法</p>
+<div class="highlight"><pre><span></span><code>  "type": "module",
+</code></pre></div>
+<h2 id="_9"><a class="headerlink" href="#_9" title="Permanent link">¶</a></h2>
 
 
 
@@ -5879,7 +5976,7 @@ npm<span class="w"> </span>install<span class="w"> </span>cesium-navigation-es6
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         最后更新:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年5月14日 17:29:52 CST"><span class="timeago" datetime="2026-05-14T17:29:52+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年5月14日 17:29:52 CST">2026-05-14</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年6月20日 11:37:35 CST"><span class="timeago" datetime="2026-06-20T11:37:35+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年6月20日 11:37:35 CST">2026-06-20</span>
         
         <br>
         创建日期:
