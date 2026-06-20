@@ -118,6 +118,7 @@ nav:
       - GeoServer: frontend/05-geoserver.md
       - Vue 实现: frontend/vue-implementation.md
       - React 实现: frontend/react-implementation.md
+      - Rust 实现: frontend/rust-implementation.md
       - Vue:
           - 概述: frontend/vue/index.md
           - Vue2 转 Vue3: frontend/vue/vue2-to-vue3.md
