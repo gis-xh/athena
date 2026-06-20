@@ -220,21 +220,6 @@ vue --version
 
 ![](../assets/images/fe-14-028.webp)
 
-## 5 Vite改造
-
-vite无法使用require，需要替换
-
-正则表达式检索替换：
-
-- `require\((["'][^"']+["'])\)`替换为`new URL($1, import.meta.url)`
-- `require\((["'][^"']+["'])\)`替换为`new URL($1, import.meta.url)`
-
-在package.json中添加一行，强制使用ESM语法
-
-```
-  "type": "module",
-```
-
 ## 参考文章
 
 1. [修改npm全局安装包的位置路径](https://blog.csdn.net/bealei/article/details/115658300)

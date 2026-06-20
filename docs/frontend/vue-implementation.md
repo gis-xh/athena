@@ -1,4 +1,4 @@
-# Vue 前端项目初始化-20260514
+# Vue TypeScript 前端项目初始化-20260517
 
 ## 相关参考
 
@@ -45,8 +45,10 @@ npm install -g eslint
 
 （3）注意：由于 vite 最新版本 v8 出现了破坏性变更，对静态路径的读取发生改变，考虑到后续兼容性，选用 v7 版本。
 
+- Vite 官方构建模板说明：https://github.com/vitejs/vite/tree/main/packages/create-vite#readme
+
 ```sh
-npm create vite@7 frontend -- --template vue
+npm create vite@7 frontend -- --template vue-ts
 ```
 
 2、切换到项目目录
@@ -106,15 +108,19 @@ export default {
 
 1、安装 Vite 核心配件
 
-（1）目的：用于 `vite.config.js` 内部配置
+（1）目的：用于 `vite.config.ts` 内部配置
 
 （2）逐个安装，`-D` 表示仅开发环境下使用
 
 （3）注意：vite-plugin-static-copy v4 版本与 v3 版本存在较大差异，考虑到旧版本兼容性，选用 v3 版本。
 
 ```sh
-npm install -D @vitejs/plugin-vue-jsx vite-plugin-html vite-plugin-static-copy@3.4.0
+npm install -D @vitejs/plugin-vue-jsx vite-plugin-static-copy@3.4.0 vite-plugin-compression
 ```
+
+- `vitejs/plugin-vue-jsx`：用于对 vue 的 jsx 与 tsx 语言支持
+- `vite-plugin-static-copy`：用于复制静态依赖
+- `vite-plugin-compression`：用于开启打包时的代码压缩
 
 2、安装 Vue Router
 
@@ -126,7 +132,15 @@ npm install -D @vitejs/plugin-vue-jsx vite-plugin-html vite-plugin-static-copy@3
 npm install vue-router@4
 ```
 
-3、安装 Pinia
+3、安装 Vue 状态管理库
+
+安装 Vuex（可选）
+
+（1）目的：Vue 官方状态管理模式库。
+
+（2）官网：https://vuex.vuejs.org/zh/
+
+安装 Pinia（推荐）
 
 （1）目的：用于 Vue 的专属状态管理库，允许跨组件或页面共享状态。
 
@@ -247,11 +261,11 @@ npm install dayjs
 
 ## 二、基本配置
 
-### （一）`vite.config.mjs` 配置
+### （一）`vite.config.mts` 配置
 
-将默认生成的`vite.config.js`文件名改为`vite.config.mjs`，修改后不会再被 `package.json` 中的 `"type"` 和 Node 版本影响。
+将默认生成的`vite.config.ts`文件名改为`vite.config.mts`，修改后不会再被 `package.json` 中的 `"type"` 和 Node 版本影响。
 
-```js
+```ts
 import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
@@ -267,6 +281,15 @@ export default defineConfig({
   define: {
     // 定义 CESIUM_BASE_URL
     CESIUM_BASE_URL: JSON.stringify(cesiumBaseUrl),
+  },
+  resolve: {
+    // 配置别名
+    alias: {
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
+      assets: fileURLToPath(new URL("./src/assets", import.meta.url)),
+    },
+    // vite需要手动添加对后缀名省略的支持, webpack不需要
+    extensions: [".js", ".ts", ".jsx", ".tsx", ".vue", ".css", ".scss"],
   },
   optimizeDeps: {
     include: [
@@ -295,39 +318,29 @@ export default defineConfig({
   ],
   // 开发服务器配置
   server: {
-    hot: true, // 启用热模块
     host: "0.0.0.0", // 允许外部访问
-    port: 8080, // 端口号
+    port: 5713, // 端口号
     // 代理转发配置
     proxy: {
       // 后端代理
-      "/admin": {
-        target: "http://127.0.0.1:8000/admin/",
+      "/api": {
+        target: "http://127.0.0.1:8000/api/",
         changeOrigin: true,
         secure: false,
         ws: true,
-        // 将请求路径中开头的 `/admin` 替换为空字符串，即移除 `/admin` 前缀
-        rewrite: (path) => path.replace(/^\/admin/, ""),
+        // 将请求路径中开头的 `/api` 替换为空字符串，即移除 `/api` 前缀
+        rewrite: (path) => path.replace(/^\/api/, ""),
       },
-    },
-    resolve: {
-      // 配置别名
-      alias: {
-        "@": fileURLToPath(new URL("./src", import.meta.url)),
-        assets: fileURLToPath(new URL("./src/assets", import.meta.url)),
-      },
-      // vite需要手动添加对后缀名省略的支持, webpack不需要
-      extensions: [".js", ".ts", ".jsx", ".tsx", ".vue", ".css", ".scss"],
     },
   },
 });
 ```
 
-### （二）`main.js` 配置
+### （二）`main.ts` 配置
 
-为了将上面安装的库引入到代码中使用，需要在 `main.js` 中的设置如下。
+为了将上面安装的库引入到代码中使用，需要在 `main.ts` 中的设置如下。
 
-```js
+```ts
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 import router from "./router";
@@ -346,11 +359,10 @@ import "cesium/Source/Widgets/widgets.css";
 import * as DeepdarkUi from "deepdark-ui";
 import "deepdark-ui/deepdark-ui.css";
 
-// 设置Cesium Ion Token
-Cesium.Ion.defaultAccessToken = "XXXXXX";
+// 配置Cesium Ion Token
+Cesium.Ion.defaultAccessToken =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzZGJkM2ExNC1jMTYyLTQ2YjQtODBmMi04NzE4NGQ4MmI1NTQiLCJpZCI6MTAyNzI1LCJpYXQiOjE2NzczOTk3ODF9.OhHmzcF2vVFbfChAoNjWGTylgsRfVa8q9wYgS3nXQXU";
 
-// 引入Pinia
-const pinia = createPinia();
 // 创建Vue应用实例
 const app = createApp(App);
 
@@ -359,6 +371,8 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component);
 }
 
+// 引入Pinia
+const pinia = createPinia();
 // 使用Pinia
 app.use(pinia);
 // 使用Vue Router
@@ -378,3 +392,20 @@ ElTableColumn.props.showOverflowTooltip = {
 // 挂载应用
 app.mount("#app");
 ```
+
+### （三）Vite改造
+
+vite无法使用require，需要替换
+
+正则表达式检索替换：
+
+- `require\((["'][^"']+["'])\)`替换为`new URL($1, import.meta.url)`
+- `require\((["'][^"']+["'])\)`替换为`new URL($1, import.meta.url)`
+
+在package.json中添加一行，强制使用ESM语法
+
+```
+  "type": "module",
+```
+
+##
