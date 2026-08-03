@@ -17,3 +17,6 @@ site/
 *.tar
 *.tar.gz
 *.7z
+.omo/
+.trae/
+.sisyphus/

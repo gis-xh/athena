@@ -5,6 +5,7 @@
 ### 1.1 安装 WSL2
 
 - 微软官方教程：https://learn.microsoft.com/en-us/windows/wsl/install
+- 微软官方下载地址：https://github.com/microsoft/WSL/releases
 - 详细视频教程：【超详细的WSL教程：Windows上的Linux子系统】https://www.bilibili.com/video/BV1tW42197za/?share_source=copy_web
 
 第一次安装需要重启
@@ -13,7 +14,7 @@
 wsl --install
 ```
 
-![](../assets/images/deploy-3-003.webp)
+![](../assets/images/win_wsl-2025-04-15-1.webp)
 
 查看支持的Linux系统列表
 
@@ -21,7 +22,7 @@ wsl --install
 wsl --list --online
 ```
 
-![](../assets/images/deploy-image-20250415155533579-016.webp)
+![](../assets/images/win_wsl-2025-04-15-2.webp)
 
 下载系统镜像，默认安装最新的Ubuntu（当前为Ubuntu 24.04）
 
@@ -35,7 +36,7 @@ wsl --install 镜像名称 --web-download
 wsl --list -v
 ```
 
-![](../assets/images/deploy-image-20250415155952588-017.webp)
+![](../assets/images/win_wsl-2025-04-15-3.webp)
 
 进入子系统，初次进入系统需要设置用户名（非root）与密码
 
@@ -43,7 +44,7 @@ wsl --list -v
 wsl -d Ubuntu
 ```
 
-![](../assets/images/deploy-2-002.webp)
+![](../assets/images/win_wsl-2025-04-15-4.webp)
 
 退出子系统
 
@@ -51,7 +52,7 @@ wsl -d Ubuntu
 exit
 ```
 
-![](../assets/images/deploy-2-002.webp)
+![](../assets/images/win_wsl-2025-04-15-5.webp)
 
 ### 1.2 安装 Docker
 
@@ -61,7 +62,7 @@ exit
 
 再次查看当前的子系统，出现一个新的子系统docker-desktop
 
-![](../assets/images/deploy-4-004.webp)
+![](../assets/images/win_wsl-2025-04-15-6.webp)
 
 ### 1.3 WSL 基本操作
 
@@ -81,7 +82,7 @@ wsl --shutdown
 
 需要注意的是docker子系统可以马上关闭，但Ubuntu系统一般需要8s后才可以正常关闭。
 
-![](../assets/images/deploy-1-001.webp)
+![](../assets/images/win_wsl-2025-04-15-7.webp)
 
 ## 2 Linux 基础
 

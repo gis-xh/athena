@@ -34,9 +34,3 @@ mkdocs serve
 # 构建静态站点
 mkdocs build
 ```
-
-## 主要参考
-
-- [graykode/nlp-tutorial (GitHub)](https://github.com/graykode/nlp-tutorial)
-- [Hugging Face 快速入门](https://blog.csdn.net/zhaohongfei_358/article/details/126224199)
-- [韩顺平 Linux 教程 (B站)](https://www.bilibili.com/video/BV1Sv411r7vd)

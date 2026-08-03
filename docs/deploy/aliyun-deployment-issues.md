@@ -1,6 +1,6 @@
 # 阿里云部署踩坑记录
 
-相关文档：[阿里云部署前后端项目全过程记录](aliyun-fullstack-deployment.md)
+相关文档：[阿里云部署前后端项目全过程记录](./aliyun-deployment.md)
 
 ## 一、分离 setting.py
 
@@ -250,3 +250,4 @@ kill -9 进程号
 ```
 supervisord -c ~/etc/supervisor/supervisord.conf
 ```
+

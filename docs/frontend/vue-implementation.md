@@ -1,4 +1,4 @@
-# Vue TypeScript 前端项目初始化-20260517
+# Vue TypeScript 前端项目初始化-20260729
 
 ## 相关参考
 
@@ -55,6 +55,16 @@ npm create vite@7 frontend -- --template vue-ts
 
 ```sh
 cd frontend
+```
+
+3、安装 @types/node
+
+（1）目的：为 Node.js 提供 TypeScript 类型定义的包
+
+（2）注意：需要同步安装与当前 node 对应的版本，当前以 node 22 版本为例
+
+```sh
+npm install @types/node@22
 ```
 
 ### （三）样式初始化
@@ -132,6 +142,8 @@ npm install -D @vitejs/plugin-vue-jsx vite-plugin-static-copy@3.4.0 vite-plugin-
 npm install vue-router@4
 ```
 
+（3）实际使用需要在 `src/` 目录下手动创建 `router/index.ts`
+
 3、安装 Vue 状态管理库
 
 安装 Vuex（可选）
@@ -181,22 +193,22 @@ npm install element-resize-detector
 
 （1）目的：当前主流图表组件库。
 
-（2）官网：https://echarts.apache.org/zh/download.html
+（2）官网：[下载 - Apache ECharts](https://echarts.apache.org/zh/download.html)
 
-（3）注意：由于很多依赖包依赖的是 ECharts v5 版本，考虑到后续兼容性，选用 v5 版本。
+（3）注意：由于目前很多第三方依赖包依赖的仍是 ECharts v5 版本，考虑到后续兼容性，选用 v5 版本。
 
 ```sh
 npm install echarts@5
 ```
 
-7、安装 xlsx
+7、安装 exceljs
 
-（1）目的：用于导出 xlsx 表格。
+（1）目的：用于导出 xlsx 格式的 Excel 表格，支持设置表格内容样式。
 
-（2）官网：https://docs.sheetjs.com/docs/
+（2）官网：[GitHub - exceljs/exceljs: Excel Workbook Manager · GitHub](https://github.com/exceljs/exceljs)
 
 ```sh
-npm install https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz
+npm install exceljs
 ```
 
 8、安装 vue-office
@@ -407,5 +419,3 @@ vite无法使用require，需要替换
 ```
   "type": "module",
 ```
-
-##

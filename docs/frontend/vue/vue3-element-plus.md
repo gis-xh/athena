@@ -1,4 +1,4 @@
-# Vue3 setup 语法糖下的 Element-Plus 使用
+# Vue3 Setup + Element-Plus
 
 ## 1 i8n 国际化
 
@@ -95,3 +95,18 @@ const cellStyle = ({ row, column, rowIndex, columnIndex }) => {
 2. [vue（九）：elementUI分页插件的插槽slot的用法](https://blog.csdn.net/Fiona_lms/article/details/81368918)
 
 由于 vue 的标签 el-pagination 当中的 layout 只能存在一个自定义 slot，所以当需要自定义多个 slot 时，就考虑用多个 el-pagination 拼接到一起。
+
+
+
+## 4 Button 按钮
+
+Element Plus 默认样式
+
+按钮带有内边距（约 8px 15px ），这会压缩按钮内部的内容区域，若
+
+相邻的 el-button （即 .el-button + .el-button ）会自动被添加一个 margin-left: 12px 的样式，这是为了在水平排列时提供默认间距；当垂直排列时会出现首个按钮偏移的情况，此时可以使用` !important`强制取消间距。
+
+```css
+margin: 0 !important;
+```
+

@@ -1,3 +1,25 @@
+## Monorepo（单体仓库）
+
+是一种软件架构模式，**指将多个相关项目、模块或服务集中存储在同一个代码仓库中进行管理**。它能实现跨模块代码复用、原子化提交和依赖一致性，被 Vue3、Babel 等项目广泛使用。
+
+典型的 Monorepo 目录结构如下：
+
+```
+my-monorepo/
+├── apps/                 # 核心应用目录（多个独立部署的前端或后端服务）
+│   ├── web-app/          # 网站后台端
+│   └── mobile-app/       # 移动端项目
+├── packages/             # 共享包或基础组件库目录
+│   ├── ui-components/    # 公共 UI 组件库
+│   ├── utils/            # 通用工具函数
+│   └── tsconfig-config/  # 共享的 TypeScript 配置文件
+├── turbo.json / nx.json  # 性能加速工具（或缓存配置）
+├── pnpm-workspace.yaml   # 工作区管理文件（指定哪些文件夹是包）
+└── package.json          # 根级别的依赖与命令入口
+```
+
+
+
 ## 1. 路径问题
 
     @/  相对路径

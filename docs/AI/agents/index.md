@@ -9,5 +9,5 @@ AI Agent 架构、工具调用与实践笔记。Agent 是 LLM 应用的一种架
 ## 目录
 
 - [Prompt 模板](./prompt-template.md)
-- [OpenClaw 配置](./openclaw-setup.md)
-- [OpenCode 配置](./opencode-setup.md)
+
+> 注意：AI Agent 工具配置文档已迁移至「环境配置」分类，请参阅 [AI 与算法](../index.md)

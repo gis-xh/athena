@@ -15,7 +15,7 @@ comments: false
 | [AI 学习](./AI/index.md)         | AI、深度学习（PyTorch、Keras）、大语言模型、Agents |
 | [前端学习](./frontend/index.md)  | Vue、React、Cesium、Web3D、GeoServer               |
 | [Python 学习](./python/index.md) | Conda、uv、Django、FastAPI、PyQt、数据分析         |
-| [Linux 学习](./linux/index.md)   | 系统操作、Shell 脚本、Python 自动化                |
+| [Linux 学习](./deploy/linux/index.md)   | 系统操作、Shell 脚本、Python 自动化                |
 | [项目部署](./deploy/index.md)    | Docker、阿里云、CentOS、DevOps                     |
 | [物联网](./iot/index.md)         | OrangePi、边缘计算                                 |
 | [3D 建模](./3D/index.md)         | Blender                                            |
@@ -25,14 +25,8 @@ comments: false
 - **框架**: MkDocs + MkDocs Material
 - **语言**: Python、JavaScript、Shell
 
-## 本地预览
+## 学习路径
 
-```bash
-mkdocs serve
-```
+建议按以下顺序学习：
 
-## 主要参考
-
-- [graykode/nlp-tutorial](https://github.com/graykode/nlp-tutorial)
-- [韩顺平 Linux 教程](https://www.bilibili.com/video/BV1Sv411r7vd)
-- [Hugging Face 快速入门](https://blog.csdn.net/zhaohongfei_358/article/details/126224199)
+1. **环境配置** → 2. **工程化实践** → 3. **具体知识模块**
