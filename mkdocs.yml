@@ -58,6 +58,8 @@ nav:
           - Windows 工具: setup/basic/windows-tools.md
           - 浏览器配置: setup/basic/browser-setup.md
           - 终端配置: setup/basic/terminal-setup.md
+          - Win11 新机开荒: setup/basic/windows-new-machine.md
+          - Windows 问题汇总: setup/basic/windows-troubleshooting.md
       - 开发工具:
           - 概述: setup/dev/index.md
           - Node.js: setup/dev/nodejs-setup.md
@@ -148,6 +150,7 @@ nav:
           - 概述: frontend/vue/index.md
           - Vue2 转 Vue3: frontend/vue/vue2-to-vue3.md
           - Vue3 & ECharts: frontend/vue/vue3-echarts.md
+          - ECharts 图表汇总: frontend/vue/echarts-charts.md
           - Vue3 & ElementPlus: frontend/vue/vue3-element-plus.md
           - 基础知识: frontend/vue/basics.md
           - 学习记录: frontend/vue/learning-notes.md
@@ -156,6 +159,10 @@ nav:
       - Web3D: frontend/03-web3d.md
       - Cesium GIS: frontend/04-cesium.md
       - GeoServer: frontend/05-geoserver.md
+  - GIS 与遥感:
+      - 总览: gis/index.md
+      - GEE 笔记: gis/gee-notes.md
+      - GIS-Python: gis/gis-python.md
   - 桌面应用开发:
       - 总览: desktop/index.md
       - PyQt: desktop/pyqt.md

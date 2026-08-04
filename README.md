@@ -6,15 +6,16 @@
 
 ## 内容架构
 
-| 分类   | 路径                                                         | 说明                                     |
-| ------ | ------------------------------------------------------------ | ---------------------------------------- |
-| AI/ML  | `docs/deep-learning/`, `docs/LLM/`, `docs/machine-learning/` | 深度学习基础、Keras、PyTorch、LLM        |
-| Python | `docs/python/`                                               | 环境管理、数据分析、Django、GUI、FastAPI |
-| 前端   | `docs/frontend/`                                             | Vue、React、Cesium、Web3D                |
-| Linux  | `docs/linux/`                                                | Linux 系统操作、Shell 脚本               |
-| DevOps | `docs/deploy/`                                               | Docker、阿里云、CentOS 部署              |
-| IoT    | `docs/iot/`                                                  | OrangePi、边缘计算                       |
-| 3D     | `docs/3d/`                                                   | Blender 建模                             |
+| 分类     | 路径                                                         | 说明                                     |
+| -------- | ------------------------------------------------------------ | ---------------------------------------- |
+| AI/ML    | `docs/deep-learning/`, `docs/LLM/`, `docs/machine-learning/` | 深度学习基础、Keras、PyTorch、LLM        |
+| Python   | `docs/python/`                                               | 环境管理、数据分析、Django、GUI、FastAPI |
+| 前端     | `docs/frontend/`                                             | Vue、React、Cesium、Web3D                |
+| Linux    | `docs/linux/`                                                | Linux 系统操作、Shell 脚本               |
+| DevOps   | `docs/deploy/`                                               | Docker、阿里云、CentOS 部署              |
+| IoT      | `docs/iot/`                                                  | OrangePi、边缘计算                       |
+| 3D       | `docs/3d/`                                                   | Blender 建模                             |
+| GIS/遥感 | `docs/gis/`                                                  | GEE、遥感影像处理与 GIS 开发             |
 
 ## 技术栈
 
