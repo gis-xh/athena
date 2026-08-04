@@ -1,5 +1,8 @@
 ---
 comments: false
+tags: [前端]
+difficulty: 入门
+status: published
 ---
 
 # Vue

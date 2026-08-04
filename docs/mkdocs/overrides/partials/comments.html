@@ -1,4 +1,4 @@
-{% if page.meta.comments %}
+{% if page.meta.comments is not defined or page.meta.comments %}
 <!-- Insert Giscus generated snippet here -->
 <!-- 插入 Giscus 生成的代码块 -->
 <!-- TODO: 需在 giscus.app 为 gis-xh/athena 重新生成 repo-id / category-id 后再启用评论 -->

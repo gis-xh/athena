@@ -99,25 +99,29 @@ nav:
           - 概述: AI/llm/index.md
           - 01 预训练: AI/llm/01-pretrain.md
           - 02 Transformer: AI/llm/02-transformer.md
+          - 03 GPT & BERT: AI/llm/03-gpt-bert.md
+          - 04 RWKV: AI/llm/04-rwkv.md
           - 05 GLM: AI/llm/05-glm.md
           - 06 知识图谱: AI/llm/06-knowledge-graph.md
           - 07 LangChain: AI/llm/07-langchain.md
           - 08 MCP: AI/llm/08-mcp.md
           - 09 向量数据库: AI/llm/09-vectorstore.md
+          - 10 训练方法: AI/llm/10-training-approach.md
       - 机器学习:
           - 概述: AI/courses/machine-learning/index.md
-          - Week 1: AI/courses/machine-learning/Week01.md
+          - 什么是机器学习: AI/courses/machine-learning/01-what-is-machine-learning.md
       - 数据分析:
           - 概述: AI/data-analysis/index.md
           - NumPy 环境配置: AI/data-analysis/numpy-setup.md
           - NumPy:
               - 概述: AI/data-analysis/numpy/index.md
               - 基础:
-                  - 基础操作: AI/data-analysis/numpy/01-basics/02-basics.md
-                  - 快速入门: AI/data-analysis/numpy/01-basics/03-quickstart.md
+                  - 基础操作: AI/data-analysis/numpy/01-basics/01-basics.md
+                  - 快速入门: AI/data-analysis/numpy/01-basics/02-quickstart.md
               - 数据存取:
                   - 数据存取: AI/data-analysis/numpy/02-data-storage/01-storage.md
                   - 词云: AI/data-analysis/numpy/02-data-storage/02-wordcloud.md
+                  - 函数: AI/data-analysis/numpy/02-data-storage/03-functions.md
           - Matplotlib: AI/data-analysis/matplotlib/01-intro.md
           - Python Excel: AI/data-analysis/python-excel/01-excel.md
       - AI 课程:
@@ -130,14 +134,15 @@ nav:
           - CS230 2018:
               - 概述: AI/courses/cs230-2018/index.md
               - Neural Networks: AI/courses/cs230-2018/01-neural-networks.md
-              - 02: AI/courses/cs230-2018/02.md
-              - Lecture 2: AI/courses/cs230-2018/Lecture2.md
+              - 作业 1：逻辑回归: AI/courses/cs230-2018/02-assignment-logistic-regression.md
+              - 课程项目笔记: AI/courses/cs230-2018/03-assignment-projects.md
           - Deeplearning.AI:
               - 概述: AI/courses/deeplearning-ai/index.md
               - Prompt Engineering: AI/courses/deeplearning-ai/01-prompt-engineering.md
               - ChatGPT API: AI/courses/deeplearning-ai/02-chatgpt-api.md
               - LangChain App: AI/courses/deeplearning-ai/03-langchain-app.md
               - LangChain Data: AI/courses/deeplearning-ai/04-langchain-data.md
+              - Gradio: AI/courses/deeplearning-ai/05-gradio.md
   - Web 开发:
       - 总览: frontend/index.md
       - Vue:
@@ -150,7 +155,7 @@ nav:
           - 学习记录: frontend/vue/learning-notes.md
           - Vue + TypeScript 项目初始化: frontend/vue-implementation.md
       - React: frontend/react-implementation.md
-      - UI 框架: frontend/02-ui.md
+      - UI 框架: frontend/01-ui-frameworks.md
       - Web3D: frontend/03-web3d.md
       - Cesium GIS: frontend/04-cesium.md
       - GeoServer: frontend/05-geoserver.md
@@ -174,16 +179,17 @@ nav:
   - 后端开发:
       - 总览: python/index.md
       - Django:
-          - 概述: python/03-django/index.md
-          - 环境配置: python/03-django/01-setup.md
-          - 教程: python/03-django/02-tutorial.md
-          - 项目 1: python/03-django/03-project-1.md
-          - 项目 2: python/03-django/04-project-2.md
+          - 概述: python/01-django/index.md
+          - 环境配置: python/01-django/01-setup.md
+          - 教程: python/01-django/02-tutorial.md
+          - 项目 1: python/01-django/03-project-1.md
+          - 项目 2: python/01-django/04-project-2.md
       - FastAPI:
-          - 概述: python/05-fastapi/index.md
+          - 概述: python/03-fastapi/index.md
+          - 入门: python/03-fastapi/01-intro.md
       - GUI:
-          - 概述: python/04-gui/index.md
-          - PyQt 入门: python/04-gui/01-intro.md
+          - 概述: python/02-gui/index.md
+          - PyQt 入门: python/02-gui/01-intro.md
           - PyInstaller 打包: python/pyinstaller-setup.md
   - 3D 可视化:
       - 总览: 3D/index.md
@@ -199,6 +205,7 @@ nav:
           - 概述: deploy/linux/index.md
           - Linux 基础:
               - 概述: deploy/linux/01-basics/index.md
+              - 目录结构: deploy/linux/01-basics/01-directory-structure.md
           - Linux 实操:
               - 概述: deploy/linux/02-practical/index.md
               - 远程访问: deploy/linux/02-practical/01-remote-access.md
@@ -217,6 +224,7 @@ nav:
       - DevOps 学习: deploy/devops-learning.md
   - 其他:
       - 随记: somethings.md
+      - 标签: tags.md
 
 # [Extensions] 扩展
 plugins:
@@ -225,8 +233,28 @@ plugins:
       lang:
         - en
         - ja
+        - zh
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
-  - tags # 给单篇文章添加标签 https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/?h=tags
+  - tags:
+      tags_file: tags.md
+  - redirects:
+      redirect_maps:
+        'AI/courses/cs230-2018/02.md': 'AI/courses/cs230-2018/02-assignment-logistic-regression.md'
+        'AI/courses/cs230-2018/Lecture2.md': 'AI/courses/cs230-2018/03-assignment-projects.md'
+        'AI/courses/machine-learning/Week01.md': 'AI/courses/machine-learning/01-what-is-machine-learning.md'
+        'deploy/linux/01-basics/03-basics.md': 'deploy/linux/01-basics/01-directory-structure.md'
+        'frontend/02-ui.md': 'frontend/01-ui-frameworks.md'
+        'AI/data-analysis/numpy/01-basics/02-basics.md': 'AI/data-analysis/numpy/01-basics/01-basics.md'
+        'AI/data-analysis/numpy/01-basics/03-quickstart.md': 'AI/data-analysis/numpy/01-basics/02-quickstart.md'
+        'python/03-django/index.md': 'python/01-django/index.md'
+        'python/03-django/01-setup.md': 'python/01-django/01-setup.md'
+        'python/03-django/02-tutorial.md': 'python/01-django/02-tutorial.md'
+        'python/03-django/03-project-1.md': 'python/01-django/03-project-1.md'
+        'python/03-django/04-project-2.md': 'python/01-django/04-project-2.md'
+        'python/04-gui/index.md': 'python/02-gui/index.md'
+        'python/04-gui/01-intro.md': 'python/02-gui/01-intro.md'
+        'python/05-fastapi/index.md': 'python/03-fastapi/index.md'
+        'python/05-fastapi/01-intro.md': 'python/03-fastapi/01-intro.md'
   - git-revision-date-localized: # 日期显示
       # ["date","datetime","iso_date","iso_datetime","timeago","custom"]
       type: timeago

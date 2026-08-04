@@ -1,3 +1,9 @@
+---
+tags: [AI, Agents]
+difficulty: 入门
+status: published
+---
+
 # OpenClaw 及其插件安装配置说明 - 20260321 更新
 
 ## 一、不同系统的注意事项

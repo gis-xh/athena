@@ -1,3 +1,9 @@
+---
+tags: [Python]
+difficulty: 进阶
+status: published
+---
+
 # 03 Django 项目实战（一）
 
 &emsp;&emsp;本项目使用 Django3.2 版本进行开发，安装过程请参考 [Django 开发环境配置](./01-setup.md) 。
@@ -23,7 +29,7 @@ django-admin startproject myDjango32
 1. django 创建的新项目中会有一些默认的文件和文件夹
 2. django 项目有命名规则，不得有空格和符号，不遵守就会报错，这里我们尽量采用驼峰命名法。
 
-![](../../assets/images/py-image-20220830104652188-037.webp)
+![1 创建项目 截图](../../assets/images/py-image-20220830104652188-037.webp)
 
 ### 1.2 查看项目目录
 
@@ -33,7 +39,7 @@ django-admin startproject myDjango32
 cd myDjango32
 ```
 
-![](../../assets/images/py-image-20220830104815454-038.webp)
+![2 查看项目目录 截图](../../assets/images/py-image-20220830104815454-038.webp)
 
 ### 1.3 项目默认文件的介绍
 
@@ -43,7 +49,7 @@ cd myDjango32
 tree /f
 ```
 
-![](../../assets/images/py-image-20220830104941506-039.webp)
+![3 项目默认文件的介绍 截图](../../assets/images/py-image-20220830104941506-039.webp)
 
 > 当前项目目录结构说明
 
@@ -126,11 +132,11 @@ python manage.py runserver
 
 - 在终端启动项目：此时可以看到，因为未进行数据迁移操作，出现报错信息，但项目仍然成功启动。
 
-![](../../assets/images/py-image-20220830110453169-040.webp)
+![1 第一次运行 截图](../../assets/images/py-image-20220830110453169-040.webp)
 
 - 项目页面：在浏览器输入 http://127.0.0.1:8000/ 即可访问当前本地运行的项目。
 
-![](../../assets/images/py-image-20220830110752061-041.webp)
+![1 第一次运行 截图（2）](../../assets/images/py-image-20220830110752061-041.webp)
 
 #### 2.3.2 数据迁移
 
@@ -156,7 +162,7 @@ python manage.py runserver
 
 &emsp;&emsp;此时我们可以看到，错误信息已经消失。每次对数据模型 `model` 进行修改后，都要进行数据迁移操作，这个我们后面再详细讲解。
 
-![](../../assets/images/py-image-20220830111322065-042.webp)
+![2 数据迁移 截图](../../assets/images/py-image-20220830111322065-042.webp)
 
 #### 2.3.3 `runserver` 命令解析
 
@@ -182,7 +188,7 @@ python manage.py runserver
 
 &emsp;&emsp;在浏览器中打开地址 http://127.0.0.1:8000/admin/ 后，输入密码可进入管理页面。
 
-![](../../assets/images/py-image-20220825203509273-033.webp)
+![2 进入 admin 管理页 截图](../../assets/images/py-image-20220825203509273-033.webp)
 
 ## 四、项目依赖包管理
 
@@ -198,7 +204,7 @@ python -m venv env
 
 &emsp;&emsp;使用 `python -m venv` 命令创建名为 `env` 的虚拟环境，此时项目目录如下图所示。
 
-![](../../assets/images/py-image-20220831233129456-045.webp)
+![1 创建项目虚拟环境 截图](../../assets/images/py-image-20220831233129456-045.webp)
 
 > 激活虚拟环境
 
@@ -238,11 +244,11 @@ pipreqs ./ --encoding=utf-8 --force
 - `--encoding=utf-8` ：使用 `utf-8` 编码。
 - `--force` ：若已存在 `requirements.txt` 文件，将强行覆盖原文件。
 
-![](../../assets/images/py-image-20220831233552446-046.webp)
+![2 收集依赖包信息 截图](../../assets/images/py-image-20220831233552446-046.webp)
 
 > 生成后的项目目录
 
-![](../../assets/images/py-image-20220831233624906-047.webp)
+![2 收集依赖包信息 截图（2）](../../assets/images/py-image-20220831233624906-047.webp)
 
 #### 4.2.3 安装项目依赖
 
@@ -469,7 +475,7 @@ python manage.py runserver
 
 &emsp;&emsp;在浏览器中打开地址 http://127.0.0.1:8000/ 后即可进入 DRF 页面。
 
-![](../../assets/images/py-image-20220831113346248-043.webp)
+![7 登录页面 截图](../../assets/images/py-image-20220831113346248-043.webp)
 
 上一节：[02 Django 官网示例](./02-tutorial.md)
 

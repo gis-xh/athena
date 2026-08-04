@@ -10,6 +10,8 @@ dependencies = [
     "mkdocs-git-revision-date-localized-plugin",
     "mkdocs-git-authors-plugin",
     "mkdocs-meta-manager",
+    "jieba>=0.42.1",
+    "mkdocs-redirects>=1.2.3",
 ]
 [[tool.uv.index]]
 url="https://pypi.tuna.tsinghua.edu.cn/simple"

@@ -1,3 +1,9 @@
+---
+tags: [AI, 深度学习, Keras]
+difficulty: 进阶
+status: published
+---
+
 # 迁移学习
 
 ## 环境配置

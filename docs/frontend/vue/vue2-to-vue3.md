@@ -1,3 +1,9 @@
+---
+tags: [前端]
+difficulty: 入门
+status: published
+---
+
 ## 1 Element UI + Vue2 转化 Element Plus + Vue3
 
 ### 1.1 完整代码对比
@@ -153,7 +159,7 @@ const typeRadios = ref([
 ]);
 ```
 
-![](../../assets/images/fe-image-20220810145840592-025.webp)
+![3 v-model 数据绑定 截图](../../assets/images/fe-image-20220810145840592-025.webp)
 
 ## 4 `mount()` 函数
 

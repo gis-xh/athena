@@ -1,3 +1,9 @@
+---
+tags: [AI, 数据分析]
+difficulty: 入门
+status: published
+---
+
 # 0201 NumPy 数据存取
 
 ## 1 CSV 文件的存取
@@ -31,7 +37,7 @@ np.savetxt(frame, array, fmt='%.18e', delimiter=None)
 
 > ipython
 
-![](../../../../assets/images/py-image-20220827160841536-012.webp)
+![1 写入 CSV 文件 截图](../../../../assets/images/py-image-20220827160841536-012.webp)
 
 > python
 
@@ -43,7 +49,7 @@ np.savetxt('a.csv', a, fmt='%d', delimiter=',')
 
 #### 1.1.2 打开 CSV 文件
 
-![](../../../../assets/images/py-image-20220827163259191-013.webp)
+![2 打开 CSV 文件 截图](../../../../assets/images/py-image-20220827163259191-013.webp)
 
 ### 1.2 读取 CSV 文件中的数据
 
@@ -60,7 +66,7 @@ np.loadtxt(frame, dtype=np.float, delimiter=None, unpack=False)
 
 > ipython
 
-![](../../../../assets/images/py-image-20220827164657678-014.webp)
+![2 读取 CSV 文件中的数据 截图](../../../../assets/images/py-image-20220827164657678-014.webp)
 
 > python
 
@@ -103,6 +109,6 @@ np.fromfile("b.txt", dtype=np.int32, sep=",")
 
 【注】：在读取存入数据时，必须知晓数据的维度和元素类型
 
-上一节：[0103 NumPy Quick Start 翻译](../01-basics/03-quickstart.md)
+上一节：[0103 NumPy Quick Start 翻译](../01-basics/02-quickstart.md)
 
 下一节：[0202 WordCloud 词云](./02-wordcloud.md)

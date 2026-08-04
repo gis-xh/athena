@@ -1,3 +1,9 @@
+---
+tags: [环境配置]
+difficulty: 入门
+status: published
+---
+
 # 前端 Node.js 环境配置全过程记录
 
 ## 1 使用 NVM 安装 Node.js
@@ -103,11 +109,11 @@ prefix=D:\nvm\nodejs\node_global
 
 - 环境变量 → 系统变量 → 新建 → `NODE_PATH`
 
-![](../../assets/images/fe-6-031.webp)
+![2 配置全局依赖环境变量 截图](../../assets/images/fe-6-031.webp)
 
 - 环境变量 → 系统变量 → 双击 Path → 新建 `%NODE_PATH%`
 
-![](../../assets/images/fe-5-030.webp)
+![2 配置全局依赖环境变量 截图（2）](../../assets/images/fe-5-030.webp)
 
 ### 2.3 安装并配置 yarn
 
@@ -120,7 +126,7 @@ npm i -g yarn
 yarn -v
 ```
 
-![](../../assets/images/fe-image-20250201205124832-005.webp)
+![检查是否安装成功 截图](../../assets/images/fe-image-20250201205124832-005.webp)
 
 #### 2.3.2 查看 yarn 的默认配置
 
@@ -131,11 +137,11 @@ yarn global dir
 yarn cache dir
 ```
 
-![](../../assets/images/fe-9-033.webp)
+![查看缓存目录 截图](../../assets/images/fe-9-033.webp)
 
 #### 2.3.3 创建 yarn 相应文件夹
 
-![](../../assets/images/fe-10-026.webp)
+![3 创建 yarn 相应文件夹 截图](../../assets/images/fe-10-026.webp)
 
 #### 2.3.4 修改 yarn 全局安装位置和缓存位置
 
@@ -158,7 +164,7 @@ yarn global dir
 yarn cache dir
 ```
 
-![](../../assets/images/fe-11-027.webp)
+![4 再次检查 yarn 的默认配置 截图](../../assets/images/fe-11-027.webp)
 
 #### 2.3.5 修改镜像源
 
@@ -166,11 +172,11 @@ yarn cache dir
 yarn config set registry https://registry.npmmirror.com
 ```
 
-![](../../assets/images/fe-image-20250201205358017-006.webp)
+![5 修改镜像源 截图](../../assets/images/fe-image-20250201205358017-006.webp)
 
 NOTE：此处是淘宝镜像源的最新地址：[npmmirror 中国镜像站](https://npmmirror.com/)
 
-![](../../assets/images/fe-image-20250201205440923-007.webp)
+![5 修改镜像源 截图（2）](../../assets/images/fe-image-20250201205440923-007.webp)
 
 ### 2.4 安装 cnpm
 
@@ -218,7 +224,7 @@ or
 vue --version
 ```
 
-![](../../assets/images/fe-14-028.webp)
+![1 安装Vue3.2（node.js 18+） 截图](../../assets/images/fe-14-028.webp)
 
 ## 参考文章
 

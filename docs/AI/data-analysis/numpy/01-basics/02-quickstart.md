@@ -1,3 +1,9 @@
+---
+tags: [AI, 数据分析]
+difficulty: 入门
+status: published
+---
+
 # 0103 NumPy QuickStart 翻译
 
 官网原文：https://numpy.org/devdocs/user/quickstart.html
@@ -99,6 +105,6 @@
 
 &emsp;&emsp;
 
-上一节：[0102 NumPy 库基础操作](./02-basics.md)
+上一节：[0102 NumPy 库基础操作](01-basics.md)
 
 下一节：[0201 NumPy 数据存取](../02-data-storage/01-storage.md)

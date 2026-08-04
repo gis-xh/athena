@@ -1,3 +1,9 @@
+---
+tags: [AI, 深度学习, Keras]
+difficulty: 进阶
+status: published
+---
+
 # 0201 多层认知神经网络模型训练 MNIST 手写数据集
 
 说明：以下代码均是在 jupyter 中运行的。
@@ -12,7 +18,7 @@ jupyter notebook
 
 ### 1.2 创建新项目
 
-![](../../../../assets/images/dl-image-20220726181816176-065.webp)
+![2 创建新项目 截图](../../../../assets/images/dl-image-20220726181816176-065.webp)
 
 ## 2 示例代码
 
@@ -83,7 +89,7 @@ hist = model.fit(x_train, y_train, epochs=1000, batch_size=10, validation_data=(
 
 &emsp;&emsp;此处我们设置训练 1000 次。
 
-![](../../../../assets/images/dl-image-20220726181308026-064.webp)
+![5 训练模型 截图](../../../../assets/images/dl-image-20220726181308026-064.webp)
 
 ### 2.6 查看训练过程
 
@@ -115,11 +121,11 @@ plt.show()
 
 - jupyter 界面
 
-![](../../../../assets/images/dl-image-20220726182158362-066.webp)
+![6 查看训练过程 截图](../../../../assets/images/dl-image-20220726182158362-066.webp)
 
 - 训练模型图
 
-![](../../../../assets/images/dl-mnist-077.webp)
+![6 查看训练过程 截图（2）](../../../../assets/images/dl-mnist-077.webp)
 
 &emsp;&emsp;此时，我们根据图像可以观察出，验证集的误差在 100 个训练周期后开始上升，出现了过拟合现象；同时，验证集的精度也开始下降，所以训练周期控制在 100 左右为此次训练的最佳区间。
 

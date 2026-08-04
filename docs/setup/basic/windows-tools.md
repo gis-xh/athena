@@ -1,3 +1,9 @@
+---
+tags: [环境配置]
+difficulty: 入门
+status: published
+---
+
 # Windows 工具与新机配置
 
 ## 推荐软件清单

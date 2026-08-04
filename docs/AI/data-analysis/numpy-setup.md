@@ -1,3 +1,9 @@
+---
+tags: [AI, 数据分析]
+difficulty: 入门
+status: published
+---
+
 # 0101 Python 数据分析学习环境配置
 
 本文使用 miniconda 作为 python 版本控制及开发工具。
@@ -46,7 +52,7 @@ spyder
 
 &emsp;&emsp;直接在控制台中输入命令即可运行，此时可能会报错，如下图所示。参考：[CSDN - 解决——完美解决Anaconda打开Spyder5报错:link image0 hasn’t been detected!](https://blog.csdn.net/Netceor/article/details/124051048)
 
-![](../../assets/images/py-image-20220805193444303-002.webp)
+![1 初次运行并发现错误 截图](../../assets/images/py-image-20220805193444303-002.webp)
 
 > 检查依赖包
 
@@ -54,7 +60,7 @@ spyder
 pip check
 ```
 
-![](../../assets/images/py-image-20220805193703587-003.webp)
+![1 初次运行并发现错误 截图（2）](../../assets/images/py-image-20220805193703587-003.webp)
 
 &emsp;&emsp;这里我们可以发现，`spyder` 运行报错的原因是缺少了部分关联包，所以需要把他们逐一安装上。
 
@@ -85,7 +91,7 @@ pip install pyzmq==19.0.2 -i https://pypi.tuna.tsinghua.edu.cn/simple
 spyder
 ```
 
-![](../../assets/images/py-image-20220805195728485-004.webp)
+![2 安装缺失的依赖包 截图](../../assets/images/py-image-20220805195728485-004.webp)
 
 &emsp;&emsp;可以看到，之前错误已经消失了，程序可以正常运行了。
 
@@ -95,12 +101,12 @@ spyder
 
 > 修改编辑器背景色
 
-![](../../assets/images/py-image-20220805201257900-007.webp)
+![3 Spyder 内部配置 截图](../../assets/images/py-image-20220805201257900-007.webp)
 
 > Window layout 窗口布局调整
 
-![](../../assets/images/py-image-20220805201013451-005.webp)
+![3 Spyder 内部配置 截图（2）](../../assets/images/py-image-20220805201013451-005.webp)
 
 上一节：无
 
-下一节：[0102 NumPy 库基础操作](../../AI/data-analysis/numpy/01-basics/02-basics.md)
+下一节：[0102 NumPy 库基础操作](numpy/01-basics/01-basics.md)

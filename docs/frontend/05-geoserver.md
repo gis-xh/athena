@@ -1,3 +1,9 @@
+---
+tags: [前端]
+difficulty: 进阶
+status: published
+---
+
 # GeoServer 学习笔记
 
 SLD样式官方介绍：https://docs.geoserver.org/stable/en/user/styling/sld/introduction.html

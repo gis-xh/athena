@@ -1,3 +1,9 @@
+---
+tags: [前端]
+difficulty: 进阶
+status: published
+---
+
 # React前端实现-202508
 
 ## 相关参考
@@ -51,7 +57,7 @@ npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 ```
 
-![](../assets/images/fe-image-20250822093609319-009.webp)
+![（二）项目初始化 截图](../assets/images/fe-image-20250822093609319-009.webp)
 
 5、配置项目CSS关联
 

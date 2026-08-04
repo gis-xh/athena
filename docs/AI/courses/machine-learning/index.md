@@ -1,5 +1,8 @@
 ---
 comments: false
+tags: [AI, 机器学习, 课程]
+difficulty: 入门
+status: published
 ---
 
 # 机器学习 (Machine Learning)
@@ -8,4 +11,4 @@ comments: false
 
 ## 目录
 
-- [Week 1](Week01.md)
+- [Week 1](01-what-is-machine-learning.md)

@@ -1,6 +1,8 @@
 ---
 comments: false
 status: draft
+tags: [桌面应用]
+difficulty: 进阶
 ---
 
 # Rust + Tauri 开发

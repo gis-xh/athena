@@ -1,3 +1,9 @@
+---
+tags: [3D]
+difficulty: 入门
+status: published
+---
+
 # Blender学习
 
 ## 1 概述

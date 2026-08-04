@@ -1,3 +1,9 @@
+---
+tags: [AI, 大语言模型, 课程]
+difficulty: 入门
+status: published
+---
+
 # 吴恩达大模型系列课程学习
 
 ## 参考

@@ -1,5 +1,8 @@
 ---
 comments: false
+tags: [Python]
+difficulty: 入门
+status: published
 ---
 
 # Django

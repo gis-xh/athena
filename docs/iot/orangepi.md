@@ -1,3 +1,9 @@
+---
+tags: [物联网]
+difficulty: 入门
+status: published
+---
+
 # 香橙派 OrangePi 使用说明
 
 ## 一、基本介绍
@@ -31,7 +37,7 @@ ifconfig
 ssh orangepi@192.168.XXX.XXX
 ```
 
-![](../assets/images/iot-image-20260318224521017-004.webp)
+![2 SSH 连接香橙派 截图](../assets/images/iot-image-20260318224521017-004.webp)
 
 ### 3 检查硬件时钟时间
 
@@ -83,7 +89,7 @@ docker 离线包：https://wwl.lanzouq.com/s/zero3 密码:3c60
 wget -qO pi.sh https://cafe.cpolar.cn/wkdaily/zero3/raw/branch/main/zero3/pi.sh && chmod +x pi.sh && ./pi.sh
 ```
 
-![](../assets/images/iot-image-20260318233458254-005.webp)
+![1 一键部署脚本 截图](../assets/images/iot-image-20260318233458254-005.webp)
 
 - 后续二次执行时，直接启动脚本即可
 
@@ -99,7 +105,7 @@ wget -qO pi.sh https://cafe.cpolar.cn/wkdaily/zero3/raw/branch/main/zero3/pi.sh 
 1pctl update password
 ```
 
-![](../assets/images/iot-image-20260319001818762-006.webp)
+![2 使用 1Panel 截图](../assets/images/iot-image-20260319001818762-006.webp)
 
 v1 升级 v2.0.0
 
@@ -125,7 +131,7 @@ mv 1panel-migrator-linux-arm64 /usr/local/bin/1panel-migrator
 1panel-migrator upgrade website
 ```
 
-![](../assets/images/iot-image-20260319014838551-007.webp)
+![升级 1panel 网站 截图](../assets/images/iot-image-20260319014838551-007.webp)
 
 ### 3 使用内网穿透 cpolar
 

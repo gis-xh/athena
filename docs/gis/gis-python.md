@@ -1,3 +1,9 @@
+---
+tags: [GIS]
+difficulty: 进阶
+status: published
+---
+
 # GIS-Python
 
 GIS 与 Python 结合的栅格数据处理与机器学习笔记。

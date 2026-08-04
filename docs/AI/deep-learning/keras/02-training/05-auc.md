@@ -1,3 +1,9 @@
+---
+tags: [AI, 深度学习, Keras]
+difficulty: 进阶
+status: published
+---
+
 # 0205 AUC 指标计算
 
 ## 1 基本概念

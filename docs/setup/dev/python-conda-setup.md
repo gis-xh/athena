@@ -1,3 +1,9 @@
+---
+tags: [环境配置]
+difficulty: 入门
+status: published
+---
+
 # Win11 安装配置 Miniconda 全过程记录
 
 ## 1 多版本 conda 间的区别
@@ -8,7 +14,7 @@
 
 &emsp;&emsp;下载链接：[清华镜像](https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/)【这里我们选择 python3.9 版本】
 
-![](../../assets/images/py-1-052.webp)
+![2 下载 Miniconda 截图](../../assets/images/py-1-052.webp)
 
 ## 3 安装 Miniconda
 
@@ -16,15 +22,15 @@
 
 &emsp;&emsp;在安装时，右击 → 以管理员身份运行。同时，软件默认安装在 C 盘，所以需要修改文件安装位置。【要求：位置不在 C 盘，且文件名为英文。】
 
-![](../../assets/images/py-2-060.webp)
+![1 修改安装位置 截图](../../assets/images/py-2-060.webp)
 
-![](../../assets/images/py-3-061.webp)
+![1 修改安装位置 截图（2）](../../assets/images/py-3-061.webp)
 
 ### 3.2 安装成功
 
-![](../../assets/images/py-4-062.webp)
+![2 安装成功 截图](../../assets/images/py-4-062.webp)
 
-![](../../assets/images/py-5-063.webp)
+![2 安装成功 截图（2）](../../assets/images/py-5-063.webp)
 
 ### 3.3 添加环境变量
 
@@ -32,7 +38,7 @@
 
 - 右击此电脑 → 属性 → 高级系统设置 → 环境变量
 
-![](../../assets/images/py-6-064.webp)
+![3 添加环境变量 截图](../../assets/images/py-6-064.webp)
 
 - 添加环境变量 Path
 
@@ -44,7 +50,7 @@ D:\program\Miniconda3\Scripts
 D:\program\Miniconda3\Library\bin
 ```
 
-![](../../assets/images/py-7-065.webp)
+![3 添加环境变量 截图（2）](../../assets/images/py-7-065.webp)
 
 &emsp;&emsp;到这里才算是正式完成 miniconda 的安装，即软件安装 + 环境配置，下面我们需要对 conda 进行初始化。
 
@@ -56,7 +62,7 @@ D:\program\Miniconda3\Library\bin
 conda init powershell
 ```
 
-![](../../assets/images/py-8-066.webp)
+![4 conda 初始化 截图](../../assets/images/py-8-066.webp)
 
 > 初始化 cmd
 
@@ -64,7 +70,7 @@ conda init powershell
 conda init cmd.exe
 ```
 
-![](../../assets/images/py-9-067.webp)
+![4 conda 初始化 截图（2）](../../assets/images/py-9-067.webp)
 
 ## 5 更换国内镜像源
 
@@ -76,7 +82,7 @@ conda init cmd.exe
 conda config --set show_channel_urls yes
 ```
 
-![](../../assets/images/py-10-053.webp)
+![1 生成下载源文件的配置文件 截图](../../assets/images/py-10-053.webp)
 
 ### 5.2 生成下载源文件的配置文件
 
@@ -84,7 +90,7 @@ conda config --set show_channel_urls yes
 
 &emsp;&emsp;在 C 盘用户目录下找到文件后，右击使用记事本打开。
 
-![](../../assets/images/py-11-054.webp)
+![2 生成下载源文件的配置文件 截图](../../assets/images/py-11-054.webp)
 
 > 修改后内容
 
@@ -122,7 +128,7 @@ conda clean -i
 
 &emsp;&emsp;找到 miniconda 目录下的 envs 文件夹，右击打开属性。
 
-![](../../assets/images/py-12-055.webp)
+![2 生成下载源文件的配置文件 截图（2）](../../assets/images/py-12-055.webp)
 
 ## 6 conda 常用命令
 
@@ -132,7 +138,7 @@ conda clean -i
 conda info
 ```
 
-![](../../assets/images/py-13-056.webp)
+![1 检查当前环境信息 截图](../../assets/images/py-13-056.webp)
 
 ### 6.2 创建并查看虚拟环境
 
@@ -150,7 +156,7 @@ conda create -n CVEOdemo02 python=3.9
 conda info -e
 ```
 
-![](../../assets/images/py-14-057.webp)
+![2 创建并查看虚拟环境 截图](../../assets/images/py-14-057.webp)
 
 ### 6.3 移除虚拟环境
 
@@ -170,7 +176,7 @@ conda remove -n CVEOdemo02 --all
 conda activate CVEOdemo02
 ```
 
-![](../../assets/images/py-15-058.webp)
+![4 激活 & 关闭虚拟环境 截图](../../assets/images/py-15-058.webp)
 
 > 关闭虚拟环境
 
@@ -180,7 +186,7 @@ conda activate CVEOdemo02
 conda deactivate CVEOdemo02
 ```
 
-![](../../assets/images/py-16-059.webp)
+![4 激活 & 关闭虚拟环境 截图（2）](../../assets/images/py-16-059.webp)
 
 ## 参考文章
 

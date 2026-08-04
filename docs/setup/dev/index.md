@@ -1,5 +1,8 @@
 ---
 comments: false
+tags: [环境配置]
+difficulty: 入门
+status: published
 ---
 
 # 开发工具

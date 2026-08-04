@@ -1,5 +1,8 @@
 ---
 comments: false
+tags: [Linux]
+difficulty: 入门
+status: published
 ---
 
 # Linux 实操

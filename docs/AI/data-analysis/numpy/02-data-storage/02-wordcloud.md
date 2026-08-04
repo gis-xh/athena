@@ -1,3 +1,9 @@
+---
+tags: [AI, 数据分析]
+difficulty: 入门
+status: published
+---
+
 # 0202 WordCloud 词云统计
 
 ## 1 词云图

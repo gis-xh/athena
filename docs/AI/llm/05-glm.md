@@ -1,3 +1,9 @@
+---
+tags: [AI, 大语言模型]
+difficulty: 进阶
+status: published
+---
+
 # GLM 模型
 
 ## ChatGLM-6B
@@ -9,7 +15,7 @@
 - ChatGLM-6B：https://github.com/THUDM/ChatGLM-6B
 - ChatGLM2-6B：https://github.com/THUDM/ChatGLM2-6B
 
-![](../../assets/images/llm-image-20230704161025901-002.webp)
+![基本介绍 截图](../../assets/images/llm-image-20230704161025901-002.webp)
 
 ### 具备能力
 

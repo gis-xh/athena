@@ -1,3 +1,9 @@
+---
+tags: [前端]
+difficulty: 进阶
+status: published
+---
+
 # Cesium 学习笔记
 
 ## 1 安装 Cesium 1.130
@@ -8,7 +14,7 @@
 
 &emsp;&emsp;这里我们选择当前最新（截止至2025.6.7）的 [CesiumJS 1.130](https://github.com/CesiumGS/cesium/releases/tag/1.130) 进行下载安装。
 
-![](../assets/images/fe-image-20250607153832044-008.webp)
+![1 GitHub 源码下载 截图](../assets/images/fe-image-20250607153832044-008.webp)
 
 下载压缩包解压后，三个核心目录：
 

@@ -1,3 +1,9 @@
+---
+tags: [Linux]
+difficulty: 入门
+status: published
+---
+
 # 0102 虚拟机基本操作
 
 以下内容为 [B站 - 韩顺平 2021 Linux 教程](https://www.bilibili.com/video/BV1Sv411r7vd) 学习笔记。
@@ -55,7 +61,7 @@ ls
 ./vmware-install.pl
 ```
 
-![](../../assets/images/linux-image-20220819094309359-008.webp)
+![2 安装步骤 截图](../../assets/images/linux-image-20220819094309359-008.webp)
 
 ### 4.3 设置共享文件夹
 

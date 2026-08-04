@@ -1,3 +1,9 @@
+---
+tags: [Linux]
+difficulty: 入门
+status: published
+---
+
 # 0203 Linux 网络配置
 
 以下内容为 [B站 - 韩顺平 2021 Linux 教程](https://www.bilibili.com/video/BV1Sv411r7vd) 学习笔记。
@@ -68,9 +74,9 @@ sudo netplan apply
 
 5. 虚拟机网络配置中修改
 
-![](../../../assets/images/linux-image-20220819101716585-010.webp)
+![2 指定静态 IP 地址 截图](../../../assets/images/linux-image-20220819101716585-010.webp)
 
-![](../../../assets/images/linux-image-20220819101726709-011.webp)
+![2 指定静态 IP 地址 截图（2）](../../../assets/images/linux-image-20220819101726709-011.webp)
 
 6. 重启虚拟机
 
@@ -82,4 +88,4 @@ sudo reboot
 
 1. 按需填写 IP 即可
 
-![](../../../assets/images/linux-image-20220819101821605-012.webp)
+![3 安装时配置静态 IP 截图](../../../assets/images/linux-image-20220819101821605-012.webp)

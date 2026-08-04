@@ -1,3 +1,9 @@
+---
+tags: [环境配置]
+difficulty: 入门
+status: published
+---
+
 # 浏览器与常用网站
 
 ## 必备浏览器插件

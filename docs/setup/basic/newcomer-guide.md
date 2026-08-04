@@ -1,3 +1,9 @@
+---
+tags: [环境配置]
+difficulty: 入门
+status: published
+---
+
 # 新手快速入门指南
 
 面向所有新手的电脑使用与学习起步指南。浏览器插件与常用网站见[浏览器与常用网站](browser-setup.md)，办公 / 开发软件清单见[Windows 常用工具](windows-tools.md)。

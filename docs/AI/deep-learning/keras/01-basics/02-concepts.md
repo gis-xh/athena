@@ -1,3 +1,9 @@
+---
+tags: [AI, 深度学习, Keras]
+difficulty: 入门
+status: published
+---
+
 # 0102 深度学习基本概念
 
 ## 一、数据集

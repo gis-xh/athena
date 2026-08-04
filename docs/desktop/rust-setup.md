@@ -1,3 +1,9 @@
+---
+tags: [桌面应用]
+difficulty: 入门
+status: published
+---
+
 # Rust + Tauri 桌面应用开发-20260619
 
 ## 相关参考

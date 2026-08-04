@@ -1,3 +1,9 @@
+---
+tags: [部署]
+difficulty: 进阶
+status: published
+---
+
 # 阿里云部署踩坑记录
 
 相关文档：[阿里云部署前后端项目全过程记录](./aliyun-deployment.md)
@@ -250,4 +256,3 @@ kill -9 进程号
 ```
 supervisord -c ~/etc/supervisor/supervisord.conf
 ```
-

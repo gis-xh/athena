@@ -1,3 +1,9 @@
+---
+tags: [学术]
+difficulty: 进阶
+status: published
+---
+
 # 腾讯云机器翻译 API 批量翻译
 
 ## 模块设计

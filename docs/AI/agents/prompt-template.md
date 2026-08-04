@@ -1,3 +1,9 @@
+---
+tags: [AI, Agents]
+difficulty: 进阶
+status: published
+---
+
 ```
 你好，在接下来的对话中，请你阅读《Characterizing forest disturbances across the Argentine Dry Chaco based on Landsat time series》，找到并输出文中关于{研究方法}、{主要发现}、{结论}、{研究不足}、{使用数据及其对应的时间}、{使用的算法}、{使用的分类器}、{使用的指数等}，{结果的精确度}的原文描述。
 ```

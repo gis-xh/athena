@@ -1,3 +1,9 @@
+---
+tags: [AI, 深度学习, Keras]
+difficulty: 进阶
+status: published
+---
+
 # 0203 回调函数监控训练状态
 
 ## 1 循环神经网络模型
@@ -135,7 +141,7 @@ plt.show()
 
 - 训练监控结果曲线图
 
-![](../../../../assets/images/dl-image-20220912110134769-070.webp)
+![7 查看训练过程 截图](../../../../assets/images/dl-image-20220912110134769-070.webp)
 
 &emsp;&emsp;这里我们可以看到，监控结果与 [0201 训练 MNIST 手写体数据集](../02-training/01-mnist.md) 所展示的示例基本一致。
 

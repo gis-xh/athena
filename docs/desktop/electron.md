@@ -1,3 +1,9 @@
+---
+tags: [桌面应用]
+difficulty: 进阶
+status: published
+---
+
 # Electron
 
 [Electron应用打包教程：Electron-Packager, Electron-Builder, Electron-Forge和Electron-Vue-CSDN博客](https://blog.csdn.net/weixin_40629244/article/details/116429201)

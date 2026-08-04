@@ -1,3 +1,9 @@
+---
+tags: [AI, 大语言模型, 课程]
+difficulty: 进阶
+status: published
+---
+
 # Building Systems with the ChatGPT API
 
 

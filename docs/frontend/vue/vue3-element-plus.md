@@ -1,3 +1,9 @@
+---
+tags: [前端]
+difficulty: 进阶
+status: published
+---
+
 # Vue3 Setup + Element-Plus
 
 ## 1 i8n 国际化
@@ -109,4 +115,3 @@ Element Plus 默认样式
 ```css
 margin: 0 !important;
 ```
-

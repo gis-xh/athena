@@ -1,3 +1,9 @@
+---
+tags: [AI, 深度学习, 课程]
+difficulty: 入门
+status: published
+---
+
 # 吴恩达 CS230 2018 深度学习课程
 
 ## 课程介绍

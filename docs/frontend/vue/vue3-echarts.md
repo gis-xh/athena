@@ -1,3 +1,9 @@
+---
+tags: [前端]
+difficulty: 进阶
+status: published
+---
+
 # Vue3 setup 语法糖下的 ECharts 使用
 
 ## 1 引入

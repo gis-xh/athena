@@ -1,3 +1,9 @@
+---
+tags: [Python]
+difficulty: 入门
+status: published
+---
+
 # 0401 PyQt5 开发环境配置
 
 ## 一、参考文章

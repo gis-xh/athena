@@ -1,5 +1,8 @@
 ---
 comments: false
+tags: [AI, 深度学习, PyTorch]
+difficulty: 进阶
+status: published
 ---
 
 # PyTorch 深度学习框架

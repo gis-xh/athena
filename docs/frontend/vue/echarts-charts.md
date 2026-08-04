@@ -1,3 +1,9 @@
+---
+tags: [前端]
+difficulty: 进阶
+status: published
+---
+
 # ECharts 图表汇总
 
 - 内容基于 Vue 3.2 `<script setup>` 语法糖

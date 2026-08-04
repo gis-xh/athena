@@ -1,3 +1,9 @@
+---
+tags: [物联网]
+difficulty: 入门
+status: published
+---
+
 # 边缘计算
 
 ## 1 基本概念

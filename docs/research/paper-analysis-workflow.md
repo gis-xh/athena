@@ -1,3 +1,9 @@
+---
+tags: [学术]
+difficulty: 进阶
+status: published
+---
+
 # 论文数据分析流程
 
 对 Web of Science 等平台检索到的论文信息数据进行自动化分析，构建领域知识网络，快速掌握领域核心内容。

@@ -1,3 +1,9 @@
+---
+tags: [学术]
+difficulty: 进阶
+status: published
+---
+
 # ChatGPT 学术优化快速部署
 
 - 项目地址：<https://github.com/binary-husky/chatgpt_academic>

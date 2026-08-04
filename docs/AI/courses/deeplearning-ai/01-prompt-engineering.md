@@ -1,3 +1,9 @@
+---
+tags: [AI, 大语言模型, 课程]
+difficulty: 进阶
+status: published
+---
+
 # ChatGPT Prompt Engineering for Developers
 
 ## 参考
@@ -55,7 +61,7 @@
 
 通过不断地完善提示，让输出越来越接近需求。
 
-![](../../../assets/images/deploy-4-004.webp)
+![3 Prompt 优化迭代 截图](../../../assets/images/deploy-4-004.webp)
 
 <center>图 1-1 迭代优化 Prompt</center>
 
@@ -96,7 +102,7 @@
 
 - 利用语言模型参数 `temperature`，改变模型响应的多样性，数值越大越容易分心，但也许更有创造力。
 
-![](../../../assets/images/deploy-1-001.webp)
+![4 大模型的多种能力 截图](../../../assets/images/deploy-1-001.webp)
 
 <center>图 1-2 Temperature 参数示例</center>
 

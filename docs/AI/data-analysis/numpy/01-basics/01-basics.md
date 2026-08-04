@@ -1,3 +1,9 @@
+---
+tags: [AI, 数据分析]
+difficulty: 入门
+status: published
+---
+
 # 0102 NumPy 库基础操作
 
 本文使用 miniconda 作为 python 版本控制及开发工具。
@@ -84,7 +90,7 @@ z = np.array([[1, 2], (3, 4), [5, 6]])
 print(z)
 ```
 
-![](../../../../assets/images/py-image-20220821164445935-008.webp)
+![1 使用 Python 中的 列表list 和 元组tuple 等类型创建 截图](../../../../assets/images/py-image-20220821164445935-008.webp)
 
 ### 2.2 【常用方法】使用 NumPy 的函数进行创建
 
@@ -179,7 +185,7 @@ print("一维数组切片:", a[1: 4: 2])
 
 > jupyter 内容
 
-![](../../../../assets/images/py-image-20220822184510604-009.webp)
+![2 对于一维数组 截图](../../../../assets/images/py-image-20220822184510604-009.webp)
 
 ### 4.3 对于多维数组
 
@@ -206,7 +212,7 @@ print(a[:, :, ::2])
 
 > jupyter 内容
 
-![](../../../../assets/images/py-image-20220823113725452-010.webp)
+![数组切片 截图](../../../../assets/images/py-image-20220823113725452-010.webp)
 
 ## 5 ndarray 数组的运算
 
@@ -257,4 +263,4 @@ NumPy 的设计理念在于把数组当成一个数字来对待。
 
 上一节：[0101 学习环境配置](../../numpy-setup.md)
 
-下一节：[0103 NumPy 官网快速入门](./03-quickstart.md)
+下一节：[0103 NumPy 官网快速入门](02-quickstart.md)

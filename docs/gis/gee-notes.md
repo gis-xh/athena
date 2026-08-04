@@ -1,3 +1,9 @@
+---
+tags: [GIS]
+difficulty: 进阶
+status: published
+---
+
 # GEE 笔记
 
 Google Earth Engine（GEE）使用中的问题记录与遥感指数整理。

@@ -1,3 +1,9 @@
+---
+tags: [前端]
+difficulty: 入门
+status: published
+---
+
 是否使用分号结尾，是否使用单引号，最后一段话是否以逗号结尾。
 
 ```

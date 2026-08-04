@@ -1,3 +1,9 @@
+---
+tags: [学术]
+difficulty: 进阶
+status: published
+---
+
 # 论文笔记与写作方法
 
 ## 综述论文和实验论文的记录区别

@@ -1,3 +1,9 @@
+---
+tags: [AI, 数据分析]
+difficulty: 入门
+status: published
+---
+
 ## 1 参考文章
 
 1. [CSDN - 【办公自动化】全网最全 python 中 openpyxl 库用法](https://blog.csdn.net/m0_70214054/article/details/125570707)

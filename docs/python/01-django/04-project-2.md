@@ -1,3 +1,9 @@
+---
+tags: [Python]
+difficulty: 进阶
+status: published
+---
+
 # 04 Django 项目实战（二）
 
 书接上回：[03 Django 项目实战（一）](./03-project-1.md)
@@ -44,13 +50,13 @@ python manage.py makemigrations mallManagement
 
 - 终端运行结果
 
-![](../../assets/images/py-image-20220901123520240-048.webp)
+![3 数据迁移 截图](../../assets/images/py-image-20220901123520240-048.webp)
 
 &emsp;&emsp;在执行后会产生 `migrations` 文件夹，其内的 `0001_initial.py` 即为接下来对数据库进行操作的代码。
 
 - 当前项目目录
 
-![](../../assets/images/py-image-20220901123640121-049.webp)
+![3 数据迁移 截图（2）](../../assets/images/py-image-20220901123640121-049.webp)
 
 > 应用迁移脚本迁移数据
 
@@ -62,13 +68,13 @@ python manage.py migrate
 
 - 数据库迁移的生成和应用
 
-![](../../assets/images/py-image-20220825195643156-030.webp)
+![3 数据迁移 截图（3）](../../assets/images/py-image-20220825195643156-030.webp)
 
 **【特别注意】**：每次修改 models.py 文件都要进行以上操作，使得数据库同步修改结果。
 
 ### 1.4 查看生成的数据表
 
-![](../../assets/images/py-image-20220901125235800-051.webp)
+![4 查看生成的数据表 截图](../../assets/images/py-image-20220901125235800-051.webp)
 
 ### 1.5 Django-admin 管理数据
 

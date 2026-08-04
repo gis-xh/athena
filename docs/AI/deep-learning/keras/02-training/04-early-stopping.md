@@ -1,3 +1,9 @@
+---
+tags: [AI, 深度学习, Keras]
+difficulty: 进阶
+status: published
+---
+
 # 0204 训练早停
 
 ## 1 过拟合模型
@@ -101,7 +107,7 @@ plt.show()
 
 - 过拟合模型的训练监控结果曲线图
 
-![](../../../../assets/images/dl-image-20220913105542381-071.webp)
+![6 查看训练过程 截图](../../../../assets/images/dl-image-20220913105542381-071.webp)
 
 ### 2.7 模型评价
 
@@ -115,7 +121,7 @@ print('accurary : ' + str(loss_and_metrics[1]))
 
 - 过拟合模型的模型评价
 
-![](../../../../assets/images/dl-image-20220913105849387-072.webp)
+![7 模型评价 截图](../../../../assets/images/dl-image-20220913105849387-072.webp)
 
 ## 3 设置早停
 
@@ -137,11 +143,11 @@ hist = model.fit(x_train, y_train, epochs=3000,batch_size=10,validation_data=(x_
 
 - 早停法下的训练监控结果曲线图
 
-![](../../../../assets/images/dl-image-20220913110451998-073.webp)
+![2 早停法下的训练结果 截图](../../../../assets/images/dl-image-20220913110451998-073.webp)
 
 - 早停法下的模型评价
 
-![](../../../../assets/images/dl-image-20220913110621704-074.webp)
+![2 早停法下的训练结果 截图（2）](../../../../assets/images/dl-image-20220913110621704-074.webp)
 
 ### 3.3 数据对比
 

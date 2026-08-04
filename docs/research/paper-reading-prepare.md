@@ -1,3 +1,9 @@
+---
+tags: [学术]
+difficulty: 进阶
+status: published
+---
+
 # 论文研读准备
 
 ## Typora 的安装与使用

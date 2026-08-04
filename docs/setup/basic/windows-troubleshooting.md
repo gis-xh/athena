@@ -1,3 +1,9 @@
+---
+tags: [环境配置]
+difficulty: 入门
+status: published
+---
+
 # Windows 电脑问题汇总
 
 日常使用 Windows 遇到的问题与解决方法汇总。

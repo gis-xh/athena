@@ -1,3 +1,9 @@
+---
+tags: [工程化]
+difficulty: 入门
+status: published
+---
+
 # Git 基础操作-20260620
 
 ## 相关参考
@@ -184,4 +190,3 @@ git config --global alias.ps push
 ```sh
 git config --global pull.rebase true
 ```
-

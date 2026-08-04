@@ -1,3 +1,9 @@
+---
+tags: [部署]
+difficulty: 进阶
+status: published
+---
+
 # CentOS 部署方案
 
 参考：[CentOS 7 离线安装 Docker | 别扯那么远，谁能保证活到那一天](https://kunyuan.tech/archives/1287)
@@ -20,7 +26,7 @@ cat /etc/centos-release
 uname -a
 ```
 
-![](../assets/images/deploy-1-001.webp)
+![1 查看系统信息 截图](../assets/images/deploy-1-001.webp)
 
 #### 2 下载 Docker 安装包
 
@@ -84,7 +90,7 @@ Docker compose 官方下载地址：https://github.com/docker/compose/releases
 - `docker.service`：Docker 服务配置文件
 - `docker-compose-linux-x86_64`：docker compose 安装包
 
-![](../assets/images/deploy-image-20260304134441130-034.webp)
+![5 上传文件到服务器 截图](../assets/images/deploy-image-20260304134441130-034.webp)
 
 ### （二）安装并启动 Docker
 
@@ -128,7 +134,7 @@ mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose
 chmod +x /etc/systemd/system/docker.service /usr/local/bin/docker-compose
 ```
 
-![](../assets/images/deploy-3-003.webp)
+![1 安装软件 截图](../assets/images/deploy-3-003.webp)
 
 #### 2 启动 Docker 服务
 
@@ -170,4 +176,4 @@ docker -v
 docker-compose -v
 ```
 
-![](../assets/images/deploy-4-004.webp)
+![2 启动 Docker 服务 截图](../assets/images/deploy-4-004.webp)

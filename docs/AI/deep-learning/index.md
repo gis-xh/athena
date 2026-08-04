@@ -1,5 +1,8 @@
 ---
 comments: false
+tags: [AI, 深度学习]
+difficulty: 入门
+status: published
 ---
 
 # 深度学习 (Deep Learning)

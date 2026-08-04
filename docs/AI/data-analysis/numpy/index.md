@@ -1,3 +1,9 @@
+---
+tags: [AI, 数据分析]
+difficulty: 入门
+status: published
+---
+
 # NumPy 学习
 
 NumPy 库入门与数据存取笔记。

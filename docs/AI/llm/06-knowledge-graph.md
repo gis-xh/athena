@@ -1,3 +1,9 @@
+---
+tags: [AI, 大语言模型]
+difficulty: 进阶
+status: published
+---
+
 # 知识图谱 Knowledge Graph
 
 ## 相关参考
@@ -27,7 +33,7 @@
 
 知识融合：计算实体相似度，对相关知识图谱对齐、关联、合并
 
-![](../../assets/images/kg-image-20240819092526602-001.webp)
+![1 知识图谱与知识工程 截图](../../assets/images/kg-image-20240819092526602-001.webp)
 
 ### 1.2 知识图谱数据模型
 

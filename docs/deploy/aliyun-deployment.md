@@ -1,3 +1,9 @@
+---
+tags: [部署]
+difficulty: 进阶
+status: published
+---
+
 # 项目部署全过程记录
 
 相关文档：[阿里云部署踩坑记录](aliyun-deployment-issues.md)

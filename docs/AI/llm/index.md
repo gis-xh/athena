@@ -1,5 +1,8 @@
 ---
 comments: false
+tags: [AI, 大语言模型]
+difficulty: 入门
+status: published
 ---
 
 # 大语言模型 (LLM)

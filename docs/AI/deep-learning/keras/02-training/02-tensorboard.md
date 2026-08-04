@@ -1,3 +1,9 @@
+---
+tags: [AI, 深度学习, Keras]
+difficulty: 进阶
+status: published
+---
+
 # 0202 TensorBoard 监控模型
 
 说明：以下代码均是在 jupyter 中运行的。
@@ -8,7 +14,7 @@
 cat ~/.keras/keras.json
 ```
 
-![](../../../../assets/images/dl-image-20220912105333177-068.webp)
+![1 查看 Keras 配置文件 截图](../../../../assets/images/dl-image-20220912105333177-068.webp)
 
 &emsp;&emsp;这里我们可以看到 Keras 已经默认使用了 TensorFlow 作为后端引擎。
 
@@ -22,7 +28,7 @@ jupyter notebook
 
 ### 2.2 创建新项目
 
-![](../../../../assets/images/dl-image-20220726181816176-065.webp)
+![2 创建新项目 截图](../../../../assets/images/dl-image-20220726181816176-065.webp)
 
 ## 3 示例代码
 
@@ -96,7 +102,7 @@ model.fit(x_train, y_train, epochs=1000, batch_size=10, validation_data=(x_val, 
 
 &emsp;&emsp;这里我们同样训练 1000 次。
 
-![](../../../../assets/images/dl-image-20220726191625527-067.webp)
+![5 训练模型 截图](../../../../assets/images/dl-image-20220726191625527-067.webp)
 
 ### 3.6 查看训练过程
 
@@ -110,11 +116,11 @@ tensorboard --logdir=D:/demo/DeepLearning/Projects/graph
 
 - 控制台界面
 
-![](../../../../assets/images/dl-image-20220912105437639-069.webp)
+![6 查看训练过程 截图](../../../../assets/images/dl-image-20220912105437639-069.webp)
 
 - TensorBoard 训练监控结果曲线图
 
-![](../../../../assets/images/dl-image-20220912110134769-070.webp)
+![6 查看训练过程 截图（2）](../../../../assets/images/dl-image-20220912110134769-070.webp)
 
 &emsp;&emsp;此时显示的两幅图像，一个是周期训练精度图，另一个是周期训练误差图，可以清晰地观察到训练集和验证集的对比。
 

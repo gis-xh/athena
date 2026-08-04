@@ -1,3 +1,9 @@
+---
+tags: [随记]
+difficulty: 入门
+status: published
+---
+
 PyQt - 快速指南：https://iowiki.com/pyqt/pyqt_quick_guide.html
 
 NASA 地球数据检索：https://search.earthdata.nasa.gov/search?lat=37.82028063869495&long=44.71875

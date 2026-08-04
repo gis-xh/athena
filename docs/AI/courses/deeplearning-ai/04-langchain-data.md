@@ -1,3 +1,9 @@
+---
+tags: [AI, 大语言模型, 课程]
+difficulty: 进阶
+status: published
+---
+
 # LangChain Chat With Your Data
 
 ## 参考
@@ -8,7 +14,7 @@
 
 ## 1 流程介绍
 
-![](../../../assets/images/deploy-3-003.webp)
+![1 流程介绍 截图](../../../assets/images/deploy-3-003.webp)
 
 1、Document Loading：使用文档加载器加载各个来源的数据
 
@@ -60,7 +66,7 @@ pip -q install yt_dlp pydub ffmpeg ffprobe
 - `chunk_size`：块的大小
 - `chunk_overlap`：块重叠部分的大小
 
-![](../../../assets/images/llm-image-20230724180043730-027.webp)
+![3 文档分割 截图](../../../assets/images/llm-image-20230724180043730-027.webp)
 
 <center>图 4-1 文本分割示意图</center>
 
@@ -178,7 +184,7 @@ print(answer[0].page_content)
 - 然后，通过参数 `fetch_k` 控制响应的个数
 - 最后，生成多样化的文本片段返回给用户。
 
-![](../../../assets/images/llm-image-20230726122519518-028.webp)
+![1 MMR 最大边际相关性 截图](../../../assets/images/llm-image-20230726122519518-028.webp)
 
 <center>图 4-2 MMR 处理流程图</center>
 
@@ -190,7 +196,7 @@ print(answer[0].page_content)
 
 - 然后，根据元数据对向量数据进行筛选，在对搜索词进行相关语义查询
 
-![](../../../assets/images/deploy-1-001.webp)
+![2 SelfQuery 自查询 截图](../../../assets/images/deploy-1-001.webp)
 
 <center>图 4-3 查询相关语义与元数据的示例图</center>
 
@@ -200,7 +206,7 @@ print(answer[0].page_content)
 
 然后只将最相关的片段传递到最后的语言模型中。
 
-![](../../../assets/images/llm-image-20230726201014238-030.webp)
+![3 Compression 上下文压缩 截图](../../../assets/images/llm-image-20230726201014238-030.webp)
 
 <center>图 4-4 压缩流程图</center>
 
@@ -319,7 +325,7 @@ result["result"]
 
 记录之前与语言模型交流的任何对话和信息，作为聊天历史记录。使得 LLM 在回答问题时，能够综合考虑当前问题和聊天历史记录中的内容。
 
-![](../../../assets/images/deploy-4-004.webp)
+![7 上下文对话 截图](../../../assets/images/deploy-4-004.webp)
 
 <center>图 4-5 上下文 QA 对话流程图</center>
 

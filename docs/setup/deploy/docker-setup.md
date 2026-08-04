@@ -1,3 +1,9 @@
+---
+tags: [环境配置]
+difficulty: 入门
+status: published
+---
+
 # Docker 学习
 
 ## Docker 安装
@@ -24,7 +30,7 @@ RUN pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
 
 Docker Hub 提供很多镜像：https://hub.docker.com/search?q=Python
 
-![](../../assets/images/deploy-image-20230426144654613-012.webp)
+![Docker 安装 截图](../../assets/images/deploy-image-20230426144654613-012.webp)
 
 创建镜像
 

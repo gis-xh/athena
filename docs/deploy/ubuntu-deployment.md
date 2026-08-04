@@ -1,3 +1,9 @@
+---
+tags: [部署]
+difficulty: 进阶
+status: published
+---
+
 # Ubuntu 部署方案
 
 参考：[ubuntu 20.04 离线安装 docker - 知乎](https://zhuanlan.zhihu.com/p/689030004)
@@ -76,7 +82,7 @@ Docker compose 官方下载地址：https://github.com/docker/compose/releases
 
 在最新版中选择对应架构版本即可（截止至2026.08.03，最新版为v5.3.1），文件名为：`docker-compose-linux-x86_64`
 
-![](../assets/images/docker_2026-08-03_14-17-26.webp)
+![4 下载 docker-compose 安装包 截图](../assets/images/docker_2026-08-03_14-17-26.webp)
 
 #### 5 上传文件到服务器
 
@@ -193,4 +199,4 @@ sudo docker -v
 sudo docker-compose -v
 ```
 
-![](../assets/images/ubuntu_2026-07-27_17-45-36.webp)
+![2 启动 Docker 服务 截图](../assets/images/ubuntu_2026-07-27_17-45-36.webp)

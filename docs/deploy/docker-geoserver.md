@@ -1,3 +1,9 @@
+---
+tags: [部署]
+difficulty: 进阶
+status: published
+---
+
 # Docker+Geoserver使用说明
 
 ## 1 Docker配置
@@ -30,7 +36,7 @@ docker pull nginx:latest
 
 Docker Hub搜索Nginx镜像结果：
 
-![](../assets/images/fe-image-20250904160612560-011.webp)
+![1 拉取Nginx镜像 截图](../assets/images/fe-image-20250904160612560-011.webp)
 
 #### 1.2.2 拉取Geoserver镜像
 
@@ -56,7 +62,7 @@ Note：在Windows上每次使用Docker命令时，必须确保Docker Desktop已�
 
 - 进入项目根目录后，鼠标右击空白处，点击在终端中打开
 
-![](../assets/images/fe-image-20250904162014778-013.webp)
+![2 命令行打开项目根目录 截图](../assets/images/fe-image-20250904162014778-013.webp)
 
 #### 1.3.3 构建Docker容器
 
@@ -76,7 +82,7 @@ Step1：成功启动Docker服务后，会在项目根目录创建`test_data/`目
 
 Step2：创建`QGIS/`目录后，将需要发布的栅格文件都放到里面。
 
-![](../assets/images/fe-image-20250904162857598-016.webp)
+![1 基础配置 截图](../assets/images/fe-image-20250904162857598-016.webp)
 
 Step3：访问部署好的Geoserver
 
@@ -95,7 +101,7 @@ Step3：访问部署好的Geoserver
 
 工作空间仅首次数据发布时创建，设为默认工作空间后，后续可以直接使用。
 
-![](../assets/images/fe-image-20250904164535429-018.webp)
+![1 新建工作空间 截图](../assets/images/fe-image-20250904164535429-018.webp)
 
 #### 2.2.2 新建存储仓库
 
@@ -133,7 +139,7 @@ Note：由于样式设置本质是将其转换为xml内容，所以，这里的�
 
 - 2.2.1新建存储仓库 - > 2.2.3新建图层（栅格数据仓库与图层1对1关系） - > 2.2.6新建图层时直接设置图层样式
 
-![](../assets/images/fe-image-20250904172709760-024.webp)
+![3 再次发布其他数据 截图](../assets/images/fe-image-20250904172709760-024.webp)
 
 ### 2.4 更新已有的数据
 

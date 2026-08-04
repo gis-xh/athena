@@ -1,3 +1,9 @@
+---
+tags: [环境配置]
+difficulty: 入门
+status: published
+---
+
 # uv 管理 Python 环境
 
 ## 1 安装并配置 uv

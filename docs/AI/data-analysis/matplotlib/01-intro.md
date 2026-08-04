@@ -1,3 +1,9 @@
+---
+tags: [AI, 数据分析]
+difficulty: 入门
+status: published
+---
+
 # 01 Matplotlib 库入门
 
 ## 1 安装 matplotlib 库
@@ -8,7 +14,7 @@ pip install matplotlib
 
 ## 2 核心组件
 
-![](../../../assets/images/py-anatomy-001.webp)
+![2 核心组件 截图](../../../assets/images/py-anatomy-001.webp)
 
 ### 2.1 `Figure`
 

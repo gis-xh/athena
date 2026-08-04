@@ -1,3 +1,9 @@
+---
+tags: [部署]
+difficulty: 进阶
+status: published
+---
+
 # 部署运维学习
 
 ## 1 安装 WSL2 与 Docker
@@ -14,7 +20,7 @@
 wsl --install
 ```
 
-![](../assets/images/win_wsl-2025-04-15-1.webp)
+![1 安装 WSL2 截图](../assets/images/win_wsl-2025-04-15-1.webp)
 
 查看支持的Linux系统列表
 
@@ -22,7 +28,7 @@ wsl --install
 wsl --list --online
 ```
 
-![](../assets/images/win_wsl-2025-04-15-2.webp)
+![1 安装 WSL2 截图（2）](../assets/images/win_wsl-2025-04-15-2.webp)
 
 下载系统镜像，默认安装最新的Ubuntu（当前为Ubuntu 24.04）
 
@@ -36,7 +42,7 @@ wsl --install 镜像名称 --web-download
 wsl --list -v
 ```
 
-![](../assets/images/win_wsl-2025-04-15-3.webp)
+![1 安装 WSL2 截图（3）](../assets/images/win_wsl-2025-04-15-3.webp)
 
 进入子系统，初次进入系统需要设置用户名（非root）与密码
 
@@ -44,7 +50,7 @@ wsl --list -v
 wsl -d Ubuntu
 ```
 
-![](../assets/images/win_wsl-2025-04-15-4.webp)
+![1 安装 WSL2 截图（4）](../assets/images/win_wsl-2025-04-15-4.webp)
 
 退出子系统
 
@@ -52,7 +58,7 @@ wsl -d Ubuntu
 exit
 ```
 
-![](../assets/images/win_wsl-2025-04-15-5.webp)
+![1 安装 WSL2 截图（5）](../assets/images/win_wsl-2025-04-15-5.webp)
 
 ### 1.2 安装 Docker
 
@@ -62,7 +68,7 @@ exit
 
 再次查看当前的子系统，出现一个新的子系统docker-desktop
 
-![](../assets/images/win_wsl-2025-04-15-6.webp)
+![2 安装 Docker 截图](../assets/images/win_wsl-2025-04-15-6.webp)
 
 ### 1.3 WSL 基本操作
 
@@ -82,7 +88,7 @@ wsl --shutdown
 
 需要注意的是docker子系统可以马上关闭，但Ubuntu系统一般需要8s后才可以正常关闭。
 
-![](../assets/images/win_wsl-2025-04-15-7.webp)
+![3 WSL 基本操作 截图](../assets/images/win_wsl-2025-04-15-7.webp)
 
 ## 2 Linux 基础
 
@@ -195,7 +201,7 @@ sudo systemctl enable restart_docker.service
 sudo systemctl start restart_docker.service
 ```
 
-![](../assets/images/deploy-image-20241202170636229-013.webp)
+![2 设置项目开机自启动 截图](../assets/images/deploy-image-20241202170636229-013.webp)
 
 <center>图 1 启用服务并启动服务</center>
 
@@ -207,7 +213,7 @@ sudo systemctl status restart_docker.service
 sudo systemctl restart restart_docker.service
 ```
 
-![](../assets/images/deploy-5-005.webp)
+![2 设置项目开机自启动 截图（2）](../assets/images/deploy-5-005.webp)
 
 <center>图 2 重启服务器后查看服务运行情况</center>
 
@@ -349,7 +355,7 @@ sudo fdisk /dev/vdb
 
 依次输入：n，p，1，w
 
-![](../assets/images/deploy-3-003.webp)
+![4 磁盘占用 截图](../assets/images/deploy-3-003.webp)
 
 在磁盘vdb的vdb1分区创建文件系统
 
@@ -370,7 +376,7 @@ sudo mount /dev/vdb1 /home/data/
 df -h | grep data
 ```
 
-![](../assets/images/deploy-7-007.webp)
+![4 磁盘占用 截图（2）](../assets/images/deploy-7-007.webp)
 
 获取磁盘分区UUID，此处需要手动复制ID
 
@@ -402,7 +408,7 @@ sudo mount -a
 sudo lsblk 指定的磁盘/默认显示所有磁盘
 ```
 
-![](../assets/images/deploy-3-003.webp)
+![4 磁盘占用 截图（3）](../assets/images/deploy-3-003.webp)
 
 ### 3.4 更换磁盘挂载
 
@@ -413,7 +419,7 @@ sudo umount /home/data
 sudo mount | grep vdb
 ```
 
-![](../assets/images/deploy-6-006.webp)
+![4 更换磁盘挂载 截图](../assets/images/deploy-6-006.webp)
 
 若需要对已有数据的文件夹重新挂载到大容量磁盘，需要先备份数据，防止数据被覆盖。
 
@@ -454,4 +460,4 @@ sudo rm -rf /home/data/media/
 sudo vim /etc/fstab
 ```
 
-![](../assets/images/deploy-image-20250507011739160-026.webp)
+![4 更换磁盘挂载 截图（2）](../assets/images/deploy-image-20250507011739160-026.webp)

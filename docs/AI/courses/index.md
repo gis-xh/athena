@@ -1,5 +1,8 @@
 ---
 comments: false
+tags: [AI, 课程]
+difficulty: 入门
+status: published
 ---
 
 # AI 课程学习

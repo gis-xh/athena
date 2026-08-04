@@ -1,3 +1,9 @@
+---
+tags: [Python]
+difficulty: 入门
+status: published
+---
+
 # PyInstaller 编译与反编译
 
 ## 1 反编译环境配置
@@ -149,4 +155,3 @@ cd 待解析软件名称.exe_extracted
 # 使用 pycdc 解析 *.pyc 文件并保存到 main.py 中
 pycdc 待解析软件名称.pyc > main.py
 ```
-
