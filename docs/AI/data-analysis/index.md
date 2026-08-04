@@ -16,8 +16,6 @@ status: published
 
 - 2 NumPy 数据存取与函数：[0201 NumPy 数据存取](./numpy/02-data-storage/01-storage.md)
 
-> 注意：NumPy 环境配置文档已迁移至「环境配置」分类，请参阅 [开发环境](../../setup/dev/index.md)
-
 ## 环境配置
 
 &emsp;&emsp;本篇的内容，均是在虚拟环境 `data01` 中进行的。

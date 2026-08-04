@@ -1,6 +1,6 @@
 ---
 tags: [AI, 深度学习, PyTorch]
-difficulty: 进阶
+difficulty: 入门
 status: published
 ---
 

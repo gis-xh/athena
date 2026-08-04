@@ -1,7 +1,7 @@
 ---
 comments: false
 tags: [AI, 深度学习, Keras]
-difficulty: 入门
+difficulty: 进阶
 status: published
 ---
 
