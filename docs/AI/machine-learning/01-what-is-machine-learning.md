@@ -1,5 +1,5 @@
 ---
-tags: [AI, 机器学习, 课程]
+tags: [AI, 机器学习]
 difficulty: 入门
 status: published
 ---
@@ -17,7 +17,7 @@ status: published
 ## 前置要求
 
 - 无需编程基础，本页只讲概念；
-- 建议配合 Python 环境一起学习（参考[环境配置](../../../setup/dev/python-uv-setup.md)）。
+- 建议配合 Python 环境一起学习（参考[环境配置](../../setup/dev/python-uv-setup.md)）。
 
 ## 1 机器学习的定义
 
@@ -98,4 +98,4 @@ status: published
 ## 参考
 
 - Coursera 吴恩达《Machine Learning》Week 1；
-- 本仓库配套笔记：[机器学习课程索引](../index.md)。
+- 本仓库配套笔记：[AI 与算法](../index.md)。

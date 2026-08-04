@@ -73,6 +73,24 @@ nav:
       - Git 工作流: engineering/git-workflow.md
   - AI 与算法:
       - 总览: AI/index.md
+      - 数据分析:
+          - 概述: AI/data-analysis/index.md
+          - NumPy 环境配置: AI/data-analysis/numpy-setup.md
+          - NumPy:
+              - 概述: AI/data-analysis/numpy/index.md
+              - 基础:
+                  - 基础操作: AI/data-analysis/numpy/01-basics/01-basics.md
+                  - 快速入门: AI/data-analysis/numpy/01-basics/02-quickstart.md
+              - 数据存取:
+                  - 数据存取: AI/data-analysis/numpy/02-data-storage/01-storage.md
+                  - 词云: AI/data-analysis/numpy/02-data-storage/02-wordcloud.md
+                  - 函数: AI/data-analysis/numpy/02-data-storage/03-functions.md
+          - Matplotlib: AI/data-analysis/matplotlib/01-intro.md
+          - Python Excel: AI/data-analysis/python-excel/01-excel.md
+          - Spider: AI/data-analysis/spider/01-spider.md
+      - 机器学习:
+          - 概述: AI/machine-learning/index.md
+          - 什么是机器学习: AI/machine-learning/01-what-is-machine-learning.md
       - 深度学习:
           - 概述: AI/deep-learning/index.md
           - PyTorch: AI/deep-learning/pytorch/index.md
@@ -95,7 +113,7 @@ nav:
           - Keras 高级:
               - 概述: AI/deep-learning/keras/03-advanced/index.md
               - 迁移学习: AI/deep-learning/keras/03-advanced/transfer-learning.md
-      - 大语言模型:
+      - 大模型:
           - 概述: AI/llm/index.md
           - 01 预训练: AI/llm/01-pretrain.md
           - 02 Transformer: AI/llm/02-transformer.md
@@ -107,31 +125,8 @@ nav:
           - 08 MCP: AI/llm/08-mcp.md
           - 09 向量数据库: AI/llm/09-vectorstore.md
           - 10 训练方法: AI/llm/10-training-approach.md
-      - 机器学习:
-          - 概述: AI/courses/machine-learning/index.md
-          - 什么是机器学习: AI/courses/machine-learning/01-what-is-machine-learning.md
-      - 数据分析:
-          - 概述: AI/data-analysis/index.md
-          - NumPy 环境配置: AI/data-analysis/numpy-setup.md
-          - NumPy:
-              - 概述: AI/data-analysis/numpy/index.md
-              - 基础:
-                  - 基础操作: AI/data-analysis/numpy/01-basics/01-basics.md
-                  - 快速入门: AI/data-analysis/numpy/01-basics/02-quickstart.md
-              - 数据存取:
-                  - 数据存取: AI/data-analysis/numpy/02-data-storage/01-storage.md
-                  - 词云: AI/data-analysis/numpy/02-data-storage/02-wordcloud.md
-                  - 函数: AI/data-analysis/numpy/02-data-storage/03-functions.md
-          - Matplotlib: AI/data-analysis/matplotlib/01-intro.md
-          - Python Excel: AI/data-analysis/python-excel/01-excel.md
-          - Spider: AI/data-analysis/spider/01-spider.md
       - AI 课程:
           - 课程索引: AI/courses/index.md
-      - AI 应用:
-          - AI Agents: AI/agents/index.md
-          - OpenClaw: AI/agents/openclaw-setup.md
-          - OpenCode: AI/agents/opencode-setup.md
-          - Prompt 模板: AI/agents/prompt-template.md
           - CS230 2018:
               - 概述: AI/courses/cs230-2018/index.md
               - Neural Networks: AI/courses/cs230-2018/01-neural-networks.md
@@ -144,6 +139,11 @@ nav:
               - LangChain App: AI/courses/deeplearning-ai/03-langchain-app.md
               - LangChain Data: AI/courses/deeplearning-ai/04-langchain-data.md
               - Gradio: AI/courses/deeplearning-ai/05-gradio.md
+      - AI 应用:
+          - AI Agents: AI/agents/index.md
+          - OpenClaw: AI/agents/openclaw-setup.md
+          - OpenCode: AI/agents/opencode-setup.md
+          - Prompt 模板: AI/agents/prompt-template.md
   - Web 开发:
       - 总览: frontend/index.md
       - Vue:
@@ -241,7 +241,9 @@ plugins:
       redirect_maps:
         'AI/courses/cs230-2018/02.md': 'AI/courses/cs230-2018/02-assignment-logistic-regression.md'
         'AI/courses/cs230-2018/Lecture2.md': 'AI/courses/cs230-2018/03-assignment-projects.md'
-        'AI/courses/machine-learning/Week01.md': 'AI/courses/machine-learning/01-what-is-machine-learning.md'
+        'AI/courses/machine-learning/Week01.md': 'AI/machine-learning/01-what-is-machine-learning.md'
+        'AI/courses/machine-learning/index.md': 'AI/machine-learning/index.md'
+        'AI/courses/machine-learning/01-what-is-machine-learning.md': 'AI/machine-learning/01-what-is-machine-learning.md'
         'deploy/linux/01-basics/03-basics.md': 'deploy/linux/01-basics/01-directory-structure.md'
         'frontend/02-ui.md': 'frontend/01-ui-frameworks.md'
         'AI/data-analysis/numpy/01-basics/02-basics.md': 'AI/data-analysis/numpy/01-basics/01-basics.md'
