@@ -60,6 +60,7 @@ nav:
           - 终端配置: setup/basic/terminal-setup.md
           - Win11 新机开荒: setup/basic/windows-new-machine.md
           - Windows 问题汇总: setup/basic/windows-troubleshooting.md
+          - 新手快速入门: setup/basic/newcomer-guide.md
       - 开发工具:
           - 概述: setup/dev/index.md
           - Node.js: setup/dev/nodejs-setup.md

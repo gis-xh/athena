@@ -13,3 +13,4 @@ comments: false
 - [终端配置](terminal-setup.md) - Windows Terminal 与 PowerShell 7 安装
 - [Win11 新机开荒](windows-new-machine.md) - 新机配置、驱动与常用软件安装
 - [Windows 问题汇总](windows-troubleshooting.md) - 日常使用问题与解决方法
+- [新手快速入门指南](newcomer-guide.md) - 新手入门软件安装与学习/编程起步清单
