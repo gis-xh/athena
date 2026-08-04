@@ -8,9 +8,8 @@ comments: false
 
 ## 目录
 
-- [Windows 常用工具](windows-tools.md) - 办公软件、开发软件、科研入门指南
-- [浏览器配置](browser-setup.md) - 必备浏览器插件与常用网站
+- [新手快速入门指南](newcomer-guide.md) - 新手软件安装与学习/编程起步路线
+- [浏览器与常用网站](browser-setup.md) - 必备浏览器插件与常用网站
+- [Windows 工具与新机配置](windows-tools.md) - 推荐软件清单、新机开荒与工具技巧
 - [终端配置](terminal-setup.md) - Windows Terminal 与 PowerShell 7 安装
-- [Win11 新机开荒](windows-new-machine.md) - 新机配置、驱动与常用软件安装
 - [Windows 问题汇总](windows-troubleshooting.md) - 日常使用问题与解决方法
-- [新手快速入门指南](newcomer-guide.md) - 新手入门软件安装与学习/编程起步清单

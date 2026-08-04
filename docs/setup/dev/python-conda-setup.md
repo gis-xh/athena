@@ -188,4 +188,3 @@ conda deactivate CVEOdemo02
 2. [Win11 安装 Miniconda 配置 powershell](https://blog.csdn.net/qq_40597075/article/details/122560335)
 3. [Windows 中 miniconda 安装以及环境配置](https://blog.csdn.net/weixin_42744482/article/details/120299119)
 4. [改变 conda 虚拟环境的默认路径](https://blog.csdn.net/qq_36455412/article/details/125347552)
-5. [君安的 conda 笔记](https://gitee.com/gis-xh/my-note/blob/master/daily/conda.md)

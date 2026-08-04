@@ -55,12 +55,11 @@ nav:
       - 配置总览: setup/index.md
       - 基础应用:
           - 概述: setup/basic/index.md
-          - Windows 工具: setup/basic/windows-tools.md
-          - 浏览器配置: setup/basic/browser-setup.md
-          - 终端配置: setup/basic/terminal-setup.md
-          - Win11 新机开荒: setup/basic/windows-new-machine.md
-          - Windows 问题汇总: setup/basic/windows-troubleshooting.md
           - 新手快速入门: setup/basic/newcomer-guide.md
+          - 浏览器与常用网站: setup/basic/browser-setup.md
+          - Windows 工具与新机配置: setup/basic/windows-tools.md
+          - 终端配置: setup/basic/terminal-setup.md
+          - Windows 问题汇总: setup/basic/windows-troubleshooting.md
       - 开发工具:
           - 概述: setup/dev/index.md
           - Node.js: setup/dev/nodejs-setup.md

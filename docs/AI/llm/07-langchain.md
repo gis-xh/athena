@@ -155,11 +155,11 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
 
 安装 cuda11.7：(https://developer.nvidia.com/cuda-11-7-0-download-archive)
 
-- 安装教程：(https://gis-xh.github.io/athena/AI/deep-learning/keras/keras-install/#5-cuda)
+- 安装教程：[Keras 环境配置 - 安装 CUDA](../deep-learning/keras/keras-setup.md#5-cuda)
 
 安装 cudnn8.5：(https://developer.nvidia.com/rdp/cudnn-archive)
 
-- 安装教程：(https://gis-xh.github.io/athena/AI/deep-learning/keras/keras-install/#6-cudnn)
+- 安装教程：[Keras 环境配置 - 安装 cuDNN](../deep-learning/keras/keras-setup.md#6-cudnn)
 
 > 安装 torch(2.0.1)
 
