@@ -353,22 +353,6 @@
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
-         <loc>https://gis-xh.github.io/athena/engineering/</loc>
-         <lastmod>2026-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://gis-xh.github.io/athena/engineering/code-standards/</loc>
-         <lastmod>2026-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://gis-xh.github.io/athena/engineering/git-workflow/</loc>
-         <lastmod>2026-08-04</lastmod>
-    </url>
-    <url>
-         <loc>https://gis-xh.github.io/athena/engineering/teamwork/</loc>
-         <lastmod>2026-08-04</lastmod>
-    </url>
-    <url>
          <loc>https://gis-xh.github.io/athena/frontend/</loc>
          <lastmod>2026-08-04</lastmod>
     </url>
@@ -578,6 +562,26 @@
     </url>
     <url>
          <loc>https://gis-xh.github.io/athena/setup/dev/python-uv-setup/</loc>
+         <lastmod>2026-08-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gis-xh.github.io/athena/setup/engineering/</loc>
+         <lastmod>2026-08-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gis-xh.github.io/athena/setup/engineering/code-standards/</loc>
+         <lastmod>2026-08-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gis-xh.github.io/athena/setup/engineering/git-workflow/</loc>
+         <lastmod>2026-08-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gis-xh.github.io/athena/setup/engineering/teamwork/</loc>
+         <lastmod>2026-08-04</lastmod>
+    </url>
+    <url>
+         <loc>https://gis-xh.github.io/athena/setup/engineering/wos-paper-analysis-dev-log/</loc>
          <lastmod>2026-08-04</lastmod>
     </url>
 </urlset>
