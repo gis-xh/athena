@@ -124,6 +124,7 @@ nav:
                   - 函数: AI/data-analysis/numpy/02-data-storage/03-functions.md
           - Matplotlib: AI/data-analysis/matplotlib/01-intro.md
           - Python Excel: AI/data-analysis/python-excel/01-excel.md
+          - Spider: AI/data-analysis/spider/01-spider.md
       - AI 课程:
           - 课程索引: AI/courses/index.md
       - AI 应用:
@@ -235,8 +236,7 @@ plugins:
         - ja
         - zh
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
-  - tags:
-      tags_file: tags.md
+  - tags
   - redirects:
       redirect_maps:
         'AI/courses/cs230-2018/02.md': 'AI/courses/cs230-2018/02-assignment-logistic-regression.md'
