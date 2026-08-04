@@ -9,6 +9,10 @@
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
+         <loc>https://gis-xh.github.io/athena/tags/</loc>
+         <lastmod>2026-08-04</lastmod>
+    </url>
+    <url>
          <loc>https://gis-xh.github.io/athena/3D/</loc>
          <lastmod>2026-08-04</lastmod>
     </url>
@@ -49,11 +53,11 @@
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
-         <loc>https://gis-xh.github.io/athena/AI/courses/cs230-2018/02/</loc>
+         <loc>https://gis-xh.github.io/athena/AI/courses/cs230-2018/02-assignment-logistic-regression/</loc>
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
-         <loc>https://gis-xh.github.io/athena/AI/courses/cs230-2018/Lecture2/</loc>
+         <loc>https://gis-xh.github.io/athena/AI/courses/cs230-2018/03-assignment-projects/</loc>
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
@@ -85,7 +89,7 @@
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
-         <loc>https://gis-xh.github.io/athena/AI/courses/machine-learning/Week01/</loc>
+         <loc>https://gis-xh.github.io/athena/AI/courses/machine-learning/01-what-is-machine-learning/</loc>
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
@@ -105,11 +109,11 @@
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
-         <loc>https://gis-xh.github.io/athena/AI/data-analysis/numpy/01-basics/02-basics/</loc>
+         <loc>https://gis-xh.github.io/athena/AI/data-analysis/numpy/01-basics/01-basics/</loc>
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
-         <loc>https://gis-xh.github.io/athena/AI/data-analysis/numpy/01-basics/03-quickstart/</loc>
+         <loc>https://gis-xh.github.io/athena/AI/data-analysis/numpy/01-basics/02-quickstart/</loc>
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
@@ -301,7 +305,7 @@
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
-         <loc>https://gis-xh.github.io/athena/deploy/linux/01-basics/03-basics/</loc>
+         <loc>https://gis-xh.github.io/athena/deploy/linux/01-basics/01-directory-structure/</loc>
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
@@ -369,7 +373,7 @@
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
-         <loc>https://gis-xh.github.io/athena/frontend/02-ui/</loc>
+         <loc>https://gis-xh.github.io/athena/frontend/01-ui-frameworks/</loc>
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
@@ -457,39 +461,39 @@
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
-         <loc>https://gis-xh.github.io/athena/python/03-django/</loc>
+         <loc>https://gis-xh.github.io/athena/python/01-django/</loc>
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
-         <loc>https://gis-xh.github.io/athena/python/03-django/01-setup/</loc>
+         <loc>https://gis-xh.github.io/athena/python/01-django/01-setup/</loc>
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
-         <loc>https://gis-xh.github.io/athena/python/03-django/02-tutorial/</loc>
+         <loc>https://gis-xh.github.io/athena/python/01-django/02-tutorial/</loc>
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
-         <loc>https://gis-xh.github.io/athena/python/03-django/03-project-1/</loc>
+         <loc>https://gis-xh.github.io/athena/python/01-django/03-project-1/</loc>
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
-         <loc>https://gis-xh.github.io/athena/python/03-django/04-project-2/</loc>
+         <loc>https://gis-xh.github.io/athena/python/01-django/04-project-2/</loc>
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
-         <loc>https://gis-xh.github.io/athena/python/04-gui/</loc>
+         <loc>https://gis-xh.github.io/athena/python/02-gui/</loc>
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
-         <loc>https://gis-xh.github.io/athena/python/04-gui/01-intro/</loc>
+         <loc>https://gis-xh.github.io/athena/python/02-gui/01-intro/</loc>
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
-         <loc>https://gis-xh.github.io/athena/python/05-fastapi/</loc>
+         <loc>https://gis-xh.github.io/athena/python/03-fastapi/</loc>
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>
-         <loc>https://gis-xh.github.io/athena/python/05-fastapi/01-intro/</loc>
+         <loc>https://gis-xh.github.io/athena/python/03-fastapi/01-intro/</loc>
          <lastmod>2026-08-04</lastmod>
     </url>
     <url>

@@ -12,6 +12,10 @@
         <link rel="canonical" href="https://gis-xh.github.io/athena/AI/llm/04-rwkv/">
       
       
+        <link rel="prev" href="../03-gpt-bert/">
+      
+      
+        <link rel="next" href="../05-glm/">
       
       
         
@@ -22,7 +26,7 @@
     
     
       
-        <title>RWKV 模型 - Athena</title>
+        <title>04 RWKV - Athena</title>
       
     
     
@@ -91,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rwkv" class="md-skip">
+        <a href="#rwkv-rnn-llm" class="md-skip">
           跳转至
         </a>
       
@@ -125,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              RWKV 模型
+              04 RWKV
             
           </span>
         </div>
@@ -304,10 +308,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../" class="md-tabs__link">
           
   
@@ -586,6 +592,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -641,6 +654,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
             </a>
@@ -719,6 +739,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -763,6 +790,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -790,6 +824,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -819,6 +860,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -847,6 +895,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -874,6 +929,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -940,6 +1002,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -984,6 +1053,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -1012,6 +1088,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -1039,6 +1122,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -1101,6 +1191,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -1144,6 +1241,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -1213,6 +1317,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -1257,6 +1368,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -1275,6 +1393,8 @@
       
   
   
+    
+  
   
   
     
@@ -1300,16 +1420,17 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
         
           
           <div class="md-nav__link md-nav__container">
@@ -1327,17 +1448,24 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1410,6 +1538,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -1454,6 +1589,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -1481,6 +1623,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -1510,6 +1659,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -1538,6 +1694,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -1565,6 +1728,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -1621,6 +1791,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -1665,6 +1842,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -1692,6 +1876,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -1764,6 +1955,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -1808,6 +2006,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -1835,6 +2040,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -1864,6 +2076,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -1891,6 +2110,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -1920,6 +2146,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -1947,6 +2180,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -2009,6 +2249,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -2053,6 +2300,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -2080,6 +2334,8 @@
                 
   
   
+    
+  
   
   
     
@@ -2103,6 +2359,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2110,13 +2372,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked="">
         
           
           <div class="md-nav__link md-nav__container">
@@ -2134,6 +2394,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -2144,7 +2411,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2178,6 +2445,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -2206,8 +2480,227 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-gpt-bert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 GPT &amp; BERT
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 RWKV
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 RWKV
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        学习目标
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前置要求
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-transformer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 背景：Transformer 的问题
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-rwkv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 RWKV 的核心思想
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-rwkv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 RWKV 的特点
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-transformer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 与 Transformer 的对比
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 动手练习
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2233,6 +2726,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -2262,6 +2762,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -2289,6 +2796,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -2318,6 +2832,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -2345,6 +2866,48 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-training-approach/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 训练方法
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -2407,6 +2970,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -2437,19 +3007,26 @@
   
   
     <li class="md-nav__item">
-      <a href="../../courses/machine-learning/Week01/" class="md-nav__link">
+      <a href="../../courses/machine-learning/01-what-is-machine-learning/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Week 1
+    什么是机器学习
   
 
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -2477,6 +3054,8 @@
       
         
           
+        
+      
         
       
         
@@ -2517,6 +3096,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
             </a>
@@ -2561,6 +3147,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -2616,6 +3209,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
             </a>
@@ -2705,7 +3305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data-analysis/numpy/01-basics/02-basics/" class="md-nav__link">
+      <a href="../../data-analysis/numpy/01-basics/01-basics/" class="md-nav__link">
         
   
   
@@ -2718,6 +3318,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -2733,7 +3340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data-analysis/numpy/01-basics/03-quickstart/" class="md-nav__link">
+      <a href="../../data-analysis/numpy/01-basics/02-quickstart/" class="md-nav__link">
         
   
   
@@ -2746,6 +3353,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -2770,6 +3384,8 @@
   
     
     
+      
+        
       
         
       
@@ -2841,6 +3457,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -2868,6 +3491,48 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-analysis/numpy/02-data-storage/03-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    函数
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -2913,6 +3578,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -2940,6 +3612,48 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-analysis/spider/01-spider/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spider
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -2999,6 +3713,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
             </a>
@@ -3080,6 +3801,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -3124,6 +3852,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -3152,6 +3887,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -3179,6 +3921,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -3237,6 +3986,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -3281,33 +4037,12 @@
   </span>
   
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../courses/cs230-2018/02/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
     
   
-    2
+  
+    <span class="md-status md-status--published"></span>
   
 
-    
-  </span>
-  
   
 
       </a>
@@ -3323,19 +4058,61 @@
   
   
     <li class="md-nav__item">
-      <a href="../../courses/cs230-2018/Lecture2/" class="md-nav__link">
+      <a href="../../courses/cs230-2018/02-assignment-logistic-regression/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lecture 2
+    作业 1：逻辑回归
   
 
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/cs230-2018/03-assignment-projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程项目笔记
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -3363,6 +4140,8 @@
       
         
           
+        
+      
         
       
         
@@ -3403,6 +4182,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
             </a>
@@ -3448,6 +4234,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -3475,6 +4268,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -3504,6 +4304,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -3531,6 +4338,48 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/deeplearning-ai/05-gradio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gradio
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -3618,6 +4467,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -3699,6 +4555,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -3743,6 +4606,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -3770,6 +4640,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -3799,6 +4676,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -3826,6 +4710,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -3855,6 +4746,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -3883,6 +4781,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -3910,6 +4815,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -3947,6 +4859,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -3961,7 +4880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../frontend/02-ui/" class="md-nav__link">
+      <a href="../../../frontend/01-ui-frameworks/" class="md-nav__link">
         
   
   
@@ -3974,6 +4893,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -4003,6 +4929,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -4031,6 +4964,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -4058,6 +4998,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -4121,6 +5068,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -4165,6 +5119,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -4192,6 +5153,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -4265,6 +5233,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -4309,6 +5284,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -4336,6 +5318,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -4365,6 +5354,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -4392,6 +5388,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -4421,6 +5424,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -4449,6 +5459,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -4476,6 +5493,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -4539,6 +5563,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -4583,6 +5614,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -4610,6 +5648,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -4675,6 +5720,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -4736,7 +5788,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../python/03-django/" class="md-nav__link ">
+            <a href="../../../python/01-django/" class="md-nav__link ">
               
   
   
@@ -4749,6 +5801,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
             </a>
@@ -4780,7 +5839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../python/03-django/01-setup/" class="md-nav__link">
+      <a href="../../../python/01-django/01-setup/" class="md-nav__link">
         
   
   
@@ -4794,6 +5853,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -4808,7 +5874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../python/03-django/02-tutorial/" class="md-nav__link">
+      <a href="../../../python/01-django/02-tutorial/" class="md-nav__link">
         
   
   
@@ -4822,6 +5888,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -4836,7 +5909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../python/03-django/03-project-1/" class="md-nav__link">
+      <a href="../../../python/01-django/03-project-1/" class="md-nav__link">
         
   
   
@@ -4850,6 +5923,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -4864,7 +5944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../python/03-django/04-project-2/" class="md-nav__link">
+      <a href="../../../python/01-django/04-project-2/" class="md-nav__link">
         
   
   
@@ -4877,6 +5957,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -4906,6 +5993,8 @@
           
         
       
+        
+      
     
     
     
@@ -4923,7 +6012,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../python/05-fastapi/" class="md-nav__link ">
+            <a href="../../../python/03-fastapi/" class="md-nav__link ">
               
   
   
@@ -4937,8 +6026,20 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
             
           </div>
         
@@ -4953,6 +6054,41 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python/03-fastapi/01-intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    入门
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -4997,7 +6133,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../python/04-gui/" class="md-nav__link ">
+            <a href="../../../python/02-gui/" class="md-nav__link ">
               
   
   
@@ -5010,6 +6146,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
             </a>
@@ -5041,7 +6184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../python/04-gui/01-intro/" class="md-nav__link">
+      <a href="../../../python/02-gui/01-intro/" class="md-nav__link">
         
   
   
@@ -5054,6 +6197,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -5082,6 +6232,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -5151,6 +6308,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -5194,6 +6358,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -5259,6 +6430,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -5303,6 +6481,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -5331,6 +6516,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -5358,6 +6550,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -5435,6 +6634,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -5510,6 +6716,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -5546,6 +6759,8 @@
           
         
       
+        
+      
     
     
     
@@ -5577,8 +6792,20 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
+            
+              
+              <label class="md-nav__link " for="__nav_12_2_2" id="__nav_12_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
             
           </div>
         
@@ -5593,6 +6820,41 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../deploy/linux/01-basics/01-directory-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    目录结构
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -5655,6 +6917,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
             </a>
             
@@ -5699,6 +6968,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -5726,6 +7002,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -5755,6 +7038,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -5782,6 +7072,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -5819,6 +7116,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -5846,6 +7150,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -5883,6 +7194,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -5910,6 +7228,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -5939,6 +7264,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -5966,6 +7298,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -5995,6 +7334,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -6022,6 +7368,13 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
   
 
       </a>
@@ -6051,6 +7404,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -6079,6 +7439,13 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -6101,6 +7468,8 @@
   
     
     
+      
+        
       
         
       
@@ -6170,6 +7539,48 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    标签
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
 
       </a>
     </li>
@@ -6204,6 +7615,102 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        学习目标
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前置要求
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-transformer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 背景：Transformer 的问题
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-rwkv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 RWKV 的核心思想
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-rwkv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 RWKV 的特点
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-transformer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 与 Transformer 的对比
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 动手练习
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -6218,13 +7725,125 @@
 
                   
 
+  <nav class="md-tags">
+    
+      
+      
+      
+      
+        <a href="../../../tags/#tag:ai" class="md-tag">AI</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../../tags/#tag:大语言模型" class="md-tag">大语言模型</a>
+      
+    
+  </nav>
+
 
   
   
 
 
-<h1 id="rwkv">RWKV 模型<a class="headerlink" href="#rwkv" title="Permanent link">¶</a></h1>
-<p>RWKV 中文介绍：(https://www.zhihu.com/question/602564718/answer/3042600470)</p>
+<h1 id="rwkv-rnn-llm">RWKV：用 RNN 的方式做 LLM<a class="headerlink" href="#rwkv-rnn-llm" title="Permanent link">¶</a></h1>
+<blockquote>
+<p>本页介绍 RWKV 的核心思路：它把 Transformer 的注意力改造成线性递推形式，从而兼具 RNN 的低推理开销与 Transformer 的建模能力。</p>
+</blockquote>
+<h2 id="_1">学习目标<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<ul>
+<li>理解 Transformer 推理开销大的原因；</li>
+<li>理解 RWKV 如何用“状态 + 递推”替代注意力矩阵；</li>
+<li>知道 RWKV 的适用场景与限制。</li>
+</ul>
+<h2 id="_2">前置要求<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<ul>
+<li>熟悉 Transformer 的自注意力（见<a href="../02-transformer/">Transformer 笔记</a>）；</li>
+<li>了解 RNN 的“按时间步递推”基本思想。</li>
+</ul>
+<h2 id="1-transformer">1 背景：Transformer 的问题<a class="headerlink" href="#1-transformer" title="Permanent link">¶</a></h2>
+<p>自注意力需要计算并存储 <span class="arithmatex">\(O(T^2)\)</span> 的注意力矩阵（<span class="arithmatex">\(T\)</span> 为序列长度），并且每个新 token 都要重新处理之前的全部内容。</p>
+<p>后果：</p>
+<ul>
+<li>长文本显存占用大；</li>
+<li>推理速度随上下文增长而下降；</li>
+<li>在资源受限的设备上部署困难。</li>
+</ul>
+<h2 id="2-rwkv">2 RWKV 的核心思想<a class="headerlink" href="#2-rwkv" title="Permanent link">¶</a></h2>
+<p>RWKV 由四个字母组成：</p>
+<ul>
+<li>R：Receptance（接收门），类似 RNN 的遗忘/接收机制；</li>
+<li>W：Weight（位置权重），决定历史信息按什么比例衰减；</li>
+<li>K：Key，当前 token 的“查询键”；</li>
+<li>V：Value，当前 token 携带的信息。</li>
+</ul>
+<p>它把注意力的计算改写成<strong>线性递推</strong>：维护一个固定大小的状态，每读入一个新 token 更新一次状态，推理复杂度从 <span class="arithmatex">\(O(T^2)\)</span> 降到 <span class="arithmatex">\(O(T)\)</span>，显存占用也变成常量。</p>
+<p>关键区别：Transformer 的注意力是“当前 token 与所有历史 token 直接交互”，RWKV 是“历史信息先压缩成状态，再与当前 token 交互”。</p>
+<h2 id="3-rwkv">3 RWKV 的特点<a class="headerlink" href="#3-rwkv" title="Permanent link">¶</a></h2>
+<p>优点：</p>
+<ul>
+<li>推理速度快、显存占用低；</li>
+<li>支持超长上下文；</li>
+<li>模型结构简单，容易在 CPU/嵌入式设备上运行；</li>
+<li>开源社区活跃，有很多量化部署方案。</li>
+</ul>
+<p>局限：</p>
+<ul>
+<li>状态压缩会丢失部分历史细节，复杂长程依赖能力弱于完整注意力；</li>
+<li>生态和工具链不如 Transformer 成熟；</li>
+<li>顶尖效果仍由大规模 Transformer 模型保持。</li>
+</ul>
+<h2 id="4-transformer">4 与 Transformer 的对比<a class="headerlink" href="#4-transformer" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>Transformer</th>
+<th>RWKV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>注意力</td>
+<td>全量自注意力 <span class="arithmatex">\(O(T^2)\)</span></td>
+<td>线性递推 <span class="arithmatex">\(O(T)\)</span></td>
+</tr>
+<tr>
+<td>推理显存</td>
+<td>随上下文增长</td>
+<td>固定</td>
+</tr>
+<tr>
+<td>长文本</td>
+<td>优秀</td>
+<td>良好（有信息压缩损失）</td>
+</tr>
+<tr>
+<td>部署友好度</td>
+<td>一般</td>
+<td>高</td>
+</tr>
+<tr>
+<td>生态</td>
+<td>最成熟</td>
+<td>发展中</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5">5 动手练习<a class="headerlink" href="#5" title="Permanent link">¶</a></h2>
+<ol>
+<li>阅读 RWKV 的 README，用官方脚本下载一个小模型并在本地跑一次文本生成；</li>
+<li>用相同 prompt 分别让一个 GPT 风格模型和 RWKV 生成 200 字，比较两者的连贯性；</li>
+<li>思考：如果让你在树莓派上部署一个聊天机器人，你会选 Transformer 还是 RWKV？为什么？</li>
+</ol>
+<h2 id="_3">参考<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<ul>
+<li>RWKV 项目主页：https://www.rwkv.com</li>
+<li>RWKV GitHub：https://github.com/BlinkDL/RWKV-LM</li>
+<li>知乎相关介绍：<a href="https://www.zhihu.com/question/602564718/answer/3042600470">RWKV 中文介绍</a></li>
+</ul>
 
 
 
@@ -6236,7 +7855,7 @@
         <!-- mkdocs-git-revision-date-localized-plugin -->
         
         最后更新:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年8月4日 14:31:49 CST"><span class="timeago" datetime="2026-08-04T14:31:49+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年8月4日 14:31:49 CST">2026-08-04</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年8月4日 16:14:36 CST"><span class="timeago" datetime="2026-08-04T16:14:36+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年8月4日 16:14:36 CST">2026-08-04</span>
         
         <br>
         创建日期:
@@ -6313,6 +7932,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚">
+        
+          
+          <a href="../03-gpt-bert/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 03 GPT &amp; BERT">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                03 GPT &amp; BERT
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../05-glm/" class="md-footer__link md-footer__link--next" aria-label="下一页: 05 GLM">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                05 GLM
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
