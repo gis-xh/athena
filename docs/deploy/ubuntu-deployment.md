@@ -20,7 +20,7 @@ cat /etc/os-release
 uname -a
 ```
 
-![ubuntu_2026-07-27_18-29-34](./../assets/images/ubuntu_2026-07-27_18-29-34.webp)
+![ubuntu_2026-07-27_18-29-34](../assets/images/ubuntu_2026-07-27_18-29-34.webp)
 
 #### 2 下载 Docker 安装包
 

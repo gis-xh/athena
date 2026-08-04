@@ -16,6 +16,7 @@
 | IoT      | `docs/iot/`                                                  | OrangePi、边缘计算                       |
 | 3D       | `docs/3d/`                                                   | Blender 建模                             |
 | GIS/遥感 | `docs/gis/`                                                  | GEE、遥感影像处理与 GIS 开发             |
+| 学术研究 | `docs/research/`                                             | 论文研读、文献分析与科研工具             |
 
 ## 技术栈
 

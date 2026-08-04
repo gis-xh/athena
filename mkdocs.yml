@@ -163,6 +163,15 @@ nav:
       - 总览: gis/index.md
       - GEE 笔记: gis/gee-notes.md
       - GIS-Python: gis/gis-python.md
+  - 学术研究:
+      - 总览: research/index.md
+      - 论文研读准备: research/paper-reading-prepare.md
+      - CiteSpace 文献分析: research/citespace.md
+      - LaTeX 文档撰写: research/latex-writing.md
+      - ChatGPT 学术优化: research/chatgpt-academic.md
+      - 论文数据分析流程: research/paper-analysis-workflow.md
+      - 腾讯云翻译 API: research/tencent-translate-api.md
+      - 论文笔记与写作方法: research/paper-note-method.md
   - 桌面应用开发:
       - 总览: desktop/index.md
       - PyQt: desktop/pyqt.md
