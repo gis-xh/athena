@@ -1,5 +1,6 @@
 ---
 comments: false
+status: draft
 ---
 
 # PyQt 开发

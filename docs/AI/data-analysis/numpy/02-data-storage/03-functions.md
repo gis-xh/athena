@@ -1,3 +1,7 @@
+---
+status: draft
+---
+
 # 0203 NumPy 常用函数
 
 ## 1 NumPy 随机数函数

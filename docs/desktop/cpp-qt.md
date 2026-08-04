@@ -1,5 +1,6 @@
 ---
 comments: false
+status: draft
 ---
 
 # C++ Qt 开发

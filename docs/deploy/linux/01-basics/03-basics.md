@@ -1,3 +1,7 @@
+---
+status: draft
+---
+
 # 0103 Linux 基础
 
 以下内容为 [B站 - 韩顺平 2021 Linux 教程](https://www.bilibili.com/video/BV1Sv411r7vd) 学习笔记。

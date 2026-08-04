@@ -1,3 +1,7 @@
+---
+status: draft
+---
+
 # Building Generative AI Applications with Gradio
 
 - Deeplearning.AI 原版课程：https://learn.deeplearning.ai/huggingface-gradio/lesson/

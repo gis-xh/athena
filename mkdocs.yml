@@ -71,8 +71,6 @@ nav:
   - 工程化实践:
       - 总览: engineering/index.md
       - Git 工作流: engineering/git-workflow.md
-      - 代码规范: engineering/code-standards.md
-      - 团队协作: engineering/teamwork.md
   - AI 与算法:
       - 总览: AI/index.md
       - 深度学习:
@@ -101,14 +99,11 @@ nav:
           - 概述: AI/llm/index.md
           - 01 预训练: AI/llm/01-pretrain.md
           - 02 Transformer: AI/llm/02-transformer.md
-          - 03 GPT & BERT: AI/llm/03-gpt-bert.md
-          - 04 RWKV: AI/llm/04-rwkv.md
           - 05 GLM: AI/llm/05-glm.md
           - 06 知识图谱: AI/llm/06-knowledge-graph.md
           - 07 LangChain: AI/llm/07-langchain.md
           - 08 MCP: AI/llm/08-mcp.md
           - 09 向量数据库: AI/llm/09-vectorstore.md
-          - 10 训练方法: AI/llm/10-training-approach.md
       - 机器学习:
           - 概述: AI/courses/machine-learning/index.md
           - Week 1: AI/courses/machine-learning/Week01.md
@@ -123,10 +118,10 @@ nav:
               - 数据存取:
                   - 数据存取: AI/data-analysis/numpy/02-data-storage/01-storage.md
                   - 词云: AI/data-analysis/numpy/02-data-storage/02-wordcloud.md
-                  - 函数: AI/data-analysis/numpy/02-data-storage/03-functions.md
           - Matplotlib: AI/data-analysis/matplotlib/01-intro.md
           - Python Excel: AI/data-analysis/python-excel/01-excel.md
-          - Spider: AI/data-analysis/spider/01-spider.md
+      - AI 课程:
+          - 课程索引: AI/courses/index.md
       - AI 应用:
           - AI Agents: AI/agents/index.md
           - OpenClaw: AI/agents/openclaw-setup.md
@@ -143,7 +138,6 @@ nav:
               - ChatGPT API: AI/courses/deeplearning-ai/02-chatgpt-api.md
               - LangChain App: AI/courses/deeplearning-ai/03-langchain-app.md
               - LangChain Data: AI/courses/deeplearning-ai/04-langchain-data.md
-              - Gradio: AI/courses/deeplearning-ai/05-gradio.md
   - Web 开发:
       - 总览: frontend/index.md
       - Vue:
@@ -154,6 +148,7 @@ nav:
           - Vue3 & ElementPlus: frontend/vue/vue3-element-plus.md
           - 基础知识: frontend/vue/basics.md
           - 学习记录: frontend/vue/learning-notes.md
+          - Vue + TypeScript 项目初始化: frontend/vue-implementation.md
       - React: frontend/react-implementation.md
       - UI 框架: frontend/02-ui.md
       - Web3D: frontend/03-web3d.md
@@ -174,11 +169,8 @@ nav:
       - 论文笔记与写作方法: research/paper-note-method.md
   - 桌面应用开发:
       - 总览: desktop/index.md
-      - PyQt: desktop/pyqt.md
-      - C++ Qt: desktop/cpp-qt.md
       - Electron: desktop/electron.md
       - Rust 环境配置: desktop/rust-setup.md
-      - Rust + Tauri: desktop/rust-tauri.md
   - 后端开发:
       - 总览: python/index.md
       - Django:
@@ -189,7 +181,6 @@ nav:
           - 项目 2: python/03-django/04-project-2.md
       - FastAPI:
           - 概述: python/05-fastapi/index.md
-          - 入门: python/05-fastapi/01-intro.md
       - GUI:
           - 概述: python/04-gui/index.md
           - PyQt 入门: python/04-gui/01-intro.md
@@ -208,7 +199,6 @@ nav:
           - 概述: deploy/linux/index.md
           - Linux 基础:
               - 概述: deploy/linux/01-basics/index.md
-              - Linux 基础: deploy/linux/01-basics/03-basics.md
           - Linux 实操:
               - 概述: deploy/linux/02-practical/index.md
               - 远程访问: deploy/linux/02-practical/01-remote-access.md
@@ -218,6 +208,7 @@ nav:
           - Linux 安装: deploy/linux/linux-installation.md
           - 虚拟机操作: deploy/linux/vm-operations.md
       - Windows 部署: deploy/windows-deployment.md
+      - Ubuntu 部署: deploy/ubuntu-deployment.md
       - Docker GeoServer: deploy/docker-geoserver.md
       - CentOS 部署: deploy/centos-deployment.md
       - 阿里云部署: deploy/aliyun-deployment.md
