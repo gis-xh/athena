@@ -47,7 +47,7 @@ git commit -m 'git版本库初始化与文件提交操作'
 
 ### 5. 操作截图
 
-![Git 初始化操作](../assets/images/git-basics-01.webp)
+![Git 初始化操作](../../assets/images/git-basics-01.webp)
 
 ### 6. 查看提交日志记录
 
@@ -55,13 +55,13 @@ git commit -m 'git版本库初始化与文件提交操作'
 git log
 ```
 
-![Git 日志查看](../assets/images/git-basics-02.webp)
+![Git 日志查看](../../assets/images/git-basics-02.webp)
 
 ## 二、使用 HTTPS 推送至远程仓库
 
 ### 1. 新建远程仓库
 
-![新建远程仓库](../assets/images/git-basics-03.webp)
+![新建远程仓库](../../assets/images/git-basics-03.webp)
 
 ### 2. 将建立好的本地库绑定并推送至远程仓库
 
@@ -70,7 +70,7 @@ git remote add origin https://git.chenguanzhou.com/xhong/git-study-md.git
 git push -u origin master
 ```
 
-![推送成功](../assets/images/git-basics-04.webp)
+![推送成功](../../assets/images/git-basics-04.webp)
 
 ## 三、使用 SSH 加密推送
 
@@ -80,7 +80,7 @@ git push -u origin master
 ssh-keygen -t rsa -C "远程仓库的邮箱地址"
 ```
 
-![生成公钥和秘钥](../assets/images/git-basics-05.webp)
+![生成公钥和秘钥](../../assets/images/git-basics-05.webp)
 
 ### 2. 查看生成的公钥和秘钥
 
@@ -90,7 +90,7 @@ ssh-keygen -t rsa -C "远程仓库的邮箱地址"
 第一个是密钥，第二个是公钥(*.pub)
 ```
 
-![查看密钥文件](../assets/images/git-basics-06.webp)
+![查看密钥文件](../../assets/images/git-basics-06.webp)
 
 用记事本打开生成的 SSH 公钥。
 
@@ -98,11 +98,11 @@ ssh-keygen -t rsa -C "远程仓库的邮箱地址"
 
 添加密钥：
 
-![添加密钥](../assets/images/git-basics-07.webp)
+![添加密钥](../../assets/images/git-basics-07.webp)
 
 查看密钥：
 
-![查看密钥](../assets/images/git-basics-08.webp)
+![查看密钥](../../assets/images/git-basics-08.webp)
 
 检查测试链接：
 
@@ -131,7 +131,7 @@ git push -u origin master
 git config --list
 ```
 
-![查看配置](../assets/images/git-config-01.webp)
+![查看配置](../../assets/images/git-config-01.webp)
 
 ### 2. 用户名和邮箱配置
 
@@ -169,7 +169,7 @@ git config user.name '***'
 git config user.email '***@**.com'
 ```
 
-![配置示例](../assets/images/git-config-02.webp)
+![配置示例](../../assets/images/git-config-02.webp)
 
 ### 3. Alias 别名全局配置
 
@@ -183,7 +183,7 @@ git config --global alias.ps push
 
 #### 3.2 操作截图
 
-![别名配置](../assets/images/git-config-03.webp)
+![别名配置](../../assets/images/git-config-03.webp)
 
 ### 4. 默认选项配置
 

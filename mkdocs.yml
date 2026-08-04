@@ -51,8 +51,8 @@ extra:
 # [Navigtion] 导航栏
 nav:
   - 首页: index.md
-  - 环境配置:
-      - 配置总览: setup/index.md
+  - 环境与工程化:
+      - 总览: setup/index.md
       - 基础应用:
           - 概述: setup/basic/index.md
           - 新手快速入门: setup/basic/newcomer-guide.md
@@ -68,9 +68,10 @@ nav:
       - 容器环境:
           - 概述: setup/deploy/index.md
           - Docker: setup/deploy/docker-setup.md
-  - 工程化实践:
-      - 总览: engineering/index.md
-      - Git 工作流: engineering/git-workflow.md
+      - 工程化实践:
+          - 概述: setup/engineering/index.md
+          - Git 工作流: setup/engineering/git-workflow.md
+          - WOS 论文分析开发日志: setup/engineering/wos-paper-analysis-dev-log.md
   - AI 与算法:
       - 总览: AI/index.md
       - 数据分析:
@@ -244,6 +245,10 @@ plugins:
         'AI/courses/machine-learning/Week01.md': 'AI/machine-learning/01-what-is-machine-learning.md'
         'AI/courses/machine-learning/index.md': 'AI/machine-learning/index.md'
         'AI/courses/machine-learning/01-what-is-machine-learning.md': 'AI/machine-learning/01-what-is-machine-learning.md'
+        'engineering/index.md': 'setup/engineering/index.md'
+        'engineering/git-workflow.md': 'setup/engineering/git-workflow.md'
+        'engineering/code-standards.md': 'setup/engineering/code-standards.md'
+        'engineering/teamwork.md': 'setup/engineering/teamwork.md'
         'deploy/linux/01-basics/03-basics.md': 'deploy/linux/01-basics/01-directory-structure.md'
         'frontend/02-ui.md': 'frontend/01-ui-frameworks.md'
         'AI/data-analysis/numpy/01-basics/02-basics.md': 'AI/data-analysis/numpy/01-basics/01-basics.md'

@@ -22,7 +22,7 @@ status: published
 | [项目部署](./deploy/index.md)    | Docker、阿里云、CentOS、DevOps                     |
 | [物联网](./iot/index.md)         | OrangePi、边缘计算                                 |
 | [3D 建模](./3D/index.md)         | Blender                                            |
-| [工程化实践](./engineering/index.md) | Git 工作流、代码规范、团队协作                 |
+| [环境与工程化](./setup/index.md)     | 环境配置、Git 工作流、团队协作                |
 | [GIS 与遥感](./gis/index.md)     | GEE、遥感影像处理与 GIS 开发                       |
 | [学术研究](./research/index.md)  | 论文研读、文献分析与科研工具                       |
 | [桌面应用开发](./desktop/index.md) | PyQt、Electron、Rust + Tauri                     |

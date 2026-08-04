@@ -19,6 +19,6 @@ status: published
 ## 编程入门
 
 1. 依次安装[Windows 常用工具](windows-tools.md)中列出的开发类软件
-2. 掌握 Git 基本使用方法，实现将本地代码上传至 Git / GitHub，可参考[Git 工作流](../../engineering/git-workflow.md)
+2. 掌握 Git 基本使用方法，实现将本地代码上传至 Git / GitHub，可参考[Git 工作流](../../setup/engineering/git-workflow.md)
 3. 掌握 Conda 基本使用方法，实现镜像创建和激活操作，可参考[Python Conda 配置](../dev/python-conda-setup.md)
 4. 借助 Trae 等 AI 编辑器初步掌握 Python 基本语法

@@ -8,8 +8,7 @@
 
 | 分类         | 路径              | 说明                                        |
 | ------------ | ----------------- | ------------------------------------------- |
-| 环境配置     | `docs/setup/`     | 基础应用、开发工具、容器环境                |
-| 工程化实践   | `docs/engineering/` | Git 工作流、代码规范、团队协作            |
+| 环境与工程化 | `docs/setup/`     | 基础应用、开发工具、容器环境、Git 工作流     |
 | AI/算法      | `docs/AI/`        | 深度学习、大语言模型、数据分析、AI 应用     |
 | Python       | `docs/python/`    | Django、FastAPI、GUI、数据分析              |
 | 前端         | `docs/frontend/`  | Vue、React、Cesium、Web3D                   |

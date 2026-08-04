@@ -11,13 +11,14 @@ status: published
 
 ## 适合谁 / 前置要求
 
-- 已完成[环境配置](../setup/index.md)；
+- 已完成[环境配置](../index.md)；
 - 建议先掌握基本命令行操作。
 
 ## 学习路径
 
 1. [Git 工作流](git-workflow.md)（入门）：安装、初始化、提交、分支与远程协作；
-2. 代码规范与团队协作（规划中，暂未开放）。
+2. [WOS 论文分析开发日志](wos-paper-analysis-dev-log.md)（进阶）：自动化办公项目的实战记录；
+3. 代码规范与团队协作（规划中，暂未开放）。
 
 ## 能力目标
 
@@ -32,4 +33,4 @@ status: published
 ## 参考资源
 
 - [Git 官方文档](https://git-scm.com/doc)；
-- 本仓库的 [AI Agents 开发规范](../AI/agents/index.md)（如涉及协作）。
+- 本仓库的 [AI Agents 开发规范](../../AI/agents/index.md)（如涉及协作）。
